@@ -10,7 +10,7 @@ interface CustomButtonProps {
     icon?: string
 }
 
-const CustomButton = ({title, handlePress, containerStyles, textStyles, isLoading, icon}: CustomButtonProps) => {
+const DEPRECATED_CustomButton = ({title, handlePress, containerStyles, textStyles, isLoading, icon}: CustomButtonProps) => {
     return (
         <TouchableOpacity
             onPress={handlePress}
@@ -29,4 +29,4 @@ const CustomButton = ({title, handlePress, containerStyles, textStyles, isLoadin
         </TouchableOpacity>
     )
 }
-export default CustomButton
+export default DEPRECATED_CustomButton

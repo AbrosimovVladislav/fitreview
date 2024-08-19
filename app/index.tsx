@@ -7,7 +7,6 @@ import {StatusBar} from "expo-status-bar";
 import {useGlobalContext} from "@/context/GlobalProvider";
 
 import {images} from '../constants'
-import CustomButton from "@/components/CustomButton";
 import Button from "@/components/Button";
 
 const RootLayout = () => {

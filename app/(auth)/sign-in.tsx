@@ -94,7 +94,7 @@ const SignIn = () => {
                             Dont have account?
                         </Text>
                         <Link href="/sign-up" className="text-lg font-msemibold text-secondary">
-                            Sign Up
+                            Register
                         </Link>
                     </View>
                 </View>
