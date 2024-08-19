@@ -24,7 +24,7 @@ const GlobalProvider = ({children}) => {
                 }
             })
             .catch((error) => {
-                console.error(error)
+                console.error('GlobalProvide-useEffect ' + error)
             })
             .finally((() => {
                 setIsLoading(false)

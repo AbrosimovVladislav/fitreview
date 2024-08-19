@@ -1,8 +1,8 @@
 import {View, Text, Alert, ScrollView} from 'react-native'
 import React, {useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
-import FormField from "../../components/FormField";
-import Button from "../../components/Button";
+import FormField from "../../components/common/FormField";
+import Button from "../../components/common/Button";
 import {Link, router} from "expo-router";
 import {createUser, getCurrentUser} from "@/lib/appwrite";
 import {useGlobalContext} from "@/context/GlobalProvider";
