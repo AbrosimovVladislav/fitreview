@@ -29,7 +29,7 @@ const Profile = () => {
                         <View name='top-line-area' className='flex flex-row justify-between w-full'>
                             <Icon as={Ionicons} name='chevron-back-outline' size="xl" color='white'
                                   className='w-6 h-6'/>
-                            <Text className='text-3xl text-white font-bebas'>
+                            <Text className='text-3xl text-gray-300 font-bebas'>
                                 Profile
                             </Text>
                             <TouchableOpacity onPress={logout}>
@@ -43,10 +43,10 @@ const Profile = () => {
                                 className='w-16 h-16 border border-secondary rounded-lg'
                                 resizeMode='contain'
                             />
-                            <Text className='text-2xl text-white font-bebas mt-5'>
+                            <Text className='text-2xl text-gray-300 font-bebas mt-5'>
                                 {user?.username}
                             </Text>
-                            <Text className='text-lg text-white font-mregular mt-2'>
+                            <Text className='text-lg text-gray-300 font-mregular mt-2'>
                                 Basic member
                             </Text>
                         </View>
