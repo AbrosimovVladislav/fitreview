@@ -25,7 +25,7 @@ const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ..
 
                 {title === 'Password' && (
                     <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                        <Icon as={Ionicons} name={!showPassword ? 'eye-outline' : 'eye-off-outline'} color='gray' className='w-6 h-6'/>
+                        <Icon as={Ionicons} size='lg' name={!showPassword ? 'eye-outline' : 'eye-off-outline'} className='text-gray-400'/>
                     </TouchableOpacity>
                 )}
             </View>
