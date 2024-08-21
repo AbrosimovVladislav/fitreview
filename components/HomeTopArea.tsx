@@ -28,7 +28,7 @@ const HomeTopArea = () => {
                     Hello, Good Morning
                 </Text>
                 <Text className='text-3xl font-bebas text-gray-300 pt-2'>
-                    {user.username} !
+                    {user?.username} !
                 </Text>
             </View>
         </View>

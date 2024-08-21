@@ -12,7 +12,7 @@ const ExerciseList = ({exercises}: ExerciseListProps) => {
     return (
         <View className='w-full'>
             {exercises.map((exercise) => (
-                <ExerciseItem exercise={exercise}/>
+                <ExerciseItem key={exercise.exerciseId} exercise={exercise}/>
             ))}
         </View>
     )
