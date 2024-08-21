@@ -16,7 +16,7 @@ const UpperBody = () => {
             level: 'Beginner',
             time: '11 min',
             region: 'UpperBody',
-            
+
             imageUrl: images.exercise
         },
         {
@@ -25,7 +25,7 @@ const UpperBody = () => {
             level: 'Beginner',
             time: '12 min',
             region: 'UpperBody',
-            
+
             imageUrl: images.exercise
         },
         {
@@ -34,7 +34,7 @@ const UpperBody = () => {
             level: 'Amateur',
             time: '13 min',
             region: 'UpperBody',
-            
+
             imageUrl: images.exercise
         },
         {
@@ -43,7 +43,7 @@ const UpperBody = () => {
             level: 'Pro',
             time: '14 min',
             region: 'UpperBody',
-            
+
             imageUrl: images.exercise
         },
         {
@@ -52,16 +52,18 @@ const UpperBody = () => {
             level: 'Pro',
             time: '11 min',
             region: 'UpperBody',
-            
+
             imageUrl: images.exercise
         }
     ]
 
     return (
         <SafeAreaView className='bg-primary h-full'>
+            <View className='pt-4'>
+                <PageHeader title='Upper Body Region'/>
+            </View>
             <ScrollView>
-                <View className='justify-center items-center pt-4'>
-                    <PageHeader title='Upper Body Region'/>
+                <View className='justify-center items-center pt-2'>
                     <ExerciseList exercises={exercises}/>
                 </View>
             </ScrollView>

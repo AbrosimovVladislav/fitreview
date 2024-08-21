@@ -59,9 +59,11 @@ const Core = () => {
 
     return (
         <SafeAreaView className='bg-primary h-full'>
+            <View className='pt-4'>
+                <PageHeader title='Core Region'/>
+            </View>
             <ScrollView>
-                <View className='justify-center items-center pt-4'>
-                    <PageHeader title='Core Region'/>
+                <View className='justify-center items-center pt-2'>
                     <ExerciseList exercises={exercises}/>
                 </View>
             </ScrollView>
