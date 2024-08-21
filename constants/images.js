@@ -6,5 +6,16 @@ import upperBodyCategory from "../assets/images/upper-body-category.png";
 import coreCategory from "../assets/images/core-category.png";
 import hipsCategory from "../assets/images/hips-category.png";
 import feetCategory from "../assets/images/feet-category.png";
+import exercise from "../assets/images/exercise.png";
 
-export default {cards, logo, logoSmall, firstPageBanner, upperBodyCategory, coreCategory, hipsCategory, feetCategory};
+export default {
+    cards,
+    logo,
+    logoSmall,
+    firstPageBanner,
+    upperBodyCategory,
+    coreCategory,
+    hipsCategory,
+    feetCategory,
+    exercise
+};
