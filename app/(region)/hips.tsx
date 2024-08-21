@@ -10,43 +10,48 @@ const Hips = () => {
     //TODO get from database
     const exercises = [
         {
+            exerciseId: '16',
             title: 'Exercises with Jumping Cope 1',
             level: 'Beginner',
             time: '11 min',
             region: 'Hips',
-            pageUrl: '/home',
+            
             imageUrl: images.exercise
         },
         {
+            exerciseId: '17',
             title: 'Exercises with Jumping Nope 2',
             level: 'Beginner',
             time: '12 min',
             region: 'Hips',
-            pageUrl: '/home',
+            
             imageUrl: images.exercise
         },
         {
+            exerciseId: '18',
             title: 'Exercises with Jumping Pope 3',
             level: 'Amateur',
             time: '13 min',
             region: 'Hips',
-            pageUrl: '/home',
+            
             imageUrl: images.exercise
         },
         {
+            exerciseId: '19',
             title: 'Exercises with Jumping Rope 4',
             level: 'Pro',
             time: '14 min',
             region: 'Hips',
-            pageUrl: '/home',
+            
             imageUrl: images.exercise
         },
         {
+            exerciseId: '20',
             title: 'Exercises with Jumping Vope 5',
             level: 'Pro',
             time: '11 min',
             region: 'Hips',
-            pageUrl: '/home',
+            
             imageUrl: images.exercise
         }
     ]

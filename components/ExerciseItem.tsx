@@ -28,7 +28,7 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
     return (
         <View className='px-4'>
             <TouchableOpacity className='flex flex-row' onPress={() => {
-                router.push(exercise.pageUrl)
+                router.push('/exercise/' + exercise.exerciseId)
             }}>
                 <View className={`${colorVariants[exercise.region+exercise.level]} rounded-xl`}>
                 <Image

@@ -34,6 +34,8 @@ const RootLayout = () => {
                     <Stack.Screen name='(auth)' options={{headerShown: false}}/>
                     <Stack.Screen name='(tabs)' options={{headerShown: false}}/>
                     <Stack.Screen name='(region)' options={{headerShown: false}}/>
+                    <Stack.Screen name='exercise/[exerciseId]' options={{headerShown: false}}/>
+
                 </Stack>
             </NativeBaseProvider>
         </GlobalProvider>
