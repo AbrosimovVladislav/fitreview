@@ -17,12 +17,12 @@ const ExercisePage = () => {
     const [play, setPlay] = useState(false);
 
     const exercise = {
-        title: 'Exercises with Jumping Rope',
+        title: 'Прыжки на скакалке',
         thumbnail: images.exerciseBig,
         youtubeVideoId: 'SjugsyOKNvg',
         level: 'Beginner',
-        time: '11 min',
         region: 'Upper Body',
+        time: '11',
         calories: '90',
         description: 'Great exercise for warming up middle part of the neck and ' +
             'for activating mobility part of the soulders. Perfect choice as a first ' +
@@ -53,7 +53,7 @@ const ExercisePage = () => {
                     <View className='flex flex-row justify-center items-center'>
                         <Icon as={Ionicons} name='timer-outline' size="lg" className='w-6 h-6 text-gray-100'/>
                         <Text className={`text-gray-100 pt-1 pl-2 font-msemibold`}>
-                            {exercise.time}
+                            {exercise.time} min
                         </Text>
                     </View>
                 </View>

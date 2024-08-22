@@ -14,7 +14,7 @@ const PageHeader = ({title}: PageHeaderProps) => {
             <TouchableOpacity onPress={() => router.back()} className='pl-2'>
                 <Icon as={Ionicons} name='chevron-back-outline' size="xl" color='white'/>
             </TouchableOpacity>
-            <Text className='text-3xl text-gray-300 font-bebas pr-6'>
+            <Text className='text-3xl text-gray-300 font-cbebas pr-6'>
                 {title || ''}
             </Text>
             <View>

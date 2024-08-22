@@ -10,6 +10,7 @@ const RootLayout = () => {
 
     const [fontsLoaded, error] = useFonts({
         "BebasNeue-Regular": require("../assets/fonts/BebasNeue-Regular.ttf"),
+        "BebasNeue-Cyrillic": require("../assets/fonts/BebasNeue-Cyrillic.ttf"),
         "Montserrat-Bold": require("../assets/fonts/Montserrat-Bold.ttf"),
         "Montserrat-ExtraBold": require("../assets/fonts/Montserrat-ExtraBold.ttf"),
         "Montserrat-Light": require("../assets/fonts/Montserrat-Light.ttf"),

@@ -24,6 +24,7 @@ module.exports = {
       },
       fontFamily: {
         bebas: ["BebasNeue-Regular", "sans-serif"],
+        cbebas: ["BebasNeue-Cyrillic", "sans-serif"],
         mbold: ["Montserrat-Bold", "sans-serif"],
         mextrabold: ["Montserrat-ExtraBold", "sans-serif"],
         mlight: ["Montserrat-Light", "sans-serif"],
