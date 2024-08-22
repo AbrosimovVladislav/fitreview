@@ -36,7 +36,7 @@ const HomeCategories = () => {
     return (
         <View className='self-start pl-2 w-full'>
             <View className='flex flex-row justify-start items-start'>
-                <Text className='text-4xl font-bebas text-gray-300'>
+                <Text className='text-4xl font-cbebas text-gray-300'>
                     Body Regions
                 </Text>
             </View>

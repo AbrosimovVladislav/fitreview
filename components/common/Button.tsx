@@ -22,7 +22,7 @@ const Button = ({title, onPress, containerStyles, textStyles, isLoading, icon}: 
             isLoading={isLoading || false}
             startIcon={icon && <Icon as={Ionicons} name={icon} size="md" color='black' className='mb-1 mr-1'/>}
         >
-            <Text className={`text-primary font-bebas text-xl ${textStyles}`}>
+            <Text className={`text-primary font-cbebas text-xl ${textStyles}`}>
                 {title}
             </Text>
         </NativeButton>

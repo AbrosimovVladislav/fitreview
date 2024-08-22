@@ -30,27 +30,27 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
             <TouchableOpacity className='flex flex-row' onPress={() => {
                 router.push('/exercise/' + exercise.exerciseId)
             }}>
-                <View className={`${colorVariants[exercise.region+exercise.level]} rounded-xl`}>
-                <Image
-                    source={exercise.imageUrl}
-                    className={`max-w-[110px] h-[110px]`}
-                    resizeMode='contain'
-                />
+                <View className={`${colorVariants[exercise.region + exercise.level]} rounded-xl border border-green-400`}>
+                    <Image
+                        source={{uri: exercise?.shortThumbnail}}
+                        className='max-w-[110px] h-[110px] border border-red-200'
+                        resizeMode='contain'
+                    />
+                </View>
+
+                <View className='flex flex-col flex-1 pl-4 gap-1'>
+                    <Text className='text-lg text-gray-300 font-msemibold'>{exercise.title}</Text>
+                    <View className='flex flex-row'>
+                        <Icon as={Ionicons} name='timer-outline' size="sm" color='white'/>
+                        <Text className='text-sm text-gray-300 font-mmedium pl-2'>{exercise.time}</Text>
+                    </View>
+                    <Text className='text-sm text-gray-300 font-mmedium'>{exercise.level}</Text>
+                </View>
+            </TouchableOpacity>
+            <Divider orientation='horizontal' my={6} className='bg-gray-700'/>
         </View>
 
-    <View className='flex flex-col flex-1 pl-4 gap-1'>
-        <Text className='text-lg text-gray-300 font-msemibold'>{exercise.title}</Text>
-        <View className='flex flex-row'>
-            <Icon as={Ionicons} name='timer-outline' size="sm" color='white'/>
-            <Text className='text-sm text-gray-300 font-mmedium pl-2'>{exercise.time}</Text>
-        </View>
-        <Text className='text-sm text-gray-300 font-mmedium'>{exercise.level}</Text>
-    </View>
-</TouchableOpacity>
-    <Divider orientation='horizontal' my={6} className='bg-gray-700'/>
-</View>
-
-)
+    )
 }
 export default ExerciseItem
 

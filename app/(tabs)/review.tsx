@@ -7,7 +7,7 @@ const Review = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <View className='w-full min-h-[80vh] justify-center items-center px-4 my-4'>
-                    <Text className='text-5xl font-bebas text-gray-300'>
+                    <Text className='text-5xl font-cbebas text-gray-300'>
                         Review
                     </Text>
                 </View>

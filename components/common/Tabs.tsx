@@ -36,7 +36,7 @@ const Tabs = ({tabs}: TabsProps) => {
                     {...props}
                     style={{backgroundColor: 'transparent'}}
                     renderLabel={({route, focused, color}) => (
-                        <Text className={`text-lg ${focused ? 'text-white' : 'text-gray-500'} font-bebas`}>
+                        <Text className={`text-lg ${focused ? 'text-white' : 'text-gray-500'} font-cbebas`}>
                             {route.title}
                         </Text>
                     )}

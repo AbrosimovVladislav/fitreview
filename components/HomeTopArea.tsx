@@ -27,7 +27,7 @@ const HomeTopArea = () => {
                 <Text className='text-md font-mmedium text-gray-300'>
                     Hello, Good Morning
                 </Text>
-                <Text className='text-3xl font-bebas text-gray-300 pt-2'>
+                <Text className='text-3xl font-cbebas text-gray-300 pt-2'>
                     {user?.username} !
                 </Text>
             </View>

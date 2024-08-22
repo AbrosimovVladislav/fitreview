@@ -1,8 +1,13 @@
 export interface Exercise {
     "exerciseId": string,
     "title": string,
-    "time": string,
+    "thumbnail": string,
+    "shortThumbnail": string,
+    "youtubeVideoId": string,
     "level": string,
+    "time": string,
     "region": string,
-    "imageUrl": string
+    "calories": string,
+    "description": string,
+    "instructions": string[]
 }

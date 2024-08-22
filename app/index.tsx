@@ -26,7 +26,7 @@ const RootLayout = () => {
                     />
 
                     <View className="relative mt-5">
-                        <Text className="text-5xl text-secondary-200 font-bebas text-center ">Fit Review</Text>
+                        <Text className="text-5xl text-secondary-200 font-cbebas text-center ">Fit Review</Text>
                     </View>
 
                     <Text className="text-md font-mregular text-gray-100 mt-7 text-center">

@@ -2,7 +2,6 @@ import {View, Image, Text, TouchableOpacity} from 'react-native'
 import React, {useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 
-import {images} from '../../constants'
 import {icons} from '../../constants'
 import PageHeader from "@/components/PageHeader";
 import Tabs from "@/components/common/Tabs";
@@ -10,38 +9,24 @@ import {Divider, Icon} from "native-base";
 import {Ionicons} from "@expo/vector-icons";
 import BadgeInfoBox from "@/components/common/BadgeInfoBox";
 import YoutubePlayer from 'react-native-youtube-iframe';
+import {useLocalSearchParams} from "expo-router";
+import useAppwrite from "@/lib/useAppwrite";
+import {getExercisesById, getExercisesByRegion} from "@/lib/appwrite";
+import {Exercise} from "@/constants/interface";
 
 
 const ExercisePage = () => {
 
     const [play, setPlay] = useState(false);
 
-    const exercise = {
-        title: 'Прыжки на скакалке',
-        thumbnail: images.exerciseBig,
-        youtubeVideoId: 'SjugsyOKNvg',
-        level: 'Beginner',
-        region: 'Upper Body',
-        time: '11',
-        calories: '90',
-        description: 'Great exercise for warming up middle part of the neck and ' +
-            'for activating mobility part of the soulders. Perfect choice as a first ' +
-            'exercise for working out on a upper body region.',
-        instructions: [
-            'Lorem Ipsum is simply dummy text of printing Lorem Ipsum is simply dummy text of printing',
-            'Lorem Ipsum is simply dummy text of printing',
-            'Lorem Ipsum is simply',
-            'Lorem Ipsum is simply dummy text of printing Lorem Ipsum is simply',
-            'Lorem Ipsum is simply dummy text of printing',
-            'Lorem Ipsum is simply dummy text of printing',
-        ]
-    }
+    const {exerciseId} = useLocalSearchParams();
+    const { data: exercise } = useAppwrite<Exercise>(() => getExercisesById(Number(exerciseId)));
 
     const tabs = [
         {
             key: 'overview',
             title: 'Overview',
-            content: <View className='flex flex-col w-full pt-4 px-4 justify-center items-center'>
+            content: <View className= 'flex flex-col w-full pt-6 px-4 justify-center items-center'>
                 <View className='flex flex-row justify-center items-center'>
                     <View className='flex flex-row justify-center items-center'>
                         <Icon as={Ionicons} name='flame-outline' size="lg" className='w-6 h-6 text-gray-100'/>
@@ -62,7 +47,7 @@ const ExercisePage = () => {
                     <BadgeInfoBox title='Level' subtitle={exercise.level} containerStyles='pl-6'/>
                 </View>
                 <View className='flex flex-col justify-center items-center pt-6'>
-                    <Text className='text-2xl text-gray-100 font-bebas'>
+                    <Text className='text-2xl text-gray-100 font-cbebas'>
                         {exercise.title}
                     </Text>
                     <Text className='text-md text-gray-300 font-mregular justify-center items-center pt-1'>
@@ -74,9 +59,9 @@ const ExercisePage = () => {
         {
             key: 'instructions',
             title: 'Instructions',
-            content: <View className='flex flex-col w-full pt-4 px-4 justify-center items-center'>
+            content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
                 {
-                    exercise.instructions.map(instruction => {
+                    exercise?.instructions?.map(instruction => {
                         return (<View key={Math.random()} className='flex flex-row justify-center items-center pt-3'>
                             <Icon as={Ionicons} name='aperture' size="lg" className='w-6 h-6 text-gray-100'/>
                             <Text className='text-md text-gray-300 font-mmedium justify-center items-center pl-2'>

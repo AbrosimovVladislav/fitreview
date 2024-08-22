@@ -48,7 +48,7 @@ const SignIn = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <View className="w-full min-h-[80vh] justify-center px-4 my-4">
-                    <Text className="text-3xl text-gray-300 text-semibold mt-4 font-bebas">
+                    <Text className="text-3xl text-gray-300 text-semibold mt-4 font-cbebas">
                         Log in to Fit Review
                     </Text>
 

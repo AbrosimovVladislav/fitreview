@@ -2,60 +2,14 @@ import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 
-import {images} from '../../constants'
+import useAppwrite from "@/lib/useAppwrite";
 import PageHeader from "@/components/PageHeader";
 import ExerciseList from "@/components/ExerciseList";
+import {getExercisesByRegion} from "@/lib/appwrite";
 
 const UpperBody = () => {
 
-    //TODO get from database
-    const exercises = [
-        {
-            exerciseId: '1',
-            title: 'Exercises with Jumping Cope 1',
-            level: 'Beginner',
-            time: '11 min',
-            region: 'UpperBody',
-
-            imageUrl: images.exercise
-        },
-        {
-            exerciseId: '2',
-            title: 'Exercises with Jumping Nope 2',
-            level: 'Beginner',
-            time: '12 min',
-            region: 'UpperBody',
-
-            imageUrl: images.exercise
-        },
-        {
-            exerciseId: '3',
-            title: 'Exercises with Jumping Pope 3',
-            level: 'Amateur',
-            time: '13 min',
-            region: 'UpperBody',
-
-            imageUrl: images.exercise
-        },
-        {
-            exerciseId: '4',
-            title: 'Exercises with Jumping Rope 4',
-            level: 'Pro',
-            time: '14 min',
-            region: 'UpperBody',
-
-            imageUrl: images.exercise
-        },
-        {
-            exerciseId: '5',
-            title: 'Exercises with Jumping Vope 5',
-            level: 'Pro',
-            time: '11 min',
-            region: 'UpperBody',
-
-            imageUrl: images.exercise
-        }
-    ]
+    const {data: exercises} = useAppwrite(() => getExercisesByRegion('Upper Body'));
 
     return (
         <SafeAreaView className='bg-primary h-full'>
