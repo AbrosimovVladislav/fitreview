@@ -5,7 +5,7 @@ import {Ionicons} from "@expo/vector-icons";
 import {router} from "expo-router";
 
 interface PageHeaderProps {
-    title: string
+    title?: string
 }
 
 const PageHeader = ({title}: PageHeaderProps) => {
@@ -15,7 +15,7 @@ const PageHeader = ({title}: PageHeaderProps) => {
                 <Icon as={Ionicons} name='chevron-back-outline' size="xl" color='white'/>
             </TouchableOpacity>
             <Text className='text-3xl text-gray-300 font-bebas pr-6'>
-                {title}
+                {title || ''}
             </Text>
             <View>
             </View>
