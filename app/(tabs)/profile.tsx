@@ -23,7 +23,7 @@ const Profile = () => {
     return (
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
-                <View className='w-full min-h-[80vh]  items-center px-4 my-4'>
+                <View className='w-full min-h-[80vh] items-center px-4 my-4'>
                     <View className="w-full flex flex-col gap-7 justify-center items-center mb-12">
 
                         <View name='top-line-area' className='flex flex-row justify-between w-full'>

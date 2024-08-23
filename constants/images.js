@@ -8,6 +8,7 @@ import hipsCategory from "../assets/images/hips-category.png";
 import feetCategory from "../assets/images/feet-category.png";
 import exercise from "../assets/images/exercise.png";
 import exerciseBig from "../assets/images/exercise-big.png";
+import fitReview from "../assets/images/fit-review.png";
 
 export default {
     cards,
@@ -19,5 +20,6 @@ export default {
     hipsCategory,
     feetCategory,
     exercise,
-    exerciseBig
+    exerciseBig,
+    fitReview
 };

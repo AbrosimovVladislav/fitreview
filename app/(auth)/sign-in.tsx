@@ -6,6 +6,7 @@ import {Link, router} from "expo-router";
 import Button from "@/components/common/Button";
 import {getCurrentUser, signIn} from "@/lib/appwrite";
 import {useGlobalContext} from "@/context/GlobalProvider";
+import GoogleLoginButton from "@/components/GoogleLoginButton";
 
 const SignIn = () => {
 
@@ -85,13 +86,7 @@ const SignIn = () => {
                         </Text>
                     </View>
 
-                    <Button
-                        title="Connect with Google"
-                        onPress={submitGoogle}
-                        containerStyles="mt-2"
-                        isLoading={isSubmitting}
-                        icon={'logo-google'}
-                    />
+                    <GoogleLoginButton/>
 
                     <View className="justify-center pt-7 flex-row gap-2">
                         <Text className="text-lg text-gray-100 font-mregular">

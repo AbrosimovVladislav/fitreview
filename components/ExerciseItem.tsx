@@ -25,11 +25,6 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
         FeetPro: 'bg-orange-600',
     }
 
-    useEffect(() => {
-        console.log(exercise.region)
-        console.log(exercise.level)
-    },[exercise])
-
     return (
         <View className='px-4'>
             <TouchableOpacity className='flex flex-row' onPress={() => {
