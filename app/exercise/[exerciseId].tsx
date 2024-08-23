@@ -11,7 +11,7 @@ import BadgeInfoBox from "@/components/common/BadgeInfoBox";
 import YoutubePlayer from 'react-native-youtube-iframe';
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
-import {getExercisesById, getExercisesByRegion} from "@/lib/appwrite";
+import {getExercisesById} from "@/lib/appwrite";
 import {Exercise} from "@/constants/interface";
 
 
@@ -20,13 +20,13 @@ const ExercisePage = () => {
     const [play, setPlay] = useState(false);
 
     const {exerciseId} = useLocalSearchParams();
-    const { data: exercise } = useAppwrite<Exercise>(() => getExercisesById(Number(exerciseId)));
+    const {data: exercise} = useAppwrite<Exercise>(() => getExercisesById(Number(exerciseId)));
 
     const tabs = [
         {
             key: 'overview',
             title: 'Overview',
-            content: <View className= 'flex flex-col w-full pt-6 px-4 justify-center items-center'>
+            content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
                 <View className='flex flex-row justify-center items-center'>
                     <View className='flex flex-row justify-center items-center'>
                         <Icon as={Ionicons} name='flame-outline' size="lg" className='w-6 h-6 text-gray-100'/>
@@ -97,8 +97,8 @@ const ExercisePage = () => {
                                 activeOpacity={0.7}
                                 onPress={() => setPlay(true)}>
                                 < Image
-                                    source={exercise.thumbnail}
-                                    className="max-w-[400px] max-h-[240px] w-screen rounded-xl "
+                                    source={{uri: exercise?.thumbnail}}
+                                    className="w-96 h-60 max-w-[400px] max-h-[240px] w-screen rounded-xl"
                                     resizeMode="cover"
                                 />
                                 <Image

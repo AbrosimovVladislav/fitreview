@@ -1,5 +1,5 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Divider, Icon} from "native-base";
 import {Ionicons} from "@expo/vector-icons";
 import {Exercise} from "@/constants/interface";
@@ -25,15 +25,20 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
         FeetPro: 'bg-orange-600',
     }
 
+    useEffect(() => {
+        console.log(exercise.region)
+        console.log(exercise.level)
+    },[exercise])
+
     return (
         <View className='px-4'>
             <TouchableOpacity className='flex flex-row' onPress={() => {
                 router.push('/exercise/' + exercise.exerciseId)
             }}>
-                <View className={`${colorVariants[exercise.region + exercise.level]} rounded-xl border border-green-400`}>
+                <View className={`${colorVariants[exercise.region.replaceAll(" ","")+exercise.level]} rounded-xl`}>
                     <Image
                         source={{uri: exercise?.shortThumbnail}}
-                        className='max-w-[110px] h-[110px] border border-red-200'
+                        className={`w-24 h-24 max-w-[110px] max-h-[110px]`}
                         resizeMode='contain'
                     />
                 </View>
