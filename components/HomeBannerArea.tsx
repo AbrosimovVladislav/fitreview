@@ -11,7 +11,7 @@ const HomeBannerArea = () => {
                 onPress={() => router.push('/review')}
             >
                 <Image
-                    source={images.firstPageBanner}
+                    source={images.bannerGetFitReview}
                     className='max-w-[390px] h-[300px]'
                     resizeMode='contain'
                 />

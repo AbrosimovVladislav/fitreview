@@ -9,26 +9,26 @@ const HomeCategories = () => {
     const categories = [
         {
             title: 'Upper Body Region',
-            imageUrl: images.upperBodyCategory,
+            imageUrl: images.upperBody,
             description: 'Neck, Shoulder and Arms',
-            categoryUrl: '/upper-body'
+            categoryUrl: '/upperbody'
         },
         {
             title: 'Core Region',
-            imageUrl: images.coreCategory,
-            description: 'Upper Body Region is very important',
+            imageUrl: images.core,
+            description: 'Core Region is very important',
             categoryUrl: '/core'
         },
         {
             title: 'Hips Region',
-            imageUrl: images.hipsCategory,
-            description: 'Upper Body Region is very important',
+            imageUrl: images.hips,
+            description: 'Hips Region is very important',
             categoryUrl: '/hips'
         },
         {
             title: 'Feet Region',
-            imageUrl: images.feetCategory,
-            description: 'Upper Body Region is very important',
+            imageUrl: images.feet,
+            description: 'Feet Region is very important',
             categoryUrl: '/feet'
         },
     ]

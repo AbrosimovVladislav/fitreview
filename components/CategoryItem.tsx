@@ -13,11 +13,11 @@ interface CategoryItemProps {
 const CategoryItem = ({title, imageUrl, description, categoryUrl}: CategoryItemProps) => {
 
     return (
-        <View className=''>
+        <View>
             <TouchableOpacity onPress={() => router.push(categoryUrl)}>
                 <Image
                     source={imageUrl}
-                    className='max-w-[350px] h-[220px]'
+                    className='max-w-[350px] h-[200px] rounded-xl'
                     resizeMode='contain'
                 />
             </TouchableOpacity>

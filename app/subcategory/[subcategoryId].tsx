@@ -1,20 +1,21 @@
 import {View, ScrollView} from 'react-native'
-import React from 'react'
-import {SafeAreaView} from "react-native-safe-area-context";
-
+import React, {useEffect} from 'react'
+import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
+import {getExercisesBySubcategoryId} from "@/lib/appwrite";
+import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import ExerciseList from "@/components/ExerciseList";
-import {getExercisesByRegion} from "@/lib/appwrite";
 
-const UpperBody = () => {
+const SubcategoryPage = () => {
 
-    const {data: exercises} = useAppwrite(() => getExercisesByRegion('Upper Body'));
+    const {subcategoryId} = useLocalSearchParams();
+    const {data: exercises} = useAppwrite(() => getExercisesBySubcategoryId(subcategoryId));
 
     return (
         <SafeAreaView className='bg-primary h-full'>
             <View className='pt-4'>
-                <PageHeader title='Upper Body Region'/>
+                <PageHeader title={subcategoryId.replaceAll("-"," ")}/>
             </View>
             <ScrollView>
                 <View className='justify-center items-center pt-2'>
@@ -24,4 +25,4 @@ const UpperBody = () => {
         </SafeAreaView>
     )
 }
-export default UpperBody
+export default SubcategoryPage

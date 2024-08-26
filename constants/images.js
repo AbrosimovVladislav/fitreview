@@ -1,25 +1,55 @@
 import cards from "../assets/images/cards.png";
-import logo from "../assets/images/logo.png";
-import logoSmall from "../assets/images/logo-small.png";
-import firstPageBanner from "../assets/images/first-page-banner.png";
-import upperBodyCategory from "../assets/images/upper-body-category.png";
-import coreCategory from "../assets/images/core-category.png";
-import hipsCategory from "../assets/images/hips-category.png";
-import feetCategory from "../assets/images/feet-category.png";
-import exercise from "../assets/images/exercise.png";
-import exerciseBig from "../assets/images/exercise-big.png";
-import fitReview from "../assets/images/fit-review.png";
+import bannerGetFitReview from "../assets/images/banner-get-fit-review.png";
+import exerciseSmallTest from "../assets/images/exercise-small-test.png";
+
+import core from "../assets/images/regions/core/core.png";
+import coreAbsActivation from "../assets/images/regions/core/core-abs-activation.png";
+import coreBreathing from "../assets/images/regions/core/core-breathing.png";
+import coreMfr from "../assets/images/regions/core/core-mfr.png";
+import coreMobility from "../assets/images/regions/core/core-mobility.png";
+import coreStretching from "../assets/images/regions/core/core-stretching.png";
+
+import feet from "../assets/images/regions/feet/feet.png";
+import feetDrill from "../assets/images/regions/feet/feet-drill.png";
+import feetGlutesAndFeetSet from "../assets/images/regions/feet/feet-glutes-and-feet-set.png";
+import feetManual from "../assets/images/regions/feet/feet-manual.png";
+import feetMfr from "../assets/images/regions/feet/feet-mfr.png";
+import feetStretching from "../assets/images/regions/feet/feet-stretching.png";
+
+import hips from "../assets/images/regions/hips/hips.png";
+import hipsDrill from "../assets/images/regions/hips/hips-drill.png";
+import hipsMfr from "../assets/images/regions/hips/hips-mfr.png";
+import hipsMobility from "../assets/images/regions/hips/hips-mobility.png";
+import hipsStretching from "../assets/images/regions/hips/hips-stretching.png";
+
+import upperBody from "../assets/images/regions/upper-body/upper-body.png";
+import upperBodyMfr from "../assets/images/regions/upper-body/upper-body-mfr.png";
+import upperBodyMobility from "../assets/images/regions/upper-body/upper-body-mobility.png";
+import upperBodyStretching from "../assets/images/regions/upper-body/upper-body-stretching.png";
 
 export default {
     cards,
-    logo,
-    logoSmall,
-    firstPageBanner,
-    upperBodyCategory,
-    coreCategory,
-    hipsCategory,
-    feetCategory,
-    exercise,
-    exerciseBig,
-    fitReview
+    bannerGetFitReview,
+    exerciseSmallTest,
+    core,
+    coreAbsActivation,
+    coreBreathing,
+    coreMfr,
+    coreMobility,
+    coreStretching,
+    feet,
+    feetDrill,
+    feetGlutesAndFeetSet,
+    feetManual,
+    feetMfr,
+    feetStretching,
+    hips,
+    hipsDrill,
+    hipsMfr,
+    hipsMobility,
+    hipsStretching,
+    upperBody,
+    upperBodyMfr,
+    upperBodyMobility,
+    upperBodyStretching
 };

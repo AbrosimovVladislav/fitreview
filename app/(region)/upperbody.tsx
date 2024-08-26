@@ -1,51 +1,39 @@
 import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
-import PageHeader from "@/components/PageHeader";
 
 import {images} from '../../constants'
+
+import PageHeader from "@/components/PageHeader";
 import CategoryItem from "@/components/CategoryItem";
 
-const Core = () => {
+const Upperbody = () => {
 
     const subcategories = [
         {
             title: 'MFR',
-            imageUrl: images.coreMfr,
-            description: '{Core MFR description}',
-            categoryUrl: '/subcategory/core-mfr'
+            imageUrl: images.upperBodyMfr,
+            description: '{Upper Body MFR description}',
+            categoryUrl: '/subcategory/upperbody-mfr'
         },
         {
             title: 'Stretching',
-            imageUrl: images.coreStretching,
-            description: '{Core Stretching description}',
-            categoryUrl: '/subcategory/core-stretching'
+            imageUrl: images.upperBodyStretching,
+            description: '{Upper Body Stretching description}',
+            categoryUrl: '/subcategory/upperbody-stretching'
         },
         {
             title: 'Mobility',
-            imageUrl: images.coreMobility,
-            description: '{Core Mobility description}',
-            categoryUrl: '/subcategory/core-mobility'
+            imageUrl: images.upperBodyMobility,
+            description: '{Upper Body Mobility description}',
+            categoryUrl: '/subcategory/upperbody-mobility'
         },
-        {
-            title: 'Breathing',
-            imageUrl: images.coreBreathing,
-            description: '{Core Breathing description}',
-            categoryUrl: '/subcategory/core-breathing'
-        },
-        {
-            title: 'Abs Activation',
-            imageUrl: images.coreAbsActivation,
-            description: '{Core Abs Activation description}',
-            categoryUrl: '/subcategory/core-absActivation'
-        },
-
     ]
 
     return (
         <SafeAreaView className='bg-primary h-full'>
             <View className='pt-4'>
-                <PageHeader title='Core Region'/>
+                <PageHeader title='Upper Body Region'/>
             </View>
             <ScrollView>
                 <View className='w-full flex justify-center items-center my-2 w-full'>
@@ -63,4 +51,4 @@ const Core = () => {
         </SafeAreaView>
     )
 }
-export default Core
+export default Upperbody

@@ -7,7 +7,7 @@ const RegionLayout = () => {
         <>
             <Stack>
                 <Stack.Screen
-                    name="upper-body"
+                    name="upperbody"
                     options={{
                         headerShown: false
                     }}
