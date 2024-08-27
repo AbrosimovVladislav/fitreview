@@ -1,0 +1,173 @@
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-008",
+  "data": {
+    "title": "Gluteal Stretching",
+    "russianTitle": "Вытяжение ягодячного региона",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 8,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-009",
+  "data": {
+    "title": "Under Gluteal Stretching",
+    "russianTitle": "Вытяжение подъягодичного региона",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 9,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-010",
+  "data": {
+    "title": "Hips External Line Stretching",
+    "russianTitle": "Вытяжение внешней линии бедра",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 10,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-011",
+  "data": {
+    "title": "Hips Front Line Stretching",
+    "russianTitle": "Вытяжение передней линии бедра",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 11,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-012",
+  "data": {
+    "title": "Hips Internal Line Stretching",
+    "russianTitle": "Вытяжение внутренней линии бедра",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 12,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-013",
+  "data": {
+    "title": "Hips Back Line Stretching",
+    "russianTitle": "Вытяжение задней линии бедра",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Hips",
+    "calories": 10,
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 13,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
