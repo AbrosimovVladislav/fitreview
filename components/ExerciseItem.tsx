@@ -11,18 +11,18 @@ interface ExerciseItemProps {
 
 const ExerciseItem = ({exercise}: ExerciseItemProps) => {
     const colorVariants = {
-        UpperBodyBeginner: 'bg-green-200',
-        UpperBodyAmateur: 'bg-emerald-400',
-        UpperBodyPro: 'bg-teal-600',
-        CoreBeginner: 'bg-indigo-200',
-        CoreAmateur: 'bg-violet-400',
-        CorePro: 'bg-purple-600',
-        HipsBeginner: 'bg-pink-200',
-        HipsAmateur: 'bg-rose-400',
-        HipsPro: 'bg-red-600',
-        FeetBeginner: 'bg-yellow-200',
-        FeetAmateur: 'bg-amber-400',
-        FeetPro: 'bg-orange-600',
+        UpperBodyBeginner: 'bg-cyan-200',
+        UpperBodyAmateur: 'bg-blue-400',
+        UpperBodyPro: 'bg-sky-600',
+        CoreBeginner: 'bg-lime-200',
+        CoreAmateur: 'bg-green-400',
+        CorePro: 'bg-emerald-600',
+        HipsBeginner: 'bg-orange-200',
+        HipsAmateur: 'bg-yellow-400',
+        HipsPro: 'bg-amber-600',
+        FeetBeginner: 'bg-pink-200',
+        FeetAmateur: 'bg-red-400',
+        FeetPro: 'bg-rose-600',
     }
 
     return (

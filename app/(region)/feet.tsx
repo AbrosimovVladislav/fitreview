@@ -44,7 +44,7 @@ const Feet = () => {
     return (
         <SafeAreaView className='bg-primary h-full'>
             <View className='pt-4'>
-                <PageHeader title='Upper Body Region'/>
+                <PageHeader title='Feet Region'/>
             </View>
             <ScrollView>
                 <View className='w-full flex justify-center items-center my-2 w-full'>

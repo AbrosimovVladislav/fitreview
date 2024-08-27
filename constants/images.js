@@ -1,5 +1,5 @@
 import cards from "../assets/images/cards.png";
-import bannerGetFitReview from "../assets/images/banner-get-fit-review.png";
+import bannerGetFitReview from "../assets/images/banner-get-fit-review2.png";
 import exerciseSmallTest from "../assets/images/exercise-small-test.png";
 
 import core from "../assets/images/regions/core/core.png";
