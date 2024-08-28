@@ -18,25 +18,25 @@ const Home = () => {
             title: 'Upper Body Region',
             imageUrl: images.upperBody,
             description: 'Neck, Shoulder and Arms',
-            categoryUrl: '/upperbody'
+            categoryUrl: '/region/Upper Body'
         },
         {
             title: 'Core Region',
             imageUrl: images.core,
             description: 'Core Region is very important',
-            categoryUrl: '/core'
+            categoryUrl: '/region/Core'
         },
         {
             title: 'Hips Region',
             imageUrl: images.hips,
             description: 'Hips Region is very important',
-            categoryUrl: '/hips'
+            categoryUrl: '/region/Hips'
         },
         {
             title: 'Feet Region',
             imageUrl: images.feet,
             description: 'Feet Region is very important',
-            categoryUrl: '/feet'
+            categoryUrl: '/region/Feet'
         },
     ]
 
