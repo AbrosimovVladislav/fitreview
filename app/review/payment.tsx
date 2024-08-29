@@ -1,7 +1,9 @@
-import {View, Text, ScrollView} from 'react-native'
+import {View, ScrollView} from 'react-native'
 import React from 'react'
 import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
+import Button from "../../components/common/Button";
+import {router} from "expo-router";
 
 const Payment = () => {
     return (
@@ -9,6 +11,12 @@ const Payment = () => {
             <ScrollView>
                 <View className='pt-4'>
                     <PageHeader title='Payment'/>
+                    <Button
+                        title="Proceed to survey"
+                        onPress={() => router.push('/review/survey/life-style')}
+                        containerStyles="mt-2"
+                        icon={'ribbon'}
+                    />
                 </View>
             </ScrollView>
         </SafeAreaView>

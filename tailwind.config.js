@@ -10,6 +10,7 @@ module.exports = {
           100: "#FF9001",
           200: "#FF8E01",
           dark: "#FF9C0196",
+          disabled: "rgba(252,185,86,0.59)",
           spec: "#FBBC05"
         },
         black: {

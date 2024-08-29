@@ -47,7 +47,7 @@ const Review = () => {
                             fitReviewParams.map(param => {
                                 return <View key={Math.random()} className='flex flex-row justify-center items-center pt-3'>
                                     <Icon as={Ionicons} name='checkmark-done' size="lg" className='w-6 h-6 text-secondary-100'/>
-                                    <Text className={` text-gray-100 pt-1 pl-2 font-msemibold`}>
+                                    <Text className={'text-gray-100 pt-1 pl-2 font-msemibold'}>
                                         {param}
                                     </Text>
                                 </View>

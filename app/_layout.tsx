@@ -38,6 +38,8 @@ const RootLayout = () => {
                     <Stack.Screen name='exercise/[exerciseId]' options={{headerShown: false}}/>
                     <Stack.Screen name='subcategory/[subcategoryId]' options={{headerShown: false}}/>
                     <Stack.Screen name='review/payment' options={{headerShown: false}}/>
+                    <Stack.Screen name='review/survey/life-style' options={{headerShown: false}}/>
+                    <Stack.Screen name='review/survey/sport-style' options={{headerShown: false}}/>
                 </Stack>
             </NativeBaseProvider>
         </GlobalProvider>
