@@ -31,16 +31,6 @@ import upperBodyMfr from "../assets/images/regions/upper-body/upper-body-mfr.png
 import upperBodyMobility from "../assets/images/regions/upper-body/upper-body-mobility.png";
 import upperBodyStretching from "../assets/images/regions/upper-body/upper-body-stretching.png";
 
-//questions
-import sedentaryJob from "../assets/images/questions/life-style/sedentary-job.jpeg";
-import physicallyActiveJob from "../assets/images/questions/life-style/physically-active-job.jpeg";
-import physicallyHardJob from "../assets/images/questions/life-style/physically-hard-job.jpeg";
-import relaxedWeekends from "../assets/images/questions/life-style/relaxed-weekends.jpeg";
-import activeWeekends from "../assets/images/questions/life-style/active-weekends.jpeg";
-import aLotOfHobbies from "../assets/images/questions/life-style/a-lot-of-hobbies.jpeg";
-import highLevelOfStressOnTheJob from "../assets/images/questions/life-style/high-level-of-stress.jpeg";
-import workSchedule52 from "../assets/images/questions/life-style/work-shedule-52.jpeg";
-
 export default {
     cards,
     bannerGetFitReview,
@@ -68,14 +58,4 @@ export default {
     upperBodyMfr,
     upperBodyMobility,
     upperBodyStretching,
-
-    sedentaryJob,
-    physicallyActiveJob,
-    physicallyHardJob,
-    relaxedWeekends,
-    activeWeekends,
-    aLotOfHobbies,
-    highLevelOfStressOnTheJob,
-    workSchedule52
-
 };

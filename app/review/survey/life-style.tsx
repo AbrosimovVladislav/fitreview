@@ -5,44 +5,13 @@ import PageHeader from "@/components/PageHeader";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import AnswerOption from "@/components/AnswerOption";
 
-import {images} from '../../../constants'
+import useAppwrite from "@/lib/useAppwrite";
+import {getQuestionsByType} from "@/lib/appwrite";
+import {Question} from "@/constants/interface";
 
 const LifeStyle = () => {
 
-    const answerOptions = [
-        {
-            title: 'Sedentary Job',
-            image: images.sedentaryJob,
-        },
-        {
-            title: 'Physically Active Job',
-            image: images.physicallyActiveJob,
-        },
-        {
-            title: 'Physically Hard Job',
-            image: images.physicallyHardJob,
-        },
-        {
-            title: 'Relaxed Weekends',
-            image: images.relaxedWeekends,
-        },
-        {
-            title: 'Active Weekends',
-            image: images.activeWeekends,
-        },
-        {
-            title: 'A Lot of Hobbies',
-            image: images.aLotOfHobbies,
-        },
-        {
-            title: 'High Level of Stress on the Job',
-            image: images.highLevelOfStressOnTheJob,
-        },
-        {
-            title: 'Work Schedule 5/2',
-            image: images.workSchedule52,
-        }
-    ]
+    const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType('life-style'));
 
     const [pressed, setPressed] = useState([]);
 
@@ -82,7 +51,7 @@ const LifeStyle = () => {
                 </View>
 
                 <View name='question-options' className='flex justify-center items-center mt-4'>
-                    {answerOptions.map((option, index) => {
+                    {questions.map((option, index) => {
                         if (index % 2 === 0) {
                             return (
                                 <View key={index} className="flex-row justify-between">
@@ -91,12 +60,12 @@ const LifeStyle = () => {
                                         image={option.image}
                                         pressed={defineIsPressed(option.title)}
                                         onPress={() => answerOptionOnPress(option.title)}/>
-                                    {answerOptions[index + 1] && (
+                                    {questions[index + 1] && (
                                         <AnswerOption
-                                            title={answerOptions[index + 1].title}
-                                            image={answerOptions[index + 1].image}
-                                            pressed={defineIsPressed(answerOptions[index + 1].title)}
-                                            onPress={() => answerOptionOnPress(answerOptions[index + 1].title)}/>
+                                            title={questions[index + 1].title}
+                                            image={questions[index + 1].image}
+                                            pressed={defineIsPressed(questions[index + 1].title)}
+                                            onPress={() => answerOptionOnPress(questions[index + 1].title)}/>
                                     )}
                                 </View>
                             );

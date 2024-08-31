@@ -11,3 +11,10 @@ export interface Exercise {
     "description": string,
     "instructions": string[]
 }
+
+export interface Question {
+    "id": string,
+    "title": string,
+    "image": string,
+    "type": string
+}

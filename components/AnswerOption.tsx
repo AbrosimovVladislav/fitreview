@@ -11,7 +11,7 @@ const AnswerOption = ({title, image, pressed, onPress}) => {
             onPress={onPress}
             className='flex-1 px-4 py-3 justify-center items-center'>
             <Image
-                source={image}
+                source={{uri: image}}
                 className={`w-36 h-36 rounded-xl ${additionalStyles}`}
                 resizeMode='contain'
             />
