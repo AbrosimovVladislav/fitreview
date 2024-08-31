@@ -13,7 +13,7 @@ const Payment = () => {
                     <PageHeader title='Payment'/>
                     <Button
                         title="Proceed to survey"
-                        onPress={() => router.push('/review/survey/life-style')}
+                        onPress={() => router.push('/review/survey/multianswer/life-style')}
                         containerStyles="mt-2"
                         icon={'ribbon'}
                     />

@@ -1,19 +1,65 @@
 import {View, Text, ScrollView} from 'react-native'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import {useLocalSearchParams} from "expo-router";
+import useAppwrite from "@/lib/useAppwrite";
+import {Question} from "@/constants/interface";
+import {getQuestionsByType} from "@/lib/appwrite";
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
-import NextQuestionButton from "@/components/NextQuestionButton";
 import AnswerOption from "@/components/AnswerOption";
+import NextQuestionButton from "@/components/NextQuestionButton";
 
-import useAppwrite from "@/lib/useAppwrite";
-import {getQuestionsByType} from "@/lib/appwrite";
-import {Question} from "@/constants/interface";
+const MultiAnswerPage = () => {
 
-const LifeStyle = () => {
+    const {type} = useLocalSearchParams();
+    const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(type));
 
-    const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType('life-style'));
+    const pageDefinitions = [
+        {
+            stepNumber: 1,
+            type: 'life-style',
+            question: 'What is your lifestyle ?',
+            description: 'Select one or more options'
+        },
+        {
+            stepNumber: 2,
+            type: 'sport-style',
+            question: 'What is your sport style ?',
+            description: 'Select one or more options'
+        },
+        {
+            stepNumber: 3,
+            type: 'recovery',
+            question: 'What is your recovery ?',
+            description: 'Select one or more options'
+        },
+        {
+            stepNumber: 4,
+            type: 'health',
+            question: 'What is your health ?',
+            description: 'Select one or more options'
+        },
+        {
+            stepNumber: 5,
+            type: 'shoes',
+            question: 'What is your shoes ?',
+            description: 'Select one or more options'
+        },
+        {
+            stepNumber: 6,
+            type: 'nutrition-and-habits',
+            question: 'What is your nutrition ?',
+            description: 'Select one or more options'
+        }
+    ]
 
     const [pressed, setPressed] = useState([]);
+    const [pageDefinition, setPageDefinition] = useState(pageDefinitions[0])
+
+    useEffect(() => {
+        setPageDefinition(pageDefinitions.find(e => e.type === type));
+    }, [type])
+
 
     const answerOptionOnPress = (title) => {
         setPressed((prevPressed) => {
@@ -34,19 +80,21 @@ const LifeStyle = () => {
         console.log('life-style preSubmitAction')
     }
 
+    const nextStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber + 1)?.type;
+
     return (
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <PageHeader/>
                 <View name='question-header' className='pt-2 px-4'>
                     <Text className='text-md text-gray-300 font-mmedium'>
-                        Step 1 of 8
+                        Step {pageDefinition?.stepNumber} of 8
                     </Text>
                     <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
-                        What is your lifestyle ?
+                        {pageDefinition?.question}
                     </Text>
                     <Text className='text-md text-gray-300 font-mmedium pt-1'>
-                        Select one or more options
+                        {pageDefinition?.description}
                     </Text>
                 </View>
 
@@ -75,10 +123,12 @@ const LifeStyle = () => {
                 </View>
 
                 <View name='question-next-button' className='pt-4 px-4'>
-                    <NextQuestionButton disabled={pressed.length==0} path='/review/survey/sport-style' preSubmitAction={preSubmitAction}/>
+                    <NextQuestionButton disabled={pressed.length == 0}
+                                        path={nextStepType ? `/review/survey/multianswer/${nextStepType}` : '/review/survey/age-question'}
+                                        preSubmitAction={preSubmitAction}/>
                 </View>
             </ScrollView>
         </SafeAreaView>
     )
 }
-export default LifeStyle
+export default MultiAnswerPage
