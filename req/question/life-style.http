@@ -9,13 +9,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-001",
   "data": {
     "id": "1",
-    "title": "I prefer relaxed weekends",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "Sedentary job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de4200176f6bc407/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -27,13 +26,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-002",
   "data": {
     "id": "2",
-    "title": "I prefer active weekends",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2700049e20f92e/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "Physically active job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de330021b49a513f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -45,13 +43,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-003",
   "data": {
     "id": "3",
-    "title": "I have many hobbies",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de1f001db94dc573/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "Physically hard job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de390039b81dea1f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -63,13 +60,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-004",
   "data": {
     "id": "4",
-    "title": "Sedentary job",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de4200176f6bc407/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "High stress level at work",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2c0034829b8fe9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -81,13 +77,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-005",
   "data": {
     "id": "5",
-    "title": "Physically active job",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de330021b49a513f/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "My work schedule is 5/2",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de48000dfc841026/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -99,13 +94,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-006",
   "data": {
     "id": "6",
-    "title": "Physically hard job",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de390039b81dea1f/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "I have a flexible schedule",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d750420018087793fe/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -117,13 +111,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-007",
   "data": {
     "id": "7",
-    "title": "High level of stress at work",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2c0034829b8fe9/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "I prefer relaxed weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }
 ###
-
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
@@ -135,8 +128,8 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "question-008",
   "data": {
     "id": "8",
-    "title": "My work schedule is 5/2",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de48000dfc841026/view?project=66c32ed800357b5e7314&mode=admin",
+    "title": "I prefer active weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2700049e20f92e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "life-style"
   }
 }

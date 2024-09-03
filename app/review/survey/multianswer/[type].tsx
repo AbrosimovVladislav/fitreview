@@ -29,24 +29,12 @@ const MultiAnswerPage = () => {
         },
         {
             stepNumber: 3,
-            type: 'recovery',
-            question: 'What is your recovery ?',
-            description: 'Select one or more options'
-        },
-        {
-            stepNumber: 4,
             type: 'health',
             question: 'What is your health ?',
             description: 'Select one or more options'
         },
         {
-            stepNumber: 5,
-            type: 'shoes',
-            question: 'What is your shoes ?',
-            description: 'Select one or more options'
-        },
-        {
-            stepNumber: 6,
+            stepNumber: 4,
             type: 'nutrition-and-habits',
             question: 'What is your nutrition ?',
             description: 'Select one or more options'
