@@ -37,8 +37,8 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66c76bdf0003e4f2041f",
   "documentId": "exercise-002",
   "data": {
-    "title": "Under Gluteal Warm-Up",
-    "russianTitle": "Проминка подъягодичного региона",
+    "title": "Hips Rotator Warm-Up",
+    "russianTitle": "Проминка ротаторов бедра",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",
@@ -153,8 +153,8 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66c76bdf0003e4f2041f",
   "documentId": "exercise-006",
   "data": {
-    "title": "Hips Internal Line Warm-Up",
-    "russianTitle": "Проминка внутренней линии бедра",
+    "title": "Hips Adductors Warm-Up",
+    "russianTitle": "Проминка приводящих мышц",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",

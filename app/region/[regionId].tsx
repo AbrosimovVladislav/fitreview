@@ -18,19 +18,19 @@ const RegionPage = () => {
                 {
                     title: 'MFR',
                     imageUrl: images.upperBodyMfr,
-                    description: '{Upper Body MFR description}',
+                    description: 'Muscle relaxation and tension relief',
                     categoryUrl: '/subcategory/upperbody-mfr'
                 },
                 {
                     title: 'Stretching',
                     imageUrl: images.upperBodyStretching,
-                    description: '{Upper Body Stretching description}',
+                    description: 'Flexibility increase for better performance',
                     categoryUrl: '/subcategory/upperbody-stretching'
                 },
                 {
                     title: 'Mobility',
                     imageUrl: images.upperBodyMobility,
-                    description: '{Upper Body Mobility description}',
+                    description: 'Improving joint range and fluid movement',
                     categoryUrl: '/subcategory/upperbody-mobility'
                 },
             ]
@@ -41,32 +41,32 @@ const RegionPage = () => {
                 {
                     title: 'MFR',
                     imageUrl: images.coreMfr,
-                    description: '{Core MFR description}',
+                    description: 'Muscle relaxation and tension relief',
                     categoryUrl: '/subcategory/core-mfr'
                 },
                 {
                     title: 'Stretching',
                     imageUrl: images.coreStretching,
-                    description: '{Core Stretching description}',
+                    description: 'Flexibility increase for better performance',
                     categoryUrl: '/subcategory/core-stretching'
                 },
                 {
                     title: 'Mobility',
                     imageUrl: images.coreMobility,
-                    description: '{Core Mobility description}',
+                    description: 'Improving joint range and fluid movement',
                     categoryUrl: '/subcategory/core-mobility'
                 },
                 {
                     title: 'Breathing',
                     imageUrl: images.coreBreathing,
-                    description: '{Core Breathing description}',
+                    description: 'Supporting core with proper breathing',
                     categoryUrl: '/subcategory/core-breathing'
                 },
                 {
-                    title: 'Abs Activation',
-                    imageUrl: images.coreAbsActivation,
-                    description: '{Core Abs Activation description}',
-                    categoryUrl: '/subcategory/core-absActivation'
+                    title: 'Drill',
+                    imageUrl: images.coreDrill,
+                    description: 'Building strength and endurance',
+                    categoryUrl: '/subcategory/core-drill'
                 }
             ]
         },
@@ -76,25 +76,31 @@ const RegionPage = () => {
                 {
                     title: 'MFR',
                     imageUrl: images.hipsMfr,
-                    description: '{Hips MFR description}',
+                    description: 'Muscle relaxation and tension relief',
                     categoryUrl: '/subcategory/hips-mfr'
                 },
                 {
                     title: 'Stretching',
                     imageUrl: images.hipsStretching,
-                    description: '{Hips Stretching description}',
+                    description: 'Flexibility increase for better performance',
                     categoryUrl: '/subcategory/hips-stretching'
                 },
                 {
                     title: 'Mobility',
                     imageUrl: images.hipsMobility,
-                    description: '{Hips Mobility description}',
+                    description: 'Improving joint range and fluid movement',
                     categoryUrl: '/subcategory/hips-mobility'
+                },
+                {
+                    title: 'Activation',
+                    imageUrl: images.hipsMobility,
+                    description: 'Preparing hips for active movement',
+                    categoryUrl: '/subcategory/hips-activation'
                 },
                 {
                     title: 'Drill',
                     imageUrl: images.hipsDrill,
-                    description: '{Hips Drill description}',
+                    description: 'Building strength and endurance',
                     categoryUrl: '/subcategory/hips-drill'
                 }
             ]
@@ -105,31 +111,31 @@ const RegionPage = () => {
                 {
                     title: 'MFR',
                     imageUrl: images.feetMfr,
-                    description: '{Feet MFR description}',
+                    description: 'Muscle relaxation and tension relief',
                     categoryUrl: '/subcategory/feet-mfr'
-                },
-                {
-                    title: 'Manual',
-                    imageUrl: images.feetManual,
-                    description: '{Feet Manual description}',
-                    categoryUrl: '/subcategory/feet-manual'
                 },
                 {
                     title: 'Stretching',
                     imageUrl: images.feetStretching,
-                    description: '{Feet Stretching description}',
+                    description: 'Flexibility increase for better performance',
                     categoryUrl: '/subcategory/feet-stretching'
+                },
+                {
+                    title: 'Mobility',
+                    imageUrl: images.feetMobility,
+                    description: 'Improving joint range and fluid movement',
+                    categoryUrl: '/subcategory/feet-mobility'
                 },
                 {
                     title: 'Drill',
                     imageUrl: images.feetDrill,
-                    description: '{Feet Drill description}',
+                    description: 'Building strength and endurance',
                     categoryUrl: '/subcategory/feet-drill'
                 },
                 {
                     title: 'Glutes And Feet Set',
                     imageUrl: images.feetGlutesAndFeetSet,
-                    description: '{Feet Glutes And Feet Set description}',
+                    description: 'Engaging glutes for power and balance',
                     categoryUrl: '/subcategory/feet-glutesandfeetset'
                 }
             ]
