@@ -10,7 +10,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "17",
     "title": "Often get sick",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df289a002d1920ff61/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -27,7 +27,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "18",
     "title": "Had serious surgeries",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df28ed00078dadc7ee/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -44,7 +44,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "19",
     "title": "Have sleep problems",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df28d3003bb2bd4ee8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -61,7 +61,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "20",
     "title": "Hard to wake up in the morning",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df294a002a002bf7ab/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -78,7 +78,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "21",
     "title": "Low energy during the day",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2bab00124d785d55/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -95,7 +95,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "22",
     "title": "Often feel discomfort in the body",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2a770009d66fbea9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -112,7 +112,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "23",
     "title": "Uncomfortable in my shoes",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2aee0021d0636254/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
@@ -129,7 +129,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "24",
     "title": "I wear orthopedic insoles",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&mode=admin",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2b01002d507963ee/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "health"
   }
 }
