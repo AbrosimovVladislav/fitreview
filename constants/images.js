@@ -24,6 +24,7 @@ import hips from "../assets/images/regions/hips/hips.png";
 import hipsDrill from "../assets/images/regions/hips/hips-drill.png";
 import hipsMfr from "../assets/images/regions/hips/hips-mfr.png";
 import hipsMobility from "../assets/images/regions/hips/hips-mobility.png";
+import hipsActivation from "../assets/images/regions/hips/hips-activation.jpeg";
 import hipsStretching from "../assets/images/regions/hips/hips-stretching.png";
 
 import upperBody from "../assets/images/regions/upper-body/upper-body.png";
@@ -55,6 +56,7 @@ export default {
     hipsDrill,
     hipsMfr,
     hipsMobility,
+    hipsActivation,
     hipsStretching,
 
     upperBody,

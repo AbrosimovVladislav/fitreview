@@ -44,7 +44,6 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "level": "Beginner",
     "time": 5,
     "region": "Hips",
-
     "complexity": "Easy",
     "instructions": [
       "Test_Exr","Test_Exr","Test_Exr"
@@ -67,14 +66,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66c76bdf0003e4f2041f",
   "documentId": "exercise-003",
   "data": {
-    "title": "Hips Rotator Warm-Up",
-    "russianTitle": "Проминка сгибателей бедра",
+    "title": "Hips External Line Warm-Up",
+    "russianTitle": "Проминка внешней линии бедра",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",
     "time": 5,
     "region": "Hips",
-
     "complexity": "Easy",
     "instructions": [
       "Test_Exr","Test_Exr","Test_Exr"
@@ -97,8 +95,8 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66c76bdf0003e4f2041f",
   "documentId": "exercise-004",
   "data": {
-    "title": "Hips External Line Warm-Up",
-    "russianTitle": "Проминка внешней линии бедра",
+    "title": "Hips Front Line Warm-Up",
+    "russianTitle": "Проминка передней линии бедра",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",
@@ -127,8 +125,8 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66c76bdf0003e4f2041f",
   "documentId": "exercise-005",
   "data": {
-    "title": "Hips Front Line Warm-Up",
-    "russianTitle": "Проминка передней линии бедра",
+    "title": "Hips Back Line Warm-Up",
+    "russianTitle": "Проминка задней линии бедра",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",
@@ -171,36 +169,6 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
     "exerciseId": 6,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-007",
-  "data": {
-    "title": "Hips Back Line Warm-Up",
-    "russianTitle": "Проминка задней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 7,
     "description": "Test_Exr",
     "subcategory": "mfr"
   }

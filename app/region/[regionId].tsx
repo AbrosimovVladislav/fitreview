@@ -93,7 +93,7 @@ const RegionPage = () => {
                 },
                 {
                     title: 'Activation',
-                    imageUrl: images.hipsMobility,
+                    imageUrl: images.hipsActivation,
                     description: 'Preparing hips for active movement',
                     categoryUrl: '/subcategory/hips-activation'
                 },
