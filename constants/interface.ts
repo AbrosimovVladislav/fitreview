@@ -7,7 +7,7 @@ export interface Exercise {
     "level": string,
     "time": string,
     "region": string,
-    "calories": string,
+    "complexity": string,
     "description": string,
     "instructions": string[]
 }

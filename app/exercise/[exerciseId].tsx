@@ -31,7 +31,7 @@ const ExercisePage = () => {
                     <View className='flex flex-row justify-center items-center'>
                         <Icon as={Ionicons} name='flame-outline' size="lg" className='w-6 h-6 text-gray-100'/>
                         <Text className={`text-gray-100 pt-1 pl-2 font-msemibold`}>
-                            {exercise.calories} ccal
+                            {exercise.complexity}
                         </Text>
                     </View>
                     <Divider orientation='vertical' mx='6'/>

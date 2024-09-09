@@ -15,7 +15,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "level": "Beginner",
     "time": 5,
     "region": "Hips",
-    "calories": 10,
+    "complexity": "Easy",
     "instructions": [
       "Test_Exr","Test_Exr","Test_Exr"
     ],
