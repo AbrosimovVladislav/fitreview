@@ -17,7 +17,7 @@ const AgeQuestion = () => {
                     <PageHeader/>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
-                            Step 8 of 9
+                            Step 6 of 7
                         </Text>
                         <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
                             How much do you weight ?

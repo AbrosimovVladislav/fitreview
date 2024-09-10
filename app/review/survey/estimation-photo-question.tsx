@@ -17,7 +17,7 @@ const EstimationPhotoQuestion = () => {
                     <PageHeader/>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
-                            Step 9 of 9
+                            Step 7 of 7
                         </Text>
                         <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
                             Upload your photos in next option ///???///??/
