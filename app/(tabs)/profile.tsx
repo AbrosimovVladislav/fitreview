@@ -5,8 +5,8 @@ import {useGlobalContext} from "@/context/GlobalProvider";
 import {signOut} from "@/lib/appwrite";
 import {router} from "expo-router";
 import {Ionicons} from "@expo/vector-icons";
-import {Divider, Icon} from "native-base";
 import InfoBox from "@/components/common/InfoBox";
+import Divider from "@/components/common/Divider";
 
 const Profile = () => {
 
@@ -27,13 +27,12 @@ const Profile = () => {
                     <View className="w-full flex flex-col gap-7 justify-center items-center mb-12">
 
                         <View name='top-line-area' className='flex flex-row justify-between w-full'>
-                            <Icon as={Ionicons} name='chevron-back-outline' size="xl" color='white'
-                                  className='w-6 h-6'/>
+                            <Ionicons name='chevron-back-outline' size={28} color='white'/>
                             <Text className='text-3xl text-gray-300 font-cbebas'>
                                 Profile
                             </Text>
                             <TouchableOpacity onPress={logout}>
-                                <Icon as={Ionicons} name='log-out-outline' size="xl" color='white' className='w-6 h-6'/>
+                                <Ionicons name='log-out-outline' size={28} color='white'/>
                             </TouchableOpacity>
                         </View>
 
@@ -53,9 +52,9 @@ const Profile = () => {
 
                         <View name='stats-area' className='flex flex-row'>
                             <InfoBox title='85 kg' subtitle='Weight'/>
-                            <Divider orientation='vertical' mx='6'/>
+                            <Divider vertical/>
                             <InfoBox title='181 cm' subtitle='Height'/>
-                            <Divider orientation='vertical' mx='6'/>
+                            <Divider vertical/>
                             <InfoBox title='30 years' subtitle='Age'/>
                         </View>
 

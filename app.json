@@ -14,12 +14,16 @@
     },
     "ios": {
       "supportsTablet": true,
-      "package": "com.fitreview.fitreview"
+      "package": "com.fitreview.fitreview",
+      "runtimeVersion": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     },
     "web": {
@@ -32,6 +36,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "937c1fb2-aaf3-4432-9fac-2cbd7d67d9ae"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/937c1fb2-aaf3-4432-9fac-2cbd7d67d9ae"
     }
   }
 }

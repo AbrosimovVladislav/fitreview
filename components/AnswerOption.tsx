@@ -1,7 +1,6 @@
-import {Text, Image, TouchableOpacity} from 'react-native'
+import {Text, Image, TouchableOpacity, View} from 'react-native'
 import React from 'react'
 import {Ionicons} from "@expo/vector-icons";
-import {Icon} from "native-base";
 
 const AnswerOption = ({title, image, pressed, onPress}) => {
     let additionalStyles = pressed ? 'border border-secondary-100' : '';
@@ -17,8 +16,9 @@ const AnswerOption = ({title, image, pressed, onPress}) => {
             />
             {
                 pressed &&
-                <Icon as={Ionicons} name='checkmark-circle' size="xl"
-                      className='absolute text-secondary-100 top-0 right-3'/>
+                <View className='absolute text-secondary-100 top-0 right-3'>
+                    <Ionicons name='checkmark-circle' size={28} color='#FF9001'/>
+                </View>
             }
             <Text className="text-md text-gray-100 font-msemibold pt-2 text-center"
                   style={{flexWrap: 'wrap'}}

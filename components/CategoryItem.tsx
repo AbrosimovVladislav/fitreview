@@ -1,7 +1,7 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
-import {Divider} from "native-base";
 import {router} from "expo-router";
+import Divider from "@/components/common/Divider";
 
 interface CategoryItemProps {
     title: string,

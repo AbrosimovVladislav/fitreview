@@ -1,9 +1,9 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React, {useEffect} from 'react'
-import {Divider, Icon} from "native-base";
+import React from 'react'
 import {Ionicons} from "@expo/vector-icons";
 import {Exercise} from "@/constants/interface";
 import {router} from "expo-router";
+import Divider from "@/components/common/Divider";
 
 interface ExerciseItemProps {
     exercise: Exercise
@@ -27,7 +27,7 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
 
     return (
         <View className='px-4'>
-            <TouchableOpacity className='flex flex-row' onPress={() => {
+            <TouchableOpacity className='flex flex-row pb-5' onPress={() => {
                 router.push('/exercise/' + exercise.exerciseId)
             }}>
                 <View className={`${colorVariants[exercise.region.replaceAll(" ","")+exercise.level]} rounded-xl`}>
@@ -41,13 +41,13 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
                 <View className='flex flex-col flex-1 pl-4 gap-1'>
                     <Text className='text-lg text-gray-300 font-msemibold'>{exercise.title}</Text>
                     <View className='flex flex-row'>
-                        <Icon as={Ionicons} name='timer-outline' size="sm" color='white'/>
+                        <Ionicons name='timer-outline' size={16} color='white'/>
                         <Text className='text-sm text-gray-300 font-mmedium pl-2'>{exercise.time}</Text>
                     </View>
                     <Text className='text-sm text-gray-300 font-mmedium'>{exercise.level}</Text>
                 </View>
             </TouchableOpacity>
-            <Divider orientation='horizontal' my={6} className='bg-gray-700'/>
+            <Divider/>
         </View>
 
     )

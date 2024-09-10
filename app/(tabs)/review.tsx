@@ -5,7 +5,6 @@ import PageHeader from "@/components/PageHeader";
 import {router} from "expo-router";
 
 import {images} from '../../constants'
-import {Icon} from "native-base";
 import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
 
@@ -46,7 +45,7 @@ const Review = () => {
                         {
                             fitReviewParams.map(param => {
                                 return <View key={Math.random()} className='flex flex-row justify-center items-center pt-3'>
-                                    <Icon as={Ionicons} name='checkmark-done' size="lg" className='w-6 h-6 text-secondary-100'/>
+                                    <Ionicons name='checkmark-done' size={22} color='#FF9001'/>
                                     <Text className={'text-gray-100 pt-1 pl-2 font-msemibold'}>
                                         {param}
                                     </Text>

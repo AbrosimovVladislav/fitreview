@@ -2,7 +2,6 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native'
 import React, {useState} from 'react'
 
 import {Ionicons} from "@expo/vector-icons";
-import {Icon} from "native-base";
 
 const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ...props}) => {
 
@@ -25,7 +24,7 @@ const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ..
 
                 {title === 'Password' && (
                     <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                        <Icon as={Ionicons} size='lg' name={!showPassword ? 'eye-outline' : 'eye-off-outline'} className='text-gray-400'/>
+                        <Ionicons name={!showPassword ? 'eye-outline' : 'eye-off-outline'} size={28} color='gray'/>
                     </TouchableOpacity>
                 )}
             </View>

@@ -1,13 +1,13 @@
 import {View, ScrollView, Text, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
-import {Divider, Icon} from "native-base";
 
 import {images} from '../../constants'
 import CategoryItem from "@/components/CategoryItem";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {Ionicons} from "@expo/vector-icons";
 import {router} from "expo-router";
+import Divider from "@/components/common/Divider";
 
 const Home = () => {
 
@@ -53,7 +53,7 @@ const Home = () => {
                                 resizeMode='contain'
                             />
                             <TouchableOpacity onPress={() => router.push('/profile')}>
-                                <Icon as={Ionicons} name='notifications-outline' size="xl" color='white'/>
+                                <Ionicons name='notifications-outline' size={28} color='white'/>
                             </TouchableOpacity>
                         </View>
                         <View>

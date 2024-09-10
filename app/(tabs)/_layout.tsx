@@ -3,12 +3,11 @@ import React from 'react'
 import {Tabs} from "expo-router";
 import {StatusBar} from "expo-status-bar";
 import {Ionicons} from "@expo/vector-icons";
-import {Icon} from "native-base";
 
 const TabIcon = ({icon, color, name, focused}) => {
     return (
         <View className="items-center justify-center gap-1 pt-3">
-            <Icon as={Ionicons} name={icon} size="lg" color={color} className='w-6 h-6'/>
+            <Ionicons name={icon} size={22} color={color}/>
             <Text
                 className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}
                 style={{color: color}}
