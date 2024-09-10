@@ -1,33 +1,38 @@
-import {Text} from 'react-native'
-import {Button as NativeButton, Icon} from "native-base";
-
-import React from 'react'
-import {Ionicons} from "@expo/vector-icons";
+import React from 'react';
+import { Text, TouchableOpacity, ActivityIndicator, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 interface ButtonProps {
-    title: string,
-    onPress: () => void,
-    containerStyles?: string,
-    textStyles?: string,
-    isLoading?: boolean,
-    icon?: React.ReactNode
-    disabled?: boolean
+    title: string;
+    onPress: () => void;
+    containerStyles?: string;
+    textStyles?: string;
+    isLoading?: boolean;
+    icon?: string;
+    disabled?: boolean;
 }
 
-const Button = ({title, onPress, containerStyles, textStyles, isLoading, icon, disabled}: ButtonProps) => {
+const Button = ({ title, onPress, containerStyles, textStyles, isLoading, icon, disabled }: ButtonProps) => {
     return (
-        <NativeButton
-            disabled={disabled}
-            className={`flex flex-row bg-secondary rounded-xl min-h-[62px] justify-center items-center
-            active:bg-secondary-dark ${containerStyles} ${disabled && 'bg-secondary-disabled'}`}
+        <TouchableOpacity
+            disabled={disabled || isLoading}
             onPress={onPress}
-            isLoading={isLoading || false}
-            startIcon={icon && <Icon as={Ionicons} name={icon} size="md" color='black' className='mb-1 mr-1'/>}
+            className={`flex flex-row justify-center items-center min-h-[62px] rounded-xl px-4 ${disabled ? 'bg-gray-400' : 'bg-secondary'} ${containerStyles}`}
         >
-            <Text className={`text-primary font-cbebas text-xl ${textStyles}`}>
-                {title}
-            </Text>
-        </NativeButton>
-    )
-}
-export default Button
+            {isLoading ? (
+                <ActivityIndicator size="small" color="white" />
+            ) : (
+                <View className="flex flex-row items-center">
+                    {icon && (
+                        <Ionicons name={icon} size={24} color="black" className="mr-2" />
+                    )}
+                    <Text className={`text-primary text-xl font-cbebas ${textStyles}`}>
+                        {title}
+                    </Text>
+                </View>
+            )}
+        </TouchableOpacity>
+    );
+};
+
+export default Button;
