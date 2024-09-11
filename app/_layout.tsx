@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import {SplashScreen, Stack} from 'expo-router'
 import {useFonts} from 'expo-font'
 import GlobalProvider from '../context/GlobalProvider'
-import {NativeBaseProvider} from "native-base/src/core/NativeBaseProvider";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,7 +28,6 @@ const RootLayout = () => {
 
     return (
         <GlobalProvider>
-            <NativeBaseProvider>
                 <Stack>
                     <Stack.Screen name='index' options={{headerShown: false}}/>
                     <Stack.Screen name='(auth)' options={{headerShown: false}}/>
@@ -43,7 +41,6 @@ const RootLayout = () => {
                     <Stack.Screen name='review/survey/weight-question' options={{headerShown: false}}/>
                     <Stack.Screen name='review/survey/estimation-photo-question' options={{headerShown: false}}/>
                 </Stack>
-            </NativeBaseProvider>
         </GlobalProvider>
     )
 }

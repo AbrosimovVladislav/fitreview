@@ -24,7 +24,8 @@
       },
       "runtimeVersion": {
         "policy": "appVersion"
-      }
+      },
+      "package": "com.vlad911.fitreview"
     },
     "web": {
       "bundler": "metro",

@@ -8,7 +8,7 @@ const AnswerOption = ({title, image, pressed, onPress}) => {
     return (
         <TouchableOpacity
             onPress={onPress}
-            className='flex-1 px-4 py-3 justify-center items-center'>
+            className='flex-1 px-4 py-3 items-center'>
             <Image
                 source={{uri: image}}
                 className={`w-36 h-36 rounded-xl ${additionalStyles}`}
