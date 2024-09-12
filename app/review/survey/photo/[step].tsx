@@ -1,5 +1,5 @@
 import {Image, ScrollView, Text, View} from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import NextQuestionButton from "@/components/NextQuestionButton";
@@ -9,7 +9,9 @@ import UploadArea from "@/components/common/UploadArea";
 
 const PhotoQuestionStepPage = () => {
 
-    const preSubmitAction = () =>{
+    const [uploadedImages, setUploadedImages] = useState([]);
+
+    const preSubmitAction = () => {
 
     }
 
@@ -17,7 +19,7 @@ const PhotoQuestionStepPage = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <PageHeader/>
-                <View className='flex-1'>
+                <View className='flex-1 gap-4'>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
                             Step 7 of 7
@@ -31,25 +33,26 @@ const PhotoQuestionStepPage = () => {
                     </View>
 
                     <View name='example pictures'
-                        className='flex-row justify-between px-4'>
+                          className='flex-row justify-between px-4'>
                         <Image
                             source={images.cards}
-                            className='w-[180px] h-[240px] rounded-xl'
+                            className='w-[180px] h-[250px] rounded-xl'
                             resizeMode='contain'
                         />
                         <Image
                             source={images.cards}
-                            className='w-[180px] h-[240px] rounded-xl'
+                            className='w-[180px] h-[250px] rounded-xl'
                             resizeMode='contain'
                         />
                     </View>
 
                     <View name='upload picture area'>
-                        <UploadArea/>
+                        <UploadArea uploadedImages={uploadedImages} setUploadedImages={setUploadedImages}/>
                     </View>
 
                     <View name='question-next-button' className='pt-4 px-4'>
                         <NextQuestionButton
+                            disabled={uploadedImages.length < 2}
                             path={'/review/survey/photo/photo-step-2'}
                             preSubmitAction={preSubmitAction}
                         />
