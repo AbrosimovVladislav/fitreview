@@ -39,7 +39,7 @@ const RootLayout = () => {
                     <Stack.Screen name='review/survey/multianswer/[type]' options={{headerShown: false}}/>
                     <Stack.Screen name='review/survey/age-question' options={{headerShown: false}}/>
                     <Stack.Screen name='review/survey/weight-question' options={{headerShown: false}}/>
-                    <Stack.Screen name='review/survey/estimation-photo-question' options={{headerShown: false}}/>
+                    <Stack.Screen name='review/survey/photo/[step]' options={{headerShown: false}}/>
                 </Stack>
         </GlobalProvider>
     )

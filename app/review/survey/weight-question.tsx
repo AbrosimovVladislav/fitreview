@@ -41,7 +41,7 @@ const AgeQuestion = () => {
 
                     <View name='question-next-button' className='pt-4 px-4'>
                         <NextQuestionButton
-                            path={'/review/survey/estimation-photo-question'}
+                            path={'/review/survey/photo/photo-step-1'}
                             preSubmitAction={preSubmitAction}
                         />
                     </View>

@@ -15,7 +15,10 @@
     "ios": {
       "supportsTablet": true,
       "package": "com.fitreview.fitreview",
-      "runtimeVersion": "1.0.0"
+      "runtimeVersion": "1.0.0",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your photos to allow image uploads."
+      }
     },
     "android": {
       "adaptiveIcon": {
