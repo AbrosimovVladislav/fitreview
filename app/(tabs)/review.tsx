@@ -1,4 +1,4 @@
-import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native'
+import {View, Text, ScrollView, Image} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";

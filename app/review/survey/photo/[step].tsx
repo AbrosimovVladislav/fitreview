@@ -4,7 +4,6 @@ import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import NextQuestionButton from "@/components/NextQuestionButton";
 
-import {images} from '../../../../constants'
 import UploadArea from "@/components/common/UploadArea";
 import {useLocalSearchParams} from "expo-router";
 

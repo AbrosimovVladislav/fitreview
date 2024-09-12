@@ -7,7 +7,7 @@ import NumberFormField from "@/components/common/NumberFormField";
 
 const AgeQuestion = () => {
 
-    const [weight, setWeight] = useState(75);
+    const [weight, setWeight] = useState(null);
 
     const preSubmitAction = () =>{
 
@@ -17,7 +17,7 @@ const AgeQuestion = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                     <PageHeader/>
-                <View className='flex-1 gap-36 pt-4'>
+                <View className='flex-1 gap-48 pt-4'>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
                             Step 6 of 7
@@ -41,6 +41,7 @@ const AgeQuestion = () => {
 
                     <View name='question-next-button' className='pt-4 px-4'>
                         <NextQuestionButton
+                            disabled={!weight}
                             path={'/review/survey/photo/front-view'}
                             preSubmitAction={preSubmitAction}
                         />

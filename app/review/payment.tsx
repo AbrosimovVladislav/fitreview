@@ -14,7 +14,7 @@ const Payment = () => {
                     <Button
                         title="Proceed to survey"
                         onPress={() => router.push('/review/survey/multianswer/life-style')}
-                        containerStyles="mt-2"
+                        containerStyles="mt-2 mx-6"
                         icon={'ribbon'}
                     />
                 </View>
