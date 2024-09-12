@@ -12,6 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "runtimeVersion": "1.0.0",
     "ios": {
       "supportsTablet": true,
       "package": "com.fitreview.fitreview",
@@ -25,10 +26,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "runtimeVersion": {
-        "policy": "appVersion"
-      },
-      "package": "com.vlad911.fitreview"
+      "package": "com.vlad911.fitreview",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
