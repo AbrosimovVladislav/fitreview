@@ -17,7 +17,7 @@ const PhotoQuestionStepPage = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <PageHeader/>
-                <View className='flex-1 pt-4'>
+                <View className='flex-1'>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
                             Step 7 of 7
@@ -34,12 +34,12 @@ const PhotoQuestionStepPage = () => {
                         className='flex-row justify-between px-4'>
                         <Image
                             source={images.cards}
-                            className='w-[180px] h-[260px] rounded-xl'
+                            className='w-[180px] h-[240px] rounded-xl'
                             resizeMode='contain'
                         />
                         <Image
                             source={images.cards}
-                            className='w-[180px] h-[260px] rounded-xl'
+                            className='w-[180px] h-[240px] rounded-xl'
                             resizeMode='contain'
                         />
                     </View>

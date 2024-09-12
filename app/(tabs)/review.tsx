@@ -58,7 +58,8 @@ const Review = () => {
                     <View name='button' className='pt-10 px-4'>
                         <Button2
                             title="Get Started"
-                            onPress={() => router.push('/review/payment')}
+                            // onPress={() => router.push('/review/payment')}
+                            onPress={() => router.push('/review/survey/photo/photo-step-1')}
                             containerStyles="mt-2"
                             icon={'caret-forward'}
                         />
