@@ -10,7 +10,7 @@ import Button from "@/components/common/Button";
 
 const Review = () => {
 
-    const [status, setStatus] = useState('WaitingResults');
+    const [status, setStatus] = useState('NotStarted');
 
     const fitReviewParams = [
         'Lorem Ipsum is simply dummy text of printing',
