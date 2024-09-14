@@ -38,7 +38,7 @@ const Review = () => {
             </View>
 
             <View name='title-and-description-area' className='flex flex-col justify-center items-center pt-4'>
-                <Text className='text-md text-gray-300 font-mmedium pt-2 pb-6 text-center'>
+                <Text className='text-md text-gray-300 font-mmedium pt-2 pb-6 px-4 text-center'>
                     It is a long established fact that a reader
                     will be distracted by the readable
                 </Text>

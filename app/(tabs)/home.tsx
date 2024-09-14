@@ -47,11 +47,13 @@ const Home = () => {
 
                     <View name='home-top-area' className='flex flex-col gap-3 w-full'>
                         <View className='flex flex-row justify-between items-center'>
-                            <Image
-                                source={{uri: user?.avatar}}
-                                className='w-14 h-14 border border-secondary rounded-xl'
-                                resizeMode='contain'
-                            />
+                            <TouchableOpacity onPress={() => router.push('/profile')}>
+                                <Image
+                                    source={{uri: user?.avatar}}
+                                    className='w-14 h-14 border border-secondary rounded-xl'
+                                    resizeMode='contain'
+                                />
+                            </TouchableOpacity>
                             <TouchableOpacity onPress={() => router.push('/profile')}>
                                 <Ionicons name='notifications-outline' size={28} color='white'/>
                             </TouchableOpacity>
@@ -78,7 +80,7 @@ const Home = () => {
 
                     <Divider orientation='horizontal' mb={6} className='bg-gray-700'/>
 
-                    <Text className='text-4xl self-start font-cbebas text-gray-300 pb-3'>
+                    <Text className='text-4xl self-start font-cbebas text-gray-300 pb-3 pl-2'>
                         Body Regions
                     </Text>
                     <View name='home-regions-area' className='items-center w-full'>

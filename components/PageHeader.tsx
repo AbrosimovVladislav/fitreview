@@ -16,7 +16,7 @@ const PageHeader = ({ title, icon, onIconPress }: PageHeaderProps) => {
                 <Ionicons name="chevron-back-outline" size={28} color="white" />
             </TouchableOpacity>
 
-            <Text className={`text-3xl text-gray-300 font-cbebas ${icon ? '' : 'flex-1 text-center pr-9'}`}>
+            <Text className={`text-3xl text-gray-300 font-cbebas ${icon ? '' : 'flex-1 text-center pr-5'}`}>
                 {title || ''}
             </Text>
 
