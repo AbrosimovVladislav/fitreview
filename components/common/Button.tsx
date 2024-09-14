@@ -24,9 +24,9 @@ const Button = ({ title, onPress, containerStyles, textStyles, isLoading, icon, 
             ) : (
                 <View className="flex flex-row items-center">
                     {icon && (
-                        <Ionicons name={icon} size={24} color="black" className="mr-2" />
+                        <Ionicons name={icon} size={24} color="black" />
                     )}
-                    <Text className={`text-primary text-xl font-cbebas ${textStyles}`}>
+                    <Text className={`text-primary text-xl font-cbebas pl-2 pt-1 ${textStyles}`}>
                         {title}
                     </Text>
                 </View>

@@ -13,10 +13,10 @@ const Review = () => {
     const [status, setStatus] = useState('NotStarted');
 
     const fitReviewParams = [
-        'Lorem Ipsum is simply dummy text of printing',
-        'Lorem Ipsum is simply dummy text of printing',
-        'Lorem Ipsum is simply dummy text of printing',
-        'Lorem Ipsum is simply dummy text of printing'
+        'Workouts designed for your needs',
+        'Detailed body and movement analysis',
+        'Easy-to-use visual feedback for progress',
+        'Coach support to your questions anytime'
     ]
 
     const onPressGetStarted = () => {
@@ -39,8 +39,7 @@ const Review = () => {
 
             <View name='title-and-description-area' className='flex flex-col justify-center items-center pt-4'>
                 <Text className='text-md text-gray-300 font-mmedium pt-2 pb-6 px-4 text-center'>
-                    It is a long established fact that a reader
-                    will be distracted by the readable
+                    Get a complete body analysis to improve health and reach your goals
                 </Text>
                 {
                     fitReviewParams.map(param => {
