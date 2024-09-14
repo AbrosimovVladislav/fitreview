@@ -1,7 +1,6 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import {router} from "expo-router";
-import Divider from "@/components/common/Divider";
 
 interface CategoryItemProps {
     title: string,
@@ -22,8 +21,7 @@ const CategoryItem = ({title, imageUrl, description, categoryUrl}: CategoryItemP
                 />
             </TouchableOpacity>
             <Text className='text-xl text-gray-300 font-mbold'>{title}</Text>
-            <Text className='text-sm text-gray-300 font-mmedium pt-1 pb-3'>{description}</Text>
-            <Divider orientation='horizontal' mb={6} className='bg-gray-700'/>
+            <Text className='text-sm text-gray-300 font-mmedium pt-1 pb-8'>{description}</Text>
         </View>
     )
 }

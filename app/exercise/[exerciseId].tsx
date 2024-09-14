@@ -30,14 +30,14 @@ const ExercisePage = () => {
                 <View className='flex flex-row justify-center items-center'>
                     <View className='flex flex-row justify-center items-center'>
                         <Ionicons name='flame-outline' size={22} color='white'/>
-                        <Text className={`text-gray-100 pt-1 pl-2 font-msemibold`}>
+                        <Text className={`text-gray-100 pl-2 font-msemibold`}>
                             {exercise.complexity}
                         </Text>
                     </View>
                     <Divider vertical/>
                     <View className='flex flex-row justify-center items-center'>
                         <Ionicons name='timer-outline' size={22} color='white'/>
-                        <Text className={`text-gray-100 pt-1 pl-2 font-msemibold`}>
+                        <Text className={`text-gray-100 pl-2 font-msemibold`}>
                             {exercise.time} min
                         </Text>
                     </View>

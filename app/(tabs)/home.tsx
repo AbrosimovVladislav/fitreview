@@ -78,12 +78,10 @@ const Home = () => {
 
                     <Divider orientation='horizontal' mb={6} className='bg-gray-700'/>
 
-                    <View name='home-regions-area' className='self-start pl-2 w-full'>
-                        <View className='flex flex-row justify-start items-start'>
-                            <Text className='text-4xl font-cbebas text-gray-300 pb-3'>
-                                Body Regions
-                            </Text>
-                        </View>
+                    <Text className='text-4xl self-start font-cbebas text-gray-300 pb-3'>
+                        Body Regions
+                    </Text>
+                    <View name='home-regions-area' className='items-center w-full'>
                         {regions.map((item) => (
                             <CategoryItem
                                 key={item.title}

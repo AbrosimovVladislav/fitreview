@@ -1,12 +1,12 @@
-import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native'
+import {View, Text, ScrollView, Image} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {signOut} from "@/lib/appwrite";
 import {router} from "expo-router";
-import {Ionicons} from "@expo/vector-icons";
 import InfoBox from "@/components/common/InfoBox";
 import Divider from "@/components/common/Divider";
+import PageHeader from "@/components/PageHeader";
 
 const Profile = () => {
 
@@ -24,17 +24,8 @@ const Profile = () => {
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
                 <View className='w-full min-h-[80vh] items-center px-4 my-4'>
-                    <View className="w-full flex flex-col gap-7 justify-center items-center mb-12">
-
-                        <View name='top-line-area' className='flex flex-row justify-between w-full'>
-                            <Ionicons name='chevron-back-outline' size={28} color='white'/>
-                            <Text className='text-3xl text-gray-300 font-cbebas'>
-                                Profile
-                            </Text>
-                            <TouchableOpacity onPress={logout}>
-                                <Ionicons name='log-out-outline' size={28} color='white'/>
-                            </TouchableOpacity>
-                        </View>
+                    <PageHeader title='Profile' icon='log-out-outline' onIconPress={logout}/>
+                    <View className="w-full flex flex-col gap-7 justify-center items-center pt-4 mb-12">
 
                         <View name='photo-and-name-area' className='flex-col justify-center items-center'>
                             <Image
