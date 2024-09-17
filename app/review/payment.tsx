@@ -7,15 +7,15 @@ import {router} from "expo-router";
 import {createStatusRecord, createSurveyRecord} from "@/lib/SurveyService";
 import {validatePayment} from "@/lib/PaymentService";
 import {useGlobalContext} from "@/context/GlobalProvider";
+import {SurveyStatus} from "@/constants/survey-status";
 
 const Payment = () => {
 
     const {user} = useGlobalContext();
 
     const preSubmitAction = async () => {
-        //check if payment valid
         if (validatePayment()) {
-            await createStatusRecord(user.$id, "FirstReviewPaymentDone");
+            await createStatusRecord(user.$id, SurveyStatus.LifeStyleStep);
             await createSurveyRecord(user.$id);
 
             console.log('Payment successful, routing to questions section')

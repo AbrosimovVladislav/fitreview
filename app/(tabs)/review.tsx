@@ -2,13 +2,14 @@ import {View, Text, ScrollView, Image} from 'react-native'
 import React, {useCallback, useEffect, useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
-import {router, useFocusEffect, useRouter} from "expo-router";
+import {router, useFocusEffect} from "expo-router";
 
 import {images} from '../../constants'
 import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {getCurrentStatus} from "@/lib/SurveyService";
+import {SurveyStatus} from "@/constants/survey-status";
 
 const Review = () => {
 
@@ -131,7 +132,7 @@ const Review = () => {
     return (
         <SafeAreaView className='bg-primary h-full'>
             {status
-                ? status === "WaitingForFirstReviewResults" ? waitingForResultsScreen : reviewResultsScreen
+                ? status === SurveyStatus.WaitingForResults ? waitingForResultsScreen : reviewResultsScreen
                 : initialFRScreen}
         </SafeAreaView>
     )

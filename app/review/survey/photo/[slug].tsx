@@ -13,41 +13,50 @@ import {
 } from "@/lib/SurveyService";
 import {uploadImages as upload} from "@/lib/StorageService";
 import {useGlobalContext} from "@/context/GlobalProvider";
+import {SurveyStatus} from "@/constants/survey-status";
 
 const PhotoQuestionStepPage = () => {
 
     const {user} = useGlobalContext();
 
-    const {step} = useLocalSearchParams();
+    const {slug} = useLocalSearchParams();
 
     const [uploadedImages, setUploadedImages] = useState([]);
 
     const pageDefinitions = [
         {
             id: 1,
-            step: "front-view",
+            slug: "front-view",
             title: "Front View Photos",
+            status: SurveyStatus.FrontViewPhotoStep,
+            nextStatus: SurveyStatus.SideViewPhotoStep,
             samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
             samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         },
         {
             id: 2,
-            step: "side-view",
+            slug: "side-view",
             title: "Side View Photos",
+            status: SurveyStatus.SideViewPhotoStep,
+            nextStatus: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
             samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
             samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         },
         {
             id: 3,
-            step: "front-view-raised-leg",
+            slug: "front-view-raised-leg",
             title: "Front View Photos With Raised Leg",
+            status: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
+            nextStatus: SurveyStatus.SideViewWithRaisedLegPhotoStep,
             samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
             samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         },
         {
             id: 4,
-            step: "side-view-raised-leg",
+            slug: "side-view-raised-leg",
             title: "Side View Photos With Raised Leg",
+            status: SurveyStatus.SideViewWithRaisedLegPhotoStep,
+            nextStatus: SurveyStatus.WaitingForResults,
             samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
             samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         },
@@ -55,57 +64,30 @@ const PhotoQuestionStepPage = () => {
     const [pageDefinition, setPageDefinition] = useState(pageDefinitions[0])
 
     useEffect(() => {
-        setPageDefinition(pageDefinitions.find(e => e.step === step));
-    }, [step])
+        setPageDefinition(pageDefinitions.find(e => e.slug === slug));
+    }, [slug])
 
-    const currentStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id)?.step;
-    const nextStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id + 1)?.step;
+    const currentStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id)?.slug;
+    const nextStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id + 1)?.slug;
 
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        //check if current status is SurveyWeightDone and question category is FrontViewPhotos -> set SurveyFrontViewPhotosDone
-        if (currentStatus === "SurveyWeightDone" && currentStep === "front-view") {
+        const currentStep = pageDefinitions.find(pd => pd.status === currentStatus);
+
+        if(currentStep){
             const photoUrls = await upload(uploadedImages);
             console.log("photoUrls " + photoUrls)
             await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
-            const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
-
-
-            //check if current status is SurveyFrontViewPhotosDone and question category is SideViewPhotos -> set SurveySideViewPhotosDone
-        if (currentStatus === "SurveyFrontViewPhotosDone" && currentStep === "side-view") {
-            const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
-
-            const newStatus = await createStatusRecord(user.$id, "SurveySideViewPhotosDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
-
-            //check if current status is SurveySideViewPhotosDone and question category is FrontViewPhotosWithRaisedLeg -> set SurveyFrontViewPhotosWithRaisedLegDone
-        if (currentStatus === "SurveySideViewPhotosDone" && currentStep === "front-view-raised-leg") {
-            const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
-
-            const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosWithRaisedLegDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
-
-            //check if current status is SurveyFrontViewPhotosWithRaisedLegDone and question category is SideViewPhotosWithRaisedLeg -> set SurveySideViewPhotosWithRaisedLegDone
-        if (currentStatus === "SurveyFrontViewPhotosWithRaisedLegDone" && currentStep === "side-view-raised-leg") {
-            const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
-
-            const newStatus = await createStatusRecord(user.$id, "WaitingForFirstReviewResults");
+            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
             console.log("Status changed to: " + newStatus.value)
         } else {
             console.log("No suitable condition for Photo question")
             router.replace('/review');
         }
 
-        console.log(pageDefinition.step + ' question done successful')
+        console.log(pageDefinition.slug + ' question done successful')
     }
 
     return (

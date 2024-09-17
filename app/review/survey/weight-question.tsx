@@ -7,6 +7,7 @@ import NumberFormField from "@/components/common/NumberFormField";
 import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/SurveyService";
 import {router} from "expo-router";
 import {useGlobalContext} from "@/context/GlobalProvider";
+import {SurveyStatus} from "@/constants/survey-status";
 
 const WeightQuestion = () => {
 
@@ -17,9 +18,9 @@ const WeightQuestion = () => {
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        if (currentStatus === "SurveyAgeDone") {
+        if (currentStatus === SurveyStatus.WeightStep) {
             await updateSurveyRecordField(user.$id, "weight", weight);
-            const newStatus = await createStatusRecord(user.$id, "SurveyWeightDone");
+            const newStatus = await createStatusRecord(user.$id, SurveyStatus.FrontViewPhotoStep);
             console.log("Status changed to: " + newStatus.value)
         } else {
             console.log("No suitable condition for Weight question")

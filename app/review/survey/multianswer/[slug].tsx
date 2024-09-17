@@ -9,35 +9,48 @@ import PageHeader from "@/components/PageHeader";
 import AnswerOption from "@/components/AnswerOption";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import {useGlobalContext} from "@/context/GlobalProvider";
+import {SurveyStatus} from "@/constants/survey-status";
 
 const MultiAnswerPage = () => {
 
     const {user} = useGlobalContext();
-    const {type} = useLocalSearchParams();
-    const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(type));
+    const {slug} = useLocalSearchParams();
+    const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(slug));
 
     const pageDefinitions = [
         {
             stepNumber: 1,
-            type: 'lifestyle',
+            slug: 'lifestyle',
+            field: 'lifestyle',
+            status: SurveyStatus.LifeStyleStep,
+            nextStatus: SurveyStatus.SportStyleStep,
             question: 'What is your lifestyle ?',
             description: 'Select one or more options'
         },
         {
             stepNumber: 2,
-            type: 'sportstyle',
+            slug: 'sportstyle',
+            field: 'sportstyle',
+            status: SurveyStatus.SportStyleStep,
+            nextStatus: SurveyStatus.HealthStyleStep,
             question: 'What is your sport style ?',
             description: 'Select one or more options'
         },
         {
             stepNumber: 3,
-            type: 'healthstyle',
+            slug: 'healthstyle',
+            field: 'healthstyle',
+            status: SurveyStatus.HealthStyleStep,
+            nextStatus: SurveyStatus.NutritionStyleStep,
             question: 'What is your health ?',
             description: 'Select one or more options'
         },
         {
             stepNumber: 4,
-            type: 'nutritionstyle',
+            slug: 'nutritionstyle',
+            field: 'nutritionstyle',
+            status: SurveyStatus.NutritionStyleStep,
+            nextStatus: SurveyStatus.AgeStep,
             question: 'What is your nutrition ?',
             description: 'Select one or more options'
         }
@@ -47,8 +60,8 @@ const MultiAnswerPage = () => {
     const [pageDefinition, setPageDefinition] = useState(pageDefinitions[0])
 
     useEffect(() => {
-        setPageDefinition(pageDefinitions.find(e => e.type === type));
-    }, [type])
+        setPageDefinition(pageDefinitions.find(e => e.slug === slug));
+    }, [slug])
 
 
     const answerOptionOnPress = (title) => {
@@ -65,48 +78,24 @@ const MultiAnswerPage = () => {
         return pressed.includes(title);
     }
 
-    const currentStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber)?.type;
-    const nextStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber + 1)?.type;
+    const currentStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber)?.slug;
+    const nextStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber + 1)?.slug;
 
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        //check if current status is FirstReviewPaymentDone and questions category is lifestyle -> set SurveyLifeStyleDone
-        if (currentStatus === "FirstReviewPaymentDone" && currentStepType === "lifestyle") {
-            //save lifestyle chosen array to survey record
-            await updateSurveyRecordField(user.$id, "lifestyle", pressed);
-            const newStatus = await createStatusRecord(user.$id, "SurveyLifeStyleDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
+        const currentStep = pageDefinitions.find(pd => pd.status === currentStatus);
 
-            //check if current status is SurveyLifeStyleDone and questions category is sportstyle -> set SurveySportStyleDone
-        if (currentStatus === "SurveyLifeStyleDone" && currentStepType === "sportstyle") {
-            //save sportstyle chosen array to survey record
-            await updateSurveyRecordField(user.$id, "sportstyle", pressed);
-            const newStatus = await createStatusRecord(user.$id, "SurveySportStyleDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
-
-            //check if current status is SurveySportStyleDone and questions category is healthstyle -> set SurveyHealthStyleDone
-        if (currentStatus === "SurveySportStyleDone" && currentStepType === "healthstyle") {
-            //save healthstyle chosen array to survey record
-            await updateSurveyRecordField(user.$id, "healthstyle", pressed);
-            const newStatus = await createStatusRecord(user.$id, "SurveyHealthStyleDone");
-            console.log("Status changed to: " + newStatus.value)
-        } else
-
-            //check if current status is SurveyHealthStyleDone and questions category is nutritionstyle -> set SurveyNutritionStyleDone
-        if (currentStatus === "SurveyHealthStyleDone" && currentStepType === "nutritionstyle") {
-            //save nutritionstyle chosen array to survey record
-            await updateSurveyRecordField(user.$id, "nutritionstyle", pressed);
-            const newStatus = await createStatusRecord(user.$id, "SurveyNutritionStyleDone");
+        if (currentStep) {
+            await updateSurveyRecordField(user.$id, currentStep.field, pressed);
+            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
             console.log("Status changed to: " + newStatus.value)
         } else {
-            console.log("No suitable condition for MultiAnswer question")
+            console.log("No suitable condition for MultiAnswer question");
             router.push('/review');
         }
 
-        console.log(pageDefinition.type + ' question done successful')
+        console.log(pageDefinition.slug + ' question done successful')
     }
 
     return (
