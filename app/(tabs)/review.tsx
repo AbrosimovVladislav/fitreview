@@ -1,16 +1,40 @@
 import {View, Text, ScrollView, Image} from 'react-native'
-import React, {useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
-import {router} from "expo-router";
+import {router, useFocusEffect, useRouter} from "expo-router";
 
 import {images} from '../../constants'
 import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
+import {useGlobalContext} from "@/context/GlobalProvider";
+import {getCurrentStatus} from "@/lib/appwrite";
 
 const Review = () => {
 
-    const [status, setStatus] = useState('NotStarted');
+    const {user} = useGlobalContext();
+
+    const [status, setStatus] = useState(null);
+
+    useEffect(() => {
+        fetchStatus();
+    }, [])
+
+    useFocusEffect(
+        useCallback(() => {
+            fetchStatus();
+        }, [])
+    );
+
+    const fetchStatus = async () => {
+        try {
+            const currentStatus = await getCurrentStatus(user.$id);
+            console.log("currentStatus " + currentStatus);
+            setStatus(currentStatus);
+        } catch (error) {
+            console.error("Status receiving error:", error);
+        }
+    };
 
     const fitReviewParams = [
         'Workouts designed for your needs',
@@ -19,9 +43,6 @@ const Review = () => {
         'Coach support to your questions anytime'
     ]
 
-    const onPressGetStarted = () => {
-
-    }
 
     const initialFRScreen = <ScrollView>
         <View className='pt-4'>
@@ -65,6 +86,7 @@ const Review = () => {
 
 
     </ScrollView>
+
     const waitingForResultsScreen = <ScrollView>
         <PageHeader/>
         <View className='flex justify-center items-center gap-16 p-4'>
@@ -93,11 +115,24 @@ const Review = () => {
         </View>
     </ScrollView>
 
+    const reviewResultsScreen = <ScrollView>
+        <View className='pt-4'>
+            <PageHeader title='Fit Review'/>
+            <Button
+                title="Results"
+                containerStyles="mt-2 mx-6"
+                icon={'ribbon'}
+                onPress={() => console.log("results")}/>
+        </View>
+    </ScrollView>
+
+    //ToDo будет проверка статуса на старте, если какой то из шагов опроса, то будет на него раут, но если нет,
+    // то только при статусе FirstReviewDone перенаправлять на results, иначе отображать что ожидание или ошибка
     return (
         <SafeAreaView className='bg-primary h-full'>
-            {status === 'NotStarted'
-                ? initialFRScreen
-                : waitingForResultsScreen}
+            {status
+                ? status === "WaitingForFirstReviewResults" ? waitingForResultsScreen : reviewResultsScreen
+                : initialFRScreen}
         </SafeAreaView>
     )
 }

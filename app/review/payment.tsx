@@ -4,8 +4,24 @@ import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import Button from "../../components/common/Button";
 import {router} from "expo-router";
+import {createStatusRecord, createSurveyRecord, validatePayment} from "@/lib/appwrite";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const Payment = () => {
+
+    const {user} = useGlobalContext();
+
+    const preSubmitAction = async () => {
+        //check if payment valid
+        if (validatePayment()) {
+            await createStatusRecord(user.$id, "FirstReviewPaymentDone");
+            await createSurveyRecord(user.$id);
+
+            console.log('Payment successful, routing to questions section')
+            router.push('/review/survey/multianswer/lifestyle')
+        }
+    }
+
     return (
         <SafeAreaView className='bg-primary h-full'>
             <ScrollView>
@@ -13,7 +29,7 @@ const Payment = () => {
                     <PageHeader title='Payment'/>
                     <Button
                         title="Proceed to survey"
-                        onPress={() => router.push('/review/survey/multianswer/life-style')}
+                        onPress={preSubmitAction}
                         containerStyles="mt-2 mx-6"
                         icon={'ribbon'}
                     />

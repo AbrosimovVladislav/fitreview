@@ -4,13 +4,29 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import NumberFormField from "@/components/common/NumberFormField";
+import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/appwrite";
+import {router} from "expo-router";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
-const AgeQuestion = () => {
+const WeightQuestion = () => {
+
+    const {user, setStatus} = useGlobalContext();
 
     const [weight, setWeight] = useState(null);
 
-    const preSubmitAction = () =>{
+    const preSubmitAction = async () => {
+        const currentStatus = await getCurrentStatus(user.$id)
 
+        if (currentStatus === "SurveyAgeDone") {
+            await updateSurveyRecordField(user.$id, "weight", weight);
+            const newStatus = await createStatusRecord(user.$id, "SurveyWeightDone");
+            setStatus(newStatus.value)
+            console.log("Status changed to: " + newStatus.value)
+        } else {
+            console.log("No suitable condition for Weight question")
+            router.push('/review');
+        }
+        console.log('Weight question done successful')
     }
 
     return (
@@ -51,4 +67,4 @@ const AgeQuestion = () => {
         </SafeAreaView>
     )
 }
-export default AgeQuestion
+export default WeightQuestion

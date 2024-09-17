@@ -11,6 +11,636 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "30",
     "title": "I don't smoke",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2ced00317576bb95/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182300-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-029",
+  "data": {
+    "id": "29",
+    "title": "I don't drink alcohol",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2d65002a34d1237d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182300-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-028",
+  "data": {
+    "id": "28",
+    "title": "I don't eat fast food/sweets/flour",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2d7700133f2fb5f8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182300.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-027",
+  "data": {
+    "id": "27",
+    "title": "I have digestion issues",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2e50001ccbf9601d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182259-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-026",
+  "data": {
+    "id": "26",
+    "title": "I often fail to stick to a diet",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2cc0001fb21dd68a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182259-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-025",
+  "data": {
+    "id": "25",
+    "title": "I'm on a diet now",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2cdc002b37bc0e8e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "nutritionstyle"
+  }
+}
+
+<> 2024-09-16T182259.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-024",
+  "data": {
+    "id": "24",
+    "title": "I wear orthopedic insoles",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2b01002d507963ee/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182257-3.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-023",
+  "data": {
+    "id": "23",
+    "title": "Uncomfortable in my shoes",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2aee0021d0636254/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182257-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-022",
+  "data": {
+    "id": "22",
+    "title": "Often feel discomfort in the body",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2a770009d66fbea9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182257-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-021",
+  "data": {
+    "id": "21",
+    "title": "Low energy during the day",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2bab00124d785d55/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182257.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-020",
+  "data": {
+    "id": "20",
+    "title": "Hard to wake up in the morning",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df294a002a002bf7ab/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182256-3.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-019",
+  "data": {
+    "id": "19",
+    "title": "Have sleep problems",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df28d3003bb2bd4ee8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182256-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-018",
+  "data": {
+    "id": "18",
+    "title": "Had serious surgeries",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df28ed00078dadc7ee/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182256-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-017",
+  "data": {
+    "id": "17",
+    "title": "Often get sick",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df289a002d1920ff61/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "healthstyle"
+  }
+}
+
+<> 2024-09-16T182256.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-016",
+  "data": {
+    "id": "16",
+    "title": "Had complex rehabilitation after injury",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758ee0035a3c555c9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182252-4.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-015",
+  "data": {
+    "id": "15",
+    "title": "Had/Have serious injuries",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758b2001524b44ac8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182252-3.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-014",
+  "data": {
+    "id": "14",
+    "title": "Have professional sports experience",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d757a80005021253db/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182252-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-013",
+  "data": {
+    "id": "13",
+    "title": "I don't like heavy physical exercise",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d75744000ec272a994/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182252-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-012",
+  "data": {
+    "id": "12",
+    "title": "Regular training",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d75467002b48b68465/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182252.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-011",
+  "data": {
+    "id": "11",
+    "title": "Physically active once a week",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d754f00002955b478c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182251-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-010",
+  "data": {
+    "id": "10",
+    "title": "Had gym training experience",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d755bb001959fc2dd0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182251-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-009",
+  "data": {
+    "id": "9",
+    "title": "No physical activity",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d753c3001ed356f7e6/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "sportstyle"
+  }
+}
+
+<> 2024-09-16T182251.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-008",
+  "data": {
+    "id": "8",
+    "title": "I prefer active weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2700049e20f92e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182242-4.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-007",
+  "data": {
+    "id": "7",
+    "title": "I prefer relaxed weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182242-3.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-006",
+  "data": {
+    "id": "6",
+    "title": "I have a flexible schedule",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d750420018087793fe/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182242-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-005",
+  "data": {
+    "id": "5",
+    "title": "My work schedule is 5/2",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de48000dfc841026/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182242-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-004",
+  "data": {
+    "id": "4",
+    "title": "High stress level at work",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2c0034829b8fe9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182242.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-003",
+  "data": {
+    "id": "3",
+    "title": "Physically hard job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de390039b81dea1f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182241-2.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-002",
+  "data": {
+    "id": "2",
+    "title": "Physically active job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de330021b49a513f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182241-1.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-001",
+  "data": {
+    "id": "1",
+    "title": "Sedentary job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de4200176f6bc407/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
+  }
+}
+
+<> 2024-09-16T182241.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "question-030",
+  "data": {
+    "id": "30",
+    "title": "I don't smoke",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2ced00317576bb95/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "nutrition-and-habits"
   }
 }
@@ -481,959 +1111,6 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 }
 
 <> 2024-09-09T184653.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-021",
-  "data": {
-    "title": "Rails",
-    "russianTitle": "Рельсы",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 21,
-    "description": "Test_Exr",
-    "subcategory": "drill"
-  }
-}
-
-<> 2024-09-09T184652-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-020",
-  "data": {
-    "title": "Seated Hips Flexion",
-    "russianTitle": "Сгибание в тазобедренном суставе сидя",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 20,
-    "description": "Test_Exr",
-    "subcategory": "drill"
-  }
-}
-
-<> 2024-09-09T184652.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-019",
-  "data": {
-    "title": "Lying Gluteal Activation",
-    "russianTitle": "Включение ягодичной мышцы лежа",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 19,
-    "description": "Test_Exr",
-    "subcategory": "activation"
-  }
-}
-
-<> 2024-09-09T184643-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-018",
-  "data": {
-    "title": "Seated Gluteal Activation",
-    "russianTitle": "Включение ягодичной мышцы сидя",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 18,
-    "description": "Test_Exr",
-    "subcategory": "activation"
-  }
-}
-
-<> 2024-09-09T184643.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-017",
-  "data": {
-    "title": "Gluteal Mobility Complex",
-    "russianTitle": "Комплекс на увеличение мобильности ягодичных мышц",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 17,
-    "description": "Test_Exr",
-    "subcategory": "mobility"
-  }
-}
-
-<> 2024-09-09T184627-3.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-016",
-  "data": {
-    "title": "Hips External Line Mobility Complex",
-    "russianTitle": "Комплекс на увеличение мобильности внешней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 16,
-    "description": "Test_Exr",
-    "subcategory": "mobility"
-  }
-}
-
-<> 2024-09-09T184627-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-015",
-  "data": {
-    "title": "Hips Back Line Mobility Complex",
-    "russianTitle": "Комплекс на увеличение мобильности задней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 15,
-    "description": "Test_Exr",
-    "subcategory": "mobility"
-  }
-}
-
-<> 2024-09-09T184627-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-014",
-  "data": {
-    "title": "Hips Adductors Mobility Complex",
-    "russianTitle": "Комплекс на увеличение мобильности приводящих мышц",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 14,
-    "description": "Test_Exr",
-    "subcategory": "mobility"
-  }
-}
-
-<> 2024-09-09T184627.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-013",
-  "data": {
-    "title": "Hips Front Line Mobility Complex",
-    "russianTitle": "Комплекс на увеличение мобильности передней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 13,
-    "description": "Test_Exr",
-    "subcategory": "mobility"
-  }
-}
-
-<> 2024-09-09T184626.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-012",
-  "data": {
-    "title": "Hips External Line Stretching",
-    "russianTitle": "Растяжка внешней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 12,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184406-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-011",
-  "data": {
-    "title": "Hips Back Line Stretching",
-    "russianTitle": "Растяжка задней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 11,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184406-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-010",
-  "data": {
-    "title": "Hips Adductors Stretching",
-    "russianTitle": "Растяжка приводящих мышц",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 10,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184406.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-009",
-  "data": {
-    "title": "Hips Front Line Stretching",
-    "russianTitle": "Растяжка передней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 9,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184405-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-008",
-  "data": {
-    "title": "Rotator Stretching",
-    "russianTitle": "Растяжка ротаторов бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 8,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184405-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-007",
-  "data": {
-    "title": "Gluteal Stretching",
-    "russianTitle": "Растяжка ягодячного региона",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Amateur",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 7,
-    "description": "Test_Exr",
-    "subcategory": "stretching"
-  }
-}
-
-<> 2024-09-09T184405.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-006",
-  "data": {
-    "title": "Hips Adductors Warm-Up",
-    "russianTitle": "Проминка приводящих мышц",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 6,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184339.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-005",
-  "data": {
-    "title": "Hips Back Line Warm-Up",
-    "russianTitle": "Проминка задней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 5,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184338-3.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-004",
-  "data": {
-    "title": "Hips Front Line Warm-Up",
-    "russianTitle": "Проминка передней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 4,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184338-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-003",
-  "data": {
-    "title": "Hips External Line Warm-Up",
-    "russianTitle": "Проминка внешней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 3,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184338-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-002",
-  "data": {
-    "title": "Hips Rotator Warm-Up",
-    "russianTitle": "Проминка ротаторов бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 2,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184338.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-001",
-  "data": {
-    "title": "Gluteal Warm-Up",
-    "russianTitle": "Проминка ягодичного региона",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 1,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T184337.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-007",
-  "data": {
-    "title": "Hips Back Line Warm-Up",
-    "russianTitle": "Проминка задней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 7,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121141-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-006",
-  "data": {
-    "title": "Hips Adductors Warm-Up",
-    "russianTitle": "Проминка приводящих мышц",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 6,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121141-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-005",
-  "data": {
-    "title": "Hips Front Line Warm-Up",
-    "russianTitle": "Проминка передней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 5,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121141.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-004",
-  "data": {
-    "title": "Hips External Line Warm-Up",
-    "russianTitle": "Проминка внешней линии бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 4,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121140-3.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-003",
-  "data": {
-    "title": "Hips Rotator Warm-Up",
-    "russianTitle": "Проминка сгибателей бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 3,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121140-2.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-002",
-  "data": {
-    "title": "Hips Rotator Warm-Up",
-    "russianTitle": "Проминка ротаторов бедра",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 2,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121140-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-001",
-  "data": {
-    "title": "Gluteal Warm-Up",
-    "russianTitle": "Проминка ягодичного региона",
-    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
-    "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
-    "time": 5,
-    "region": "Hips",
-    "calories": 10,
-    "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
-    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 1,
-    "description": "Test_Exr",
-    "subcategory": "mfr"
-  }
-}
-
-<> 2024-09-09T121140.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-016",
-  "data": {
-    "id": "16",
-    "title": "If there was an injury, was there rehabilitation?",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758ee0035a3c555c9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
-  }
-}
-
-<> 2024-09-03T204425-1.201.json
-
-###
-
-POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
-Content-Type: application/json
-X-Appwrite-Project: 66c32ed800357b5e7314
-X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
-
-{
-  "databaseId": "66c3312f002e44e586ce",
-  "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-015",
-  "data": {
-    "id": "15",
-    "title": "Had/Have serious injuries",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758b2001524b44ac8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
-  }
-}
-
-<> 2024-09-03T204425.201.json
 
 ###
 

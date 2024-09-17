@@ -5,17 +5,22 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import NextQuestionButton from "@/components/NextQuestionButton";
 
 import UploadArea from "@/components/common/UploadArea";
-import {useLocalSearchParams} from "expo-router";
+import {router, useLocalSearchParams} from "expo-router";
+import {
+    createStatusRecord,
+    getCurrentStatus,
+    uploadImages as upload,
+    updateSurveyRecordFieldWithAdditions
+} from "@/lib/appwrite";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const PhotoQuestionStepPage = () => {
+
+    const {user, setStatus} = useGlobalContext();
 
     const {step} = useLocalSearchParams();
 
     const [uploadedImages, setUploadedImages] = useState([]);
-
-    const preSubmitAction = () => {
-
-    }
 
     const pageDefinitions = [
         {
@@ -51,9 +56,61 @@ const PhotoQuestionStepPage = () => {
 
     useEffect(() => {
         setPageDefinition(pageDefinitions.find(e => e.step === step));
-    },[step])
+    }, [step])
 
+    const currentStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id)?.step;
     const nextStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id + 1)?.step;
+
+    const preSubmitAction = async () => {
+        const currentStatus = await getCurrentStatus(user.$id)
+
+        //check if current status is SurveyWeightDone and question category is FrontViewPhotos -> set SurveyFrontViewPhotosDone
+        if (currentStatus === "SurveyWeightDone" && currentStep === "front-view") {
+            const photoUrls = await upload(uploadedImages);
+            console.log("photoUrls " + photoUrls)
+            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+
+            const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosDone");
+            setStatus(newStatus.value)
+            console.log("Status changed to: " + newStatus.value)
+        } else
+
+
+            //check if current status is SurveyFrontViewPhotosDone and question category is SideViewPhotos -> set SurveySideViewPhotosDone
+        if (currentStatus === "SurveyFrontViewPhotosDone" && currentStep === "side-view") {
+            const photoUrls = await upload(uploadedImages);
+            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+
+            const newStatus = await createStatusRecord(user.$id, "SurveySideViewPhotosDone");
+            setStatus(newStatus.value)
+            console.log("Status changed to: " + newStatus.value)
+        } else
+
+            //check if current status is SurveySideViewPhotosDone and question category is FrontViewPhotosWithRaisedLeg -> set SurveyFrontViewPhotosWithRaisedLegDone
+        if (currentStatus === "SurveySideViewPhotosDone" && currentStep === "front-view-raised-leg") {
+            const photoUrls = await upload(uploadedImages);
+            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+
+            const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosWithRaisedLegDone");
+            setStatus(newStatus.value)
+            console.log("Status changed to: " + newStatus.value)
+        } else
+
+            //check if current status is SurveyFrontViewPhotosWithRaisedLegDone and question category is SideViewPhotosWithRaisedLeg -> set SurveySideViewPhotosWithRaisedLegDone
+        if (currentStatus === "SurveyFrontViewPhotosWithRaisedLegDone" && currentStep === "side-view-raised-leg") {
+            const photoUrls = await upload(uploadedImages);
+            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+
+            const newStatus = await createStatusRecord(user.$id, "WaitingForFirstReviewResults");
+            setStatus(newStatus.value)
+            console.log("Status changed to: " + newStatus.value)
+        } else {
+            console.log("No suitable condition for Photo question")
+            router.replace('/review');
+        }
+
+        console.log(pageDefinition.step + ' question done successful')
+    }
 
     return (
         <SafeAreaView className='bg-primary h-full'>
@@ -94,6 +151,7 @@ const PhotoQuestionStepPage = () => {
                         <NextQuestionButton
                             disabled={uploadedImages.length < 2}
                             path={nextStep ? `/review/survey/photo/${nextStep}` : '/review'}
+                            finishSurvey={!nextStep}
                             preSubmitAction={preSubmitAction}
                         />
                     </View>

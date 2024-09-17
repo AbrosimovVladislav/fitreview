@@ -1,19 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from "@/components/common/Button";
 import {router} from "expo-router";
 
-const NextQuestionButton = ({path, preSubmitAction, disabled}) => {
+const NextQuestionButton = ({path, finishSurvey, preSubmitAction, disabled}) => {
+    const [isLoading, setIsLoading] = useState(false);
 
-    const onSubmit = () => {
-        preSubmitAction();
-        router.push(path)
+    const onSubmit = async () => {
+        try {
+            setIsLoading(true);
+            await preSubmitAction();
+            router.push(path)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setIsLoading(false)
+        }
+
     }
 
     return (
         <Button
-            disabled={disabled}
-            title="Next Step"
-            onPress={() => router.push(path)}
+            disabled={disabled || isLoading}
+            title={finishSurvey ? "Finish Survey" : "Next Step"}
+            isLoading={isLoading}
+            onPress={onSubmit}
         />
     )
 }

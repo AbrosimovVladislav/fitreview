@@ -11,7 +11,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "25",
     "title": "I'm on a diet now",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2cdc002b37bc0e8e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###
@@ -28,7 +28,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "26",
     "title": "I often fail to stick to a diet",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2cc0001fb21dd68a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###
@@ -45,7 +45,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "27",
     "title": "I have digestion issues",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2e50001ccbf9601d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###
@@ -62,7 +62,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "28",
     "title": "I don't eat fast food/sweets/flour",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2d7700133f2fb5f8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###
@@ -79,7 +79,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "29",
     "title": "I don't drink alcohol",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2d65002a34d1237d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###
@@ -96,7 +96,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "id": "30",
     "title": "I don't smoke",
     "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66df2ced00317576bb95/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "nutrition-and-habits"
+    "type": "nutritionstyle"
   }
 }
 ###

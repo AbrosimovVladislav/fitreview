@@ -6,12 +6,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-009",
+  "documentId": "question-001",
   "data": {
-    "id": "9",
-    "title": "No physical activity",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d753c3001ed356f7e6/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "1",
+    "title": "Sedentary job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de4200176f6bc407/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -23,12 +23,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-010",
+  "documentId": "question-002",
   "data": {
-    "id": "10",
-    "title": "Had gym training experience",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d755bb001959fc2dd0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "2",
+    "title": "Physically active job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de330021b49a513f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -40,12 +40,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-011",
+  "documentId": "question-003",
   "data": {
-    "id": "11",
-    "title": "Physically active once a week",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d754f00002955b478c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "3",
+    "title": "Physically hard job",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de390039b81dea1f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -57,12 +57,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-012",
+  "documentId": "question-004",
   "data": {
-    "id": "12",
-    "title": "Regular training",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d75467002b48b68465/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "4",
+    "title": "High stress level at work",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2c0034829b8fe9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -74,12 +74,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-013",
+  "documentId": "question-005",
   "data": {
-    "id": "13",
-    "title": "I don't like heavy physical exercise",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d75744000ec272a994/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "5",
+    "title": "My work schedule is 5/2",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de48000dfc841026/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -91,12 +91,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-014",
+  "documentId": "question-006",
   "data": {
-    "id": "14",
-    "title": "Have professional sports experience",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d757a80005021253db/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "6",
+    "title": "I have a flexible schedule",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d750420018087793fe/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -108,12 +108,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-015",
+  "documentId": "question-007",
   "data": {
-    "id": "15",
-    "title": "Had/Have serious injuries",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758b2001524b44ac8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "7",
+    "title": "I prefer relaxed weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2daf1001c7cca0686/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
@@ -125,12 +125,12 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-016",
+  "documentId": "question-008",
   "data": {
-    "id": "16",
-    "title": "Had complex rehabilitation after injury",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d758ee0035a3c555c9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-    "type": "sport-style"
+    "id": "8",
+    "title": "I prefer active weekends",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66d2de2700049e20f92e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "lifestyle"
   }
 }
 ###
