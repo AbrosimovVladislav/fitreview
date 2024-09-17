@@ -9,5 +9,6 @@ export enum SurveyStatus {
     SideViewPhotoStep= "SideViewPhotoStep",
     FrontViewWithRaisedLegPhotoStep= "FrontViewWithRaisedLegPhotoStep",
     SideViewWithRaisedLegPhotoStep= "SideViewWithRaisedLegPhotoStep",
-    WaitingForResults= "WaitingForResults"
+    WaitingForResults= "WaitingForResults",
+    FirstReviewDone= "FirstReviewDone"
 }
