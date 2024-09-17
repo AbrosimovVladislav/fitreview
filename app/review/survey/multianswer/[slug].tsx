@@ -9,7 +9,7 @@ import PageHeader from "@/components/PageHeader";
 import AnswerOption from "@/components/AnswerOption";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {SurveyStatus} from "@/constants/survey-status";
+import {multiAnswerQuestionPageDefinitions} from "@/constants/questions";
 
 const MultiAnswerPage = () => {
 
@@ -17,52 +17,12 @@ const MultiAnswerPage = () => {
     const {slug} = useLocalSearchParams();
     const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(slug));
 
-    const pageDefinitions = [
-        {
-            stepNumber: 1,
-            slug: 'lifestyle',
-            field: 'lifestyle',
-            status: SurveyStatus.LifeStyleStep,
-            nextStatus: SurveyStatus.SportStyleStep,
-            question: 'What is your lifestyle ?',
-            description: 'Select one or more options'
-        },
-        {
-            stepNumber: 2,
-            slug: 'sportstyle',
-            field: 'sportstyle',
-            status: SurveyStatus.SportStyleStep,
-            nextStatus: SurveyStatus.HealthStyleStep,
-            question: 'What is your sport style ?',
-            description: 'Select one or more options'
-        },
-        {
-            stepNumber: 3,
-            slug: 'healthstyle',
-            field: 'healthstyle',
-            status: SurveyStatus.HealthStyleStep,
-            nextStatus: SurveyStatus.NutritionStyleStep,
-            question: 'What is your health ?',
-            description: 'Select one or more options'
-        },
-        {
-            stepNumber: 4,
-            slug: 'nutritionstyle',
-            field: 'nutritionstyle',
-            status: SurveyStatus.NutritionStyleStep,
-            nextStatus: SurveyStatus.AgeStep,
-            question: 'What is your nutrition ?',
-            description: 'Select one or more options'
-        }
-    ]
-
+    const [pageDefinition, setPageDefinition] = useState(multiAnswerQuestionPageDefinitions[0])
     const [pressed, setPressed] = useState([]);
-    const [pageDefinition, setPageDefinition] = useState(pageDefinitions[0])
 
     useEffect(() => {
-        setPageDefinition(pageDefinitions.find(e => e.slug === slug));
+        setPageDefinition(multiAnswerQuestionPageDefinitions.find(e => e.slug === slug));
     }, [slug])
-
 
     const answerOptionOnPress = (title) => {
         setPressed((prevPressed) => {
@@ -78,13 +38,10 @@ const MultiAnswerPage = () => {
         return pressed.includes(title);
     }
 
-    const currentStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber)?.slug;
-    const nextStepType = pageDefinitions.find(pd => pd.stepNumber === pageDefinition?.stepNumber + 1)?.slug;
-
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        const currentStep = pageDefinitions.find(pd => pd.status === currentStatus);
+        const currentStep = multiAnswerQuestionPageDefinitions.find(pd => pd.status === currentStatus);
 
         if (currentStep) {
             await updateSurveyRecordField(user.$id, currentStep.field, pressed);
@@ -140,7 +97,7 @@ const MultiAnswerPage = () => {
 
                 <View name='question-next-button' className='pt-4 px-4'>
                     <NextQuestionButton disabled={pressed.length == 0}
-                                        path={nextStepType ? `/review/survey/multianswer/${nextStepType}` : '/review/survey/age-question'}
+                                        path={pageDefinition.nextSlug ? `/review/survey/multianswer/${pageDefinition.nextSlug}` : '/review/survey/age-question'}
                                         preSubmitAction={preSubmitAction}/>
                 </View>
             </ScrollView>

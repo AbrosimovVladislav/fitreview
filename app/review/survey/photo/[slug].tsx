@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react'
 import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import NextQuestionButton from "@/components/NextQuestionButton";
-
 import UploadArea from "@/components/common/UploadArea";
 import {router, useLocalSearchParams} from "expo-router";
 import {
@@ -13,7 +12,7 @@ import {
 } from "@/lib/SurveyService";
 import {uploadImages as upload} from "@/lib/StorageService";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {SurveyStatus} from "@/constants/survey-status";
+import {photoQuestionPageDefinitions} from "@/constants/questions";
 
 const PhotoQuestionStepPage = () => {
 
@@ -21,61 +20,19 @@ const PhotoQuestionStepPage = () => {
 
     const {slug} = useLocalSearchParams();
 
+    const [pageDefinition, setPageDefinition] = useState(photoQuestionPageDefinitions[0])
     const [uploadedImages, setUploadedImages] = useState([]);
 
-    const pageDefinitions = [
-        {
-            id: 1,
-            slug: "front-view",
-            title: "Front View Photos",
-            status: SurveyStatus.FrontViewPhotoStep,
-            nextStatus: SurveyStatus.SideViewPhotoStep,
-            samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-            samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-        },
-        {
-            id: 2,
-            slug: "side-view",
-            title: "Side View Photos",
-            status: SurveyStatus.SideViewPhotoStep,
-            nextStatus: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
-            samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-            samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-        },
-        {
-            id: 3,
-            slug: "front-view-raised-leg",
-            title: "Front View Photos With Raised Leg",
-            status: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
-            nextStatus: SurveyStatus.SideViewWithRaisedLegPhotoStep,
-            samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-            samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-        },
-        {
-            id: 4,
-            slug: "side-view-raised-leg",
-            title: "Side View Photos With Raised Leg",
-            status: SurveyStatus.SideViewWithRaisedLegPhotoStep,
-            nextStatus: SurveyStatus.WaitingForResults,
-            samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-            samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
-        },
-    ]
-    const [pageDefinition, setPageDefinition] = useState(pageDefinitions[0])
-
     useEffect(() => {
-        setPageDefinition(pageDefinitions.find(e => e.slug === slug));
+        setPageDefinition(photoQuestionPageDefinitions.find(e => e.slug === slug));
     }, [slug])
-
-    const currentStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id)?.slug;
-    const nextStep = pageDefinitions.find(pd => pd.id === pageDefinition?.id + 1)?.slug;
 
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        const currentStep = pageDefinitions.find(pd => pd.status === currentStatus);
+        const currentStep = photoQuestionPageDefinitions.find(pd => pd.status === currentStatus);
 
-        if(currentStep){
+        if (currentStep) {
             const photoUrls = await upload(uploadedImages);
             console.log("photoUrls " + photoUrls)
             await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
@@ -128,8 +85,8 @@ const PhotoQuestionStepPage = () => {
                     <View name='question-next-button' className='pt-4 px-4'>
                         <NextQuestionButton
                             disabled={uploadedImages.length < 2}
-                            path={nextStep ? `/review/survey/photo/${nextStep}` : '/review'}
-                            finishSurvey={!nextStep}
+                            path={pageDefinition.nextSlug ? `/review/survey/photo/${pageDefinition.nextSlug}` : '/review'}
+                            finishSurvey={!pageDefinition.nextSlug}
                             preSubmitAction={preSubmitAction}
                         />
                     </View>
