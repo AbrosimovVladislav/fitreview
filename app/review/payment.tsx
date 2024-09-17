@@ -4,7 +4,8 @@ import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import Button from "../../components/common/Button";
 import {router} from "expo-router";
-import {createStatusRecord, createSurveyRecord, validatePayment} from "@/lib/appwrite";
+import {createStatusRecord, createSurveyRecord} from "@/lib/SurveyService";
+import {validatePayment} from "@/lib/PaymentService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 
 const Payment = () => {

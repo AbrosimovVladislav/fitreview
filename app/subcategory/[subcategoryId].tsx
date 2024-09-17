@@ -2,7 +2,7 @@ import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
-import {getExercisesBySubcategoryId} from "@/lib/appwrite";
+import {getExercisesBySubcategoryId} from "@/lib/ExerciseService";
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import ExerciseList from "@/components/ExerciseList";

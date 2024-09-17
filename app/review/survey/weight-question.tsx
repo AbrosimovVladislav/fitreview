@@ -4,13 +4,13 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import NumberFormField from "@/components/common/NumberFormField";
-import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/appwrite";
+import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/SurveyService";
 import {router} from "expo-router";
 import {useGlobalContext} from "@/context/GlobalProvider";
 
 const WeightQuestion = () => {
 
-    const {user, setStatus} = useGlobalContext();
+    const {user} = useGlobalContext();
 
     const [weight, setWeight] = useState(null);
 
@@ -20,7 +20,6 @@ const WeightQuestion = () => {
         if (currentStatus === "SurveyAgeDone") {
             await updateSurveyRecordField(user.$id, "weight", weight);
             const newStatus = await createStatusRecord(user.$id, "SurveyWeightDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else {
             console.log("No suitable condition for Weight question")

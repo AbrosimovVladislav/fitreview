@@ -9,14 +9,14 @@ import {router, useLocalSearchParams} from "expo-router";
 import {
     createStatusRecord,
     getCurrentStatus,
-    uploadImages as upload,
-    updateSurveyRecordFieldWithAdditions
-} from "@/lib/appwrite";
+    updateSurveyRecordArrayFieldWithAdditionalValues
+} from "@/lib/SurveyService";
+import {uploadImages as upload} from "@/lib/StorageService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 
 const PhotoQuestionStepPage = () => {
 
-    const {user, setStatus} = useGlobalContext();
+    const {user} = useGlobalContext();
 
     const {step} = useLocalSearchParams();
 
@@ -68,10 +68,9 @@ const PhotoQuestionStepPage = () => {
         if (currentStatus === "SurveyWeightDone" && currentStep === "front-view") {
             const photoUrls = await upload(uploadedImages);
             console.log("photoUrls " + photoUrls)
-            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
             const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
@@ -79,30 +78,27 @@ const PhotoQuestionStepPage = () => {
             //check if current status is SurveyFrontViewPhotosDone and question category is SideViewPhotos -> set SurveySideViewPhotosDone
         if (currentStatus === "SurveyFrontViewPhotosDone" && currentStep === "side-view") {
             const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
             const newStatus = await createStatusRecord(user.$id, "SurveySideViewPhotosDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
             //check if current status is SurveySideViewPhotosDone and question category is FrontViewPhotosWithRaisedLeg -> set SurveyFrontViewPhotosWithRaisedLegDone
         if (currentStatus === "SurveySideViewPhotosDone" && currentStep === "front-view-raised-leg") {
             const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
             const newStatus = await createStatusRecord(user.$id, "SurveyFrontViewPhotosWithRaisedLegDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
             //check if current status is SurveyFrontViewPhotosWithRaisedLegDone and question category is SideViewPhotosWithRaisedLeg -> set SurveySideViewPhotosWithRaisedLegDone
         if (currentStatus === "SurveyFrontViewPhotosWithRaisedLegDone" && currentStep === "side-view-raised-leg") {
             const photoUrls = await upload(uploadedImages);
-            await updateSurveyRecordFieldWithAdditions(user.$id, "photos", photoUrls)
+            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
             const newStatus = await createStatusRecord(user.$id, "WaitingForFirstReviewResults");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else {
             console.log("No suitable condition for Photo question")

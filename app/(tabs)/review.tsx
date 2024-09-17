@@ -8,7 +8,7 @@ import {images} from '../../constants'
 import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {getCurrentStatus} from "@/lib/appwrite";
+import {getCurrentStatus} from "@/lib/SurveyService";
 
 const Review = () => {
 

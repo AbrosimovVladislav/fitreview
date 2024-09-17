@@ -4,7 +4,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import FormField from "@/components/common/FormField";
 import {Link, router} from "expo-router";
 import Button from "@/components/common/Button";
-import {getCurrentUser, signIn} from "@/lib/appwrite";
+import {getCurrentUser, signIn} from "@/lib/AuthService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import GoogleLoginButton from "@/components/GoogleLoginButton";
 

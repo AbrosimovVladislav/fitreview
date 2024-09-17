@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import {router, useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
 import {Question} from "@/constants/interface";
-import {createStatusRecord, getCurrentStatus, getQuestionsByType, updateSurveyRecordField} from "@/lib/appwrite";
+import {createStatusRecord, getCurrentStatus, getQuestionsByType, updateSurveyRecordField} from "@/lib/SurveyService";
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import AnswerOption from "@/components/AnswerOption";
@@ -12,7 +12,7 @@ import {useGlobalContext} from "@/context/GlobalProvider";
 
 const MultiAnswerPage = () => {
 
-    const {user, setStatus} = useGlobalContext();
+    const {user} = useGlobalContext();
     const {type} = useLocalSearchParams();
     const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(type));
 
@@ -76,7 +76,6 @@ const MultiAnswerPage = () => {
             //save lifestyle chosen array to survey record
             await updateSurveyRecordField(user.$id, "lifestyle", pressed);
             const newStatus = await createStatusRecord(user.$id, "SurveyLifeStyleDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
@@ -85,7 +84,6 @@ const MultiAnswerPage = () => {
             //save sportstyle chosen array to survey record
             await updateSurveyRecordField(user.$id, "sportstyle", pressed);
             const newStatus = await createStatusRecord(user.$id, "SurveySportStyleDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
@@ -94,7 +92,6 @@ const MultiAnswerPage = () => {
             //save healthstyle chosen array to survey record
             await updateSurveyRecordField(user.$id, "healthstyle", pressed);
             const newStatus = await createStatusRecord(user.$id, "SurveyHealthStyleDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else
 
@@ -103,7 +100,6 @@ const MultiAnswerPage = () => {
             //save nutritionstyle chosen array to survey record
             await updateSurveyRecordField(user.$id, "nutritionstyle", pressed);
             const newStatus = await createStatusRecord(user.$id, "SurveyNutritionStyleDone");
-            setStatus(newStatus.value)
             console.log("Status changed to: " + newStatus.value)
         } else {
             console.log("No suitable condition for MultiAnswer question")

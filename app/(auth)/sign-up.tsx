@@ -4,7 +4,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import FormField from "../../components/common/FormField";
 import Button from "../../components/common/Button";
 import {Link, router} from "expo-router";
-import {createUser, getCurrentUser} from "@/lib/appwrite";
+import {createUser, getCurrentUser} from "@/lib/AuthService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 
 const SignUp = () => {

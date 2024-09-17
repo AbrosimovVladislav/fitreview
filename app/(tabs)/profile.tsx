@@ -2,7 +2,7 @@ import {View, Text, ScrollView, Image} from 'react-native'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {signOut} from "@/lib/appwrite";
+import {signOut} from "@/lib/AuthService";
 import {router} from "expo-router";
 import InfoBox from "@/components/common/InfoBox";
 import Divider from "@/components/common/Divider";

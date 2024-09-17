@@ -10,7 +10,7 @@ import BadgeInfoBox from "@/components/common/BadgeInfoBox";
 import YoutubePlayer from 'react-native-youtube-iframe';
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
-import {getExercisesById} from "@/lib/appwrite";
+import {getExercisesById} from "@/lib/ExerciseService";
 import {Exercise} from "@/constants/interface";
 import Divider from "@/components/common/Divider";
 
