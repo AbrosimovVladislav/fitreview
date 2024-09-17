@@ -14,7 +14,7 @@ import {uploadImages as upload} from "@/lib/StorageService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {photoQuestionPageDefinitions} from "@/constants/questions";
 
-const PhotoQuestionStepPage = () => {
+const PhotoQuestionPage = () => {
 
     const {user} = useGlobalContext();
 
@@ -30,21 +30,21 @@ const PhotoQuestionStepPage = () => {
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        const currentStep = photoQuestionPageDefinitions.find(pd => pd.status === currentStatus);
+        const currentStep = photoQuestionPageDefinitions.find(pd => pd.status === currentStatus && pd.slug === slug);
 
         if (currentStep) {
             const photoUrls = await upload(uploadedImages);
-            console.log("photoUrls " + photoUrls)
+            console.log("[PhotoQuestionPage_preSubmitAction] photoUrls " + photoUrls)
             await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
             const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
-            console.log("Status changed to: " + newStatus.value)
+            console.log("[PhotoQuestionPage_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
-            console.log("No suitable condition for Photo question")
+            console.log("[PhotoQuestionPage_preSubmitAction] No suitable condition for Photo question")
             router.replace('/review');
         }
 
-        console.log(pageDefinition.slug + ' question done successful')
+        console.log("[PhotoQuestionPage_preSubmitAction] " + pageDefinition.slug + ' question done successful')
     }
 
     return (
@@ -95,4 +95,4 @@ const PhotoQuestionStepPage = () => {
         </SafeAreaView>
     )
 }
-export default PhotoQuestionStepPage
+export default PhotoQuestionPage

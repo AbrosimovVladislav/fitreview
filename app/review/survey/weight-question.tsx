@@ -21,12 +21,12 @@ const WeightQuestion = () => {
         if (currentStatus === SurveyStatus.WeightStep) {
             await updateSurveyRecordField(user.$id, "weight", weight);
             const newStatus = await createStatusRecord(user.$id, SurveyStatus.FrontViewPhotoStep);
-            console.log("Status changed to: " + newStatus.value)
+            console.log("[WeightQuestion_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
-            console.log("No suitable condition for Weight question")
+            console.log("[WeightQuestion_preSubmitAction] No suitable condition for Weight question")
             router.push('/review');
         }
-        console.log('Weight question done successful')
+        console.log('[WeightQuestion_preSubmitAction] Weight question done successful')
     }
 
     return (

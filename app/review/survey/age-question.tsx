@@ -21,13 +21,13 @@ const AgeQuestion = () => {
         if (currentStatus === SurveyStatus.AgeStep) {
             await updateSurveyRecordField(user.$id, "age", age);
             const newStatus = await createStatusRecord(user.$id, SurveyStatus.WeightStep);
-            console.log("Status changed to: " + newStatus.value)
+            console.log("[AgeQuestion_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
-            console.log("No suitable condition for Age question")
+            console.log("[AgeQuestion_preSubmitAction] No suitable condition for Age question")
             router.push('/review');
         }
 
-        console.log('Age question done successful')
+        console.log('[AgeQuestion_preSubmitAction] Age question done successful')
     }
 
     return (

@@ -30,10 +30,10 @@ const Review = () => {
     const fetchStatus = async () => {
         try {
             const currentStatus = await getCurrentStatus(user.$id);
-            console.log("currentStatus " + currentStatus);
+            console.log("[Review_fetchStatus] currentStatus " + currentStatus);
             setStatus(currentStatus);
         } catch (error) {
-            console.error("Status receiving error:", error);
+            console.error("[Review_fetchStatus] Status receiving error:", error);
         }
     };
 
@@ -123,7 +123,7 @@ const Review = () => {
                 title="Results"
                 containerStyles="mt-2 mx-6"
                 icon={'ribbon'}
-                onPress={() => console.log("results")}/>
+                onPress={() => console.log("[Review_reviewResultsScreen] results")}/>
         </View>
     </ScrollView>
 

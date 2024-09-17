@@ -41,18 +41,18 @@ const MultiAnswerPage = () => {
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        const currentStep = multiAnswerQuestionPageDefinitions.find(pd => pd.status === currentStatus);
+        const currentStep = multiAnswerQuestionPageDefinitions.find(pd => pd.status === currentStatus && pd.slug === slug);
 
         if (currentStep) {
             await updateSurveyRecordField(user.$id, currentStep.field, pressed);
             const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
-            console.log("Status changed to: " + newStatus.value)
+            console.log("[MultiAnswerPage_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
-            console.log("No suitable condition for MultiAnswer question");
+            console.log("[MultiAnswerPage_preSubmitAction] No suitable condition for MultiAnswer question");
             router.push('/review');
         }
 
-        console.log(pageDefinition.slug + ' question done successful')
+        console.log("[MultiAnswerPage_preSubmitAction] " + pageDefinition.slug + ' question done successful')
     }
 
     return (

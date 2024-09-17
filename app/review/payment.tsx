@@ -18,7 +18,7 @@ const Payment = () => {
             await createStatusRecord(user.$id, SurveyStatus.LifeStyleStep);
             await createSurveyRecord(user.$id);
 
-            console.log('Payment successful, routing to questions section')
+            console.log('[Payment_preSubmitAction] Payment successful, routing to questions section')
             router.push('/review/survey/multianswer/lifestyle')
         }
     }
