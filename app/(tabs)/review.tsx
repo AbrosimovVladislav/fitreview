@@ -4,8 +4,7 @@ import {router, useFocusEffect} from "expo-router";
 
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {getCurrentStatus} from "@/lib/SurveyService";
-import {SurveyStatus} from "@/constants/survey-status";
-import {multiAnswerQuestionPageDefinitions, photoQuestionPageDefinitions} from "@/constants/questions";
+import {SurveyStatus, surveySteps} from "@/constants/survey";
 import InitialReviewScreen from "@/components/review/InitialReviewScreen";
 import WaitingForResultsScreen from "@/components/review/WaitingForResultsScreen";
 import ReviewResultsScreen from "@/components/review/ReviewResultsScreen";
@@ -28,25 +27,10 @@ const Review = () => {
     );
 
     const defineRoutePath = (currentStatus) => {
-        const multiAnswerQuestion = multiAnswerQuestionPageDefinitions.find(pd => pd.status === currentStatus);
-        if (multiAnswerQuestion) {
-            return "/review/survey/multianswer/" + multiAnswerQuestion.slug;
+        const surveyStep = surveySteps.find(step => step.status === currentStatus);
+        if(surveyStep){
+            return "/review/survey/" + surveyStep.slug
         }
-
-        if (currentStatus === SurveyStatus.AgeStep) {
-            return "/review/survey/age-question";
-        }
-
-        if (currentStatus === SurveyStatus.WeightStep) {
-            return "/review/survey/weight-question";
-        }
-
-        const photoQuestion = photoQuestionPageDefinitions.find(pd => pd.status === currentStatus);
-        if (photoQuestion) {
-            return "/review/survey/photo/" + photoQuestion.slug;
-        }
-
-        return null;
     }
 
     const refreshPageAccordingToTheStatus = async () => {

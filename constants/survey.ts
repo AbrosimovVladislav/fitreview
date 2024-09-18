@@ -1,8 +1,24 @@
-import {SurveyStatus} from "@/constants/survey-status";
+import {SurveyStep} from "@/constants/interface";
 
-export const multiAnswerQuestionPageDefinitions = [
+export enum SurveyStatus {
+    LifeStyleStep = "LifeStyleStep",
+    SportStyleStep = "SportStyleStep",
+    HealthStyleStep = "HealthStyleStep",
+    NutritionStyleStep = "NutritionStyleStep",
+    AgeStep = "AgeStep",
+    WeightStep = "WeightStep",
+    FrontViewPhotoStep = "FrontViewPhotoStep",
+    SideViewPhotoStep = "SideViewPhotoStep",
+    FrontViewWithRaisedLegPhotoStep = "FrontViewWithRaisedLegPhotoStep",
+    SideViewWithRaisedLegPhotoStep = "SideViewWithRaisedLegPhotoStep",
+    WaitingForResults = "WaitingForResults",
+    FirstReviewDone = "FirstReviewDone"
+}
+
+export const surveySteps: SurveyStep[] = [
     {
         stepNumber: 1,
+        type: 'multianswer',
         slug: 'lifestyle',
         status: SurveyStatus.LifeStyleStep,
         field: 'lifestyle',
@@ -13,6 +29,7 @@ export const multiAnswerQuestionPageDefinitions = [
     },
     {
         stepNumber: 2,
+        type: 'multianswer',
         slug: 'sportstyle',
         status: SurveyStatus.SportStyleStep,
         field: 'sportstyle',
@@ -23,6 +40,7 @@ export const multiAnswerQuestionPageDefinitions = [
     },
     {
         stepNumber: 3,
+        type: 'multianswer',
         slug: 'healthstyle',
         status: SurveyStatus.HealthStyleStep,
         field: 'healthstyle',
@@ -33,54 +51,88 @@ export const multiAnswerQuestionPageDefinitions = [
     },
     {
         stepNumber: 4,
+        type: 'multianswer',
         slug: 'nutritionstyle',
         status: SurveyStatus.NutritionStyleStep,
         field: 'nutritionstyle',
         nextStatus: SurveyStatus.AgeStep,
-        nextSlug: null,
+        nextSlug: "age",
         question: 'What is your nutrition ?',
         description: 'Select one or more options'
-    }
-]
-
-export const photoQuestionPageDefinitions = [
+    },
     {
-        id: 1,
+        stepNumber: 5,
+        type: 'numberinput',
+        slug: 'age',
+        status: SurveyStatus.AgeStep,
+        field: 'age',
+        nextStatus: SurveyStatus.WeightStep,
+        nextSlug: "weight",
+        title: "Age",
+        placeholder: "Your age in years",
+        question: 'How old are you ?',
+    },
+    {
+        stepNumber: 6,
+        type: 'numberinput',
+        slug: 'weight',
+        status: SurveyStatus.WeightStep,
+        field: 'weight',
+        nextStatus: SurveyStatus.FrontViewPhotoStep,
+        nextSlug: "front-view",
+        title: "Weight",
+        placeholder: "Your weight in kg",
+        question: 'How much do you weight ?',
+    },
+    {
+        stepNumber: 7,
+        type: 'photoupload',
         slug: "front-view",
         status: SurveyStatus.FrontViewPhotoStep,
-        title: "Front View Photos",
+        field: 'photos',
         nextStatus: SurveyStatus.SideViewPhotoStep,
         nextSlug: "side-view",
+        question: "Front View Photos",
+        description: "Upload 2 photos like on a pictures below",
         samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     },
     {
-        id: 2,
+        stepNumber: 8,
+        type: 'photoupload',
         slug: "side-view",
         status: SurveyStatus.SideViewPhotoStep,
-        title: "Side View Photos",
+        field: 'photos',
         nextStatus: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
         nextSlug: "front-view-raised-leg",
+        question: "Side View Photos",
+        description: "Upload 2 photos like on a pictures below",
         samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     },
     {
-        id: 3,
+        stepNumber: 9,
+        type: 'photoupload',
         slug: "front-view-raised-leg",
         status: SurveyStatus.FrontViewWithRaisedLegPhotoStep,
-        title: "Front View Photos With Raised Leg",
+        field: 'photos',
         nextStatus: SurveyStatus.SideViewWithRaisedLegPhotoStep,
         nextSlug: "side-view-raised-leg",
+        question: "Front View Photos With Raised Leg",
+        description: "Upload 2 photos like on a pictures below",
         samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     },
     {
-        id: 4,
+        stepNumber: 10,
+        type: 'photoupload',
         slug: "side-view-raised-leg",
         status: SurveyStatus.SideViewWithRaisedLegPhotoStep,
-        title: "Side View Photos With Raised Leg",
+        field: 'photos',
         nextStatus: SurveyStatus.WaitingForResults,
         nextSlug: null,
+        question: "Side View Photos With Raised Leg",
+        description: "Upload 2 photos like on a pictures below",
         samplePhoto1: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
         samplePhoto2: "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66e2af30002b4045effa/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     }

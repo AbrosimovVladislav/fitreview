@@ -1,46 +1,43 @@
 import {View, Text, ScrollView} from 'react-native'
 import React, {useState} from 'react'
-import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
-import NextQuestionButton from "@/components/NextQuestionButton";
 import NumberFormField from "@/components/common/NumberFormField";
+import NextQuestionButton from "@/components/NextQuestionButton";
+import {surveySteps} from "@/constants/survey";
 import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/SurveyService";
 import {router} from "expo-router";
-import {useGlobalContext} from "@/context/GlobalProvider";
-import {SurveyStatus} from "@/constants/survey-status";
 
-const AgeQuestion = () => {
+const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
 
-    const {user} = useGlobalContext();
-
-    const [age, setAge] = useState(null);
+    const [value, setValue] = useState(null);
 
     const preSubmitAction = async () => {
         const currentStatus = await getCurrentStatus(user.$id)
 
-        if (currentStatus === SurveyStatus.AgeStep) {
-            await updateSurveyRecordField(user.$id, "age", age);
-            const newStatus = await createStatusRecord(user.$id, SurveyStatus.WeightStep);
-            console.log("[AgeQuestion_preSubmitAction] Status changed to: " + newStatus.value)
+        const currentStep = surveySteps.find(pd => pd.status === currentStatus && pd.slug === slug);
+
+        if (currentStep) {
+            await updateSurveyRecordField(user.$id, currentStep.field, value);
+            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
+            console.log("[NumberInputSurveyStepScreen_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
-            console.log("[AgeQuestion_preSubmitAction] No suitable condition for Age question")
+            console.log("[NumberInputSurveyStepScreen_preSubmitAction] No suitable condition for NumberInput question");
             router.push('/review');
         }
 
-        console.log('[AgeQuestion_preSubmitAction] Age question done successful')
+        console.log("[NumberInputSurveyStepScreen_preSubmitAction] " + surveyStep.slug + ' question done successful')
     }
 
     return (
-        <SafeAreaView className='bg-primary flex-1  h-full'>
             <ScrollView>
                 <PageHeader/>
                 <View className='flex-1 gap-48 pt-4'>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
-                            Step 5 of 7
+                            Step {surveyStep?.stepNumber} of {surveySteps.length}
                         </Text>
                         <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
-                            How old are you?
+                            {surveyStep?.question}
                         </Text>
                         <Text className='text-md text-gray-300 font-mmedium pt-1'>
                         </Text>
@@ -48,25 +45,25 @@ const AgeQuestion = () => {
 
                     <View className='items-center'>
                         <NumberFormField
-                            title="Age"
+                            title={surveyStep.title}
                             titleInvisible
-                            placeholder="Your age in years"
-                            value={age}
-                            handleChangeText={setAge}
+                            placeholder={surveyStep.placeholder}
+                            value={value}
+                            handleChangeText={setValue}
                             otherStyles="m-6"
                         />
                     </View>
 
                     <View name='question-next-button' className='pt-4 px-4'>
                         <NextQuestionButton
-                            disabled={!age}
-                            path={'/review/survey/weight-question'}
+                            disabled={!value}
+                            //TODO заменить логику, если нет некст слага, значит заканчиваем опрос
+                            path={surveyStep.nextSlug ? `/review/survey/${surveyStep.nextSlug}` : '/review'}
                             preSubmitAction={preSubmitAction}
                         />
                     </View>
                 </View>
             </ScrollView>
-        </SafeAreaView>
     )
 }
-export default AgeQuestion
+export default NumberInputSurveyStepScreen

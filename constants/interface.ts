@@ -1,3 +1,5 @@
+import {SurveyStatus} from "@/constants/survey";
+
 export interface Exercise {
     "exerciseId": string,
     "title": string,
@@ -17,4 +19,20 @@ export interface Question {
     "title": string,
     "image": string,
     "type": string
+}
+
+export interface SurveyStep {
+    "stepNumber": number,
+    "type": string,
+    "slug": string,
+    "status": SurveyStatus,
+    "field": string,
+    "nextStatus": SurveyStatus,
+    "nextSlug": string | null,
+    "title"?: string,
+    "placeholder"?: string,
+    "question": string,
+    "description"?: string,
+    "samplePhoto1"?: string,
+    "samplePhoto2"?: string
 }
