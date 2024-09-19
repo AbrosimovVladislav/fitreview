@@ -6,23 +6,111 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-008",
+  "documentId": "exercise-032",
   "data": {
-    "title": "",
-    "russianTitle": "",
+    "title": "Lower Back Unloading",
+    "russianTitle": "Разрузка поясничного региона",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
     "level": "Beginner",
     "time": 5,
-    "region": "",
+    "region": "Core",
     "complexity": "Easy",
     "instructions": [
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 8,
+    "exerciseId": 32,
     "description": "Test_Exr",
-    "subcategory": ""
+    "subcategory": "stretching"
   }
 }
 ###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-033",
+  "data": {
+    "title": "Seated 90/90 Stretching",
+    "russianTitle": "Вытяжка сидя в положении 90/90",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Beginner",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 33,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-034",
+  "data": {
+    "title": "Iliopsoas Stretching",
+    "russianTitle": "Вытяжка подвздошнопоясничной мышцы",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Beginner",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 34,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-035",
+  "data": {
+    "title": "Side Bend",
+    "russianTitle": "Боковой наклон",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Beginner",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 35,
+    "description": "Test_Exr",
+    "subcategory": "stretching"
+  }
+}
+
+

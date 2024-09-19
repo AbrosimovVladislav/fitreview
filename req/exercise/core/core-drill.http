@@ -6,13 +6,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-036",
+  "documentId": "exercise-048",
   "data": {
-    "title": "Chest Rotation with Block",
-    "russianTitle": "Ротация грудного отдела с кубиком",
+    "title": "Intra-Abdominal Pressure Creation",
+    "russianTitle": "Создание внутребрюшного давления",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -20,9 +20,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 36,
+    "exerciseId": 48,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
   }
 }
 ###
@@ -35,13 +35,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-037",
+  "documentId": "exercise-049",
   "data": {
-    "title": "Side-Lying Rotation with Block",
-    "russianTitle": "Ротация лежа на боку с кубиком",
+    "title": "Pelvic Tilt with Breathing",
+    "russianTitle": "Подкрутка таза с дыханием",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -49,9 +49,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 37,
+    "exerciseId": 49,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
   }
 }
 ###
@@ -64,13 +64,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-038",
+  "documentId": "exercise-050",
   "data": {
-    "title": "Wall Standing Flexion",
-    "russianTitle": "Сгибание у стенки стоя",
+    "title": "Oblique Activation",
+    "russianTitle": "Активация косых мышц живота",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -78,9 +78,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 38,
+    "exerciseId": 50,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
   }
 }
 ###
@@ -93,13 +93,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-039",
+  "documentId": "exercise-051",
   "data": {
-    "title": "Lower Back Unloading on All Fours",
-    "russianTitle": "Разгрузка поясничного региона на четвереньках",
+    "title": "Scissors and Reverse",
+    "russianTitle": "Ножницы и обратно",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -107,9 +107,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 39,
+    "exerciseId": 51,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
   }
 }
 ###
@@ -122,13 +122,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-040",
+  "documentId": "exercise-052",
   "data": {
-    "title": "Seated 90/90 Side Bend",
-    "russianTitle": "Боковой наклон сидя 90/90",
+    "title": "Standing Resistance Band Push",
+    "russianTitle": "Толкание резинки стоя перед собой",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -136,9 +136,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 40,
+    "exerciseId": 52,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
   }
 }
 ###
@@ -151,13 +151,13 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66c76bdf0003e4f2041f",
-  "documentId": "exercise-041",
+  "documentId": "exercise-053",
   "data": {
-    "title": "Standing Rib Expansion",
-    "russianTitle": "Раскрытие ребер стоя",
+    "title": "Ceiling Pull Lying on Back",
+    "russianTitle": "Подтяжка к потолку лежа на спине",
     "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
     "youtubeVideoId": "gJh03s2HNeo",
-    "level": "Beginner",
+    "level": "Amateur",
     "time": 5,
     "region": "Core",
     "complexity": "Easy",
@@ -165,9 +165,96 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
       "Test_Exr","Test_Exr","Test_Exr"
     ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
-    "exerciseId": 41,
+    "exerciseId": 53,
     "description": "Test_Exr",
-    "subcategory": "mobility"
+    "subcategory": "drill"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-054",
+  "data": {
+    "title": "Dead Bug",
+    "russianTitle": "Мертвый жук",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 54,
+    "description": "Test_Exr",
+    "subcategory": "drill"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-055",
+  "data": {
+    "title": "All Fours Twist",
+    "russianTitle": "Скручивание на четвереньках",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 55,
+    "description": "Test_Exr",
+    "subcategory": "drill"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-056",
+  "data": {
+    "title": "Leg-Hand Resistance",
+    "russianTitle": "Сопротивление нога рука",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Amateur",
+    "time": 5,
+    "region": "Core",
+    "complexity": "Easy",
+    "instructions": [
+      "Test_Exr","Test_Exr","Test_Exr"
+    ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 56,
+    "description": "Test_Exr",
+    "subcategory": "drill"
   }
 }
 ###
