@@ -38,8 +38,7 @@ const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
 
     return (
         <ScrollView>
-            <PageHeader/>
-            <View className='flex-1 gap-4'>
+            <View className='flex-1 gap-4 pt-4'>
                 <View name='question-header' className='pt-2 px-4'>
                     <Text className='text-md text-gray-300 font-mmedium'>
                         Step {surveyStep.stepNumber} of {surveySteps.length}
