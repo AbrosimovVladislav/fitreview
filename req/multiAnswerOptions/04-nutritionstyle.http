@@ -6,7 +6,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-025",
+  "documentId": "mao-025",
   "data": {
     "id": "25",
     "title": "I'm on a diet now",
@@ -23,7 +23,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-026",
+  "documentId": "mao-026",
   "data": {
     "id": "26",
     "title": "I often fail to stick to a diet",
@@ -40,7 +40,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-027",
+  "documentId": "mao-027",
   "data": {
     "id": "27",
     "title": "I have digestion issues",
@@ -57,7 +57,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-028",
+  "documentId": "mao-028",
   "data": {
     "id": "28",
     "title": "I don't eat fast food/sweets/flour",
@@ -74,7 +74,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-029",
+  "documentId": "mao-029",
   "data": {
     "id": "29",
     "title": "I don't drink alcohol",
@@ -91,7 +91,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-030",
+  "documentId": "mao-030",
   "data": {
     "id": "30",
     "title": "I don't smoke",

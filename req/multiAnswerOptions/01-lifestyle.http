@@ -6,7 +6,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-001",
+  "documentId": "mao-001",
   "data": {
     "id": "1",
     "title": "Sedentary job",
@@ -23,7 +23,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-002",
+  "documentId": "mao-002",
   "data": {
     "id": "2",
     "title": "Physically active job",
@@ -40,7 +40,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-003",
+  "documentId": "mao-003",
   "data": {
     "id": "3",
     "title": "Physically hard job",
@@ -57,7 +57,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-004",
+  "documentId": "mao-004",
   "data": {
     "id": "4",
     "title": "High stress level at work",
@@ -74,7 +74,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-005",
+  "documentId": "mao-005",
   "data": {
     "id": "5",
     "title": "My work schedule is 5/2",
@@ -91,7 +91,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-006",
+  "documentId": "mao-006",
   "data": {
     "id": "6",
     "title": "I have a flexible schedule",
@@ -108,7 +108,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-007",
+  "documentId": "mao-007",
   "data": {
     "id": "7",
     "title": "I prefer relaxed weekends",
@@ -125,7 +125,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66d2d8a400226febc4bd",
-  "documentId": "question-008",
+  "documentId": "mao-008",
   "data": {
     "id": "8",
     "title": "I prefer active weekends",

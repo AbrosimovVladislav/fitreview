@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import {SafeAreaView} from "react-native-safe-area-context";
 import Button from "../../components/common/Button";
 import {router} from "expo-router";
-import {createStatusRecord, createSurveyRecord} from "@/lib/SurveyService";
+import {createStatusRecord} from "@/lib/SurveyService";
 import {validatePayment} from "@/lib/PaymentService";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {SurveyStatus, surveySteps} from "@/constants/survey";
@@ -19,7 +19,6 @@ const Payment = () => {
             // в будущем опрос может быть не всегда первым и будет другая
             // логика связанная с оплатой или опросом повторным
             await createStatusRecord(user.$id, SurveyStatus.LifeStyleStep);
-            await createSurveyRecord(user.$id);
 
             console.log('[Payment_preSubmitAction] Payment successful, routing to questions section')
             router.push(`/review/survey/${surveySteps[0].slug}`)

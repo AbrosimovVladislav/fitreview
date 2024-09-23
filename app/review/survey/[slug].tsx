@@ -3,22 +3,31 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import MultiAnswerSurveyStepScreen from "@/components/review/survey/MultiAnswerSurveyStepScreen";
 import {useLocalSearchParams} from "expo-router";
-import {surveySteps} from "@/constants/survey";
 import {SurveyStep} from "@/constants/interface";
 import NumberInputSurveyStepScreen from "@/components/review/survey/NumberInputSurveyStepScreen";
 import PhotoUploadSurveyStepScreen from "@/components/review/survey/PhotoUploadSurveyStepScreen";
 import ReviewErrorCase from "@/components/review/ReviewErrorCase";
+import useAppwrite from "@/lib/useAppwrite";
+import {getSurveyStepBySlug} from "@/lib/SurveyService";
+import LoadingView from "@expo/metro-runtime/build/LoadingView.native";
+import {surveySteps} from "@/constants/survey";
 
 const SurveyStepPage = () => {
 
     const {user} = useGlobalContext();
     const {slug} = useLocalSearchParams();
 
+    const {data: surveyStepData} = useAppwrite<SurveyStep>(() => getSurveyStepBySlug(slug));
+
     const [surveyStep, setSurveyStep] = useState<SurveyStep>(surveySteps[0]);
 
     useEffect(() => {
-        setSurveyStep(surveySteps.find(e => e.slug === slug));
-    }, [slug])
+        setSurveyStep(surveyStepData);
+    }, [surveyStepData])
+
+    if(!surveyStepData){
+        return <LoadingView/>
+    }
 
     return (
         <SafeAreaView className='bg-primary h-full'>

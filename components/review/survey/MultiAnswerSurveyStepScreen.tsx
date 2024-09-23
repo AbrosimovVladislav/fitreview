@@ -1,11 +1,14 @@
 import {View, Text, ScrollView} from 'react-native'
 import React, {useState} from 'react'
-import PageHeader from "@/components/PageHeader";
 import AnswerOption from "@/components/AnswerOption";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import useAppwrite from "@/lib/useAppwrite";
 import {Question} from "@/constants/interface";
-import {createStatusRecord, getCurrentStatus, getQuestionsByType, updateSurveyRecordField} from "@/lib/SurveyService";
+import {
+    createStatusRecord,
+    getQuestionsByType,
+    saveAnswer
+} from "@/lib/SurveyService";
 import {router} from "expo-router";
 import {surveySteps} from "@/constants/survey";
 
@@ -30,13 +33,9 @@ const MultiAnswerSurveyStepScreen = ({user, slug, surveyStep}) => {
     }
 
     const preSubmitAction = async () => {
-        const currentStatus = await getCurrentStatus(user.$id)
-
-        const currentStep = surveySteps.find(pd => pd.status === currentStatus && pd.slug === slug);
-
-        if (currentStep) {
-            await updateSurveyRecordField(user.$id, currentStep.field, pressed);
-            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
+        if (surveyStep) {
+            await saveAnswer(user.$id, surveyStep.$id, pressed);
+            const newStatus = await createStatusRecord(user.$id, surveyStep.nextStatus);
             console.log("[MultiAnswerPage_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
             console.log("[MultiAnswerPage_preSubmitAction] No suitable condition for MultiAnswer question");
@@ -86,7 +85,7 @@ const MultiAnswerSurveyStepScreen = ({user, slug, surveyStep}) => {
 
             <View name='question-next-button' className='pt-4 px-4'>
                 <NextQuestionButton disabled={pressed.length == 0}
-                                    //TODO заменить логику, если нет некст слага, значит заканчиваем опрос
+                    //TODO заменить логику, если нет некст слага, значит заканчиваем опрос
                                     path={surveyStep.nextSlug ? `/review/survey/${surveyStep.nextSlug}` : '/review'}
                                     preSubmitAction={preSubmitAction}/>
             </View>

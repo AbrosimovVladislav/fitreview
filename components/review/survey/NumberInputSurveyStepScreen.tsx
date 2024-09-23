@@ -1,10 +1,9 @@
 import {View, Text, ScrollView} from 'react-native'
 import React, {useState} from 'react'
-import PageHeader from "@/components/PageHeader";
 import NumberFormField from "@/components/common/NumberFormField";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import {surveySteps} from "@/constants/survey";
-import {createStatusRecord, getCurrentStatus, updateSurveyRecordField} from "@/lib/SurveyService";
+import {createStatusRecord, saveAnswer} from "@/lib/SurveyService";
 import {router} from "expo-router";
 
 const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
@@ -12,13 +11,9 @@ const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
     const [value, setValue] = useState(null);
 
     const preSubmitAction = async () => {
-        const currentStatus = await getCurrentStatus(user.$id)
-
-        const currentStep = surveySteps.find(pd => pd.status === currentStatus && pd.slug === slug);
-
-        if (currentStep) {
-            await updateSurveyRecordField(user.$id, currentStep.field, value);
-            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
+        if (surveySteps) {
+            await saveAnswer(user.$id, surveyStep.$id, [value]);
+            const newStatus = await createStatusRecord(user.$id, surveyStep.nextStatus);
             console.log("[NumberInputSurveyStepScreen_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
             console.log("[NumberInputSurveyStepScreen_preSubmitAction] No suitable condition for NumberInput question");

@@ -1,12 +1,10 @@
 import {View, Text, Image, ScrollView} from 'react-native'
 import React, {useState} from 'react'
-import PageHeader from "@/components/PageHeader";
 import UploadArea from "@/components/common/UploadArea";
 import NextQuestionButton from "@/components/NextQuestionButton";
 import {
     createStatusRecord,
-    getCurrentStatus,
-    updateSurveyRecordArrayFieldWithAdditionalValues
+    saveAnswer
 } from "@/lib/SurveyService";
 import {uploadImages as upload} from "@/lib/StorageService";
 import {router} from "expo-router";
@@ -17,16 +15,13 @@ const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
     const [uploadedImages, setUploadedImages] = useState([]);
 
     const preSubmitAction = async () => {
-        const currentStatus = await getCurrentStatus(user.$id)
-
-        const currentStep = surveySteps.find(pd => pd.status === currentStatus && pd.slug === slug);
-
-        if (currentStep) {
+        if (surveyStep) {
             const photoUrls = await upload(uploadedImages);
             console.log("[PhotoQuestionPage_preSubmitAction] photoUrls " + photoUrls)
-            await updateSurveyRecordArrayFieldWithAdditionalValues(user.$id, "photos", photoUrls)
 
-            const newStatus = await createStatusRecord(user.$id, currentStep.nextStatus);
+            await saveAnswer(user.$id, surveyStep.$id, photoUrls)
+
+            const newStatus = await createStatusRecord(user.$id, surveyStep.nextStatus);
             console.log("[PhotoQuestionPage_preSubmitAction] Status changed to: " + newStatus.value)
         } else {
             console.log("[PhotoQuestionPage_preSubmitAction] No suitable condition for Photo question")
