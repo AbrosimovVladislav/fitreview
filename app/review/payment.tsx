@@ -7,7 +7,7 @@ import {router} from "expo-router";
 import {createStatusRecord} from "@/lib/SurveyService";
 import {validatePayment} from "@/lib/PaymentService";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {SurveyStatus, surveySteps} from "@/constants/survey";
+import {defaultSurveyStep, SurveyStatus} from "@/constants/survey";
 
 const Payment = () => {
 
@@ -21,7 +21,7 @@ const Payment = () => {
             await createStatusRecord(user.$id, SurveyStatus.LifeStyleStep);
 
             console.log('[Payment_preSubmitAction] Payment successful, routing to questions section')
-            router.push(`/review/survey/${surveySteps[0].slug}`)
+            router.push(`/review/survey/${defaultSurveyStep.slug}`)
         }
     }
 

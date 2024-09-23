@@ -4,16 +4,19 @@ import PageHeader from "@/components/PageHeader";
 import Button from "@/components/common/Button";
 import {isSubscriptionActive} from "@/lib/PaymentService";
 import {router} from "expo-router";
+import {createStatusRecord} from "@/lib/SurveyService";
+import {SurveyStatus} from "@/constants/survey";
 
-const ReviewResultsScreen = () => {
+const ReviewResultsScreen = ({user}) => {
 
-    const preRefreshAction = () => {
+    const preRefreshAction = async () => {
 
         if (isSubscriptionActive()) {
             //создать новую запись или кочевряжим старую
             //изменить текущий статус на начало второго опроса или конкретный шат
+            await createStatusRecord(user.$id, SurveyStatus.SecondTimeWeightStep);
 
-            router.push("/review/survey/weight-question"); // первый вопрос повторного опроса, скорее всего про вес
+            router.push("/review/survey/second-time-weight"); // первый вопрос повторного опроса, скорее всего про вес
         } else {
             router.push("/review/payment");
         }

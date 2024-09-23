@@ -8,7 +8,6 @@ import {
 } from "@/lib/SurveyService";
 import {uploadImages as upload} from "@/lib/StorageService";
 import {router} from "expo-router";
-import {surveySteps} from "@/constants/survey";
 
 const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
 
@@ -36,7 +35,7 @@ const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
             <View className='flex-1 gap-4 pt-4'>
                 <View name='question-header' className='pt-2 px-4'>
                     <Text className='text-md text-gray-300 font-mmedium'>
-                        Step {surveyStep.stepNumber} of {surveySteps.length}
+                        Step {surveyStep.stepNumber}
                     </Text>
                     <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
                         {surveyStep.question}

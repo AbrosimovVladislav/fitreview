@@ -1,14 +1,15 @@
 import {View, Text, Image, ScrollView} from 'react-native'
 import React from 'react'
-import PageHeader from "@/components/PageHeader";
 
 import {images} from '../../constants'
+import Button from "@/components/common/Button";
+import {createStatusRecord} from "@/lib/SurveyService";
+import {SurveyStatus} from "@/constants/survey";
 
-const WaitingForResultsScreen = () => {
+const WaitingForResultsScreen = ({user}) => {
     return (
         <ScrollView>
-            <PageHeader/>
-            <View className='flex justify-center items-center gap-16 p-4'>
+            <View className='flex justify-center items-center gap-16 p-4 pt-8'>
                 <View className='flex gap-3 justify-center items-center'>
                     <Text className="text-4xl text-gray-300 text-semibold mt-4 font-cbebas">
                         Perfect !
@@ -30,8 +31,13 @@ const WaitingForResultsScreen = () => {
                         We’ll help you understand your body and reach your goals effectively
                     </Text>
                 </View>
-
             </View>
+
+            <Button
+                className='p-2 bg-red'
+                title='Test Results'
+                onPress={async () => await createStatusRecord(user.$id, SurveyStatus.FirstReviewDone)}
+            />
         </ScrollView>
     )
 }

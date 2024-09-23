@@ -3,8 +3,8 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {router, useFocusEffect} from "expo-router";
 
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {getCurrentStatus} from "@/lib/SurveyService";
-import {SurveyStatus, surveySteps} from "@/constants/survey";
+import {getCurrentStatus, getSurveyStepByStatus} from "@/lib/SurveyService";
+import {SurveyStatus} from "@/constants/survey";
 import InitialReviewScreen from "@/components/review/InitialReviewScreen";
 import WaitingForResultsScreen from "@/components/review/WaitingForResultsScreen";
 import ReviewResultsScreen from "@/components/review/ReviewResultsScreen";
@@ -26,9 +26,9 @@ const Review = () => {
         }, [])
     );
 
-    const defineRoutePath = (currentStatus) => {
-        const surveyStep = surveySteps.find(step => step.status === currentStatus);
-        if(surveyStep){
+    const defineRoutePath = async (currentStatus) => {
+        const surveyStep = await getSurveyStepByStatus(currentStatus);
+        if (surveyStep) {
             return "/review/survey/" + surveyStep.slug
         }
     }
@@ -39,7 +39,7 @@ const Review = () => {
             console.log("[Review_refreshPageAccordingToTheStatus] currentStatus " + currentStatus);
             setStatus(currentStatus);
 
-            const routePath = defineRoutePath(currentStatus);
+            const routePath = currentStatus === null ? null :await defineRoutePath(currentStatus);
             if (routePath) {
                 router.push(routePath);
             }
@@ -53,9 +53,9 @@ const Review = () => {
         <SafeAreaView className='bg-primary h-full'>
             {status
                 ? status === SurveyStatus.WaitingForResults
-                    ? <WaitingForResultsScreen/>
+                    ? <WaitingForResultsScreen user={user}/>
                     : status === SurveyStatus.FirstReviewDone
-                        ? <ReviewResultsScreen/>
+                        ? <ReviewResultsScreen user={user}/>
                         : <ReviewErrorCase/>
                 : <InitialReviewScreen/>}
         </SafeAreaView>

@@ -10,7 +10,7 @@ import ReviewErrorCase from "@/components/review/ReviewErrorCase";
 import useAppwrite from "@/lib/useAppwrite";
 import {getSurveyStepBySlug} from "@/lib/SurveyService";
 import LoadingView from "@expo/metro-runtime/build/LoadingView.native";
-import {surveySteps} from "@/constants/survey";
+import {defaultSurveyStep} from "@/constants/survey";
 
 const SurveyStepPage = () => {
 
@@ -19,7 +19,7 @@ const SurveyStepPage = () => {
 
     const {data: surveyStepData} = useAppwrite<SurveyStep>(() => getSurveyStepBySlug(slug));
 
-    const [surveyStep, setSurveyStep] = useState<SurveyStep>(surveySteps[0]);
+    const [surveyStep, setSurveyStep] = useState<SurveyStep>(defaultSurveyStep);
 
     useEffect(() => {
         setSurveyStep(surveyStepData);

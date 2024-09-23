@@ -2,7 +2,6 @@ import {View, Text, ScrollView} from 'react-native'
 import React, {useState} from 'react'
 import NumberFormField from "@/components/common/NumberFormField";
 import NextQuestionButton from "@/components/NextQuestionButton";
-import {surveySteps} from "@/constants/survey";
 import {createStatusRecord, saveAnswer} from "@/lib/SurveyService";
 import {router} from "expo-router";
 
@@ -11,7 +10,7 @@ const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
     const [value, setValue] = useState(null);
 
     const preSubmitAction = async () => {
-        if (surveySteps) {
+        if (surveyStep) {
             await saveAnswer(user.$id, surveyStep.$id, [value]);
             const newStatus = await createStatusRecord(user.$id, surveyStep.nextStatus);
             console.log("[NumberInputSurveyStepScreen_preSubmitAction] Status changed to: " + newStatus.value)
@@ -28,7 +27,7 @@ const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
                 <View className='flex-1 gap-48 pt-8'>
                     <View name='question-header' className='pt-2 px-4'>
                         <Text className='text-md text-gray-300 font-mmedium'>
-                            Step {surveyStep?.stepNumber} of {surveySteps.length}
+                            Step {surveyStep?.stepNumber}
                         </Text>
                         <Text className="text-3xl text-gray-300 text-semibold pt-4 font-cbebas">
                             {surveyStep?.question}
