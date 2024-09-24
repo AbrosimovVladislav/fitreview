@@ -3,11 +3,11 @@ import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 
 import {images} from '../../constants'
-import CategoryItem from "@/components/CategoryItem";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {Ionicons} from "@expo/vector-icons";
 import {router} from "expo-router";
 import Divider from "@/components/common/Divider";
+import ListItem from "@/components/common/ListItem";
 
 const Home = () => {
 
@@ -16,25 +16,25 @@ const Home = () => {
     const regions = [
         {
             title: 'Upper Body Region',
-            imageUrl: images.upperBody,
+            imageUrl: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2884f0021591e6d9d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314',
             description: 'Shoulder blades, chest and shoulders',
             categoryUrl: '/region/Upper Body'
         },
         {
             title: 'Core Region',
-            imageUrl: images.core,
+            imageUrl: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f28897000e758519a3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314',
             description: 'Central support for body strength',
             categoryUrl: '/region/Core'
         },
         {
             title: 'Hips Region',
-            imageUrl: images.hips,
+            imageUrl: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f1c65e0012672775a9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314',
             description: 'Foundation for movement and balance',
             categoryUrl: '/region/Hips'
         },
         {
             title: 'Feet Region',
-            imageUrl: images.feet,
+            imageUrl: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2886b0012a8a8e1a4/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314',
             description: 'Control for every step',
             categoryUrl: '/region/Feet'
         },
@@ -83,14 +83,14 @@ const Home = () => {
                     <Text className='text-4xl self-start font-cbebas text-gray-300 pb-3 pl-2'>
                         Body Regions
                     </Text>
-                    <View name='home-regions-area' className='items-center w-full'>
+                    <View name='home-regions-area' className='w-full'>
                         {regions.map((item) => (
-                            <CategoryItem
+                            <ListItem
                                 key={item.title}
                                 title={item.title}
-                                imageUrl={item.imageUrl}
+                                image={item.imageUrl}
                                 description={item.description}
-                                categoryUrl={item.categoryUrl}
+                                route={item.categoryUrl}
                             />
                         ))}
                     </View>

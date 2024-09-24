@@ -55,9 +55,24 @@ const TabsLayout = () => {
                         headerShown: false,
                         tabBarIcon: ({color, focused}) => (
                             <TabIcon
-                                icon='barbell'
+                                icon='fitness'
                                 color={color}
                                 name="Review"
+                                focused={focused}
+                            />
+                        )
+                    }}
+                />
+                <Tabs.Screen
+                    name="training"
+                    options={{
+                        title: 'Training',
+                        headerShown: false,
+                        tabBarIcon: ({color, focused}) => (
+                            <TabIcon
+                                icon='barbell'
+                                color={color}
+                                name="Training"
                                 focused={focused}
                             />
                         )

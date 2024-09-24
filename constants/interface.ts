@@ -36,3 +36,12 @@ export interface SurveyStep {
     "samplePhoto1"?: string,
     "samplePhoto2"?: string
 }
+
+export interface Training {
+    "user": string[],
+    "thumbnail": string,
+    "title": string,
+    "russianTitle": string,
+    "description": string,
+    "exercise": string[]
+}
