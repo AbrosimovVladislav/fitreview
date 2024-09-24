@@ -6,9 +6,67 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66f1c3cb0036cbb71361",
-  "documentId": "training-002",
+  "documentId": "training-004",
   "data": {
-    "userId": "66c34c0900208a85ab52",
+    "userId": "66e40b680004a6330bd7",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-005",
+  "data": {
+    "userId": "66e2ca30002fc360855d",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-007",
+  "data": {
+    "userId": "66f2d6b600259769fd38",
     "title": "Custom Feet & Core Training",
     "russianTitle": "Кастом тренировка ноги и кор",
     "description": "Custom training for feet and core specially for you",
