@@ -6,16 +6,23 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66f1c3cb0036cbb71361",
-  "documentId": "training-001",
+  "documentId": "training-002",
   "data": {
     "userId": "66c34c0900208a85ab52",
-    "title": "MFR Hips Training",
-    "russianTitle": "МФР тренировка ТБС",
-    "description": "MFR hips training for basic warm-up and mobility",
-    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f1c65e0012672775a9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "exerciseId": [
-      "exercise-001","exercise-002","exercise-003","exercise-004","exercise-005","exercise-006"
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
     ]
   }
 }
+
 ###

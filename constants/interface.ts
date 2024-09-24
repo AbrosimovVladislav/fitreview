@@ -43,5 +43,5 @@ export interface Training {
     "title": string,
     "russianTitle": string,
     "description": string,
-    "exercise": string[]
+    "exercise": Exercise[]
 }

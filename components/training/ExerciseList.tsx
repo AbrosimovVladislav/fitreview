@@ -1,6 +1,6 @@
 import {View} from 'react-native'
 import React from 'react'
-import ExerciseItem from "@/components/ExerciseItem";
+import ExerciseItem from "@/components/training/ExerciseItem";
 import {Exercise} from "@/constants/interface";
 
 interface ExerciseListProps {
