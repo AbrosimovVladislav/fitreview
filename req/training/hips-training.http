@@ -50,9 +50,9 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
 {
   "databaseId": "66c3312f002e44e586ce",
   "collectionId": "66f1c3cb0036cbb71361",
-  "documentId": "training-008",
+  "documentId": "training-003",
   "data": {
-    "userId": "66f2d6b600259769fd38",
+    "userId": "66c34c0900208a85ab52",
     "title": "MFR Hips Training",
     "russianTitle": "МФР тренировка ТБС",
     "description": "MFR hips training for basic warm-up and mobility",

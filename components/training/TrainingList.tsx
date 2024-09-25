@@ -1,13 +1,8 @@
 import {ScrollView, View} from 'react-native'
 import React from 'react'
-import useAppwrite from "@/lib/useAppwrite";
-import {getTrainingsByUserId} from "@/lib/ExerciseService";
-import {Training} from "@/constants/interface";
 import ListItem from "@/components/common/ListItem";
 
-const TrainingList = ({user}) => {
-
-    const {data: trainings} = useAppwrite<Training>(() => getTrainingsByUserId(user.$id));
+const TrainingList = ({trainings}) => {
 
     return (
         <ScrollView>
