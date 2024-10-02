@@ -1,12 +1,8 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React, {useEffect} from 'react'
+import React from 'react'
 import {router} from "expo-router";
 
 const ListItem = ({title, image, description, route}) => {
-
-    useEffect(() => {
-        console.log(image)
-    },[image])
 
     return (
         <View className=''>
