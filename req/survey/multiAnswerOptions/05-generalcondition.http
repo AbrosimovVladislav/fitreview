@@ -1,0 +1,144 @@
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-031",
+  "data": {
+    "id": "31",
+    "title": "My sleep has improved",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd464300129307e067/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-032",
+  "data": {
+    "id": "32",
+    "title": "I feel physically better",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd463800265409c206/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-033",
+  "data": {
+    "id": "33",
+    "title": "I feel less stressed",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd4632003a20b5f18d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-034",
+  "data": {
+    "id": "34",
+    "title": "I’m more energized daily",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd463e001288a273fd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-035",
+  "data": {
+    "id": "35",
+    "title": "I look more toned",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-036",
+  "data": {
+    "id": "36",
+    "title": "I wake up feeling rested",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-037",
+  "data": {
+    "id": "37",
+    "title": "I notice improved focus",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66d2d8a400226febc4bd",
+  "documentId": "mao-038",
+  "data": {
+    "id": "38",
+    "title": "I don’t feel any positive changes",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "type": "general-condition"
+  }
+}
+###
+

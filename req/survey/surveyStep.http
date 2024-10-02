@@ -250,15 +250,14 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "surveyStep-refresh-001",
   "data": {
     "stepNumber": 1,
-    "type": "numberinput",
-    "slug": "second-time-weight",
-    "status": "SecondTimeWeightStep",
-    "field": "weight",
-    "nextStatus": "SecondTimeFrontViewPhotoStep",
-    "nextSlug": "second-time-front-view",
-    "title": "Weight",
-    "placeholder": "Your new weight in kg",
-    "question": "How much do you weigh?"
+    "type": "multianswer",
+    "slug": "general-condition",
+    "status": "SecondTimeGeneralConditionStep",
+    "field": "generalcondition",
+    "nextStatus": "SecondTimePhysicalConditionStep",
+    "nextSlug": "physical-condition",
+    "question": "How you doing?",
+    "description": "Select one or more options"
   }
 }
 
@@ -274,6 +273,53 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "documentId": "surveyStep-refresh-002",
   "data": {
     "stepNumber": 2,
+    "type": "multianswer",
+    "slug": "physical-condition",
+    "status": "SecondTimePhysicalConditionStep",
+    "field": "physicalcondition",
+    "nextStatus": "SecondTimeWeightStep",
+    "nextSlug": "second-time-weight",
+    "question": "What about your physical condition?",
+    "description": "Select one or more options"
+  }
+}
+
+### Step 13
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f16c200000183b116c/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f16c200000183b116c",
+  "documentId": "surveyStep-refresh-003",
+  "data": {
+    "stepNumber": 3,
+    "type": "numberinput",
+    "slug": "second-time-weight",
+    "status": "SecondTimeWeightStep",
+    "field": "weight",
+    "nextStatus": "SecondTimeFrontViewPhotoStep",
+    "nextSlug": "second-time-front-view",
+    "title": "Weight",
+    "placeholder": "Your new weight in kg",
+    "question": "How much do you weigh?"
+  }
+}
+
+### Step 14
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f16c200000183b116c/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f16c200000183b116c",
+  "documentId": "surveyStep-refresh-004",
+  "data": {
+    "stepNumber": 4,
     "type": "photoupload",
     "slug": "second-time-front-view",
     "status": "SecondTimeFrontViewPhotoStep",

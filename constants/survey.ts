@@ -13,11 +13,13 @@ export enum SurveyStatus {
     SideViewWithRaisedLegPhotoStep = "SideViewWithRaisedLegPhotoStep",
     WaitingForResults = "WaitingForResults",
     FirstReviewDone = "FirstReviewDone",
+    SecondTimeGeneralConditionStep = "SecondTimeGeneralConditionStep",
+    SecondTimePhysicalConditionStep = "SecondTimePhysicalConditionStep",
     SecondTimeWeightStep = "SecondTimeWeightStep",
-    SecondTimeFrontViewPhotoStep = "SecondTimeFrontViewPhotoStep",
+    SecondTimeFrontViewPhotoStep = "SecondTimeFrontViewPhotoStep"
 }
 
-export const defaultSurveyStep: SurveyStep = {
+export const defaultFirstSurveyStep: SurveyStep = {
     stepNumber: 1,
     type: 'multianswer',
     slug: 'lifestyle',
@@ -26,5 +28,17 @@ export const defaultSurveyStep: SurveyStep = {
     nextStatus: SurveyStatus.SportStyleStep,
     nextSlug: "sportstyle",
     question: 'What is your lifestyle ?',
+    description: 'Select one or more options'
+}
+
+export const defaultSecondSurveyStep: SurveyStep = {
+    stepNumber: 1,
+    type: 'multianswer',
+    slug: 'general-condition',
+    status: SurveyStatus.SecondTimeGeneralConditionStep,
+    field: 'generalcondition',
+    nextStatus: SurveyStatus.SecondTimePhysicalConditionStep,
+    nextSlug: "physical-condition",
+    question: 'How you doing ?',
     description: 'Select one or more options'
 }

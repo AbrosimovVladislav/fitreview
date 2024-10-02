@@ -5,7 +5,7 @@ import Button from "@/components/common/Button";
 import {isSubscriptionActive} from "@/lib/PaymentService";
 import {router} from "expo-router";
 import {createStatusRecord} from "@/lib/SurveyService";
-import {SurveyStatus} from "@/constants/survey";
+import {defaultSecondSurveyStep, SurveyStatus} from "@/constants/survey";
 
 const ReviewResultsScreen = ({user}) => {
 
@@ -14,9 +14,9 @@ const ReviewResultsScreen = ({user}) => {
         if (isSubscriptionActive()) {
             //создать новую запись или кочевряжим старую
             //изменить текущий статус на начало второго опроса или конкретный шат
-            await createStatusRecord(user.$id, SurveyStatus.SecondTimeWeightStep);
+            await createStatusRecord(user.$id, defaultSecondSurveyStep.status);
 
-            router.push("/review/survey/second-time-weight"); // первый вопрос повторного опроса, скорее всего про вес
+            router.push(`/review/survey/${defaultSecondSurveyStep.slug}`)
         } else {
             router.push("/review/payment");
         }
