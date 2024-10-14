@@ -1,0 +1,40 @@
+import {View, Text, Image, ScrollView} from 'react-native'
+import React, {useRef} from 'react'
+import BottomSheet from '@gorhom/bottom-sheet';
+import PageHeader from "@/components/PageHeader";
+
+
+const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
+    const bottomSheetRef = useRef(null);
+
+    return (
+        <BottomSheet
+            ref={bottomSheetRef}
+            index={isOpen ? 0 : -1} // Открываем Bottom Sheet при isOpen
+            snapPoints={['90%', '90%']} // Высота Bottom Sheet
+            enablePanDownToClose={true}
+            onClose={onClose} // Закрываем Bottom Sheet
+        >
+            <ScrollView>
+                <View className="flex-col items-center pt-4 px-4 bg-primary">
+                    <PageHeader title={region.title} icon='close-circle' onIconPress={onClose}/>
+                    <Image
+                        source={{uri: region.userImage}}
+                        className="w-full h-96"
+                        resizeMode="contain"
+                    />
+
+                    {
+                        region.points.map((point, index) =>
+                            <Text className="text-md text-center text-gray-100 py-2 font-mregular">
+                                {index + 1}. {point}
+                            </Text>)
+                    }
+
+
+                </View>
+            </ScrollView>
+        </BottomSheet>
+    )
+}
+export default ReviewRegionDetailsBottomSheet

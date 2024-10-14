@@ -1,0 +1,98 @@
+export const newRegions = [
+    {
+        'name': 'R1',
+        'title': 'Upper Body Right',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d49002f8c16a6ce/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d220004060f91d5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'L1',
+        'title': 'Upper Body Left',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d36001164ccb913/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d0b00382c37d3b0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'R2',
+        'title': 'Core Right',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d4f0015bc2bf520/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2700071793fa46/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'L2',
+        'title': 'Core Left',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d3b0006075c2466/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d11000d68b1c272/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'R3',
+        'title': 'Hips Right',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d54002559cfbc5a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2c00298968dbcd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'L3',
+        'title': 'Hips Left',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d3f0015ba63dddf/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d17003c1c767d37/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'R4',
+        'title': 'Feet Right',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d5a00211b4dbcf9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d32000c5208fa15/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+    {
+        'name': 'L4',
+        'title': 'Feet Left',
+        'points': [
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+            'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
+        ],
+        'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d440039258f18a3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d1d00119b482021/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+    },
+]

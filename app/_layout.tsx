@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {SplashScreen, Stack} from 'expo-router'
 import {useFonts} from 'expo-font'
 import GlobalProvider from '../context/GlobalProvider'
+import {GestureHandlerRootView} from "react-native-gesture-handler";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,6 +29,7 @@ const RootLayout = () => {
 
     return (
         <GlobalProvider>
+            <GestureHandlerRootView style={{ flex: 1 }}>
                 <Stack>
                     <Stack.Screen name='index' options={{headerShown: false}}/>
                     <Stack.Screen name='(auth)' options={{headerShown: false}}/>
@@ -39,6 +41,7 @@ const RootLayout = () => {
                     <Stack.Screen name='review/survey/[slug]' options={{headerShown: false, gestureEnabled: false}}/>
                     <Stack.Screen name='training/[slug]' options={{headerShown: false}}/>
                 </Stack>
+            </GestureHandlerRootView>
         </GlobalProvider>
     )
 }
