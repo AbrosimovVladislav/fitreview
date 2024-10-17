@@ -10,7 +10,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "39",
     "title": "Pain has decreased",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/671143fb002f4a00a19f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "physical-condition"
   }
 }
@@ -28,7 +28,7 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "data": {
     "id": "40",
     "title": "I move more freely",
-    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66fd46480024369ec00a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "image": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/671143e50023eb005c44/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "type": "physical-condition"
   }
 }
