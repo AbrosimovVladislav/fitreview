@@ -11,7 +11,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, icon, onIconPress }: PageHeaderProps) => {
     return (
-        <View className={`flex flex-row w-full pb-4 items-center ${icon ? 'justify-between' : 'justify-start'}`}>
+        <View className={`flex flex-row w-full pb-3 items-center ${icon ? 'justify-between' : 'justify-start'}`}>
             <TouchableOpacity onPress={() => router.back()} className="pl-2">
                 <Ionicons name="chevron-back-outline" size={28} color="white" />
             </TouchableOpacity>
