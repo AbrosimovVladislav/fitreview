@@ -27,25 +27,33 @@ const ExercisePage = () => {
             key: 'overview',
             title: 'Overview',
             content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
-                <View className='flex flex-row justify-center items-center'>
-                    <View className='flex flex-row justify-center items-center'>
-                        <Ionicons name='flame-outline' size={22} color='white'/>
-                        <Text className={`text-gray-100 pl-2 font-msemibold`}>
+                <View className='flex flex-row items-center'>
+                    <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
+                        <Ionicons name='flame-outline' size={22} color='#FF9001' />
+                        <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.complexity}
                         </Text>
                     </View>
-                    <Divider vertical/>
-                    <View className='flex flex-row justify-center items-center'>
-                        <Ionicons name='timer-outline' size={22} color='white'/>
-                        <Text className={`text-gray-100 pl-2 font-msemibold`}>
+                    <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
+                        <Ionicons name='timer-outline' size={22} color='lime' />
+                        <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.time} min
                         </Text>
                     </View>
+                    <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
+                        <Ionicons name='barbell-outline' size={22} color='white' />
+                        <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
+                            {exercise.level}
+                        </Text>
+                    </View>
+                    <View className='flex-1 flex flex-col justify-center items-center'>
+                        <Ionicons name='person-outline' size={22} color='cyan' />
+                        <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
+                            {exercise.region}
+                        </Text>
+                    </View>
                 </View>
-                <View className='flex flex-row justify-center items-center pt-4'>
-                    <BadgeInfoBox title='Region' subtitle={exercise.region}/>
-                    <BadgeInfoBox title='Level' subtitle={exercise.level} containerStyles='pl-6'/>
-                </View>
+
                 <View className='flex flex-col justify-center items-center pt-6'>
                     <Text className='text-2xl text-gray-100 font-cbebas'>
                         {exercise.title}
