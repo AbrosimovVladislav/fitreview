@@ -1,0 +1,3 @@
+### Получение упражнения по ID
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json

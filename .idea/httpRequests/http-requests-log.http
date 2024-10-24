@@ -1,3 +1,17 @@
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json
+
+<> 2024-10-24T130344.500.json
+
+###
+
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json
+
+<> 2024-10-24T130022.500.json
+
+###
+
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66d2d8a400226febc4bd/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314
