@@ -58,7 +58,7 @@ const extractRegionAndSubcategoryFromId = (subcategoryId) => {
     return {region, subcategory};
 }
 
-export const getExercisesById = async (exerciseId) => {
+export const getExerciseByIdDeprecated = async (exerciseId) => {
     try {
         const exercises = await databases.listDocuments(
             config.databaseId,

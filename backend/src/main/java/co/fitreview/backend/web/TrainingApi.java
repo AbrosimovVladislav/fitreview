@@ -17,7 +17,7 @@ public class TrainingApi {
 
     private final TrainingService trainingService;
 
-    @GetMapping("/{id}")
+    @GetMapping("/exercise/{id}")
     public Exercise getExerciseById(@PathVariable Long id) {
         return trainingService.getExerciseById(id);
     }

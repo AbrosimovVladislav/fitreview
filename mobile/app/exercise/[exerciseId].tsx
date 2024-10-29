@@ -6,13 +6,11 @@ import {icons} from '../../constants'
 import PageHeader from "@/components/PageHeader";
 import Tabs from "@/components/common/Tabs";
 import {Ionicons} from "@expo/vector-icons";
-import BadgeInfoBox from "@/components/common/BadgeInfoBox";
 import YoutubePlayer from 'react-native-youtube-iframe';
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
-import {getExercisesById} from "@/lib/ExerciseService";
 import {Exercise} from "@/constants/interface";
-import Divider from "@/components/common/Divider";
+import {getExerciseById2} from "@/service/TrainingService";
 
 
 const ExercisePage = () => {
@@ -20,7 +18,7 @@ const ExercisePage = () => {
     const [play, setPlay] = useState(false);
 
     const {exerciseId} = useLocalSearchParams();
-    const {data: exercise} = useAppwrite<Exercise>(() => getExercisesById(Number(exerciseId)));
+    const {data: exercise} = useAppwrite<Exercise>(() => getExerciseById2(Number(exerciseId)));
 
     const tabs = [
         {
