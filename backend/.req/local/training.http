@@ -1,3 +1,7 @@
+### Get Training By Id
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json
+
 ### Get Exercise By Id
 GET http://localhost:8080/api/v1/training/exercise/77
 Accept: application/json
