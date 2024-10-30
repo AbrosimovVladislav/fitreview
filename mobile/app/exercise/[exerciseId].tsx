@@ -10,7 +10,9 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
 import {Exercise} from "@/constants/interface";
-import {getExerciseById2} from "@/service/TrainingService";
+import {getExerciseById} from "@/service/TrainingService";
+import {getExerciseByIdDeprecated} from "@/lib/ExerciseService";
+import {BE} from "@/config"
 
 
 const ExercisePage = () => {
@@ -18,7 +20,9 @@ const ExercisePage = () => {
     const [play, setPlay] = useState(false);
 
     const {exerciseId} = useLocalSearchParams();
-    const {data: exercise} = useAppwrite<Exercise>(() => getExerciseById2(Number(exerciseId)));
+    const {data: exercise} = BE
+        ? useAppwrite<Exercise>(() => getExerciseById(Number(exerciseId)))
+        : useAppwrite<Exercise>(() => getExerciseByIdDeprecated(Number(exerciseId)));
 
     const tabs = [
         {
@@ -27,25 +31,25 @@ const ExercisePage = () => {
             content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
                 <View className='flex flex-row items-center'>
                     <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
-                        <Ionicons name='flame-outline' size={22} color='#FF9001' />
+                        <Ionicons name='flame-outline' size={22} color='#FF9001'/>
                         <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.complexity}
                         </Text>
                     </View>
                     <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
-                        <Ionicons name='timer-outline' size={22} color='lime' />
+                        <Ionicons name='timer-outline' size={22} color='lime'/>
                         <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.time} min
                         </Text>
                     </View>
                     <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
-                        <Ionicons name='barbell-outline' size={22} color='white' />
+                        <Ionicons name='barbell-outline' size={22} color='white'/>
                         <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.level}
                         </Text>
                     </View>
                     <View className='flex-1 flex flex-col justify-center items-center'>
-                        <Ionicons name='person-outline' size={22} color='cyan' />
+                        <Ionicons name='person-outline' size={22} color='cyan'/>
                         <Text className='text-xs text-gray-100 pt-2 font-msemibold'>
                             {exercise.region}
                         </Text>

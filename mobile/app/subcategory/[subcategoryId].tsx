@@ -2,15 +2,19 @@ import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
-import {getExercisesBySubcategoryId} from "@/lib/ExerciseService";
+import {getExercisesBySubcategoryIdDeprecated} from "@/lib/ExerciseService";
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import ExerciseList from "@/components/training/ExerciseList";
+import {BE} from "@/config";
+import {getExercisesBySubcategoryId} from "@/service/TrainingService";
 
 const SubcategoryPage = () => {
 
     const {subcategoryId} = useLocalSearchParams();
-    const {data: exercises} = useAppwrite(() => getExercisesBySubcategoryId(subcategoryId));
+    const {data: exercises} = BE
+        ? useAppwrite(() => getExercisesBySubcategoryId(subcategoryId))
+        : useAppwrite(() => getExercisesBySubcategoryIdDeprecated(subcategoryId));
 
     return (
         <SafeAreaView className='bg-primary h-full'>

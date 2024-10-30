@@ -1,3 +1,7 @@
-### Получение упражнения по ID
+### Get Exercise By Id
 GET http://localhost:8080/api/v1/training/exercise/77
+Accept: application/json
+
+### Get Exercises By Region And Subcategory
+GET http://localhost:8080/api/v1/training/exercises/UPPERBODY/MFR
 Accept: application/json

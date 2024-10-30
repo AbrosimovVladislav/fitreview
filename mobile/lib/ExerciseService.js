@@ -35,9 +35,9 @@ export const getTrainingsByUserId = async (userId) => {
     }
 }
 
-export const getExercisesBySubcategoryId = async (subcategoryId) => {
+export const getExercisesBySubcategoryIdDeprecated = async (subcategoryId) => {
     try {
-        const {region, subcategory} = extractRegionAndSubcategoryFromId(subcategoryId);
+        const {region, subcategory} = extractRegionAndSubcategoryFromIdDeprecated(subcategoryId);
         const exercises = await databases.listDocuments(
             config.databaseId,
             config.exerciseCollectionId,
@@ -53,7 +53,7 @@ export const getExercisesBySubcategoryId = async (subcategoryId) => {
     }
 }
 
-const extractRegionAndSubcategoryFromId = (subcategoryId) => {
+const extractRegionAndSubcategoryFromIdDeprecated = (subcategoryId) => {
     const [region, subcategory] = subcategoryId.split('-');
     return {region, subcategory};
 }

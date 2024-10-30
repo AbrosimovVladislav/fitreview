@@ -1,12 +1,15 @@
 package co.fitreview.backend.service;
 
 import co.fitreview.backend.entity.Exercise;
+import co.fitreview.backend.entity.Region;
+import co.fitreview.backend.entity.Subcategory;
 import co.fitreview.backend.exception.EntityNotFoundException;
 import co.fitreview.backend.repo.ExerciseRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -25,5 +28,9 @@ public class TrainingService {
         }
 
         return exercise.get();
+    }
+
+    public List<Exercise> getExercisesByRegionAndSubcategory(Region region, Subcategory subcategory) {
+        return exerciseRepo.findByRegionAndSubcategory(region,subcategory);
     }
 }

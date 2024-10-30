@@ -1,7 +1,7 @@
 import {SurveyStatus} from "@/constants/survey";
 
 export interface Exercise {
-    "exerciseId": string,
+    "id": string,
     "title": string,
     "thumbnail": string,
     "shortThumbnail": string,
