@@ -1,5 +1,6 @@
 package co.fitreview.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,6 +8,7 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.Type;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,6 +16,7 @@ import java.util.List;
 @Setter
 @Accessors(chain = true)
 public class Exercise {
+
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
@@ -46,7 +49,9 @@ public class Exercise {
 
     private String description;
 
-
+    @JsonIgnore
+    @ManyToMany(mappedBy = "exercises", fetch = FetchType.LAZY)
+    private List<Training> trainings = new ArrayList<>();
 
 
 

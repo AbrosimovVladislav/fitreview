@@ -1,5 +1,9 @@
 import {getRequest} from "./beclient";
 
+export const getTrainingById = async (trainingId) => {
+    return await getRequest(`/training/${trainingId}`);
+};
+
 export const getExerciseById = async (exerciseId) => {
     return await getRequest(`/training/exercise/${exerciseId}`);
 };

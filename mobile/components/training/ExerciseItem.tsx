@@ -26,10 +26,6 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
         FEETPRO: 'bg-rose-600',
     }
 
-    useEffect(() => {
-        console.log(exercise)
-    },[exercise])
-
     return (
         <View className='px-4'>
             <TouchableOpacity className='flex flex-row pb-5' onPress={() => {

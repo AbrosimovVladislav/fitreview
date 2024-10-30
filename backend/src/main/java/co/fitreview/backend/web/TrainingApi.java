@@ -3,6 +3,7 @@ package co.fitreview.backend.web;
 import co.fitreview.backend.entity.Exercise;
 import co.fitreview.backend.entity.Region;
 import co.fitreview.backend.entity.Subcategory;
+import co.fitreview.backend.entity.Training;
 import co.fitreview.backend.service.TrainingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,11 @@ import java.util.List;
 public class TrainingApi {
 
     private final TrainingService trainingService;
+
+    @GetMapping("/{id}")
+    public Training getTrainingById(@PathVariable Long id) {
+        return trainingService.getTrainingById(id);
+    }
 
     @GetMapping("/exercise/{id}")
     public Exercise getExerciseById(@PathVariable Long id) {

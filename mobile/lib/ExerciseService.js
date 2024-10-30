@@ -3,21 +3,6 @@ import {client, config} from "./appwrite";
 
 const databases = new Databases(client);
 
-export const getTrainingById = async (documentId) => {
-    try {
-        const training = await databases.getDocument(
-            config.databaseId,
-            config.trainingCollectionId,
-            documentId
-        )
-
-        return training;
-    } catch (error) {
-        console.error('[ExerciseService-getTrainingById] ' + error)
-        throw new Error(error);
-    }
-}
-
 export const getTrainingsByUserId = async (userId) => {
     try {
         const trainings = await databases.listDocuments(
@@ -31,6 +16,21 @@ export const getTrainingsByUserId = async (userId) => {
         return trainings.documents;
     } catch (error) {
         console.error('[ExerciseService-getTrainingsByUserId] ' + error)
+        throw new Error(error);
+    }
+}
+
+export const getTrainingByIdDeprecated = async (documentId) => {
+    try {
+        const training = await databases.getDocument(
+            config.databaseId,
+            config.trainingCollectionId,
+            documentId
+        )
+
+        return training;
+    } catch (error) {
+        console.error('[ExerciseService-getTrainingById] ' + error)
         throw new Error(error);
     }
 }
