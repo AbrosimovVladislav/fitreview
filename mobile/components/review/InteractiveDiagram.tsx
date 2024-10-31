@@ -1,16 +1,12 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React, {useState} from 'react'
+import React from 'react'
 import {newRegions} from "@/constants/temp";
 import {Ionicons} from "@expo/vector-icons";
-import ReviewRegionDetailsBottomSheet from "@/components/review/ReviewRegionDetailsBottomSheet";
 
-const InteractiveDiagram = () => {
-
-    const [selected, setSelected] = useState('');
-    const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
+const InteractiveDiagram = ({selectedRegion, setSelectedRegion, setBottomSheetVisible}) => {
 
     function handleRegionPress(regionName: string) {
-        setSelected(prevState => prevState === regionName ? '' : regionName)
+        setSelectedRegion(prevState => prevState === regionName ? '' : regionName)
     }
 
     function handleDetailsPress() {
@@ -59,16 +55,16 @@ const InteractiveDiagram = () => {
                             className={`flex items-start ${getBorderClass(region.name)} border-orange-300`}
                         >
                             <Image
-                                source={{uri: selected === region.name ? region.diagramImage : region.userImage}}
+                                source={{uri: selectedRegion === region.name ? region.diagramImage : region.userImage}}
                                 className="w-32 h-32"
                                 resizeMode="contain"
                             />
-                            {selected === region.name && (
+                            {selectedRegion === region.name && (
                                 <TouchableOpacity
                                     onPress={handleDetailsPress}
-                                    className={region.name.includes("L") ? "absolute top-2 right-2" : "absolute top-2 left-2"}
+                                    className={region.name.includes("L") ? "absolute top-10 right-0" : "absolute top-10 left-0"}
                                 >
-                                    <Ionicons name='information-circle' size={40}
+                                    <Ionicons name='search-circle' size={48}
                                               color='#FF9001'/>
                                 </TouchableOpacity>
                             )}
@@ -76,15 +72,6 @@ const InteractiveDiagram = () => {
                     </View>
                 ))}
             </View>
-
-            {bottomSheetVisible && (
-                <ReviewRegionDetailsBottomSheet
-                    isOpen={bottomSheetVisible}
-                    onClose={() => setBottomSheetVisible(false)}
-                    region={newRegions.filter(r => r.name === selected)[0]}
-                >
-                </ReviewRegionDetailsBottomSheet>
-            )}
         </View>
     )
 }

@@ -14,13 +14,13 @@ const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
             snapPoints={['100%', '100%']} // Высота Bottom Sheet
             enablePanDownToClose={true}
             onClose={onClose} // Закрываем Bottom Sheet
-            handleIndicatorStyle={{ backgroundColor: '#CDCDE0' }} // Цвет самой палочки
-            handleStyle={{ backgroundColor: '#1E1E2D' }} // Замените на нужный цвет для фона вокруг палочки
-            backgroundStyle={{ backgroundColor: '#1E1E2D' }}
+            handleIndicatorStyle={{backgroundColor: '#CDCDE0'}} // Цвет самой палочки
+            handleStyle={{backgroundColor: '#1E1E2D'}} // Замените на нужный цвет для фона вокруг палочки
+            backgroundStyle={{backgroundColor: '#1E1E2D'}}
         >
             <ScrollView>
                 <View className="flex-col items-center pt-4 px-4 bg-black-100">
-                    <PageHeader title={region.title} icon='close-circle' onIconPress={onClose}/>
+                    <PageHeader title={region.title} icon='close' onIconPress={onClose} removeGoBackIcon/>
                     <Image
                         source={{uri: region.userImage}}
                         className="w-full h-96"

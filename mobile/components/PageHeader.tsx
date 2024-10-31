@@ -1,19 +1,20 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
+import {Ionicons} from '@expo/vector-icons';
+import {router} from 'expo-router';
 
 interface PageHeaderProps {
     title?: string;
     icon?: string;
     onIconPress?: () => void;
+    removeGoBackIcon?: boolean;
 }
 
-const PageHeader = ({ title, icon, onIconPress }: PageHeaderProps) => {
+const PageHeader = ({title, icon, onIconPress, removeGoBackIcon}: PageHeaderProps) => {
     return (
         <View className={`flex flex-row w-full pb-3 items-center ${icon ? 'justify-between' : 'justify-start'}`}>
-            <TouchableOpacity onPress={() => router.back()} className="pl-2">
-                <Ionicons name="chevron-back-outline" size={28} color="white" />
+            <TouchableOpacity onPress={() => !removeGoBackIcon && router.back()} className={`pl-2 ${removeGoBackIcon && 'opacity-0 pointer-events-none'}`}>
+                <Ionicons name="chevron-back-outline" size={28} color="white"/>
             </TouchableOpacity>
 
             <Text className={`text-3xl text-gray-300 font-cbebas ${icon ? '' : 'flex-1 text-center pr-5'}`}>
@@ -22,7 +23,7 @@ const PageHeader = ({ title, icon, onIconPress }: PageHeaderProps) => {
 
             {icon && (
                 <TouchableOpacity onPress={onIconPress} className="pr-2">
-                    <Ionicons name={icon} size={28} color="white" />
+                    <Ionicons name={icon} size={28} color="white"/>
                 </TouchableOpacity>
             )}
         </View>
