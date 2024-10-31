@@ -1,9 +1,12 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native'
+import {View, Text, TouchableOpacity, Image, Dimensions} from 'react-native'
 import React from 'react'
 import {newRegions} from "@/constants/temp";
 import {Ionicons} from "@expo/vector-icons";
 
 const InteractiveDiagram = ({selectedRegion, setSelectedRegion, setBottomSheetVisible}) => {
+
+    const { width } = Dimensions.get('window');
+    const imageSizeClass = width < 400 ? 'w-32 h-32' : 'w-36 h-36';
 
     function handleRegionPress(regionName: string) {
         setSelectedRegion(prevState => prevState === regionName ? '' : regionName)
@@ -56,7 +59,7 @@ const InteractiveDiagram = ({selectedRegion, setSelectedRegion, setBottomSheetVi
                         >
                             <Image
                                 source={{uri: selectedRegion === region.name ? region.diagramImage : region.userImage}}
-                                className="w-32 h-32"
+                                className={imageSizeClass}
                                 resizeMode="contain"
                             />
                             {selectedRegion === region.name && (
