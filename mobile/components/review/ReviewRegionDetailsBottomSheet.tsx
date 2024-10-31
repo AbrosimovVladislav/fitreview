@@ -20,7 +20,11 @@ const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
         >
             <ScrollView>
                 <View className="flex-col items-center pt-4 px-4 bg-black-100">
-                    <PageHeader title={region.title} icon='close' onIconPress={onClose} removeGoBackIcon/>
+                    <PageHeader
+                        title={region.title}
+                        icon='close'
+                        onIconPress={onClose}
+                        removeGoBackIcon/>
                     <Image
                         source={{uri: region.userImage}}
                         className="w-full h-96"

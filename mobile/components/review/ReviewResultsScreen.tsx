@@ -66,7 +66,7 @@ const ReviewResultsScreen = ({user}) => {
 
     return (
         <View className='flex-1 pt-4 px-1'>
-            <PageHeader title='Fit Review'/>
+            <PageHeader title='Fit Review' paddingBottom="pb-0"/>
             <Tabs tabs={tabs}/>
             {bottomSheetVisible && (
                 <ReviewRegionDetailsBottomSheet

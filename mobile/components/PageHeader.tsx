@@ -6,13 +6,14 @@ import {router} from 'expo-router';
 interface PageHeaderProps {
     title?: string;
     icon?: string;
+    paddingBottom?: string,
     onIconPress?: () => void;
     removeGoBackIcon?: boolean;
 }
 
-const PageHeader = ({title, icon, onIconPress, removeGoBackIcon}: PageHeaderProps) => {
+const PageHeader = ({title, icon, paddingBottom, onIconPress, removeGoBackIcon}: PageHeaderProps) => {
     return (
-        <View className={`flex flex-row w-full pb-3 items-center ${icon ? 'justify-between' : 'justify-start'}`}>
+        <View className={`flex flex-row w-full items-center ${icon ? 'justify-between' : 'justify-start'}  ${paddingBottom || 'pb-3'}`}>
             <TouchableOpacity onPress={() => !removeGoBackIcon && router.back()} className={`pl-2 ${removeGoBackIcon && 'opacity-0 pointer-events-none'}`}>
                 <Ionicons name="chevron-back-outline" size={28} color="white"/>
             </TouchableOpacity>
