@@ -1,11 +1,16 @@
-import {View, Text, Image, ScrollView} from 'react-native'
-import React, {useRef} from 'react'
+import {View, Text, Image, ScrollView, Switch} from 'react-native'
+import React, {useRef, useState} from 'react'
 import BottomSheet from '@gorhom/bottom-sheet';
 import PageHeader from "@/components/PageHeader";
 
 
 const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
     const bottomSheetRef = useRef(null);
+    const [showDiagram, setShowDiagram] = useState(false); // Состояние для переключения изображения
+
+    function handleToggle() {
+        setShowDiagram(prevState => !prevState);
+    }
 
     return (
         <BottomSheet
@@ -26,10 +31,20 @@ const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
                         onIconPress={onClose}
                         removeGoBackIcon/>
                     <Image
-                        source={{uri: region.userImage}}
+                        source={{uri: showDiagram ? region.diagramImage : region.userImage}}
                         className="w-full h-96"
                         resizeMode="contain"
                     />
+
+                    <View className={`absolute top-24 ${region.name.includes("L") ? "right-9" : "left-9"} flex-row items-center`}>
+                        <Text className="text-white mr-2">{showDiagram ? 'Photo' : 'X-Ray'}</Text>
+                        <Switch
+                            value={showDiagram}
+                            onValueChange={handleToggle}
+                            thumbColor="#FF9001"
+                            trackColor={{ false: "#767577", true: "#FF9001" }}
+                        />
+                    </View>
 
                     {
                         region.points.map((point, index) =>

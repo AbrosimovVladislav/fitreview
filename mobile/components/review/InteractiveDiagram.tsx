@@ -59,7 +59,7 @@ const InteractiveDiagram = ({selectedRegion, setSelectedRegion, setBottomSheetVi
                         >
                             <Image
                                 source={{uri: selectedRegion === region.name ? region.diagramImage : region.userImage}}
-                                className={imageSizeClass}
+                                className={`${imageSizeClass} ${selectedRegion && selectedRegion !== region.name ? 'opacity-50' : 'opacity-100'}`}
                                 resizeMode="contain"
                             />
                             {selectedRegion === region.name && (
