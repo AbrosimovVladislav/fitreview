@@ -17,12 +17,33 @@ const InteractiveDiagram = () => {
         setBottomSheetVisible(true);
     }
 
+    const getBorderClass = (regionName) => {
+        switch (regionName) {
+            case 'R1':
+                return 'border-r-0.5 border-b-0.5'; // Верхняя левая картинка
+            case 'R2':
+                return 'border-r-0.5 border-b-0.5'; // Верхняя правая картинка
+            case 'R3':
+                return 'border-r-0.5 border-b-0.5'; // Средняя левая картинка
+            case 'R4':
+                return 'border-r-0.5'; // Средняя правая картинка
+            case 'L1':
+                return 'border-b-0.5'; // Нижняя левая картинка
+            case 'L2':
+                return 'border-b-0.5'; // Нижняя правая картинка
+            case 'L3':
+                return 'border-b-0.5'; // Нижняя левая картинка
+            case 'L4':
+                return ''; // Нижняя правая картинка
+            default:
+                return ''; // Картинки с полными границами
+        }
+    };
+
     return (
         <View>
-
-            <Text className="text-md text-center text-gray-100 pt-3 font-mregular">
-                Warming up your glutes is essential for enhancing movement efficiency,
-                preventing injuries
+            <Text className="text-md text-center text-gray-100 pt-4 pb-2 font-mregular">
+                To check the details, tap on the body region
             </Text>
 
             <View className="flex flex-row flex-wrap px-4 pt-3">
@@ -35,11 +56,11 @@ const InteractiveDiagram = () => {
                     >
                         <TouchableOpacity
                             onPress={() => handleRegionPress(region.name)}
-                            className="flex items-start"
+                            className={`flex items-start ${getBorderClass(region.name)} border-orange-300`}
                         >
                             <Image
                                 source={{uri: selected === region.name ? region.diagramImage : region.userImage}}
-                                className="w-32 h-32 border-0.5 border-orange-300"
+                                className="w-32 h-32"
                                 resizeMode="contain"
                             />
                             {selected === region.name && (
