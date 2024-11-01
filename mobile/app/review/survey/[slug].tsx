@@ -6,7 +6,7 @@ import {useLocalSearchParams} from "expo-router";
 import {SurveyStep} from "@/constants/interface";
 import NumberInputSurveyStepScreen from "@/components/review/survey/NumberInputSurveyStepScreen";
 import PhotoUploadSurveyStepScreen from "@/components/review/survey/PhotoUploadSurveyStepScreen";
-import ReviewErrorCase from "@/components/review/ReviewErrorCase";
+import ErrorReviewScreen from "@/components/review/screen/ErrorReviewScreen";
 import useAppwrite from "@/lib/useAppwrite";
 import {getSurveyStepBySlug} from "@/lib/SurveyService";
 import LoadingView from "@expo/metro-runtime/build/LoadingView.native";
@@ -47,7 +47,7 @@ const SurveyStepPage = () => {
                                 user={user}
                                 slug={slug}
                                 surveyStep={surveyStep}/>
-                            : <ReviewErrorCase/>
+                            : <ErrorReviewScreen/>
             }
 
         </SafeAreaView>

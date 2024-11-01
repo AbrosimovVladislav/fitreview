@@ -1,4 +1,4 @@
-import {View, ScrollView} from 'react-native'
+import {View} from 'react-native'
 import React, {useState} from 'react'
 import PageHeader from "@/components/PageHeader";
 import {isSubscriptionActive} from "@/lib/PaymentService";
@@ -6,13 +6,14 @@ import {router} from "expo-router";
 import {createStatusRecord} from "@/lib/SurveyService";
 import {defaultSecondSurveyStep} from "@/constants/survey";
 import Tabs from "@/components/common/Tabs";
-import InteractiveDiagram from "@/components/review/InteractiveDiagram";
-import OtherViewsScreen from "@/components/review/OtherViewsScreen";
-import ReviewRegionDetailsBottomSheet from "@/components/review/ReviewRegionDetailsBottomSheet";
-import {reviewItems} from "@/constants/temp";
-import ReviewResultsTab from "@/components/review/ReviewResultsTab";
+import OtherViewsReviewResultTab from "@/components/review/result/tab/other/OtherViewsReviewResultTab";
+import DetailsBottomSheet from "@/components/review/result/DetailsBottomSheet";
+import {bodyMapRegions} from "@/constants/temp";
+import SummaryReviewResultTab from "@/components/review/result/tab/summary/SummaryReviewResultTab";
+import FrontViewReviewResultTab from "@/components/review/result/tab/front/FrontViewReviewResultTab";
+import BackViewReviewResultTab from "@/components/review/result/tab/back/BackViewReviewResultTab";
 
-const ReviewResultsScreen = ({user}) => {
+const ResultsReviewScreen = ({user}) => {
 
     const [selectedRegion, setSelectedRegion] = useState('');
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
@@ -34,33 +35,33 @@ const ReviewResultsScreen = ({user}) => {
         {
             key: "front-view",
             title: "Front View",
-            content: <ScrollView><InteractiveDiagram
-                regions={reviewItems.filter(item => 'FrontView' === item.group)}
+            content: <FrontViewReviewResultTab
+                bodyMapRegions={bodyMapRegions.filter(item => 'FrontView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
-            /></ScrollView>
+            />
         },
         {
             key: "back-view",
             title: "Back View",
-            content: <ScrollView><InteractiveDiagram
-                regions={reviewItems.filter(item => 'BackView' === item.group)}
+            content: <BackViewReviewResultTab
+                bodyMapRegions={bodyMapRegions.filter(item => 'BackView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
-            /></ScrollView>
+            />
         },
         {
             key: "other-views",
             title: "Other Views",
-            content: <ScrollView><OtherViewsScreen/></ScrollView>
+            content: <OtherViewsReviewResultTab/>
         },
         {
             key: "results",
-            title: "Results",
-            content: <ReviewResultsTab
-                regions={reviewItems.filter(item => 'FrontView' === item.group)}
+            title: "Summary",
+            content: <SummaryReviewResultTab
+                bodyMapRegions={bodyMapRegions.filter(item => 'FrontView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -73,14 +74,14 @@ const ReviewResultsScreen = ({user}) => {
             <PageHeader title='Fit Review' paddingBottom="pb-0"/>
             <Tabs tabs={tabs}/>
             {bottomSheetVisible && (
-                <ReviewRegionDetailsBottomSheet
+                <DetailsBottomSheet
                     isOpen={bottomSheetVisible}
                     onClose={() => setBottomSheetVisible(false)}
-                    region={reviewItems.filter(r => r.name === selectedRegion)[0]}
+                    region={bodyMapRegions.filter(r => r.name === selectedRegion)[0]}
                 >
-                </ReviewRegionDetailsBottomSheet>
+                </DetailsBottomSheet>
             )}
         </View>
     )
 }
-export default ReviewResultsScreen
+export default ResultsReviewScreen

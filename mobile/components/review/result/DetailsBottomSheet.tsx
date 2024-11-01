@@ -4,7 +4,7 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import PageHeader from "@/components/PageHeader";
 
 
-const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
+const DetailsBottomSheet = ({isOpen, onClose, region}) => {
     const bottomSheetRef = useRef(null);
     const [showDiagram, setShowDiagram] = useState(false); // Состояние для переключения изображения
 
@@ -36,7 +36,7 @@ const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
                         resizeMode="contain"
                     />
 
-                    <View className={`absolute top-24 ${region.name.includes("L") ? "right-9" : "left-9"} flex-row items-center`}>
+                    <View className={`absolute top-24 ${region.name.includes("R") ? "right-9" : "left-9"} flex-row items-center`}>
                         <Text className="text-white mr-2">{showDiagram ? 'Photo' : 'X-Ray'}</Text>
                         <Switch
                             value={showDiagram}
@@ -59,4 +59,4 @@ const ReviewRegionDetailsBottomSheet = ({isOpen, onClose, region}) => {
         </BottomSheet>
     )
 }
-export default ReviewRegionDetailsBottomSheet
+export default DetailsBottomSheet

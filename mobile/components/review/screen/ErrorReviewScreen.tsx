@@ -3,7 +3,7 @@ import React from 'react'
 import PageHeader from "@/components/PageHeader";
 import Button from "@/components/common/Button";
 
-const ReviewErrorCase = () => {
+const ErrorReviewScreen = () => {
     return (
         <ScrollView>
             <View className='pt-4'>
@@ -12,9 +12,9 @@ const ReviewErrorCase = () => {
                     title="ERROR CASE"
                     containerStyles="mt-2 mx-6"
                     icon={'ribbon'}
-                    onPress={() => console.log("[ReviewErrorCase] results_error")}/>
+                    onPress={() => console.log("[ErrorReviewScreen] results_error")}/>
             </View>
         </ScrollView>
     )
 }
-export default ReviewErrorCase
+export default ErrorReviewScreen

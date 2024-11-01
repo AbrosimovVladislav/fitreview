@@ -5,10 +5,10 @@ import {router, useFocusEffect} from "expo-router";
 import {useGlobalContext} from "@/context/GlobalProvider";
 import {getCurrentStatus, getSurveyStepByStatus} from "@/lib/SurveyService";
 import {SurveyStatus} from "@/constants/survey";
-import InitialReviewScreen from "@/components/review/InitialReviewScreen";
-import WaitingForResultsScreen from "@/components/review/WaitingForResultsScreen";
-import ReviewResultsScreen from "@/components/review/ReviewResultsScreen";
-import ReviewErrorCase from "@/components/review/ReviewErrorCase";
+import InitialReviewScreen from "@/components/review/screen/InitialReviewScreen";
+import WaitingReviewScreen from "@/components/review/screen/WaitingReviewScreen";
+import ResultsReviewScreen from "@/components/review/screen/ResultsReviewScreen";
+import ErrorReviewScreen from "@/components/review/screen/ErrorReviewScreen";
 
 const Review = () => {
 
@@ -53,10 +53,10 @@ const Review = () => {
         <SafeAreaView className='bg-primary h-full'>
             {status
                 ? status === SurveyStatus.WaitingForResults
-                    ? <WaitingForResultsScreen user={user}/>
+                    ? <WaitingReviewScreen user={user}/>
                     : status === SurveyStatus.FirstReviewDone
-                        ? <ReviewResultsScreen user={user}/>
-                        : <ReviewErrorCase/>
+                        ? <ResultsReviewScreen user={user}/>
+                        : <ErrorReviewScreen/>
                 : <InitialReviewScreen/>}
         </SafeAreaView>
     )

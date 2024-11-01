@@ -6,7 +6,7 @@ import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
 import {router} from "expo-router";
 
-import {images} from '../../constants'
+import {images} from '../../../constants'
 
 const InitialReviewScreen = () => {
     return (

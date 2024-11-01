@@ -1,12 +1,12 @@
 import {View, Text, Image, ScrollView} from 'react-native'
 import React from 'react'
 
-import {images} from '../../constants'
+import {images} from '../../../constants'
 import Button from "@/components/common/Button";
 import {createStatusRecord} from "@/lib/SurveyService";
 import {SurveyStatus} from "@/constants/survey";
 
-const WaitingForResultsScreen = ({user}) => {
+const WaitingReviewScreen = ({user}) => {
     return (
         <ScrollView>
             <View className='flex justify-center items-center gap-16 p-4 pt-8'>
@@ -41,4 +41,4 @@ const WaitingForResultsScreen = ({user}) => {
         </ScrollView>
     )
 }
-export default WaitingForResultsScreen
+export default WaitingReviewScreen
