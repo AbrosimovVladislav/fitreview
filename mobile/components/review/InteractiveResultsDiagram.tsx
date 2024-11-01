@@ -32,6 +32,20 @@ const InteractiveDiagram = ({regions, selectedRegion, setSelectedRegion, setBott
         setBottomSheetVisible(true);
     }
 
+    const getEstimationColor = (estimation) => {
+        if (estimation <= 70) {
+            // Переход от красного к желтому
+            const red = 255;
+            const green = Math.floor((estimation / 70) * 255);
+            return `rgb(${red}, ${green}, 0)`;
+        } else {
+            // Переход от желтого к зеленому
+            const green = 255;
+            const red = Math.floor(255 - ((estimation - 70) / 70) * 255);
+            return `rgb(${red}, ${green}, 0)`;
+        }
+    };
+
     return !regions
         ? <LoadingView/>
         : (
@@ -57,15 +71,35 @@ const InteractiveDiagram = ({regions, selectedRegion, setSelectedRegion, setBott
                                     className={`${imageSizeClass} ${selectedRegion && selectedRegion !== region.name ? 'opacity-50' : 'opacity-100'}`}
                                     resizeMode="contain"
                                 />
-                                {selectedRegion === region.name && (
-                                    <TouchableOpacity
-                                        onPress={handleDetailsPress}
-                                        className={region.name.includes("L") ? "absolute top-10 right-0" : "absolute top-10 left-0"}
-                                    >
-                                        <Ionicons name='search-circle' size={48}
-                                                  color='#FF9001'/>
-                                    </TouchableOpacity>
-                                )}
+                                {
+                                    selectedRegion === region.name
+                                        ? (
+                                            <TouchableOpacity
+                                                onPress={handleDetailsPress}
+                                                className={region.name.includes("L") ? "absolute top-10 right-0" : "absolute top-10 left-0"}
+                                            >
+                                                <Ionicons name='search-circle' size={48}
+                                                          color='#FF9001'/>
+                                            </TouchableOpacity>
+
+                                        )
+                                        : (
+                                            <View
+                                                className={`absolute ${region.name.includes('R') ? 'top-12 left-0' : 'top-12 right-0'} w-12 h-12 bg-opacity-75 rounded-full flex items-center justify-center`}
+                                                style={{
+                                                    borderColor: getEstimationColor(region.estimation),
+                                                    borderWidth: 1, // Установка ширины границы для применения динамического цвета
+                                                }}
+                                            >
+                                                <Text
+                                                    className="text-lg font-cbebas"
+                                                    style={{color: getEstimationColor(region.estimation)}}
+                                                >
+                                                    {region.estimation}%
+                                                </Text>
+                                            </View>
+                                        )
+                                }
                             </TouchableOpacity>
                         </View>
                     ))}

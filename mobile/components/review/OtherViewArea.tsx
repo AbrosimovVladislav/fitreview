@@ -1,7 +1,7 @@
 import {View, Text, Image} from 'react-native'
 import React from 'react'
 
-const OtherViewArea = ({title}) => {
+const OtherViewArea = ({title, leftImage, rightImage}) => {
     return (
         <View className='flex items-center pb-8'>
             <Text className="text-3xl text-gray-300 text-semibold font-cbebas">
@@ -9,13 +9,13 @@ const OtherViewArea = ({title}) => {
             </Text>
             <View className='flex flex-row gap-4'>
                 <Image
-                    source={{uri: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a3f4600184a31918f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin'}}
-                    className="w-44 h-84"
+                    source={{uri: leftImage}}
+                    className="w-44 h-96 border border-red-300"
                     resizeMode="contain"
                 />
                 <Image
-                    source={{uri: 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a3f4600184a31918f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin'}}
-                    className="w-44 h-96"
+                    source={{uri: rightImage}}
+                    className="w-44 h-96 border border-orange-300"
                     resizeMode="contain"
                 />
             </View>

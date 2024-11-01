@@ -9,7 +9,8 @@ import Tabs from "@/components/common/Tabs";
 import InteractiveDiagram from "@/components/review/InteractiveDiagram";
 import OtherViewsScreen from "@/components/review/OtherViewsScreen";
 import ReviewRegionDetailsBottomSheet from "@/components/review/ReviewRegionDetailsBottomSheet";
-import {newRegions} from "@/constants/temp";
+import {reviewItems} from "@/constants/temp";
+import ReviewResultsTab from "@/components/review/ReviewResultsTab";
 
 const ReviewResultsScreen = ({user}) => {
 
@@ -34,6 +35,7 @@ const ReviewResultsScreen = ({user}) => {
             key: "front-view",
             title: "Front View",
             content: <ScrollView><InteractiveDiagram
+                regions={reviewItems.filter(item => 'FrontView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -43,6 +45,7 @@ const ReviewResultsScreen = ({user}) => {
             key: "back-view",
             title: "Back View",
             content: <ScrollView><InteractiveDiagram
+                regions={reviewItems.filter(item => 'BackView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -56,11 +59,12 @@ const ReviewResultsScreen = ({user}) => {
         {
             key: "results",
             title: "Results",
-            content: <ScrollView><InteractiveDiagram
+            content: <ReviewResultsTab
+                regions={reviewItems.filter(item => 'FrontView' === item.group)}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
-            /></ScrollView>
+            />
         },
     ]
 
@@ -72,7 +76,7 @@ const ReviewResultsScreen = ({user}) => {
                 <ReviewRegionDetailsBottomSheet
                     isOpen={bottomSheetVisible}
                     onClose={() => setBottomSheetVisible(false)}
-                    region={newRegions.filter(r => r.name === selectedRegion)[0]}
+                    region={reviewItems.filter(r => r.name === selectedRegion)[0]}
                 >
                 </ReviewRegionDetailsBottomSheet>
             )}
