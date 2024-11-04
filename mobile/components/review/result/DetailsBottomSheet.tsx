@@ -32,7 +32,7 @@ const DetailsBottomSheet = ({isOpen, onClose, region}) => {
                         removeGoBackIcon/>
                     <Image
                         source={{uri: showDiagram ? region.diagramImage : region.userImage}}
-                        className="w-full h-96"
+                        className="w-full h-96 bg-black-200"
                         resizeMode="contain"
                     />
 

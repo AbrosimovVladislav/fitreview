@@ -11,7 +11,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6723826b0010c23a3449/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d220004060f91d5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550620020adb4b6a5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-R1',
@@ -25,7 +25,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67238256001b725e9cee/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d0b00382c37d3b0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67255077000fc35d036f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-L2',
@@ -39,7 +39,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67238270000ffa92161e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2700071793fa46/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550670010f9364001/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-R2',
@@ -53,7 +53,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6723825a003cacf7d4ce/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d11000d68b1c272/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725507c00001071f800/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-L3',
@@ -67,7 +67,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67238274003889eb94a6/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2c00298968dbcd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725506b0039885b04a9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-R3',
@@ -81,7 +81,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67238260001a3c3ed162/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d17003c1c767d37/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550820031155677d1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-L4',
@@ -95,7 +95,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672382790023df44988f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d32000c5208fa15/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550700028cea21e8e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'FrontView-R4',
@@ -109,7 +109,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672382650023cbc7789e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d1d00119b482021/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550890009a8f05b7b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-L1',
@@ -122,7 +122,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399de001ecdac342b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d220004060f91d5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725503a00087a128460/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-R1',
@@ -135,7 +135,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399c7003cedc077f3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d0b00382c37d3b0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725504d0031221a9c15/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-L2',
@@ -148,7 +148,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399e3003497e47080/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2700071793fa46/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725503f00002aa3a5cb/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-R2',
@@ -161,7 +161,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399cd0026060f8f08/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d11000d68b1c272/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/67255052001f8a60d9d9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-L3',
@@ -174,7 +174,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399e9000b0134507d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d2c00298968dbcd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550430039a2bd875e/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-R3',
@@ -187,7 +187,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399d2002936704806/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d17003c1c767d37/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725505700311eea5cf8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-L4',
@@ -200,7 +200,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399ee000281b83bea/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d32000c5208fa15/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672550480027caa0d188/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'BackView-R4',
@@ -213,7 +213,7 @@ export const bodyMapRegions = [
             'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
         ],
         'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/672399d8000394295cc1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/670a2d1d00119b482021/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+        'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6725505d0003361e3fcc/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
     },
     {
         'name': 'SideView-R',

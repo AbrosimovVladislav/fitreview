@@ -10,12 +10,12 @@ const OtherViewArea = ({title, leftImage, rightImage}) => {
             <View className='flex flex-row gap-4'>
                 <Image
                     source={{uri: leftImage}}
-                    className="w-44 h-96 border border-red-300"
+                    className="w-44 h-96"
                     resizeMode="contain"
                 />
                 <Image
                     source={{uri: rightImage}}
-                    className="w-44 h-96 border border-orange-300"
+                    className="w-44 h-96"
                     resizeMode="contain"
                 />
             </View>
