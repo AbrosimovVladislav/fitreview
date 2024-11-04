@@ -43,6 +43,7 @@
     "react-native-animatable": "^1.4.0",
     "react-native-appwrite": "^0.4.0",
     "react-native-circular-progress": "^1.4.1",
+    "react-native-collapsible": "^1.6.2",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-pager-view": "6.3.0",
     "react-native-reanimated": "~3.10.1",

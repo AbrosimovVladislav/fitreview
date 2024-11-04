@@ -54,10 +54,14 @@ const TouchableRegion = ({
                         ? <DetailsButton
                             regionName={region.name}
                             setBottomSheetVisible={setBottomSheetVisible}/>
-                        : summary && <EstimationLabel
-                        regionName={region.name}
-                        regionEstimation={region.estimation}
-                        screenWidth={screenWidth}/>
+                        : summary && <View
+                        className={`absolute ${region.name.includes('L') ? 'top-10 left-0' : 'top-10 right-0'} `}>
+                        <EstimationLabel
+                            regionName={region.name}
+                            regionEstimation={region.estimation}
+                            size={screenWidth < 400 ? 'md' : 'lg'}/>
+                    </View>
+
                 }
             </TouchableOpacity>
         </View>

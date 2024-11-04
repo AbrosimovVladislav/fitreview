@@ -1,8 +1,8 @@
-import {ScrollView} from 'react-native'
+import {ScrollView, View} from 'react-native'
 import React from 'react'
 import InteractiveBodyMap from "@/components/review/result/interactive-body-map/InteractiveBodyMap";
 import SummaryEstimationArea from "@/components/review/result/tab/summary/SummaryEstimationArea";
-import SummaryAccordion from "@/components/review/result/tab/summary/SummaryAccordion";
+import MainProblemsArea from "@/components/review/result/tab/summary/MainProblemsArea";
 import Divider from "@/components/common/Divider";
 
 const SummaryReviewResultTab = ({
@@ -13,7 +13,7 @@ const SummaryReviewResultTab = ({
                                     summaryEstimation
                                 }) => {
     return (
-        <ScrollView>
+        <ScrollView className='px-4'>
             <InteractiveBodyMap
                 bodyMapRegions={bodyMapRegions}
                 selectedRegion={selectedRegion}
@@ -24,16 +24,12 @@ const SummaryReviewResultTab = ({
             <SummaryEstimationArea
                 summaryEstimation={summaryEstimation}
             />
-            <Divider/>
-            <SummaryAccordion
+                <Divider/>
+
+            <MainProblemsArea
 
             />
-            <SummaryAccordion
-
-            />
-            <SummaryAccordion
-
-            />
+                <Divider/>
         </ScrollView>
     )
 }
