@@ -6,17 +6,19 @@ import TouchableRegion from "@/components/review/result/interactive-body-map/Tou
 const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, setBottomSheetVisible, summary}) => {
 
     const {width} = Dimensions.get('window');
-    const imageSizeClass = width < 400 ? 'w-32 h-32' : 'w-36 h-36';
 
     return !bodyMapRegions
         ? <LoadingView/>
         : (
             <View>
-                <Text className="text-md text-center text-gray-100 pt-4 pb-2 font-mregular">
-                    To check the details, tap on the body region
-                </Text>
+                {
+                    !summary &&
+                    <Text className="text-md text-center text-gray-100 pt-4 pb-2 font-mregular">
+                        To check the details, tap on the body region
+                    </Text>
+                }
 
-                <View className="flex flex-row flex-wrap px-4 pt-3">
+                <View className="flex flex-row flex-wrap px-4 pt-2">
                     {bodyMapRegions.map((region, index) => (
                         <TouchableRegion
                             index={index}
@@ -25,7 +27,7 @@ const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, 
                             setSelectedRegion={setSelectedRegion}
                             setBottomSheetVisible={setBottomSheetVisible}
                             summary={summary}
-                            imageSizeClass={imageSizeClass}
+                            screenWidth={width}
                         />
                     ))}
                 </View>

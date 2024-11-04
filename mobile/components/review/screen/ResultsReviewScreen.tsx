@@ -18,6 +18,9 @@ const ResultsReviewScreen = ({user}) => {
     const [selectedRegion, setSelectedRegion] = useState('');
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
+    //TODO заменить на реальные данные из бд
+    const summaryEstimation = 75;
+
     const preRefreshAction = async () => {
 
         if (isSubscriptionActive()) {
@@ -65,6 +68,7 @@ const ResultsReviewScreen = ({user}) => {
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
+                summaryEstimation={summaryEstimation}
             />
         },
     ]

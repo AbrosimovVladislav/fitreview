@@ -10,7 +10,7 @@ const TouchableRegion = ({
                              setSelectedRegion,
                              setBottomSheetVisible,
                              summary,
-                             imageSizeClass
+                             screenWidth
                          }) => {
 
     const borderClassMap = {
@@ -23,6 +23,10 @@ const TouchableRegion = ({
         R3: 'border-b-0.5',
         R4: ''
     };
+
+    const imageSizeClass = screenWidth < 400
+        ? (summary ? 'w-28 h-28' : 'w-32 h-32')
+        : (summary ? 'w-32 h-32' : 'w-36 h-36');
 
     const getBorderClass = (regionName) => {
         const key = Object.keys(borderClassMap).find(k => regionName.includes(k));
@@ -52,7 +56,8 @@ const TouchableRegion = ({
                             setBottomSheetVisible={setBottomSheetVisible}/>
                         : summary && <EstimationLabel
                         regionName={region.name}
-                        regionEstimation={region.estimation}/>
+                        regionEstimation={region.estimation}
+                        screenWidth={screenWidth}/>
                 }
             </TouchableOpacity>
         </View>
