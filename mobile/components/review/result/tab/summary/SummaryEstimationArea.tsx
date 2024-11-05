@@ -2,7 +2,7 @@ import {View, Text} from 'react-native'
 import React from 'react'
 import {IconCalendarMonth, IconScaleOutline, IconUser} from "@tabler/icons-react-native";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import {getEstimationColor} from '@/service/GradientColorService'
+import {getEstimationColor} from "@/service/GradientColorService";
 
 
 const SummaryEstimationArea = ({summaryEstimation}) => {
