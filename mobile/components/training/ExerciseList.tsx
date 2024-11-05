@@ -11,8 +11,8 @@ interface ExerciseListProps {
 const ExerciseList = ({exercises}: ExerciseListProps) => {
     return (
         <View className='w-full'>
-            {exercises.map((exercise) => (
-                <ExerciseItem key={exercise.id} exercise={exercise}/>
+            {exercises.map((exercise, index) => (
+                <ExerciseItem key={index} exercise={exercise}/>
             ))}
         </View>
     )

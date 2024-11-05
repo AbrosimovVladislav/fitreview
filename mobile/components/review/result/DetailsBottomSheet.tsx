@@ -48,7 +48,7 @@ const DetailsBottomSheet = ({isOpen, onClose, region}) => {
 
                     {
                         region.points.map((point, index) =>
-                            <Text className="text-md text-center text-gray-100 py-2 font-mregular">
+                            <Text key={index} className="text-md text-center text-gray-100 py-2 font-mregular">
                                 {index + 1}. {point}
                             </Text>)
                     }

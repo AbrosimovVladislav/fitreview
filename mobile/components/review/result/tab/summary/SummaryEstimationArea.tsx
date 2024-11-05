@@ -42,7 +42,7 @@ const SummaryEstimationArea = ({summaryEstimation}) => {
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
                     <IconScaleOutline size={25} color='#34C759'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {85} kg
+                        {78} kg
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
@@ -50,19 +50,19 @@ const SummaryEstimationArea = ({summaryEstimation}) => {
                         BMI
                     </Text>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {24}%
+                        {22}%
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
                     <IconUser size={25} color='white'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {'31 y.o.'}
+                        {'29 y.o.'}
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center'>
                     <IconCalendarMonth size={25} color='#007AFF'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {'Dec 24'}
+                        {'Nov 05'}
                     </Text>
                 </View>
             </View>

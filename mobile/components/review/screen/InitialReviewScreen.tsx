@@ -29,8 +29,8 @@ const InitialReviewScreen = () => {
                         Get a complete body analysis to improve health and reach your goals
                     </Text>
                     {
-                        fitReviewParams.map(param => {
-                            return <View key={Math.random()} className='flex flex-row justify-center items-center pt-3'>
+                        fitReviewParams.map((param,index) => {
+                            return <View key={index} className='flex flex-row justify-center items-center pt-3'>
                                 <Ionicons name='checkmark-done' size={22} color='#FF9001'/>
                                 <Text className={'text-gray-100 pt-1 pl-2 font-msemibold'}>
                                     {param}

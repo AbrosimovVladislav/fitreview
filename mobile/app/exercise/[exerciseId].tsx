@@ -71,8 +71,8 @@ const ExercisePage = () => {
             title: 'Instructions',
             content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
                 {
-                    exercise?.instructions?.map(instruction => {
-                        return (<View key={Math.random()} className='flex flex-row justify-center items-center pt-3'>
+                    exercise?.instructions?.map((instruction,index) => {
+                        return (<View key={index} className='flex flex-row justify-center items-center pt-3'>
                             <Ionicons name='aperture' size={22} color='white'/>
                             <Text className='text-md text-gray-300 font-mmedium justify-center items-center pl-2'>
                                 {instruction}
