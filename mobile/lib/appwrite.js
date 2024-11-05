@@ -13,7 +13,8 @@ export const config = {
     answerCollectionId: '66f168f90014ee377c8f',
     trainingCollectionId: '66f1c3cb0036cbb71361',
     frStorageId: '66c331f000314ec68775',
-    frSurveyStorageId: '66e9aa840010695d18f0'
+    frSurveyStorageId: '66e9aa840010695d18f0',
+    frReviewStorageId: '672a245c0017b4d2c2bf'
 }
 
 export const client = new Client();

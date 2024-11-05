@@ -21,6 +21,7 @@ const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, 
                 <View className="flex flex-row flex-wrap px-4 pt-2">
                     {bodyMapRegions.map((region, index) => (
                         <TouchableRegion
+                            key={index}
                             index={index}
                             region={region}
                             selectedRegion={selectedRegion}

@@ -9,22 +9,22 @@ const MainProblemsArea = ({getIconByType}) => {
 
     const mainProblems = [
         {
-            title: 'Right Hand',
+            title: 'Right Hand & Shoudler',
             description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 52,
+            estimation: 67,
             iconType: 'hand'
         },
         {
-            title: 'Right Feet',
+            title: 'Chest Muscles',
             description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 36,
-            iconType: 'feet'
+            estimation: 47,
+            iconType: 'upper-body'
         },
         {
-            title: 'Left Feet',
+            title: 'Core Area',
             description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 29,
-            iconType: 'feet'
+            estimation: 54,
+            iconType: 'core'
         }
     ]
 
@@ -34,8 +34,9 @@ const MainProblemsArea = ({getIconByType}) => {
                 title='Main Problems'
                 content={<View className='py-3'>
                     {
-                        mainProblems.map(problem => {
+                        mainProblems.map((problem, index) => {
                             return <InfoCard
+                                key={index}
                                 title={problem.title}
                                 description={problem.description}
                                 icon1={<EstimationLabel

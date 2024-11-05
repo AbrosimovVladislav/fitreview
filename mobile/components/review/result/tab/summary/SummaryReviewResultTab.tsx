@@ -7,7 +7,7 @@ import Divider from "@/components/common/Divider";
 import TrainingPlanArea from "@/components/review/result/tab/summary/TrainingPlanArea";
 import {IconHandStop, IconMan, IconShoe} from "@tabler/icons-react-native/dist/esm/tabler-icons-react-native";
 import RecommendationsArea from "@/components/review/result/tab/summary/RecommendationsArea";
-import {IconBed, IconMeat, IconMoodNervous} from "@tabler/icons-react-native";
+import {IconBed, IconDatabase, IconMeat, IconMoodNervous, IconShirt} from "@tabler/icons-react-native";
 
 const SummaryReviewResultTab = ({
                                     bodyMapRegions,
@@ -29,6 +29,10 @@ const SummaryReviewResultTab = ({
                 return <IconMeat size={25} color='black'/>;
             case 'sleep':
                 return <IconBed size={25} color='black'/>;
+            case 'upper-body':
+                return <IconShirt size={25} color='black'/>;
+            case 'core':
+                return <IconDatabase size={25} color='black'/>;
             default:
                 return <IconMan size={25} color='black'/>;
         }

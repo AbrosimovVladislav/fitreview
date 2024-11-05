@@ -30,8 +30,9 @@ const RecommendationsArea = ({getIconByType}) => {
                 title='Recommendations'
                 content={<View className='py-3'>
                     {
-                        recommendations.map(recommendation => {
+                        recommendations.map((recommendation, index) => {
                             return <InfoCard
+                                key={index}
                                 title={recommendation.title}
                                 description={recommendation.description}
                                 icon1={<View

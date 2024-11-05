@@ -36,8 +36,9 @@ const TrainingPlanArea = ({getIconByType}) => {
                 title='Training Objective'
                 content={<View className='py-3'>
                     {
-                        trainings.map(training => {
+                        trainings.map((training,index) => {
                             return <InfoCard
+                                key={index}
                                 title={training.title}
                                 description={training.description}
                                 icon1={<View

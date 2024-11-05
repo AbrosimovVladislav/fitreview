@@ -6,7 +6,6 @@ import {router} from "expo-router";
 import {createStatusRecord} from "@/lib/SurveyService";
 import {defaultSecondSurveyStep} from "@/constants/survey";
 import Tabs from "@/components/common/Tabs";
-import OtherViewsReviewResultTab from "@/components/review/result/tab/other/OtherViewsReviewResultTab";
 import DetailsBottomSheet from "@/components/review/result/DetailsBottomSheet";
 import {bodyMapRegions} from "@/constants/temp";
 import SummaryReviewResultTab from "@/components/review/result/tab/summary/SummaryReviewResultTab";
@@ -19,7 +18,7 @@ const ResultsReviewScreen = ({user}) => {
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
     //TODO заменить на реальные данные из бд
-    const summaryEstimation = 75;
+    const summaryEstimation = 81;
 
     const preRefreshAction = async () => {
 
@@ -55,11 +54,11 @@ const ResultsReviewScreen = ({user}) => {
                 setBottomSheetVisible={setBottomSheetVisible}
             />
         },
-        {
-            key: "other-views",
-            title: "Other Views",
-            content: <OtherViewsReviewResultTab/>
-        },
+        // {
+        //     key: "other-views",
+        //     title: "Other Views",
+        //     content: <OtherViewsReviewResultTab/>
+        // },
         {
             key: "results",
             title: "Summary",
