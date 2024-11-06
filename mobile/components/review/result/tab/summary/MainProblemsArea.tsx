@@ -5,28 +5,7 @@ import EstimationLabel from "@/components/review/result/interactive-body-map/Est
 import {getEstimationColor} from "@/service/GradientColorService";
 import InfoCard from "@/components/common/InfoCard";
 
-const MainProblemsArea = ({getIconByType}) => {
-
-    const mainProblems = [
-        {
-            title: 'Right Hand & Shoudler',
-            description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 67,
-            iconType: 'hand'
-        },
-        {
-            title: 'Chest Muscles',
-            description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 47,
-            iconType: 'upper-body'
-        },
-        {
-            title: 'Core Area',
-            description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            estimation: 54,
-            iconType: 'core'
-        }
-    ]
+const MainProblemsArea = ({getIconByType, mainProblems}) => {
 
     return (
         <View>

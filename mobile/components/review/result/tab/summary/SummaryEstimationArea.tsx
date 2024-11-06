@@ -5,7 +5,7 @@ import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import {getEstimationColor} from "@/service/GradientColorService";
 
 
-const SummaryEstimationArea = ({summaryEstimation}) => {
+const SummaryEstimationArea = ({summaryData}) => {
 
     return (
         <View className='pb-4'>
@@ -13,17 +13,17 @@ const SummaryEstimationArea = ({summaryEstimation}) => {
                 <AnimatedCircularProgress
                     size={90}
                     width={15}
-                    fill={summaryEstimation}
-                    tintColor={getEstimationColor(summaryEstimation)}
+                    fill={summaryData.estimation}
+                    tintColor={getEstimationColor(summaryData.estimation)}
                     onAnimationComplete={() => console.log('onAnimationComplete')}
                     backgroundColor="#3d5875">
                     {
                         () => (
                             <Text
                                 className='text-2xl font-semibold font-cbebas pt-1'
-                                style={{ color: getEstimationColor(summaryEstimation) }}
+                                style={{ color: getEstimationColor(summaryData.estimation) }}
                             >
-                                {summaryEstimation} %
+                                {summaryData.estimation} %
                             </Text>
                         )
                     }
@@ -42,7 +42,7 @@ const SummaryEstimationArea = ({summaryEstimation}) => {
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
                     <IconScaleOutline size={25} color='#34C759'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {78} kg
+                        {summaryData.weight} kg
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
@@ -50,19 +50,19 @@ const SummaryEstimationArea = ({summaryEstimation}) => {
                         BMI
                     </Text>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {22}%
+                        {summaryData.fatIndex}%
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
                     <IconUser size={25} color='white'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {'29 y.o.'}
+                        {summaryData.age + ' y.o.'}
                     </Text>
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center'>
                     <IconCalendarMonth size={25} color='#007AFF'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {'Nov 05'}
+                        {summaryData.date}
                     </Text>
                 </View>
             </View>

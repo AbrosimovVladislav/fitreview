@@ -4,25 +4,7 @@ import Accordion from "@/components/common/Accordion";
 import InfoCard from "@/components/common/InfoCard";
 import {getRandomColor} from "@/service/GradientColorService";
 
-const RecommendationsArea = ({getIconByType}) => {
-
-    const recommendations = [
-        {
-            title: 'Lower stress at work',
-            description: 'Training oriented to warming up and stretching of upper body region muscles',
-            iconType: 'stress'
-        },
-        {
-            title: 'Stop your diet',
-            description: 'Training oriented to warming up and stretching of upper body region muscles the recommendations',
-            iconType: 'food'
-        },
-        {
-            title: 'Sleep more than now',
-            description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            iconType: 'sleep'
-        }
-    ]
+const RecommendationsArea = ({getIconByType, recommendations}) => {
 
     return (
         <View>

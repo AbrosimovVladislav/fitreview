@@ -11,10 +11,10 @@ import {IconBed, IconDatabase, IconMeat, IconMoodNervous, IconShirt} from "@tabl
 
 const SummaryReviewResultTab = ({
                                     bodyMapRegions,
+                                    summaryData,
                                     selectedRegion,
                                     setSelectedRegion,
-                                    setBottomSheetVisible,
-                                    summaryEstimation
+                                    setBottomSheetVisible
                                 }) => {
 
     const getIconByType = (iconType) => {
@@ -48,23 +48,26 @@ const SummaryReviewResultTab = ({
                 summary
             />
             <SummaryEstimationArea
-                summaryEstimation={summaryEstimation}
+                summaryData={summaryData}
             />
             <Divider/>
 
             <MainProblemsArea
                 getIconByType={getIconByType}
+                mainProblems={summaryData.mainProblems}
             />
             <Divider/>
 
             <TrainingPlanArea
                 getIconByType={getIconByType}
+                trainingObjective={summaryData.trainingObjective}
             />
 
             <Divider/>
 
             <RecommendationsArea
                 getIconByType={getIconByType}
+                recommendations={summaryData.recommendations}
             />
         </ScrollView>
     )

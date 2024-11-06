@@ -6,25 +6,7 @@ import {getRandomColor} from "@/service/GradientColorService";
 import Button from "@/components/common/Button";
 import {router} from "expo-router";
 
-const TrainingPlanArea = ({getIconByType}) => {
-
-    const trainings = [
-        {
-            title: 'UpperBody MFR + Activation',
-            description: 'Training oriented to warming up and stretching of upper body region muscles',
-            iconType: 'hand'
-        },
-        {
-            title: 'Right Feet Stretching',
-            description: 'Training oriented to warming up and stretching of upper body region muscles the recommendations',
-            iconType: 'feet'
-        },
-        {
-            title: 'Feet Varus Fix',
-            description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
-            iconType: 'feet'
-        }
-    ]
+const TrainingPlanArea = ({getIconByType, trainingObjective}) => {
 
     const onToTrainingPlanPress = async () => {
         router.push('/training')
@@ -36,7 +18,7 @@ const TrainingPlanArea = ({getIconByType}) => {
                 title='Training Objective'
                 content={<View className='py-3'>
                     {
-                        trainings.map((training,index) => {
+                        trainingObjective.map((training,index) => {
                             return <InfoCard
                                 key={index}
                                 title={training.title}

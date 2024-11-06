@@ -7,18 +7,20 @@ import {createStatusRecord} from "@/lib/SurveyService";
 import {defaultSecondSurveyStep} from "@/constants/survey";
 import Tabs from "@/components/common/Tabs";
 import DetailsBottomSheet from "@/components/review/result/DetailsBottomSheet";
-import {emptyRegion, reviewData} from "@/constants/temp";
+import {emptyRegion} from "@/constants/temp";
 import SummaryReviewResultTab from "@/components/review/result/tab/summary/SummaryReviewResultTab";
 import FrontViewReviewResultTab from "@/components/review/result/tab/front/FrontViewReviewResultTab";
 import BackViewReviewResultTab from "@/components/review/result/tab/back/BackViewReviewResultTab";
+import useAppwrite from "@/lib/useAppwrite";
+import {Training} from "@/constants/interface";
+import {getLastReviewByUserId} from "@/service/ReviewService";
 
 const ResultsReviewScreen = ({user}) => {
 
+    const {data: reviewData} = useAppwrite<Training>(() => getLastReviewByUserId('1'))
+
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
-
-    //TODO заменить на реальные данные из бд
-    const summaryEstimation = 81;
 
     const preRefreshAction = async () => {
 
@@ -64,10 +66,10 @@ const ResultsReviewScreen = ({user}) => {
             title: "Summary",
             content: <SummaryReviewResultTab
                 bodyMapRegions={reviewData.summaryView}
+                summaryData={reviewData.summaryData}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
-                summaryEstimation={summaryEstimation}
             />
         },
     ]
