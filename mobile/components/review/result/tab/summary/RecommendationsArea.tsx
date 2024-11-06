@@ -10,6 +10,7 @@ const RecommendationsArea = ({getIconByType, recommendations}) => {
         <View>
             <Accordion
                 title='Recommendations'
+                initCollapsed={true}
                 content={<View className='py-3'>
                     {
                         recommendations.map((recommendation, index) => {

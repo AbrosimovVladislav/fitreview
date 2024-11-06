@@ -11,6 +11,7 @@ const MainProblemsArea = ({getIconByType, mainProblems}) => {
         <View>
             <Accordion
                 title='Main Problems'
+                initCollapsed={false}
                 content={<View className='py-3'>
                     {
                         mainProblems.map((problem, index) => {

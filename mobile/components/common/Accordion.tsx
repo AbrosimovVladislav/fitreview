@@ -1,11 +1,15 @@
 import {View, Text, TouchableOpacity} from 'react-native'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Collapsible from "react-native-collapsible";
 import {Ionicons} from "@expo/vector-icons";
 
 //TODO when press open, put focus on start of accordion
-const Accordion = ({title, content}) => {
+const Accordion = ({title, initCollapsed, content}) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
+
+    useEffect(() => {
+        setIsCollapsed(initCollapsed);
+    },[initCollapsed])
 
     return (
         <View className='pt-2 pb-3'>

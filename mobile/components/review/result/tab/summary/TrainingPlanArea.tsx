@@ -16,6 +16,7 @@ const TrainingPlanArea = ({getIconByType, trainingObjective}) => {
         <View>
             <Accordion
                 title='Training Objective'
+                initCollapsed={true}
                 content={<View className='py-3'>
                     {
                         trainingObjective.map((training,index) => {
