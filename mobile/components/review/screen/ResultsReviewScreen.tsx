@@ -7,14 +7,14 @@ import {createStatusRecord} from "@/lib/SurveyService";
 import {defaultSecondSurveyStep} from "@/constants/survey";
 import Tabs from "@/components/common/Tabs";
 import DetailsBottomSheet from "@/components/review/result/DetailsBottomSheet";
-import {bodyMapRegions} from "@/constants/temp";
+import {emptyRegion, reviewData} from "@/constants/temp";
 import SummaryReviewResultTab from "@/components/review/result/tab/summary/SummaryReviewResultTab";
 import FrontViewReviewResultTab from "@/components/review/result/tab/front/FrontViewReviewResultTab";
 import BackViewReviewResultTab from "@/components/review/result/tab/back/BackViewReviewResultTab";
 
 const ResultsReviewScreen = ({user}) => {
 
-    const [selectedRegion, setSelectedRegion] = useState('');
+    const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
     //TODO заменить на реальные данные из бд
@@ -38,7 +38,7 @@ const ResultsReviewScreen = ({user}) => {
             key: "front-view",
             title: "Front View",
             content: <FrontViewReviewResultTab
-                bodyMapRegions={bodyMapRegions.filter(item => 'FrontView' === item.group)}
+                bodyMapRegions={reviewData.frontView}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -48,7 +48,7 @@ const ResultsReviewScreen = ({user}) => {
             key: "back-view",
             title: "Back View",
             content: <BackViewReviewResultTab
-                bodyMapRegions={bodyMapRegions.filter(item => 'BackView' === item.group)}
+                bodyMapRegions={reviewData.backView}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -63,7 +63,7 @@ const ResultsReviewScreen = ({user}) => {
             key: "results",
             title: "Summary",
             content: <SummaryReviewResultTab
-                bodyMapRegions={bodyMapRegions.filter(item => 'FrontView' === item.group)}
+                bodyMapRegions={reviewData.summaryView}
                 selectedRegion={selectedRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
@@ -80,7 +80,7 @@ const ResultsReviewScreen = ({user}) => {
                 <DetailsBottomSheet
                     isOpen={bottomSheetVisible}
                     onClose={() => setBottomSheetVisible(false)}
-                    region={bodyMapRegions.filter(r => r.name === selectedRegion)[0]}
+                    region={selectedRegion}
                 >
                 </DetailsBottomSheet>
             )}

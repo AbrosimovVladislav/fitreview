@@ -2,6 +2,7 @@ import {TouchableOpacity, Image, View} from 'react-native'
 import React from 'react'
 import DetailsButton from "@/components/review/result/interactive-body-map/DetailsButton";
 import EstimationLabel from "@/components/review/result/interactive-body-map/EstimationLabel";
+import {emptyRegion} from "@/constants/temp";
 
 const TouchableRegion = ({
                              index,
@@ -33,24 +34,24 @@ const TouchableRegion = ({
         return borderClassMap[key] || '';
     };
 
-    function handleItemPress(regionName: string) {
-        setSelectedRegion(prevState => prevState === regionName ? '' : regionName)
+    function handleItemPress(region) {
+        setSelectedRegion(prevState => prevState.name === region.name ? emptyRegion : region)
     }
 
     return (
         <View key={index}
               className={`flex w-1/2 ${region.name.includes('L') ? 'items-end' : 'items-start'}`}>
             <TouchableOpacity
-                onPress={() => handleItemPress(region.name)}
+                onPress={() => handleItemPress(region)}
                 className={`flex items-start ${getBorderClass(region.name)} border-orange-300`}
             >
                 <Image
-                    source={{uri: selectedRegion === region.name ? region.diagramImage : region.userImage}}
-                    className={`${imageSizeClass} ${selectedRegion && selectedRegion !== region.name ? 'opacity-50' : 'opacity-100'}`}
+                    source={{uri: selectedRegion.name === region.name ? region.diagramImage : region.userImage}}
+                    className={`${imageSizeClass} ${selectedRegion.name && selectedRegion.name !== region.name ? 'opacity-50' : 'opacity-100'}`}
                     resizeMode="contain"
                 />
                 {
-                    selectedRegion === region.name
+                    selectedRegion.name === region.name
                         ? <DetailsButton
                             regionName={region.name}
                             setBottomSheetVisible={setBottomSheetVisible}/>
