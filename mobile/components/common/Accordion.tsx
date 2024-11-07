@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react'
 import Collapsible from "react-native-collapsible";
 import {Ionicons} from "@expo/vector-icons";
 
-//TODO when press open, put focus on start of accordion
 const Accordion = ({title, initCollapsed, content}) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
 

@@ -41,7 +41,7 @@ const ResultsReviewScreen = ({user}) => {
             title: "Front View",
             content: <FrontViewReviewResultTab
                 bodyMapRegions={reviewData.frontView}
-                selectedRegion={selectedRegion}
+                selectedRegion={selectedRegion && selectedRegion.group==='FrontView' ? selectedRegion : emptyRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
             />
@@ -51,7 +51,18 @@ const ResultsReviewScreen = ({user}) => {
             title: "Back View",
             content: <BackViewReviewResultTab
                 bodyMapRegions={reviewData.backView}
-                selectedRegion={selectedRegion}
+                selectedRegion={selectedRegion && selectedRegion.group==='BackView' ? selectedRegion : emptyRegion}
+                setSelectedRegion={setSelectedRegion}
+                setBottomSheetVisible={setBottomSheetVisible}
+            />
+        },
+        {
+            key: "results",
+            title: "Summary",
+            content: <SummaryReviewResultTab
+                bodyMapRegions={reviewData.summaryView}
+                summaryData={reviewData.summaryData}
+                selectedRegion={selectedRegion && selectedRegion.group==='SummaryView' ? selectedRegion : emptyRegion}
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
             />
@@ -61,17 +72,6 @@ const ResultsReviewScreen = ({user}) => {
         //     title: "Other Views",
         //     content: <OtherViewsReviewResultTab/>
         // },
-        {
-            key: "results",
-            title: "Summary",
-            content: <SummaryReviewResultTab
-                bodyMapRegions={reviewData.summaryView}
-                summaryData={reviewData.summaryData}
-                selectedRegion={selectedRegion}
-                setSelectedRegion={setSelectedRegion}
-                setBottomSheetVisible={setBottomSheetVisible}
-            />
-        },
     ]
 
     return (
