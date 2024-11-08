@@ -11,6 +11,7 @@ const TouchableRegion = ({
                              setSelectedRegion,
                              setBottomSheetVisible,
                              summary,
+                             sideView,
                              screenWidth
                          }) => {
 
@@ -25,13 +26,29 @@ const TouchableRegion = ({
         R4: ''
     };
 
+    const sideViewBorderClassMap = {
+        L1: 'border-b-0.5',
+        L2: 'border-b-0.5',
+        L3: 'border-b-0.5',
+        L4: '',
+        R1: 'border-b-0.5',
+        R2: 'border-b-0.5',
+        R3: 'border-b-0.5',
+        R4: ''
+    };
+
     const imageSizeClass = screenWidth < 400
         ? (summary ? 'w-28 h-28' : 'w-32 h-32')
         : (summary ? 'w-32 h-32' : 'w-36 h-36');
 
     const getBorderClass = (regionName) => {
-        const key = Object.keys(borderClassMap).find(k => regionName.includes(k));
-        return borderClassMap[key] || '';
+        if (sideView) {
+            const key = Object.keys(sideViewBorderClassMap).find(k => regionName.includes(k));
+            return sideViewBorderClassMap[key] || '';
+        } else {
+            const key = Object.keys(borderClassMap).find(k => regionName.includes(k));
+            return borderClassMap[key] || '';
+        }
     };
 
     function handleItemPress(region) {

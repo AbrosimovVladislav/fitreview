@@ -14,6 +14,7 @@ import BackViewReviewResultTab from "@/components/review/result/tab/back/BackVie
 import useAppwrite from "@/lib/useAppwrite";
 import {Training} from "@/constants/interface";
 import {getLastReviewByUserId} from "@/service/ReviewService";
+import SideViewReviewResultTab from "@/components/review/result/tab/side/SideViewReviewResultTab";
 
 const ResultsReviewScreen = ({user}) => {
 
@@ -57,6 +58,16 @@ const ResultsReviewScreen = ({user}) => {
             />
         },
         {
+            key: "side-views",
+            title: "Side Views",
+            content: <SideViewReviewResultTab
+                bodyMapRegions={reviewData.sideView}
+                selectedRegion={selectedRegion && selectedRegion.group==='SideView' ? selectedRegion : emptyRegion}
+                setSelectedRegion={setSelectedRegion}
+                setBottomSheetVisible={setBottomSheetVisible}
+            />
+        },
+        {
             key: "results",
             title: "Summary",
             content: <SummaryReviewResultTab
@@ -66,12 +77,7 @@ const ResultsReviewScreen = ({user}) => {
                 setSelectedRegion={setSelectedRegion}
                 setBottomSheetVisible={setBottomSheetVisible}
             />
-        },
-        // {
-        //     key: "other-views",
-        //     title: "Other Views",
-        //     content: <OtherViewsReviewResultTab/>
-        // },
+        }
     ]
 
     return (

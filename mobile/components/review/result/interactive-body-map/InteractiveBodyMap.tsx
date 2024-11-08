@@ -3,7 +3,7 @@ import React from 'react'
 import LoadingView from "@/components/LoadingView";
 import TouchableRegion from "@/components/review/result/interactive-body-map/TouchableRegion";
 
-const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, setBottomSheetVisible, summary}) => {
+const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, setBottomSheetVisible, summary, sideView}) => {
 
     const {width} = Dimensions.get('window');
 
@@ -28,6 +28,7 @@ const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, 
                             setSelectedRegion={setSelectedRegion}
                             setBottomSheetVisible={setBottomSheetVisible}
                             summary={summary}
+                            sideView={sideView}
                             screenWidth={width}
                         />
                     ))}
