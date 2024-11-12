@@ -47,7 +47,7 @@ const SummaryEstimationArea = ({summaryData}) => {
                 </View>
                 <View className='flex-1 flex flex-col justify-center items-center border-r border-gray-300'>
                     <Text className='text-xl text-secondary-100 font-msemibold'>
-                        BMI
+                        FI
                     </Text>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
                         {summaryData.fatIndex}%

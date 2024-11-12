@@ -405,55 +405,55 @@ const reviewData = {
         date: 'Nov 05',
         mainProblems: [
             {
-                title: 'Right Hand & Shoudler',
-                description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
+                title: 'Right Shoulder',
+                description: 'Right shoulder is higher; left arm hangs, suggesting weak deltoid, with trapezius compensating',
                 estimation: 67,
                 iconType: 'hand'
             },
             {
                 title: 'Chest Muscles',
-                description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
+                description: 'Left pec minor and major seem overloaded, pulling the shoulder forward and up',
                 estimation: 47,
                 iconType: 'upper-body'
             },
             {
-                title: 'Core Area',
-                description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
+                title: 'Lower Back and Pelvis',
+                description: 'Left side overloaded; indicates weak glutes and abdominal imbalance affecting pelvic alignment',
                 estimation: 54,
                 iconType: 'core'
             }
         ],
         trainingObjective: [
             {
-                title: 'UpperBody MFR + Activation',
-                description: 'Training oriented to warming up and stretching of upper body region muscles',
+                title: 'Foot Stability and Big Toe Function',
+                description: 'Improve foot stability, enhance big toe mobility, wear flexible, wide-toe shoes',
                 iconType: 'hand'
             },
             {
-                title: 'Right Feet Stretching',
-                description: 'Training oriented to warming up and stretching of upper body region muscles the recommendations',
+                title: 'Pelvic Stability and Hip Flexors',
+                description: 'Focus on hip flexor release, glute activation, and core-pelvic stabilization',
                 iconType: 'feet'
             },
             {
-                title: 'Feet Varus Fix',
-                description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
+                title: 'Core and Thoracic Mobility',
+                description: 'Strengthen diaphragm and core, enhance thoracic mobility, and release upper shoulder tension',
                 iconType: 'feet'
             }
         ],
         recommendations: [
             {
-                title: 'Lower stress at work',
-                description: 'Training oriented to warming up and stretching of upper body region muscles',
+                title: 'Training and Active Recovery',
+                description: 'Swimming, dynamic stretching, bodyweight and equipment-based functional and strength training',
                 iconType: 'stress'
             },
             {
-                title: 'Stop your diet',
-                description: 'Training oriented to warming up and stretching of upper body region muscles the recommendations',
+                title: 'Professional Therapeutic Support',
+                description: 'Regular sessions with a massage therapist, kinesiologist, and osteopath',
                 iconType: 'food'
             },
             {
-                title: 'Sleep more than now',
-                description: 'To see the recommendations, just tap on the body region or run a step-by-step body reviewTo see the recommendations',
+                title: 'Relaxation and Recovery',
+                description: 'Spa treatments for muscle relaxation and overall well-being',
                 iconType: 'sleep'
             }
         ]
