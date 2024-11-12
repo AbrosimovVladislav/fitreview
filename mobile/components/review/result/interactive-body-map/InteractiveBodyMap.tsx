@@ -2,8 +2,18 @@ import {View, Text, Dimensions} from 'react-native'
 import React from 'react'
 import LoadingView from "@/components/LoadingView";
 import TouchableRegion from "@/components/review/result/interactive-body-map/TouchableRegion";
+import {IconInfoOctagon} from "@tabler/icons-react-native";
+import Tooltip from 'rn-tooltip';
+import {reivewPreDefine} from "@/constants/review";
 
-const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, setBottomSheetVisible, summary, sideView}) => {
+const InteractiveBodyMap = ({
+                                bodyMapRegions,
+                                selectedRegion,
+                                setSelectedRegion,
+                                setBottomSheetVisible,
+                                summary,
+                                sideView
+                            }) => {
 
     const {width} = Dimensions.get('window');
 
@@ -13,9 +23,20 @@ const InteractiveBodyMap = ({bodyMapRegions, selectedRegion, setSelectedRegion, 
             <View>
                 {
                     !summary &&
-                    <Text className="text-md text-center text-gray-100 pt-4 pb-2 font-mregular">
-                        To check the details, tap on the body region
-                    </Text>
+                    <View className='flex-row justify-center pt-2 pb-2'>
+                        <Text className="text-md text-center pt-2 pr-3 text-gray-100 font-mregular">
+                            To check the details, tap on the body region
+                        </Text>
+                        <Tooltip
+                            popover={<Text className={`text-white`}>{reivewPreDefine}</Text>}
+                            height={300}
+                            width={350}
+                            backgroundColor="rgba(0,0,0,0.8)"
+                        >
+                            <IconInfoOctagon size={32} color='#FF8E01'/>
+                        </Tooltip>
+                    </View>
+
                 }
 
                 <View className="flex flex-row flex-wrap px-4 pt-2">

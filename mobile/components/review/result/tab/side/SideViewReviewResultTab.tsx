@@ -5,7 +5,7 @@ import InteractiveBodyMap from "@/components/review/result/interactive-body-map/
 const SideViewReviewResultTab = ({bodyMapRegions, selectedRegion, setSelectedRegion, setBottomSheetVisible}) => {
 
     return (
-        <ScrollView className='py-4'>
+        <ScrollView>
             <InteractiveBodyMap
                 bodyMapRegions={bodyMapRegions}
                 selectedRegion={selectedRegion}
