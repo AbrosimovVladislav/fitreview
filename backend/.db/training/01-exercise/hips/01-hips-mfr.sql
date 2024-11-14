@@ -15,8 +15,8 @@ INSERT INTO exercise (
 ) VALUES (
              1, -- id
              'EASY', -- complexity
-             'Test_Exr', -- description
-             '[ "Test_Exr", "Test_Exr", "Test_Exr" ]'::jsonb, -- instructions
+             'Gluteal warm-up enhances muscle activation, improves stability, and reduces injury risk. This exercise strengthens hip and pelvic muscles, preparing the body for physical activity.', -- description
+             '[ "Stand upright with feet hip-width apart and knees slightly bent", "Slowly extend one leg backward, keeping your back straight and controlled", "Squeeze the glute muscles, holding the position for a second","Return your leg to the starting position, maintaining balance","Repeat 10-15 times for each leg","For added difficulty, use a resistance band or perform on a raised platform" ]'::jsonb, -- instructions
              'BEGINNER', -- level
              'HIPS', -- region
              'Проминка ягодичного региона', -- russian_title

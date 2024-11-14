@@ -13,6 +13,8 @@ import {Exercise} from "@/constants/interface";
 import {getExerciseById} from "@/service/TrainingService";
 import {getExerciseByIdDeprecated} from "@/lib/ExerciseService";
 import {BE} from "@/config"
+import {IconHandStop} from "@tabler/icons-react-native/dist/esm/tabler-icons-react-native";
+import {getEstimationColor} from "@/service/GradientColorService";
 
 
 const ExercisePage = () => {
@@ -56,11 +58,11 @@ const ExercisePage = () => {
                     </View>
                 </View>
 
-                <View className='flex flex-col justify-center items-center pt-6'>
+                <View className='flex flex-col justify-center items-center pt-6 gap-2 px-3'>
                     <Text className='text-2xl text-gray-100 font-cbebas'>
                         {exercise.title}
                     </Text>
-                    <Text className='text-md text-gray-300 font-mregular justify-center items-center pt-1'>
+                    <Text className='text-lg text-gray-300 font-mregular text-center justify-center items-center pt-1'>
                         {exercise.description}
                     </Text>
                 </View>
@@ -69,12 +71,30 @@ const ExercisePage = () => {
         {
             key: 'instructions',
             title: 'Instructions',
-            content: <View className='flex flex-col w-full pt-6 px-4 justify-center items-center'>
+            content: <View className='flex flex-col w-full pt-6 pl-3 pr-6 '>
+                <View className='flex-row justify-center gap-3'>
+                    <Text className='text-2xl text-secondary-100 text-center font-cbebas'>
+                        {exercise.title}
+                    </Text>
+                    <Text className='text-2xl text-gray-100 text-center font-cbebas'>
+                        step by step
+                    </Text>
+                </View>
                 {
-                    exercise?.instructions?.map((instruction,index) => {
-                        return (<View key={index} className='flex flex-row justify-center items-center pt-3'>
-                            <Ionicons name='aperture' size={22} color='white'/>
-                            <Text className='text-md text-gray-300 font-mmedium justify-center items-center pl-2'>
+                    exercise?.instructions?.map((instruction, index) => {
+                        return (<View key={index} className='flex flex-row pt-5 pl-2 pr-5 gap-1'>
+                            <View
+                                className='w-8 h-8 bg-opacity-75 rounded-full flex items-center justify-center'
+                                style={{
+                                    borderColor: '#FF9C0196',
+                                    borderWidth: 1,
+                                }}
+                            >
+                                <Text className='text-md text-secondary-100 font-cbebas'>
+                                    {index + 1}
+                                </Text>
+                            </View>
+                            <Text className='text-md text-gray-300 font-mmedium pl-2'>
                                 {instruction}
                             </Text>
                         </View>)

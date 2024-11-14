@@ -1,3 +1,306 @@
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-003",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "MFR Hips Training",
+    "russianTitle": "МФР тренировка ТБС",
+    "description": "MFR hips training for basic warm-up and mobility",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f1c65e0012672775a9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-001","exercise-002","exercise-003","exercise-004","exercise-005","exercise-006"
+    ]
+  }
+}
+
+<> 2024-11-14T132952.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66c76bdf0003e4f2041f/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66c76bdf0003e4f2041f",
+  "documentId": "exercise-001",
+  "data": {
+    "title": "Gluteal Warm-Up",
+    "russianTitle": "Проминка ягодичного региона",
+    "thumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise-big.png",
+    "youtubeVideoId": "gJh03s2HNeo",
+    "level": "Beginner",
+    "time": 5,
+    "region": "Hips",
+    "complexity": "Easy",
+    "instructions": [ "Stand upright with feet hip-width apart and knees slightly bent", "Slowly extend one leg backward, keeping your back straight and controlled", "Squeeze the glute muscles, holding the position for a second","Return your leg to the starting position, maintaining balance","Repeat 10-15 times for each leg","For added difficulty, use a resistance band or perform on a raised platform" ],
+    "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
+    "exerciseId": 1,
+    "description": "Gluteal warm-up enhances muscle activation, improves stability, and reduces injury risk. This exercise strengthens hip and pelvic muscles, preparing the body for physical activity",
+    "subcategory": "mfr"
+  }
+}
+
+<> 2024-11-14T131916.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-004",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Chest & Shoulders Training",
+    "russianTitle": "Кастом тренировка Грудные и Плечи",
+    "description": "Custom training for chest and shoulders specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-077",
+      "exercise-078",
+      "exercise-079",
+      "exercise-080",
+      "exercise-085",
+      "exercise-087",
+      "exercise-095"
+    ]
+  }
+}
+
+<> 2024-11-14T130934.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-005",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Lower Back Training",
+    "russianTitle": "Кастом тренировка Низ Спины",
+    "description": "Custom training for lower back specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6735e7ec00184ba88c74/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-028",
+      "exercise-030",
+      "exercise-032",
+      "exercise-033",
+      "exercise-037",
+      "exercise-038",
+      "exercise-042"
+    ]
+  }
+}
+
+<> 2024-11-14T130735.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-004",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Chest & Shoulders Training",
+    "russianTitle": "Кастом тренировка Грудные и Плечи",
+    "description": "Custom training for chest and shoulders specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125702.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-004",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125519.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-004",
+  "data": {
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125458.409.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-007",
+  "data": {
+    "userId": "66f2d6b600259769fd38",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125424.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-005",
+  "data": {
+    "userId": "66e2ca30002fc360855d",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125406.201.json
+
+###
+
+POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
+Content-Type: application/json
+X-Appwrite-Project: 66c32ed800357b5e7314
+X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de2b74ad7b44ede4a609e12495c90dc680903ebf3784b91f8943ada57b91996efa10cea61413f69fb3419633adbb17c70ca302103279a7b42e053beefdc693216f131cef6b910f24fb06542b8b09936f0d10997fd3f7f6f69f7cad9398e77366ad
+
+{
+  "databaseId": "66c3312f002e44e586ce",
+  "collectionId": "66f1c3cb0036cbb71361",
+  "documentId": "training-004",
+  "data": {
+    "userId": "66e40b680004a6330bd7",
+    "title": "Custom Feet & Core Training",
+    "russianTitle": "Кастом тренировка ноги и кор",
+    "description": "Custom training for feet and core specially for you",
+    "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
+    "exerciseId": [
+      "exercise-034",
+      "exercise-064",
+      "exercise-035",
+      "exercise-036",
+      "exercise-037",
+      "exercise-065",
+      "exercise-066"
+    ]
+  }
+}
+
+<> 2024-11-14T125350.201.json
+
+###
+
 GET http://localhost:8080/api/v1/training/1
 Accept: application/json
 

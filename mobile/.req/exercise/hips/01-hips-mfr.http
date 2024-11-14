@@ -16,12 +16,10 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
     "time": 5,
     "region": "Hips",
     "complexity": "Easy",
-    "instructions": [
-      "Test_Exr","Test_Exr","Test_Exr"
-    ],
+    "instructions": [ "Stand upright with feet hip-width apart and knees slightly bent", "Slowly extend one leg backward, keeping your back straight and controlled", "Squeeze the glute muscles, holding the position for a second","Return your leg to the starting position, maintaining balance","Repeat 10-15 times for each leg","For added difficulty, use a resistance band or perform on a raised platform" ],
     "shortThumbnail": "https://storage.googleapis.com/banner-ai-saved-images/exercise.png",
     "exerciseId": 1,
-    "description": "Test_Exr",
+    "description": "Gluteal warm-up enhances muscle activation, improves stability, and reduces injury risk. This exercise strengthens hip and pelvic muscles, preparing the body for physical activity",
     "subcategory": "mfr"
   }
 }

@@ -8,19 +8,19 @@ X-Appwrite-Key: 27fcf2ca888ed890e1dc68d5cf5f450d5ada0843c1ba560e450f37335c4b39de
   "collectionId": "66f1c3cb0036cbb71361",
   "documentId": "training-004",
   "data": {
-    "userId": "66e40b680004a6330bd7",
-    "title": "Custom Feet & Core Training",
-    "russianTitle": "Кастом тренировка ноги и кор",
-    "description": "Custom training for feet and core specially for you",
+    "userId": "66c34c0900208a85ab52",
+    "title": "Custom Chest & Shoulders Training",
+    "russianTitle": "Кастом тренировка Грудные и Плечи",
+    "description": "Custom training for chest and shoulders specially for you",
     "thumbnail": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/66f2a42d001733a23e7d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314",
     "exerciseId": [
-      "exercise-034",
-      "exercise-064",
-      "exercise-035",
-      "exercise-036",
-      "exercise-037",
-      "exercise-065",
-      "exercise-066"
+      "exercise-077",
+      "exercise-078",
+      "exercise-079",
+      "exercise-080",
+      "exercise-085",
+      "exercise-087",
+      "exercise-095"
     ]
   }
 }
