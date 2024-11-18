@@ -11,7 +11,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a247d001271f51de8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a269f000dfa3e176b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a100095f421231/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-R1',
@@ -24,7 +24,7 @@ const reviewData = {
                 'Стрелка 2. Левое плечо ниже правого, что может указывать на перенапряжение правой трапециевидной мышцы. Причиной может быть неправильное дыхание, сидячий образ жизни или слабость дельтовидной мышцы, не поддерживающей равновесие плеч.'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24900035da4a0684/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26b2000f040f5228/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32b5001af06a46ac/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-L2',
@@ -39,7 +39,7 @@ const reviewData = {
                 'Стрелка 4. Асимметрия между стрелками 4, 5 и смещение пупка вправо могут указывать на дисфункцию диафрагмы, напряжение косых мышц живота или проблемы с кишечником, что влияет на симметрию и работу мышц корпуса.'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a2482000b43eee1ba/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26a40007ebbbc238/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a500223e9575e1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-R2',
@@ -56,7 +56,7 @@ const reviewData = {
                 'Стрелка 6. Левая рука опущена ниже правой, возможно, из-за слабости средней части дельтовидной мышцы. Легкий разворот плеча вперед может указывать на напряжение малой грудной мышцы и внутренних ротаторов плеча.',
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249b00147c131fb8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26b600290893cc30/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32bb0030c42413c2/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-L3',
@@ -69,7 +69,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24870012597061bd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26a800195095ed9c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a9002ab2dd698a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-R3',
@@ -82,7 +82,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249f002d82c97eb0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26ba003dba05e5a8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c20034fc482d06/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-L4',
@@ -95,7 +95,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a248b0033c3bfe011/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26ac002c13858382/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32ad002deea7c392/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'FrontView-R4',
@@ -108,7 +108,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24a40030acaf12c3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26bf000ef3816bb6/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c90032e471c525/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         }
     ],
     backView: [
@@ -123,7 +123,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30ba000f2b7117f9/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30e20023f6e7ee39/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b3278002aac5434e1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-R1',
@@ -136,7 +136,7 @@ const reviewData = {
                 'Стрелка 2. Правое плечо выше левого, что может означать перенапряжение трапециевидной мышцы. Это часто связано с ношением сумки на правом плече, слабостью дельтовидной мышцы или неправильной осанкой'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30ce00177271991f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30f500188139606b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b328d00224b1fcb74/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-L2',
@@ -151,7 +151,7 @@ const reviewData = {
                 'Стрелки 6 и 7. Левая поясничная мышца более напряжена, что может быть вызвано слабостью ягодичных и косых мышц живота. Это приводит к неравномерной нагрузке на поясницу и бедра.',
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30bf003befea3059/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30e80003c7fbda83/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b327e000f88416482/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-R2',
@@ -166,7 +166,7 @@ const reviewData = {
                 'Стрелки 4 и 5. Повернутая наружу рука может указывать на нестабильность лопатки: мышцы спереди перенапряжены, а мышцы спины, наоборот, ослаблены и не обеспечивают должной поддержки.',
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30d3002710dba480/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30f9003aec5dd840/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32920023424ffacc/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-L3',
@@ -179,7 +179,7 @@ const reviewData = {
                 'Стрелка 8. Смещение крестца может возникать из-за неравномерной работы мышц бедер или слабости ягодичных и поясничных мышц, что нарушает симметрию таза и поясницы.'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30c40029293cfcc4/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30ec001fcc441d0f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b3283002fc5a495db/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-R3',
@@ -192,7 +192,7 @@ const reviewData = {
                 'Стрелка 8. Смещение крестца может возникать из-за неравномерной работы мышц бедер или слабости ягодичных и поясничных мышц, что нарушает симметрию таза и поясницы.'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30d8000d18004e95/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30fe000f23233746/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32980009458166c5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-L4',
@@ -205,7 +205,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30c9002d54d8b293/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30f000292492efa8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b3288002b90583aec/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'BackView-R4',
@@ -218,7 +218,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a30dc002b42a645d4/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a310200188c088f40/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b329c0032e81646a3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
     ],
     sideView: [
@@ -236,7 +236,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd89c0012f7c2ed97/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8770008aec25d69/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32cf001e321778a7/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-R1',
@@ -252,7 +252,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8af00120545668b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd88a00130f3cea1f/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32e500360fc46f41/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-L2',
@@ -268,7 +268,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8a000334f3b3cd0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd87b0022a3b4a3fb/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32d40034e38953ba/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-R2',
@@ -284,7 +284,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8b300366d246cc8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd88e003785999796/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32ee002972a3475c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-L3',
@@ -300,7 +300,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8a5000dca9c9103/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd87f003ba5f82905/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32d90033eb779a2c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-R3',
@@ -316,7 +316,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8b8002195eab621/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd893002087115ba5/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32f40018e584c449/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-L4',
@@ -332,7 +332,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8a9003665d49572/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd885002d153d7c07/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32df0016adb205e0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SideView-R4',
@@ -348,7 +348,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8bd002bc7252885/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672dd8970033442b657d/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32f90017c6f27fab/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
     ],
     summaryView: [
@@ -365,7 +365,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a247d001271f51de8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a269f000dfa3e176b/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a100095f421231/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-R1',
@@ -380,7 +380,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24900035da4a0684/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26b2000f040f5228/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32b5001af06a46ac/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-L2',
@@ -395,7 +395,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a2482000b43eee1ba/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26a40007ebbbc238/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a500223e9575e1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-R2',
@@ -410,7 +410,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249b00147c131fb8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26b600290893cc30/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32bb0030c42413c2/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-L3',
@@ -425,7 +425,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24870012597061bd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26a800195095ed9c/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a9002ab2dd698a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-R3',
@@ -440,7 +440,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249f002d82c97eb0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26ba003dba05e5a8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c20034fc482d06/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-L4',
@@ -455,7 +455,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a248b0033c3bfe011/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26ac002c13858382/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32ad002deea7c392/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         },
         {
             'name': 'SummaryView-R4',
@@ -470,7 +470,7 @@ const reviewData = {
                 'Визуально проблем в данном регионе не обнаружено'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24a40030acaf12c3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
-            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a26bf000ef3816bb6/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
+            'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c90032e471c525/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
         }
     ],
     summaryData: {

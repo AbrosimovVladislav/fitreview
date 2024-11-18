@@ -7,11 +7,14 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
     "runtimeVersion": "1.0.0",
     "ios": {
       "supportsTablet": true,
@@ -29,6 +32,7 @@
       "package": "com.vlad911.fitreview",
       "runtimeVersion": "1.0.0"
     },
+
     "web": {
       "bundler": "metro",
       "output": "static",

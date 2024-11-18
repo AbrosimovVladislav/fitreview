@@ -9,8 +9,8 @@ import PhotoUploadSurveyStepScreen from "@/components/review/survey/PhotoUploadS
 import ErrorReviewScreen from "@/components/review/screen/ErrorReviewScreen";
 import useAppwrite from "@/lib/useAppwrite";
 import {getSurveyStepBySlug} from "@/lib/SurveyService";
-import LoadingView from "@expo/metro-runtime/build/LoadingView.native";
 import {defaultFirstSurveyStep} from "@/constants/survey";
+import LoadingView from "@/components/LoadingView";
 
 const SurveyStepPage = () => {
 
