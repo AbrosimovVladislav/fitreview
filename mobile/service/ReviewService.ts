@@ -358,11 +358,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '91',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                'At the moment, the region does not require any practice'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                'На данный момент регион функционально стабилен'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a247d001271f51de8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a100095f421231/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -373,11 +372,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '67',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                '1. Focus on exercises to strengthen the left shoulder and balance posture, such as scapular stabilizers, lateral raises, and breathing drills for better muscle engagement and tension release'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                '1. Сосредоточьтесь на упражнениях для укрепления левого плеча и выравнивания осанки, таких как стабилизация лопатки, махи в стороны и дыхательные упражнения для снятия напряжения'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24900035da4a0684/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32b5001af06a46ac/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -388,11 +386,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '54',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                '1. Improve core stability with exercises targeting the diaphragm and obliques, such as planks, side planks, and controlled breathing. Include stretches for the pectoral muscles to release tension'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                '1. Необходимо улучшить стабильность корпуса с помощью упражнений на диафрагму и косые мышцы. Добавьте растяжку грудных мышц для снятия напряжения'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a2482000b43eee1ba/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a500223e9575e1/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -403,11 +400,12 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '47',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                '1. Combine core stabilization drills (planks, dead bugs) with exercises to strengthen deltoids and reduce rotation (resistance band pulls). Include stretches for the chest and shoulder muscles to restore balance',
+                '2. Incorporate internal and external rotation exercises for shoulders using resistance bands. Add posterior chain work (rows, reverse flies) to correct scapular instability and ensure balanced muscle function'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                '1. Сочетайте упражнения на стабилизацию корпуса с укреплением дельтовидных мышц. Добавьте растяжку грудных и плечевых мышц для восстановления баланса',
+                '2. Выполняйте упражнения на внутреннюю и внешнюю ротацию плеч с резинкой. Добавьте упражнения на заднюю цепь для исправления нестабильности лопатки'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249b00147c131fb8/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32bb0030c42413c2/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -418,11 +416,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '94',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                'At the moment, the region does not require any practice'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                'На данный момент регион функционально стабилен'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24870012597061bd/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32a9002ab2dd698a/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -433,11 +430,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '96',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                'At the moment, the region does not require any practice'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                'На данный момент регион функционально стабилен'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a249f002d82c97eb0/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c20034fc482d06/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -448,11 +444,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '99',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                'At the moment, the region does not require any practice'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                'На данный момент регион функционально стабилен'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a248b0033c3bfe011/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32ad002deea7c392/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
@@ -463,11 +458,10 @@ const reviewData = {
             'group': 'SummaryView',
             'estimation': '99',
             'points': [
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength',
-                'Warming up your glutes is essential for enhancing movement efficiency, preventing injuries, and maximizing strength'
+                'At the moment, the region does not require any practice'
             ],
             'pointsRus': [
-                'Визуально проблем в данном регионе не обнаружено'
+                'На данный момент регион функционально стабилен'
             ],
             'userImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/672a24a40030acaf12c3/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
             'diagramImage': 'https://cloud.appwrite.io/v1/storage/buckets/672a245c0017b4d2c2bf/files/673b32c90032e471c525/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin',
