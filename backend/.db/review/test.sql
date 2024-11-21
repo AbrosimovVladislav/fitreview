@@ -272,54 +272,52 @@ VALUES (17, 'SideView-L1', 'Left View Upper Body', 'SideView', NULL,
 -- Вставляем данные в таблицу BodySegment для SummaryView
 INSERT INTO body_segment_description (id, descriptions, descriptions_rus)
 VALUES (25, '[
-  "At the moment, the region does not require any practice"
+  "Shoulders. Consult a specialist to address fascial tension and activate muscles. Wear a backpack on both shoulders. Exercises: dynamic stretching, functional training with equipment to improve strength and motor function."
 ]',
         '[
-          "На данный момент регион функционально стабилен"
+          "Плечи. Обратитесь к специалисту для работы с фасцией и активации мышц. Носите рюкзак на обоих плечах. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
         ]'),
        (26, '[
-         "1. Focus on exercises to strengthen the left shoulder and balance posture, such as scapular stabilizers, lateral raises, and breathing drills for better muscle engagement and tension release"
+         "Shoulders. Consult a specialist to address fascial tension and activate muscles. Wear a backpack on both shoulders. Exercises: dynamic stretching, functional training with equipment to improve strength and motor function."
        ]',
         '[
-          "1. Сосредоточьтесь на упражнениях для укрепления левого плеча и выравнивания осанки, таких как стабилизация лопатки, махи в стороны и дыхательные упражнения для снятия напряжения"
+          "Плечи. Обратитесь к специалисту для работы с фасцией и активации мышц. Носите рюкзак на обоих плечах. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
         ]'),
        (27, '[
-         "1. Improve core stability with exercises targeting the diaphragm and obliques, such as planks, side planks, and controlled breathing. Include stretches for the pectoral muscles to release tension"
+         "Thoracic Region. Improve thoracic mobility and core function (diaphragm, abs, pelvic floor). Include stretching for front thighs and exercises targeting hip joints and surrounding muscles."
        ]',
         '[
-          "1. Необходимо улучшить стабильность корпуса с помощью упражнений на диафрагму и косые мышцы. Добавьте растяжку грудных мышц для снятия напряжения"
+          "Грудной отдел. Улучшите мобильность грудного отдела и работу кора (диафрагма, пресс, тазовое дно). Добавьте растяжку передней поверхности бедра и тренировки для тазобедренного сустава и окружающих мышц."
         ]'),
        (28, '[
-         "1. Combine core stabilization drills (planks, dead bugs) with exercises to strengthen deltoids and reduce rotation (resistance band pulls). Include stretches for the chest and shoulder muscles to restore balance",
-         "2. Incorporate internal and external rotation exercises for shoulders using resistance bands. Add posterior chain work (rows, reverse flies) to correct scapular instability and ensure balanced muscle function"
+         "Thoracic Region. Improve thoracic mobility and core function (diaphragm, abs, pelvic floor). Include stretching for front thighs and exercises targeting hip joints and surrounding muscles."
        ]',
         '[
-          "1. Сочетайте упражнения на стабилизацию корпуса с укреплением дельтовидных мышц. Добавьте растяжку грудных и плечевых мышц для восстановления баланса",
-          "2. Выполняйте упражнения на внутреннюю и внешнюю ротацию плеч с резинкой. Добавьте упражнения на заднюю цепь для исправления нестабильности лопатки"
+          "Грудной отдел. Улучшите мобильность грудного отдела и работу кора (диафрагма, пресс, тазовое дно). Добавьте растяжку передней поверхности бедра и тренировки для тазобедренного сустава и окружающих мышц."
         ]'),
        (29, '[
-         "At the moment, the region does not require any practice"
+         "Hip Joint. Focus on hip mobility and pelvic stability. Exercises: dynamic stretching, functional training with equipment to enhance strength and motor function."
        ]',
         '[
-          "На данный момент регион функционально стабилен"
+          "Тазобедренный сустав. Работайте над мобильностью тазобедренного сустава и стабильностью таза. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
         ]'),
        (30, '[
-         "At the moment, the region does not require any practice"
+         "Hip Joint. Focus on hip mobility and pelvic stability. Exercises: dynamic stretching, functional training with equipment to enhance strength and motor function."
        ]',
         '[
-          "На данный момент регион функционально стабилен"
+          "Тазобедренный сустав. Работайте над мобильностью тазобедренного сустава и стабильностью таза. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
         ]'),
        (31, '[
-         "At the moment, the region does not require any practice"
+         "Foot. Wear wide-toe shoes, walk barefoot at home, massage feet and calves. Practice exercises to improve foot stability and mobility."
        ]',
         '[
-          "На данный момент регион функционально стабилен"
+          "Стопа. Носите обувь с широким носком, ходите босиком дома, делайте массаж стоп и голеней. Тренируйтесь для улучшения стабильности и мобильности стопы."
         ]'),
        (32, '[
-         "At the moment, the region does not require any practice"
+         "Foot. Wear wide-toe shoes, walk barefoot at home, massage feet and calves. Practice exercises to improve foot stability and mobility."
        ]',
         '[
-          "На данный момент регион функционально стабилен"
+          "Стопа. Носите обувь с широким носком, ходите босиком дома, делайте массаж стоп и голеней. Тренируйтесь для улучшения стабильности и мобильности стопы."
         ]');
 
 INSERT INTO body_segment (id, name, title, segment_group, estimation, user_image, diagram_image, review_id,
