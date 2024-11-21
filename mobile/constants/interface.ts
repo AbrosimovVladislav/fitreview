@@ -45,3 +45,66 @@ export interface Training {
     "description": string,
     "exercise": Exercise[]
 }
+
+// Описание для BodySegmentDescription
+interface BodySegmentDescription {
+    id: number;
+    descriptions: string[];
+    descriptionsRus: string[];
+}
+
+// Описание для BodySegment
+interface BodySegment {
+    id: number;
+    name: string;
+    title: string;
+    segmentGroup: string;
+    estimation: number | null;
+    userImage: string;
+    diagramImage: string;
+    bodySegmentDescription: BodySegmentDescription;
+}
+
+// Описание для Problems, Objectives, Recommendations
+interface Problem {
+    id: number;
+    title: string;
+    description: string;
+    estimation: number;
+    iconType: string;
+}
+
+interface TrainingObjective {
+    id: number;
+    title: string;
+    description: string;
+    iconType: string;
+}
+
+interface GeneralRecommendation {
+    id: number;
+    title: string;
+    description: string;
+    iconType: string;
+}
+
+// Описание для UserData
+interface UserData {
+    id: number;
+    userName: string;
+    estimation: number;
+    weight: number;
+    fatIndex: number;
+    age: number;
+}
+
+// Описание для главного объекта
+interface Review {
+    id: number;
+    date: string;
+    userData: UserData;
+    bodySegments: BodySegment[];
+    problems: Problem[];
+    trainingObjectives: TrainingObjective[];
+    generalRecommendations: GeneralRecommendation[];
+}

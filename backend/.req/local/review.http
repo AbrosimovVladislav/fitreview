@@ -1,0 +1,3 @@
+### Get Last Review By UserId
+GET http://localhost:8080/api/v1/review/1
+Accept: application/json

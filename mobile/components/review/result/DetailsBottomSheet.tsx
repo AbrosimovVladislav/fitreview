@@ -47,8 +47,7 @@ const DetailsBottomSheet = ({isOpen, onClose, region}) => {
                     </View>
 
                     {
-                        // region.points.map((point, index) =>
-                        region.pointsRus.map((point, index) =>
+                        region && region.bodySegmentDescription && region.bodySegmentDescription.descriptions && region.bodySegmentDescription.descriptions.map((point, index) =>
                             <Text key={index} className="text-md text-center text-gray-100 pt-3 pb-2 font-mregular">
                                 {point}
                             </Text>)

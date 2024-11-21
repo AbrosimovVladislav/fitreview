@@ -10,8 +10,11 @@ import RecommendationsArea from "@/components/review/result/tab/summary/Recommen
 import {IconBed, IconDatabase, IconMeat, IconMoodNervous, IconShirt} from "@tabler/icons-react-native";
 
 const SummaryReviewResultTab = ({
+                                    userData,
+                                    problems,
+                                    trainingObjectives,
+                                    generalRecommendations,
                                     bodyMapRegions,
-                                    summaryData,
                                     selectedRegion,
                                     setSelectedRegion,
                                     setBottomSheetVisible
@@ -48,26 +51,26 @@ const SummaryReviewResultTab = ({
                 summary
             />
             <SummaryEstimationArea
-                summaryData={summaryData}
+                summaryData={userData}
             />
             <Divider/>
 
             <MainProblemsArea
                 getIconByType={getIconByType}
-                mainProblems={summaryData.mainProblems}
+                mainProblems={problems}
             />
             <Divider/>
 
             <TrainingPlanArea
                 getIconByType={getIconByType}
-                trainingObjective={summaryData.trainingObjective}
+                trainingObjective={trainingObjectives}
             />
 
             <Divider/>
 
             <RecommendationsArea
                 getIconByType={getIconByType}
-                recommendations={summaryData.recommendations}
+                recommendations={generalRecommendations}
             />
         </ScrollView>
     )

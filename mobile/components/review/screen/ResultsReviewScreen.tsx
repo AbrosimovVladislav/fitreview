@@ -12,13 +12,16 @@ import SummaryReviewResultTab from "@/components/review/result/tab/summary/Summa
 import FrontViewReviewResultTab from "@/components/review/result/tab/front/FrontViewReviewResultTab";
 import BackViewReviewResultTab from "@/components/review/result/tab/back/BackViewReviewResultTab";
 import useAppwrite from "@/lib/useAppwrite";
-import {Training} from "@/constants/interface";
-import {getLastReviewByUserId} from "@/service/ReviewService";
+import {getLastReviewByUserId, getLastReviewByUserIdDeprecated} from "@/service/ReviewService";
 import SideViewReviewResultTab from "@/components/review/result/tab/side/SideViewReviewResultTab";
+import {BE} from "@/config";
+import Review from "@/app/(tabs)/review";
 
 const ResultsReviewScreen = ({user}) => {
 
-    const {data: reviewData} = useAppwrite<Training>(() => getLastReviewByUserId('1'))
+    const {data: reviewData} = BE
+        ? useAppwrite<Review>(() => getLastReviewByUserId('1'))
+        : useAppwrite<Review>(() => getLastReviewByUserIdDeprecated('1'))
 
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
@@ -40,43 +43,54 @@ const ResultsReviewScreen = ({user}) => {
         {
             key: "front-view",
             title: "Front View",
-            content: <FrontViewReviewResultTab
-                bodyMapRegions={reviewData.frontView}
-                selectedRegion={selectedRegion && selectedRegion.group==='FrontView' ? selectedRegion : emptyRegion}
-                setSelectedRegion={setSelectedRegion}
-                setBottomSheetVisible={setBottomSheetVisible}
-            />
+            content: reviewData && reviewData.bodySegments ? (
+                <FrontViewReviewResultTab
+                    bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'FrontView')}
+                    selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'FrontView' ? selectedRegion : emptyRegion}
+                    setSelectedRegion={setSelectedRegion}
+                    setBottomSheetVisible={setBottomSheetVisible}
+                />
+            ) : null
         },
         {
             key: "back-view",
             title: "Back View",
-            content: <BackViewReviewResultTab
-                bodyMapRegions={reviewData.backView}
-                selectedRegion={selectedRegion && selectedRegion.group==='BackView' ? selectedRegion : emptyRegion}
-                setSelectedRegion={setSelectedRegion}
-                setBottomSheetVisible={setBottomSheetVisible}
-            />
+            content: reviewData && reviewData.bodySegments ? (
+                <BackViewReviewResultTab
+                    bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'BackView')}
+                    selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'BackView' ? selectedRegion : emptyRegion}
+                    setSelectedRegion={setSelectedRegion}
+                    setBottomSheetVisible={setBottomSheetVisible}
+                />
+            ) : null
         },
         {
             key: "side-views",
             title: "Side Views",
-            content: <SideViewReviewResultTab
-                bodyMapRegions={reviewData.sideView}
-                selectedRegion={selectedRegion && selectedRegion.group==='SideView' ? selectedRegion : emptyRegion}
-                setSelectedRegion={setSelectedRegion}
-                setBottomSheetVisible={setBottomSheetVisible}
-            />
+            content: reviewData && reviewData.bodySegments ? (
+                <SideViewReviewResultTab
+                    bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'SideView')}
+                    selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'SideView' ? selectedRegion : emptyRegion}
+                    setSelectedRegion={setSelectedRegion}
+                    setBottomSheetVisible={setBottomSheetVisible}
+                />
+            ) : null
         },
         {
             key: "results",
             title: "Summary",
-            content: <SummaryReviewResultTab
-                bodyMapRegions={reviewData.summaryView}
-                summaryData={reviewData.summaryData}
-                selectedRegion={selectedRegion && selectedRegion.group==='SummaryView' ? selectedRegion : emptyRegion}
-                setSelectedRegion={setSelectedRegion}
-                setBottomSheetVisible={setBottomSheetVisible}
-            />
+            content: reviewData && reviewData.bodySegments ? (
+                <SummaryReviewResultTab
+                    userData={reviewData.userData}
+                    problems={reviewData.problems}
+                    trainingObjectives={reviewData.trainingObjectives}
+                    generalRecommendations={reviewData.generalRecommendations}
+                    bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'SummaryView')}
+                    selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'SummaryView' ? selectedRegion : emptyRegion}
+                    setSelectedRegion={setSelectedRegion}
+                    setBottomSheetVisible={setBottomSheetVisible}
+                />
+            ) : null
         }
     ]
 
