@@ -36,7 +36,7 @@ const PhotoQuestionComponent = ({step, setCurrentStep, question, answer, lastQue
                 </View>
 
                 <View name='example pictures'
-                      className='flex-row justify-between px-4'>
+                      className='flex-row justify-center px-4'>
                     <Image
                         source={{uri: question?.imageExample}}
                         className='w-[180px] h-[250px] rounded-xl'

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {Ionicons} from '@expo/vector-icons';
@@ -33,18 +33,14 @@ const UploadArea = ({uploadedImage, setUploadedImage}) => {
         setUploadedImage(null);
     };
 
-    useEffect(() => {
-        console.log("uploadedImage: " + uploadedImage)
-    },[uploadedImage])
-
     return (
-        <View className="flex-1 justify-between px-4">
+        <View className="flex-1 justify-center items-center px-4">
             <ScrollView contentContainerStyle={{flexGrow: 1}}>
                 {uploadedImage ? (
                     <View className="relative">
                         <Image
                             source={{ uri: uploadedImage }}
-                            className="w-40 h-52 rounded-xl border border-red-300"
+                            className="w-40 h-52 rounded-xl"
                             resizeMode="cover"
                         />
                         <TouchableOpacity
