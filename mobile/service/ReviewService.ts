@@ -1,4 +1,4 @@
-import {getRequest} from "@/service/beclient";
+import {getRequest, postRequest} from "@/service/beclient";
 
 const reviewDataNew = {
     "id": 1,
@@ -666,6 +666,23 @@ const reviewDataNew = {
     ]
 }
 
+// ---Review Status---
+export const getReviewStatusByUserId = async (userId) => {
+    try {
+        let status = await getRequest(`/review/status/${userId}`);
+        return status;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
+
+export const addNewReviewStatusRecord = async (userId, status) => {
+    return await postRequest('/review/status', {userId: userId, status: status});
+}
+
+
+// ---Review Results---
 export const getLastReviewByUserIdDeprecated = async (userId) => {
     return reviewDataNew;
 };

@@ -5,7 +5,7 @@ import NextQuestionButton from "@/components/NextQuestionButton";
 import {createStatusRecord, saveAnswer} from "@/lib/SurveyService";
 import {router} from "expo-router";
 
-const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
+const NumberInputSurveyStepScreenDeprecated = ({user, slug, surveyStep}) => {
 
     const [value, setValue] = useState(null);
 
@@ -59,4 +59,4 @@ const NumberInputSurveyStepScreen = ({user, slug, surveyStep}) => {
             </ScrollView>
     )
 }
-export default NumberInputSurveyStepScreen
+export default NumberInputSurveyStepScreenDeprecated

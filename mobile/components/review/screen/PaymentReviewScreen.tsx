@@ -1,27 +1,24 @@
 import {View, ScrollView} from 'react-native'
 import React from 'react'
-import PageHeader from "@/components/PageHeader";
-import {SafeAreaView} from "react-native-safe-area-context";
-import Button from "../../components/common/Button";
-import {router} from "expo-router";
-import {createStatusRecord} from "@/lib/SurveyService";
-import {validatePayment} from "@/lib/PaymentService";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {defaultFirstSurveyStep, SurveyStatus} from "@/constants/survey";
+import {validatePayment} from "@/lib/PaymentService";
+import {addNewReviewStatusRecord} from "@/service/ReviewService";
+import {SurveyStatus} from "@/constants/survey";
+import {SafeAreaView} from "react-native-safe-area-context";
+import PageHeader from "@/components/PageHeader";
+import Button from "@/components/common/Button";
 
-const Payment = () => {
-
+const PaymentReviewScreen = ({setStatus}) => {
     const {user} = useGlobalContext();
+    const userId = '1';
 
-    const preSubmitAction = async () => {
+    const toSurveyStep = async () => {
         if (validatePayment()) {
             //ToDo Сейчас здесь логика на прохождение первого опроса, но
             // в будущем опрос может быть не всегда первым и будет другая
             // логика связанная с оплатой или опросом повторным
-            await createStatusRecord(user.$id, SurveyStatus.LifeStyleStep);
-
-            console.log('[Payment_preSubmitAction] Payment successful, routing to questions section')
-            router.push(`/review/survey/${defaultFirstSurveyStep.slug}`)
+            await addNewReviewStatusRecord(userId, SurveyStatus.FirstSurvey);
+            setStatus(SurveyStatus.FirstSurvey);
         }
     }
 
@@ -32,7 +29,7 @@ const Payment = () => {
                     <PageHeader title='Payment'/>
                     <Button
                         title="Proceed to survey"
-                        onPress={preSubmitAction}
+                        onPress={toSurveyStep}
                         containerStyles="mt-2 mx-6"
                         icon={'ribbon'}
                     />
@@ -41,4 +38,4 @@ const Payment = () => {
         </SafeAreaView>
     )
 }
-export default Payment
+export default PaymentReviewScreen

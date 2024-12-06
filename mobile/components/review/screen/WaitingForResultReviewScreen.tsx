@@ -6,7 +6,7 @@ import Button from "@/components/common/Button";
 import {createStatusRecord} from "@/lib/SurveyService";
 import {SurveyStatus} from "@/constants/survey";
 
-const WaitingReviewScreen = ({user}) => {
+const WaitingForResultReviewScreen = ({user}) => {
     return (
         <ScrollView>
             <View className='flex justify-center items-center gap-16 p-4 pt-8'>
@@ -41,4 +41,4 @@ const WaitingReviewScreen = ({user}) => {
         </ScrollView>
     )
 }
-export default WaitingReviewScreen
+export default WaitingForResultReviewScreen

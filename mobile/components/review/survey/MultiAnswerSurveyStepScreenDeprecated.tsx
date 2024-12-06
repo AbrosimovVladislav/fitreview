@@ -1,4 +1,4 @@
-import {View, Text, ScrollView} from 'react-native'
+import {View, Text, ScrollView, TouchableOpacity} from 'react-native'
 import React, {useState} from 'react'
 import AnswerOption from "@/components/AnswerOption";
 import NextQuestionButton from "@/components/NextQuestionButton";
@@ -10,8 +10,9 @@ import {
     saveAnswer
 } from "@/lib/SurveyService";
 import {router} from "expo-router";
+import {Ionicons} from "@expo/vector-icons";
 
-const MultiAnswerSurveyStepScreen = ({user, slug, surveyStep}) => {
+const MultiAnswerSurveyStepScreenDeprecated = ({user, slug, surveyStep}) => {
 
     const {data: questions} = useAppwrite<Question[]>(() => getQuestionsByType(slug));
 
@@ -46,6 +47,9 @@ const MultiAnswerSurveyStepScreen = ({user, slug, surveyStep}) => {
 
     return (
         <ScrollView>
+            <TouchableOpacity onPress={() => router.back()} className={`pl-2`}>
+                <Ionicons name="chevron-back-outline" size={28} color="white"/>
+            </TouchableOpacity>
             <View name='question-header' className='pt-6 px-4'>
                 <Text className='text-md text-gray-300 font-mmedium'>
                     Step {surveyStep?.stepNumber}
@@ -91,4 +95,4 @@ const MultiAnswerSurveyStepScreen = ({user, slug, surveyStep}) => {
         </ScrollView>
     )
 }
-export default MultiAnswerSurveyStepScreen
+export default MultiAnswerSurveyStepScreenDeprecated

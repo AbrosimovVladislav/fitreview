@@ -1,6 +1,15 @@
 import {SurveyStep} from "@/constants/interface";
 
 export enum SurveyStatus {
+    WelcomeScreen = "WelcomeScreen",
+    PaymentScreen = "PaymentScreen",
+    FirstSurvey = "FirstSurvey",
+    WaitingForResults = "WaitingForResults",
+    ReviewResults = "ReviewResults",
+    SecondSurvey = "SecondSurvey",
+}
+
+export enum SurveyStatusOld {
     LifeStyleStep = "LifeStyleStep",
     SportStyleStep = "SportStyleStep",
     HealthStyleStep = "HealthStyleStep",

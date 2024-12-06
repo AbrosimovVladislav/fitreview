@@ -9,7 +9,7 @@ import {
 import {uploadImages as upload} from "@/lib/StorageService";
 import {router} from "expo-router";
 
-const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
+const PhotoUploadSurveyStepScreenDeprecated = ({user, slug, surveyStep}) => {
 
     const [uploadedImages, setUploadedImages] = useState([]);
 
@@ -76,4 +76,4 @@ const PhotoUploadSurveyStepScreen = ({user, slug, surveyStep}) => {
         </ScrollView>
     )
 }
-export default PhotoUploadSurveyStepScreen
+export default PhotoUploadSurveyStepScreenDeprecated

@@ -37,7 +37,6 @@ const RootLayout = () => {
                     <Stack.Screen name='region/[regionId]' options={{headerShown: false}}/>
                     <Stack.Screen name='exercise/[exerciseId]' options={{headerShown: false}}/>
                     <Stack.Screen name='subcategory/[subcategoryId]' options={{headerShown: false}}/>
-                    <Stack.Screen name='review/payment' options={{headerShown: false}}/>
                     <Stack.Screen name='review/survey/[slug]' options={{headerShown: false, gestureEnabled: false}}/>
                     <Stack.Screen name='training/[slug]' options={{headerShown: false}}/>
                 </Stack>

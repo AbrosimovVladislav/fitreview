@@ -16,9 +16,11 @@ export interface Exercise {
 
 export interface Question {
     "id": string,
+    "type": string,
     "title": string,
-    "image": string,
-    "type": string
+    "value": string,
+    "description": string,
+    "placeholder": string
 }
 
 export interface SurveyStep {

@@ -11,3 +11,13 @@ export const getRequest = async (endpoint, params = {}) => {
         throw new Error(error);
     }
 };
+
+export const postRequest = async (endpoint, data = {}, config = {}) => {
+    try {
+        const response = await axios.post(`${BASE_URL}${endpoint}`, data, config);
+        return response.data;
+    } catch (error) {
+        console.error('[API Service] Error in POST request:', error);
+        throw new Error(error);
+    }
+};

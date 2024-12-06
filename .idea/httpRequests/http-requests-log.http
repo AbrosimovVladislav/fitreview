@@ -1,3 +1,34 @@
+POST http://localhost:8080/api/v1/review/status
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "status": "PaymentScreen"
+}
+
+###
+
+GET http://localhost:8080/api/v1/review/status/1
+Accept: application/json
+
+<> 2024-12-03T070310.200.json
+
+###
+
+GET http://localhost:8080/api/v1/review/status/1
+Accept: application/json
+
+<> 2024-12-03T070225.500.json
+
+###
+
+GET http://localhost:8080/api/v1/review/1
+Accept: application/json
+
+<> 2024-11-21T171434.200.json
+
+###
+
 POST https://cloud.appwrite.io/v1/databases/66c3312f002e44e586ce/collections/66f1c3cb0036cbb71361/documents
 Content-Type: application/json
 X-Appwrite-Project: 66c32ed800357b5e7314

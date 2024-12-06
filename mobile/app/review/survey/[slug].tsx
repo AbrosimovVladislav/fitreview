@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 import {useGlobalContext} from "@/context/GlobalProvider";
-import MultiAnswerSurveyStepScreen from "@/components/review/survey/MultiAnswerSurveyStepScreen";
+import MultiAnswerSurveyStepScreenDeprecated from "@/components/review/survey/MultiAnswerSurveyStepScreenDeprecated";
 import {useLocalSearchParams} from "expo-router";
 import {SurveyStep} from "@/constants/interface";
-import NumberInputSurveyStepScreen from "@/components/review/survey/NumberInputSurveyStepScreen";
-import PhotoUploadSurveyStepScreen from "@/components/review/survey/PhotoUploadSurveyStepScreen";
+import NumberInputSurveyStepScreenDeprecated from "@/components/review/survey/NumberInputSurveyStepScreenDeprecated";
+import PhotoUploadSurveyStepScreenDeprecated from "@/components/review/survey/PhotoUploadSurveyStepScreenDeprecated";
 import ErrorReviewScreen from "@/components/review/screen/ErrorReviewScreen";
 import useAppwrite from "@/lib/useAppwrite";
 import {getSurveyStepBySlug} from "@/lib/SurveyService";
@@ -33,17 +33,17 @@ const SurveyStepPage = () => {
         <SafeAreaView className='bg-primary h-full'>
             {
                 surveyStep.type === 'multianswer'
-                    ? <MultiAnswerSurveyStepScreen
+                    ? <MultiAnswerSurveyStepScreenDeprecated
                         user={user}
                         slug={slug}
                         surveyStep={surveyStep}/>
                     : surveyStep.type === 'numberinput'
-                        ? <NumberInputSurveyStepScreen
+                        ? <NumberInputSurveyStepScreenDeprecated
                             user={user}
                             slug={slug}
                             surveyStep={surveyStep}/>
                         : surveyStep.type === 'photoupload'
-                            ? <PhotoUploadSurveyStepScreen
+                            ? <PhotoUploadSurveyStepScreenDeprecated
                                 user={user}
                                 slug={slug}
                                 surveyStep={surveyStep}/>
