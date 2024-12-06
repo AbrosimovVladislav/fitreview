@@ -8,6 +8,10 @@ export const uploadImages = async (fileArray) => {
     return await Promise.all(fileArray.map(fileUri => uploadFile(fileUri, 'image/png', config.frSurveyStorageId)));
 };
 
+export const uploadImage = async (imageUrl) => {
+    return await uploadFile(imageUrl, 'image/png', config.frSurveyStorageId);
+}
+
 const uploadFile = async (fileUri, mimeType, storageId) => {
     try {
         const fileInfo = await FileSystem.getInfoAsync(fileUri);

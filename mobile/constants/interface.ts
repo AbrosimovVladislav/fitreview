@@ -20,7 +20,8 @@ export interface Question {
     "title": string,
     "value": string,
     "description": string,
-    "placeholder": string
+    "placeholder": string,
+    "imageExample": string
 }
 
 export interface SurveyStep {

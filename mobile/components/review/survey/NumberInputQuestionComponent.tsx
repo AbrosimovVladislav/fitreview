@@ -55,7 +55,6 @@ const NumberInputQuestionComponent = ({step, setCurrentStep, question, answer, l
                                                   answerValue={value}
                                                   setCurrentStep={setCurrentStep}/>
                     }
-
                 </View>
             </View>
         </ScrollView>

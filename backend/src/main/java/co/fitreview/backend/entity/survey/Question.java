@@ -26,6 +26,7 @@ public class Question {
     private String value; // сам вопрос
     private String description; // пояснение вопроса, если нужно
     private String placeholder; // посяснение вопрос в инпуте, если нужно
+    private String imageExample;
 
     // Связь с вариантами ответа
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
