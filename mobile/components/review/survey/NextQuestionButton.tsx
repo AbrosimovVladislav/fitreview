@@ -4,15 +4,17 @@ import {saveAnswer} from "@/service/SurveyService";
 
 const NextQuestionButton = ({disabled, questionId, answerValue, setPressed, setCurrentStep}) => {
 
+    const testUserId = '1';
+
     const [isLoading, setIsLoading] = useState(false);
 
     const nextQuestionOnPress = async () => {
         setIsLoading(true);
         //save answer
-        await saveAnswer('1', questionId, answerValue)
+        await saveAnswer(testUserId, questionId, answerValue)
 
         //clear pressed
-        setPressed([]);
+        setPressed && setPressed([]);
 
         //change step
         setCurrentStep(prevStep => prevStep + 1);

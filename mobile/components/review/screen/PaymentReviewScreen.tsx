@@ -10,14 +10,14 @@ import Button from "@/components/common/Button";
 
 const PaymentReviewScreen = ({setStatus}) => {
     const {user} = useGlobalContext();
-    const userId = '1';
+    const testUserId = '1';
 
     const toSurveyStep = async () => {
         if (validatePayment()) {
             //ToDo Сейчас здесь логика на прохождение первого опроса, но
             // в будущем опрос может быть не всегда первым и будет другая
             // логика связанная с оплатой или опросом повторным
-            await addNewReviewStatusRecord(userId, SurveyStatus.FirstSurvey);
+            await addNewReviewStatusRecord(testUserId, SurveyStatus.FirstSurvey);
             setStatus(SurveyStatus.FirstSurvey);
         }
     }

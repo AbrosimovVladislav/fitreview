@@ -19,9 +19,11 @@ import Review from "@/app/(tabs)/review";
 
 const ResultsReviewScreen = ({user}) => {
 
+    const testUserId = '1';
+
     const {data: reviewData} = BE
-        ? useAppwrite<Review>(() => getLastReviewByUserId('1'))
-        : useAppwrite<Review>(() => getLastReviewByUserIdDeprecated('1'))
+        ? useAppwrite<Review>(() => getLastReviewByUserId(testUserId))
+        : useAppwrite<Review>(() => getLastReviewByUserIdDeprecated(testUserId))
 
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);

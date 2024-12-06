@@ -11,10 +11,10 @@ import {SurveyStatus} from "@/constants/survey";
 
 const WelcomeReviewScreen = ({setStatus}) => {
 
-    const userId = '1';
+    const testUserId = '1';
 
     const toPaymentStep = async () => {
-        await addNewReviewStatusRecord(userId, SurveyStatus.PaymentScreen);
+        await addNewReviewStatusRecord(testUserId, SurveyStatus.PaymentScreen);
         setStatus(SurveyStatus.PaymentScreen);
     }
 

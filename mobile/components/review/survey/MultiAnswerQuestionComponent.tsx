@@ -3,8 +3,11 @@ import React, {useEffect, useRef, useState} from 'react'
 import AnswerOption from "@/components/AnswerOption";
 import NextQuestionButton from "@/components/review/survey/NextQuestionButton";
 import PreviousQuestionButton from "@/components/review/survey/PreviousQuestionButton";
+import SubmitSurveyButton from "@/components/review/survey/SubmitSurveyButton";
 
-const MultiAnswerQuestionComponent = ({step, setCurrentStep, question, answer}) => {
+const MultiAnswerQuestionComponent = ({step, setCurrentStep, question, answer, lastQuestion, setStatus}) => {
+
+    const testUserId='1';
 
     const scrollViewRef = useRef(null);
     const [pressed, setPressed] = useState([]);
@@ -78,11 +81,21 @@ const MultiAnswerQuestionComponent = ({step, setCurrentStep, question, answer}) 
             </View>
 
             <View name='question-next-button' className='pt-4 px-4'>
-                <NextQuestionButton disabled={pressed.length == 0}
-                                    questionId={question.id}
-                                    answerValue={pressed}
-                                    setPressed={setPressed}
-                                    setCurrentStep={setCurrentStep}/>
+                {
+                    lastQuestion
+                        ? <SubmitSurveyButton
+                            disabled={pressed.length == 0}
+                            questionId={question.id}
+                            answerValue={pressed}
+                            setPressed={setPressed}
+                            setStatus={setStatus}/>
+                        : <NextQuestionButton disabled={pressed.length == 0}
+                                              questionId={question.id}
+                                              answerValue={pressed}
+                                              setPressed={setPressed}
+                                              setCurrentStep={setCurrentStep}/>
+                }
+
             </View>
         </ScrollView>
     )

@@ -14,14 +14,15 @@ import PaymentReviewScreen from "@/components/review/screen/PaymentReviewScreen"
 const Review = () => {
 
     const {user} = useGlobalContext();
+    const testUserId = '1';
 
     const [status, setStatus] = useState('WelcomeScreen');
 
     const statusComponentMap = {
         WelcomeScreen: <WelcomeReviewScreen setStatus={setStatus}/>,
         PaymentScreen: <PaymentReviewScreen setStatus={setStatus}/>,
-        FirstSurvey: <FirstSurveyReviewScreen/>,
-        WaitingForResults: <WaitingForResultReviewScreen/>,
+        FirstSurvey: <FirstSurveyReviewScreen setStatus={setStatus}/>,
+        WaitingForResults: <WaitingForResultReviewScreen setStatus={setStatus}/>,
         ReviewResults: <ResultsReviewScreen/>,
         SecondSurvey: <SecondSurveyReviewScreen/>,
     };
@@ -38,7 +39,7 @@ const Review = () => {
 
     const refreshPageAccordingToTheStatus = async () => {
         try {
-            const currentStatus = await getReviewStatusByUserId('1');
+            const currentStatus = await getReviewStatusByUserId(testUserId);
             console.log("[Review_refreshPageAccordingToTheStatus] currentStatus " + currentStatus.value);
 
             //if status was not created yet, then not refresh state

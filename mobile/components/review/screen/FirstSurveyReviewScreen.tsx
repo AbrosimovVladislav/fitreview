@@ -7,7 +7,9 @@ import NumberInputQuestionComponent from "@/components/review/survey/NumberInput
 import PhotoQuestionComponent from "@/components/review/survey/PhotoQuestionComponent";
 import {getAnswerByUserIdAndQuestionId, getQuestionById} from "@/service/SurveyService";
 
-const FirstSurveyReviewScreen = () => {
+const FirstSurveyReviewScreen = ({setStatus}) => {
+
+    const testUserId = '1';
 
     const [currentStep, setCurrentStep] = useState(1);
     const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
@@ -22,6 +24,22 @@ const FirstSurveyReviewScreen = () => {
         {
             step: 2,
             questionId: 2
+        },
+        {
+            step: 3,
+            questionId: 3
+        },
+        {
+            step: 4,
+            questionId: 4
+        },
+        {
+            step: 5,
+            questionId: 7
+        },
+        {
+            step: 6,
+            questionId: 8
         }
     ]
 
@@ -35,7 +53,7 @@ const FirstSurveyReviewScreen = () => {
             if (questionId) {
                 const fetchedQuestion = await getQuestionById(questionId);
                 setCurrentQuestion(fetchedQuestion);
-                let answer = await getAnswerByUserIdAndQuestionId('1', questionId);
+                let answer = await getAnswerByUserIdAndQuestionId(testUserId, questionId);
                 setExistingAnswer(answer);
             }
         };
@@ -52,6 +70,8 @@ const FirstSurveyReviewScreen = () => {
                         setCurrentStep={setCurrentStep}
                         question={currentQuestion}
                         answer={existingAnswer}
+                        lastQuestion={firstSurveyList.length === currentStep}
+                        setStatus={setStatus}
                     />
                 );
             case 'NUMBERINPUT':
@@ -61,6 +81,8 @@ const FirstSurveyReviewScreen = () => {
                         setCurrentStep={setCurrentStep}
                         question={currentQuestion}
                         answer={existingAnswer}
+                        lastQuestion={firstSurveyList.length === currentStep}
+                        setStatus={setStatus}
                     />
                 );
             case 'PHOTO':
@@ -70,6 +92,8 @@ const FirstSurveyReviewScreen = () => {
                         setCurrentStep={setCurrentStep}
                         question={currentQuestion}
                         answer={existingAnswer}
+                        lastQuestion={firstSurveyList.length === currentStep}
+                        setStatus={setStatus}
                     />
                 );
             default:

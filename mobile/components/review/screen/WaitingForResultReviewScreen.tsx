@@ -3,10 +3,18 @@ import React from 'react'
 
 import {images} from '../../../constants'
 import Button from "@/components/common/Button";
-import {createStatusRecord} from "@/lib/SurveyService";
 import {SurveyStatus} from "@/constants/survey";
+import {addNewReviewStatusRecord} from "@/service/ReviewService";
 
-const WaitingForResultReviewScreen = ({user}) => {
+const WaitingForResultReviewScreen = ({setStatus}) => {
+
+    const testUserId = '1';
+
+    const testResultsOnPressTEMPORARY = async () => {
+        await addNewReviewStatusRecord(testUserId, SurveyStatus.ReviewResults);
+        setStatus(SurveyStatus.ReviewResults);
+    }
+
     return (
         <ScrollView>
             <View className='flex justify-center items-center gap-16 p-4 pt-8'>
@@ -36,7 +44,7 @@ const WaitingForResultReviewScreen = ({user}) => {
             <Button
                 className='p-2 bg-red'
                 title='Test Results'
-                onPress={async () => await createStatusRecord(user.$id, SurveyStatus.FirstReviewDone)}
+                onPress={testResultsOnPressTEMPORARY}
             />
         </ScrollView>
     )
