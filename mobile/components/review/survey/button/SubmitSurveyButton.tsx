@@ -24,8 +24,11 @@ const SubmitSurveyButton = ({
 
         //TODO подумать как вынести логику пресабмит действия для фото вопроса
         if (photoQuestion) {
-            const photoUrl = await uploadImage(answerValue);
-            answerValue = photoUrl;
+            //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
+            if(!answerValue.includes("http")){
+                const photoUrl = await uploadImage(answerValue);
+                answerValue = photoUrl;
+            }
             setUploadedImage(null);
         }
 

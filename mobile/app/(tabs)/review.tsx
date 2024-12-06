@@ -25,7 +25,7 @@ const Review = () => {
         FirstSurvey: <FirstSurveyReviewScreen setStatus={setStatus}/>,
         WaitingForResults: <WaitingForResultReviewScreen setStatus={setStatus}/>,
         ReviewResults: <ResultsReviewScreen/>,
-        SecondSurvey: <SecondSurveyReviewScreen/>,
+        SecondSurvey: <SecondSurveyReviewScreen setStatus={setStatus}/>,
     };
 
     useEffect(() => {
