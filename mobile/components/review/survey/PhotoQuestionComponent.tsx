@@ -1,9 +1,9 @@
 import {View, Text, Image, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import UploadArea from "@/components/common/UploadArea";
-import PreviousQuestionButton from "@/components/review/survey/PreviousQuestionButton";
-import SubmitSurveyButton from "@/components/review/survey/SubmitSurveyButton";
-import NextQuestionButton from "@/components/review/survey/NextQuestionButton";
+import PreviousQuestionButton from "@/components/review/survey/button/PreviousQuestionButton";
+import SubmitSurveyButton from "@/components/review/survey/button/SubmitSurveyButton";
+import NextQuestionButton from "@/components/review/survey/button/NextQuestionButton";
 
 const PhotoQuestionComponent = ({step, setCurrentStep, question, answer, lastQuestion, setStatus}) => {
 

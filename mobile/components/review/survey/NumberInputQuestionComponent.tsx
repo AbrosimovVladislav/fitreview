@@ -1,9 +1,9 @@
 import {View, Text, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import NumberFormField from "@/components/common/NumberFormField";
-import SubmitSurveyButton from "@/components/review/survey/SubmitSurveyButton";
-import PreviousQuestionButton from "@/components/review/survey/PreviousQuestionButton";
-import NextQuestionButton from "@/components/review/survey/NextQuestionButton";
+import SubmitSurveyButton from "@/components/review/survey/button/SubmitSurveyButton";
+import PreviousQuestionButton from "@/components/review/survey/button/PreviousQuestionButton";
+import NextQuestionButton from "@/components/review/survey/button/NextQuestionButton";
 
 const NumberInputQuestionComponent = ({step, setCurrentStep, question, answer, lastQuestion, setStatus}) => {
 

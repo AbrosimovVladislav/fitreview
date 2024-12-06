@@ -1,9 +1,9 @@
 import {View, Text, ScrollView} from 'react-native'
 import React, {useEffect, useRef, useState} from 'react'
 import AnswerOption from "@/components/AnswerOption";
-import NextQuestionButton from "@/components/review/survey/NextQuestionButton";
-import PreviousQuestionButton from "@/components/review/survey/PreviousQuestionButton";
-import SubmitSurveyButton from "@/components/review/survey/SubmitSurveyButton";
+import NextQuestionButton from "@/components/review/survey/button/NextQuestionButton";
+import PreviousQuestionButton from "@/components/review/survey/button/PreviousQuestionButton";
+import SubmitSurveyButton from "@/components/review/survey/button/SubmitSurveyButton";
 
 const MultiAnswerQuestionComponent = ({step, setCurrentStep, question, answer, lastQuestion, setStatus}) => {
 
