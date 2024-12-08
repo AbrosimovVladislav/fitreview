@@ -45,8 +45,7 @@ export interface Training {
     "thumbnail": string,
     "title": string,
     "russianTitle": string,
-    "description": string,
-    "exercise": Exercise[]
+    "description": string
 }
 
 // Описание для BodySegmentDescription

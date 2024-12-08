@@ -1,7 +1,6 @@
 import {ScrollView, View} from 'react-native'
 import React from 'react'
 import ListItem from "@/components/common/ListItem";
-import {BE} from "@/config";
 
 const TrainingList = ({trainings}) => {
 
@@ -16,7 +15,7 @@ const TrainingList = ({trainings}) => {
                                 title={training.title}
                                 image={training.thumbnail}
                                 description={training.description}
-                                route={`/training/${BE ? 1 : training.$id}`}
+                                route={`/training/${training.id}`}
                             />
                         ))
                     }

@@ -8,13 +8,14 @@ import PageHeader from "@/components/PageHeader";
 import {View} from "react-native";
 import useAppwrite from "@/lib/useAppwrite";
 import {Training as ITraining} from "@/constants/interface";
-import {getTrainingsByUserId} from "@/lib/ExerciseService";
 import {useFocusEffect} from "expo-router";
+import {getTrainingsByUserId} from "@/service/TrainingService";
 
 const Training = () => {
 
-    const { user } = useGlobalContext();
-    const { data: initialTrainings } = useAppwrite<ITraining>(() => getTrainingsByUserId(user.$id));
+    const testUserId = '1';
+    const {user} = useGlobalContext();
+    const {data: initialTrainings} = useAppwrite<ITraining>(() => getTrainingsByUserId(testUserId));
 
     const [trainings, setTrainings] = useState<ITraining[]>(initialTrainings || []);
 
@@ -26,7 +27,7 @@ const Training = () => {
 
     const refreshTrainings = async () => {
         try {
-            const updatedTrainings = await getTrainingsByUserId(user.$id);
+            const updatedTrainings = await getTrainingsByUserId(testUserId);
             setTrainings(updatedTrainings);
         } catch (error) {
             console.error("[Training_refreshTrainings] Training receiving error:", error);
@@ -36,13 +37,13 @@ const Training = () => {
     return (
         <SafeAreaView className='bg-primary h-full'>
             {
-                trainings.length>0 &&
+                trainings.length > 0 &&
                 <View className='pt-4'>
                     <PageHeader title="Trainings"/>
                 </View>
             }
             {
-                trainings.length>0
+                trainings.length > 0
                     ? <TrainingList trainings={trainings}/>
                     : <NoTrainingsAvailable/>
             }

@@ -45,6 +45,14 @@ public class TrainingService {
     }
 
     public List<Exercise> getExercisesByRegionAndSubcategory(Region region, Subcategory subcategory) {
-        return exerciseRepo.findByRegionAndSubcategory(region,subcategory);
+        return exerciseRepo.findByRegionAndSubcategory(region, subcategory);
+    }
+
+    public List<Training> findByUserId(Long userId) {
+        return trainingRepo.findByUserId(userId);
+    }
+
+    public List<Exercise> getExerciseByTrainingId(Long trainingId) {
+        return exerciseRepo.findByTrainingId(trainingId);
     }
 }

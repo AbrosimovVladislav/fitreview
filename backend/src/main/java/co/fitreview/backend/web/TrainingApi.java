@@ -22,6 +22,16 @@ public class TrainingApi {
 
     private final TrainingService trainingService;
 
+    @GetMapping("/exercises/{trainingId}")
+    public List<Exercise> getExercisesByTrainingId (@PathVariable Long trainingId){
+        return trainingService.getExerciseByTrainingId(trainingId);
+    }
+
+    @GetMapping("/user/{userId}")
+    public List<Training> getTrainingsByUserId(@PathVariable Long userId){
+        return trainingService.findByUserId(userId);
+    }
+
     @GetMapping("/{id}")
     public Training getTrainingById(@PathVariable Long id) {
         return trainingService.getTrainingById(id);

@@ -1,7 +1,7 @@
 import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {useGlobalContext} from "@/context/GlobalProvider";
-import {validatePayment} from "@/lib/PaymentService";
+import {validatePayment} from "@/service/PaymentService";
 import {addNewReviewStatusRecord} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
 import {SafeAreaView} from "react-native-safe-area-context";

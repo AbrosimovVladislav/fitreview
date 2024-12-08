@@ -11,10 +11,6 @@ import {useLocalSearchParams} from "expo-router";
 import useAppwrite from "@/lib/useAppwrite";
 import {Exercise} from "@/constants/interface";
 import {getExerciseById} from "@/service/TrainingService";
-import {getExerciseByIdDeprecated} from "@/lib/ExerciseService";
-import {BE} from "@/config"
-import {IconHandStop} from "@tabler/icons-react-native/dist/esm/tabler-icons-react-native";
-import {getEstimationColor} from "@/service/GradientColorService";
 
 
 const ExercisePage = () => {
@@ -22,9 +18,7 @@ const ExercisePage = () => {
     const [play, setPlay] = useState(false);
 
     const {exerciseId} = useLocalSearchParams();
-    const {data: exercise} = BE
-        ? useAppwrite<Exercise>(() => getExerciseById(Number(exerciseId)))
-        : useAppwrite<Exercise>(() => getExerciseByIdDeprecated(Number(exerciseId)));
+    const {data: exercise} = useAppwrite<Exercise>(() => getExerciseById(Number(exerciseId)))
 
     const tabs = [
         {

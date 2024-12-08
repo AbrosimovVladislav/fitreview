@@ -1,5 +1,6 @@
 package co.fitreview.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,11 @@ public class Training {
     private String thumbnail;
     private String description;
 
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "trainings")
+    private List<FRUser> users = new ArrayList<>();
+
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "training_exercise",

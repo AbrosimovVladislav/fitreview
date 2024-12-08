@@ -1,10 +1,9 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React, {useEffect} from 'react'
+import React from 'react'
 import {Ionicons} from "@expo/vector-icons";
 import {Exercise} from "@/constants/interface";
 import {router} from "expo-router";
 import Divider from "@/components/common/Divider";
-import {BE} from "@/config";
 
 interface ExerciseItemProps {
     exercise: Exercise
@@ -29,7 +28,7 @@ const ExerciseItem = ({exercise}: ExerciseItemProps) => {
     return (
         <View className='px-4'>
             <TouchableOpacity className='flex flex-row pb-5' onPress={() => {
-                router.push(`/exercise/${BE ? exercise.id : exercise.exerciseId}`);
+                router.push(`/exercise/${exercise.id}`);
             }}>
                 <View className={`${colorVariants[exercise.region.toUpperCase().replaceAll(" ","")+exercise.level.toUpperCase()]} rounded-xl`}>
                     <Image
