@@ -19,7 +19,7 @@ const Tabs = ({tabs}: TabsProps) => {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState(tabs.map(tab => ({key: tab.key, title: tab.title})));
 
-    const renderScene = ({ route }: { route: ITab }) => {
+    const renderScene = ({route}: { route: ITab }) => {
         const tab = tabs.find(tab => tab.key === route.key);
         return tab ? tab.content : null;
     };
@@ -31,18 +31,23 @@ const Tabs = ({tabs}: TabsProps) => {
             renderScene={renderScene}
             onIndexChange={setIndex}
             initialLayout={{width: layout.width}}
-            renderTabBar={props => (
-                <TabBar
-                    {...props}
-                    style={{backgroundColor: 'transparent'}}
-                    renderLabel={({route, focused, color}) => (
-                        <Text className={`text-lg ${focused ? 'text-white' : 'text-gray-500'} font-cbebas`}>
-                            {route.title}
-                        </Text>
-                    )}
-                    indicatorStyle={{backgroundColor: 'white'}}
-                />
-            )}
+            renderTabBar={props => {
+                const {key, ...otherProps} = props;
+                return (
+                    <TabBar
+                        {...otherProps}
+                        style={{backgroundColor: 'transparent'}}
+                        renderLabel={({route, focused, color}) => (
+                            <Text className={`text-lg ${focused ? 'text-white' : 'text-gray-500'} font-cbebas`}>
+                                {route.title}
+                            </Text>
+                        )}
+                        indicatorStyle={{backgroundColor: 'white'}}
+                    />
+                )
+            }
+
+            }
         />
     )
 }
