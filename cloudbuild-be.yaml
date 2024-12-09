@@ -1,18 +1,18 @@
 steps:
-  # Шаг 1: Сборка JAR-файла с помощью Maven
+  # Сборка JAR-файла через Maven
   - name: 'gcr.io/cloud-builders/mvn'
     args: ['clean', 'package']
     dir: 'backend'
 
-  # Шаг 2: Сборка Docker-образа
+  # Сборка Docker-образа
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/fitreview-backend:latest', '-f', 'Dockerfile.be', '.']
 
-  # Шаг 3: Загрузка Docker-образа в GCR
+  # Загрузка Docker-образа в Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/fitreview-backend:latest']
 
-  # Шаг 4: Деплой образа в Google Cloud Run
+  # Деплой Docker-образа на Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       [
