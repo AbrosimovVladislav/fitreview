@@ -1,3 +1,90 @@
+GET http://localhost:8080/api/v1/review/1
+Accept: application/json
+
+<> 2024-12-09T162024.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/user/1
+Accept: application/json
+
+<> 2024-12-09T161625.200.json
+
+###
+
+GET http://localhost:8080/api/v1/review/status/1
+Accept: application/json
+
+<> 2024-12-09T161617.200.json
+
+###
+
+GET http://localhost:8080/api/v1/review/status/1
+Accept: application/json
+
+<> 2024-12-09T161540.200.json
+
+###
+
+POST http://localhost:8080/api/v1/review/status
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "status": "PaymentScreen"
+}
+
+###
+
+GET http://localhost:8080/api/v1/review/1
+Accept: application/json
+
+<> 2024-12-09T161525.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/user/1
+Accept: application/json
+
+<> 2024-12-08T090507.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json
+
+<> 2024-12-08T090500.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/1
+Accept: application/json
+
+<> 2024-12-08T090443.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/user/1
+Accept: application/json
+
+<> 2024-12-08T090213.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/exercises/UPPERBODY/MFR
+Accept: application/json
+
+<> 2024-12-07T002735.200.json
+
+###
+
+GET http://localhost:8080/api/v1/training/user/1
+Accept: application/json
+
+<> 2024-12-07T002716.200.json
+
+###
+
 POST http://localhost:8080/api/v1/review/status
 Content-Type: application/json
 
