@@ -1,13 +1,10 @@
 steps:
-  # Шаг 1: Сборка Docker-образа
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/fitreview-backend:latest', '-f', 'Dockerfile.be', '.']
 
-  # Шаг 2: Загрузка Docker-образа в GCR
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/fitreview-backend:latest']
 
-  # Шаг 3: Деплой образа в Google Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       [
