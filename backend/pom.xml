@@ -14,23 +14,10 @@
     <version>1.0</version>
     <name>fitreview</name>
     <description>fitreview</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
 
     <properties>
         <java.version>21</java.version>
+        <baseImage>openjdk:21-jdk-slim</baseImage>
     </properties>
 
 
@@ -74,6 +61,9 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>3.4.1</version>
                 <configuration>
+                    <from>
+                        <image>${baseImage}</image>
+                    </from>
                     <to>
                         <image>gcr.io/${project.groupId}/${project.artifactId}</image>
                     </to>
