@@ -4,7 +4,7 @@ options:
 steps:
   - name: maven:3.9.6-amazoncorretto-21
     entrypoint: mvn
-    args: [ 'compile','jib:build', '-Djib.to.image=gcr.io/$PROJECT_ID/fit-review-444116:$COMMIT_SHA', '-f', 'back/pom.xml' ]
+    args: [ 'compile','jib:build', '-Djib.to.image=gcr.io/$PROJECT_ID/fit-review-444116:$COMMIT_SHA', '-f', 'backend/pom.xml' ]
 
   # Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
