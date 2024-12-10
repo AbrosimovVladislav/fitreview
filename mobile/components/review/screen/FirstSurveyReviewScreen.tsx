@@ -33,19 +33,19 @@ const FirstSurveyReviewScreen = ({setStatus}) => {
         },
         {
             step: 7,
-            questionId: 11
+            questionId: 9
         },
         {
             step: 8,
-            questionId: 12
+            questionId: 10
         },
         {
             step: 9,
-            questionId: 13
+            questionId: 11
         },
         {
             step: 10,
-            questionId: 14
+            questionId: 12
         }
     ]
 

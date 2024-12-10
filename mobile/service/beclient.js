@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/v1';
+// const BASE_URL = 'http://localhost:8080/api/v1';
+const BASE_URL = 'https://fit-review-444116-633533964999.europe-north1.run.app/api/v1';
 
 export const getRequest = async (endpoint, params = {}) => {
     try {

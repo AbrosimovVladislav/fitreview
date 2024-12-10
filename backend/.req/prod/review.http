@@ -1,0 +1,16 @@
+### Get Last Review By UserId
+GET https://fit-review-444116-633533964999.europe-north1.run.app/api/v1/review/1
+Accept: application/json
+
+### Get Last ReviewStatus By UserId
+GET https://fit-review-444116-633533964999.europe-north1.run.app/api/v1/review/status/1
+Accept: application/json
+
+### Post Create New ReviewStatus Record
+POST https://fit-review-444116-633533964999.europe-north1.run.app/api/v1/review/status
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "status": "PaymentScreen"
+}
