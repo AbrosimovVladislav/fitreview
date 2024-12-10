@@ -32,11 +32,16 @@ const Review = () => {
         refreshPageAccordingToTheStatus();
     }, [])
 
+    useEffect(() => {
+        refreshPageAccordingToTheStatus();
+    }, [status])
+
     useFocusEffect(
         useCallback(() => {
             refreshPageAccordingToTheStatus();
         }, [])
     );
+
 
     const refreshPageAccordingToTheStatus = async () => {
         try {
