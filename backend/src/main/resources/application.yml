@@ -13,3 +13,13 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc.lob.non_contextual_creation: true
     open-in-view: false
+
+gcp:
+  storage:
+    basic-url: https://storage.googleapis.com/
+    bucket-name: fit_review
+    client-email: fr-storage-service-account@fit-review-444116.iam.gserviceaccount.com
+    private-key-id: ${GOOGLE_STORAGE_PRIVATE_KEY_ID}
+    private-key: ${GOOGLE_STORAGE_PRIVATE_KEY}
+    client-id: 105107947195209788558
+    project-id: fit-review-444116
