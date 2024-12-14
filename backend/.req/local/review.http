@@ -6,7 +6,7 @@ Accept: application/json
 GET http://localhost:8080/api/v1/review/status/1
 Accept: application/json
 
-### Post Create New ReviewStatus Record
+### Post Create New ReviewStatus Record /
 POST http://localhost:8080/api/v1/review/status
 Content-Type: application/json
 
