@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Button from "@/components/common/Button";
 import {saveAnswer} from "@/service/SurveyService";
-import {uploadImage} from "@/lib/StorageService";
+import {generateImageName, uploadImageToAPI} from "@/service/StorageService"
 
 const NextQuestionButton = ({
                                 disabled,
@@ -24,7 +24,8 @@ const NextQuestionButton = ({
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
             if(!answerValue.includes("http")){
-                const photoUrl = await uploadImage(answerValue);
+                const imageName = generateImageName(testUserId, questionId);
+                const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
             }
             setUploadedImage(null);
