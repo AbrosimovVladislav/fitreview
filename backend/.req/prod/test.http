@@ -1,0 +1,8 @@
+### Post Create New ReviewStatus Record
+POST https://fit-review-444116-633533964999.europe-north1.run.app/test/uploadImage
+Content-Type: application/json
+
+{
+  "imageUrl": "https://cloud.appwrite.io/v1/storage/buckets/66c331f000314ec68775/files/6735e7ec00184ba88c74/view?project=66c32ed800357b5e7314&project=66c32ed800357b5e7314&mode=admin",
+  "imageName": "testImage2"
+}

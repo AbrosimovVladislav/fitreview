@@ -3,7 +3,7 @@ import Button from "@/components/common/Button";
 import {saveAnswer} from "@/service/SurveyService";
 import {addNewReviewStatusRecord} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
-import {uploadImage} from "@/lib/StorageService";
+import {generateImageName, uploadImageToAPI} from "@/service/StorageService"
 
 const SubmitSurveyButton = ({
                                 disabled,
@@ -25,8 +25,9 @@ const SubmitSurveyButton = ({
         //TODO подумать как вынести логику пресабмит действия для фото вопроса
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
-            if(!answerValue.includes("http")){
-                const photoUrl = await uploadImage(answerValue);
+            if (!answerValue.includes("http")) {
+                const imageName = generateImageName(testUserId, questionId);
+                const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
             }
             setUploadedImage(null);

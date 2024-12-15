@@ -4,6 +4,7 @@ import co.fitreview.backend.integration.GCStorageClient;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,21 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("test")
+@RequestMapping("api/v1/storage")
 @RequiredArgsConstructor
-public class TestApi {
+public class StorageApi {
 
     private final GCStorageClient gcStorageClient;
 
     @PostMapping("/uploadImage")
-    public String testUploadImage(@RequestBody TestUploadImageDto request) {
-        return gcStorageClient.uploadImage(request.getImageUrl(), request.getImageName(), MediaType.IMAGE_PNG);
+    public String uploadImage(@RequestBody TestUploadImageDto request) {
+        byte[] imageBytes = Base64.decodeBase64(request.getImageBase64());
+        return gcStorageClient.uploadImage(imageBytes, request.getImageName(), MediaType.IMAGE_PNG);
     }
 
     @Data
     private static class TestUploadImageDto {
-        private String imageUrl;
         private String imageName;
+        private String imageBase64;
     }
 }
 
