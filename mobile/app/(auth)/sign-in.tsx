@@ -4,8 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import FormField from '@/components/common/FormField';
 import { Link, router } from 'expo-router';
 import Button from '@/components/common/Button';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/firebase'; // Импорт из файла firebase.js
+import { signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
+import { auth } from '@/firebase';
+import {postRequest} from "@/service/beclient"; // Импорт из файла firebase.js
 
 const SignIn = () => {
     const [form, setForm] = useState({
@@ -25,11 +26,21 @@ const SignIn = () => {
         try {
             // Логиним пользователя через Firebase
             const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password);
-            const user = userCredential.user;6
+            const user = userCredential.user;
 
-            // После успешного входа направляем на домашний экран
-            router.replace('/home');
-            console.log('User signed in:', user);
+
+            // Получаем ID токен
+            const idToken = await getIdToken(user);
+            console.log("ID Token:", idToken);
+
+            // Здесь позже будет отправка токена на бэкенд
+            // Отправляем токен на сервер
+            const data = postRequest('/auth/verify-token',{"idToken":idToken})
+
+            const result = await data;
+            console.log("Server response:", result);
+
+            router.replace("/home");
         } catch (error) {
             Alert.alert('Error', error.message);
         } finally {
