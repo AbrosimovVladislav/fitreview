@@ -1,52 +1,44 @@
-import {View, Text, ScrollView, Alert} from 'react-native'
-import React, {useState} from 'react'
-import {SafeAreaView} from "react-native-safe-area-context";
-import FormField from "@/components/common/FormField";
-import {Link, router} from "expo-router";
-import Button from "@/components/common/Button";
-import {getCurrentUser, signIn} from "@/lib/AuthService";
-import {useGlobalContext} from "@/context/GlobalProvider";
-import GoogleLoginButton from "@/components/GoogleLoginButton";
+import { View, Text, ScrollView, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import FormField from '@/components/common/FormField';
+import { Link, router } from 'expo-router';
+import Button from '@/components/common/Button';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '@/firebase'; // Импорт из файла firebase.js
 
 const SignIn = () => {
-
-    const {setUser, setIsLoggedIn} = useGlobalContext();
-
     const [form, setForm] = useState({
         email: '',
-        password: ''
-    })
+        password: '',
+    });
     const [isSubmitting, setIsSubmitting] = useState(false);
-
 
     const submit = async () => {
         if (!form.email || !form.password) {
             Alert.alert('Error', 'Please fill in all the fields');
+            return;
         }
 
         setIsSubmitting(true);
 
         try {
-            await signIn(form.email, form.password);
+            // Логиним пользователя через Firebase
+            const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password);
+            const user = userCredential.user;6
 
-            const result = await getCurrentUser();
-            setUser(result);
-            setIsLoggedIn(true);
-
+            // После успешного входа направляем на домашний экран
             router.replace('/home');
+            console.log('User signed in:', user);
         } catch (error) {
-            Alert.alert('Error', error.message)
+            Alert.alert('Error', error.message);
         } finally {
             setIsSubmitting(false);
         }
-    }
-
-    const submitGoogle = async () => {
-
-    }
+    };
 
     return (
-        <SafeAreaView className='bg-primary h-full'>
+        <SafeAreaView className="bg-primary h-full">
             <ScrollView>
                 <View className="w-full min-h-[80vh] justify-center px-4 my-4">
                     <Text className="text-3xl text-gray-300 text-semibold mt-4 font-cbebas">
@@ -56,21 +48,26 @@ const SignIn = () => {
                     <FormField
                         title="Email"
                         value={form.email}
-                        handleChangeText={(e) => setForm({
-                            ...form,
-                            email: e
-                        })}
+                        handleChangeText={(e) =>
+                            setForm({
+                                ...form,
+                                email: e,
+                            })
+                        }
                         otherStyles="mt-7"
                         keyboardType="email-address"
                     />
                     <FormField
                         title="Password"
                         value={form.password}
-                        handleChangeText={(e) => setForm({
-                            ...form,
-                            password: e
-                        })}
+                        handleChangeText={(e) =>
+                            setForm({
+                                ...form,
+                                password: e,
+                            })
+                        }
                         otherStyles="mt-7"
+                        secureTextEntry={true}
                     />
 
                     <Button
@@ -80,18 +77,8 @@ const SignIn = () => {
                         isLoading={isSubmitting}
                     />
 
-                    <View className='flex items-center mt-8'>
-                        <Text className="text-md text-gray-100 font-mregular">
-                            Or Log In with
-                        </Text>
-                    </View>
-
-                    <GoogleLoginButton/>
-
                     <View className="justify-center pt-7 flex-row gap-2">
-                        <Text className="text-lg text-gray-100 font-mregular">
-                            Dont have account?
-                        </Text>
+                        <Text className="text-lg text-gray-100 font-mregular">Don't have an account?</Text>
                         <Link href="/sign-up" className="text-lg font-msemibold text-secondary">
                             Register
                         </Link>
@@ -99,6 +86,7 @@ const SignIn = () => {
                 </View>
             </ScrollView>
         </SafeAreaView>
-    )
-}
-export default SignIn
+    );
+};
+
+export default SignIn;
