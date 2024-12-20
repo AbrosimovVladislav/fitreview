@@ -22,6 +22,9 @@ public class FRUser {
     private String name;
     private String email;
 
+    @Column(unique = true)
+    private String firebaseId; // UID из Firebase
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_training",

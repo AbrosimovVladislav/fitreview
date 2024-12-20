@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface FRUserRepo extends JpaRepository<FRUser, Long> {
     Optional<FRUser> findByEmail(String email);
+    Optional<FRUser> findByFirebaseId(String uid);
 }

@@ -4,8 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import { Link, router } from 'expo-router';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '@/firebase'; // Импорт Firebase SDK
+import {createUserWithEmailAndPassword, getIdToken, updateProfile} from 'firebase/auth';
+import { auth } from '@/firebase';
+import {postRequest} from "@/service/beclient";
 
 const SignUp = () => {
     const [form, setForm] = useState({
@@ -17,29 +18,36 @@ const SignUp = () => {
 
     const submit = async () => {
         if (!form.userName || !form.email || !form.password) {
-            Alert.alert('Error', 'Please fill in all the fields');
+            Alert.alert("Error", "Please fill in all the fields");
             return;
         }
 
         setIsSubmitting(true);
 
         try {
-            // Создание пользователя через Firebase
+            // Регистрируем пользователя через Firebase
             const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
+            const user = userCredential.user;
 
-            // Обновление профиля с именем пользователя
-            await updateProfile(userCredential.user, {
-                displayName: form.userName,
-            });
+            // Обновляем профиль пользователя (например, добавляем displayName)
+            await updateProfile(user, { displayName: form.userName });
 
-            Alert.alert('Success', 'User registered successfully!');
-            router.replace('/home');
+            // Получаем новый токен после обновления профиля
+            const idToken = await getIdToken(user, true); // true означает форсировать обновление токена
+
+            // Отправляем запрос на регистрацию на сервер
+            await postRequest("/auth/register", { idToken });
+
+            Alert.alert("Success", "User registered successfully!");
+            router.replace("/home");
         } catch (error) {
-            Alert.alert('Error', error.message);
+            Alert.alert("Error", error.message);
         } finally {
             setIsSubmitting(false);
         }
     };
+
+
 
     return (
         <SafeAreaView className="bg-primary h-full">

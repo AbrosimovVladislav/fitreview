@@ -22,23 +22,42 @@ public class AuthApi {
 
     private final FRUserRepo frUserRepository;
 
-    @PostMapping("/verify-token")
-    public ResponseEntity<?> verifyToken(@RequestBody AuthDto request) {
+    @PostMapping("/register")
+    public ResponseEntity<?> register(@RequestBody AuthDto request) {
         try {
-            // Проверяем токен через Firebase Admin SDK
             FirebaseToken decodedToken = FirebaseAuth.getInstance().verifyIdToken(request.getIdToken());
             String uid = decodedToken.getUid();
             String email = decodedToken.getEmail();
             String name = decodedToken.getName();
 
-            // Проверяем, существует ли пользователь в базе данных
-            FRUser user = frUserRepository.findByEmail(email)
-                    .orElseGet(() -> {
-                        FRUser newUser = new FRUser()
-                                .setEmail(email)
-                                .setName(name);
-                        return frUserRepository.save(newUser);
-                    });
+            // Проверяем, существует ли пользователь
+            if (frUserRepository.findByFirebaseId(uid).isPresent()) {
+                return ResponseEntity.status(400).body("User already exists");
+            }
+
+            // Создаём нового пользователя
+            FRUser newUser = new FRUser()
+                    .setFirebaseId(uid)
+                    .setEmail(email)
+                    .setName(name);
+
+            frUserRepository.save(newUser);
+
+            return ResponseEntity.ok("User registered successfully");
+        } catch (FirebaseAuthException e) {
+            return ResponseEntity.status(401).body("Invalid token");
+        }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody AuthDto request) {
+        try {
+            FirebaseToken decodedToken = FirebaseAuth.getInstance().verifyIdToken(request.getIdToken());
+            String uid = decodedToken.getUid();
+
+            // Проверяем, существует ли пользователь
+            FRUser user = frUserRepository.findByFirebaseId(uid)
+                    .orElseThrow(() -> new RuntimeException("User not found"));
 
             return ResponseEntity.ok(user);
         } catch (FirebaseAuthException e) {

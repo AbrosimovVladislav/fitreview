@@ -17,36 +17,29 @@ const SignIn = () => {
 
     const submit = async () => {
         if (!form.email || !form.password) {
-            Alert.alert('Error', 'Please fill in all the fields');
+            Alert.alert("Error", "Please fill in all the fields");
             return;
         }
 
         setIsSubmitting(true);
 
         try {
-            // Логиним пользователя через Firebase
             const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password);
             const user = userCredential.user;
-
-
-            // Получаем ID токен
             const idToken = await getIdToken(user);
-            console.log("ID Token:", idToken);
 
-            // Здесь позже будет отправка токена на бэкенд
-            // Отправляем токен на сервер
-            const data = postRequest('/auth/verify-token',{"idToken":idToken})
-
-            const result = await data;
-            console.log("Server response:", result);
+            // Отправляем запрос на логин
+            const serverResponse = await postRequest("/auth/login", { idToken });
+            console.log("Server response:", serverResponse);
 
             router.replace("/home");
         } catch (error) {
-            Alert.alert('Error', error.message);
+            Alert.alert("Error", error.message);
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
     return (
         <SafeAreaView className="bg-primary h-full">
