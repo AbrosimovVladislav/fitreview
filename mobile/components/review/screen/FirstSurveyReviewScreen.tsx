@@ -3,8 +3,6 @@ import SurveyComponent from "@/components/review/survey/SurveyComponent";
 
 const FirstSurveyReviewScreen = ({setStatus}) => {
 
-    const testUserId = '1';
-
     //TODO take from db???
     const firstSurveyList = [
         {
@@ -51,7 +49,6 @@ const FirstSurveyReviewScreen = ({setStatus}) => {
 
     return (
         <SurveyComponent
-            userId={testUserId}
             surveyList={firstSurveyList}
             setStatus={setStatus}
         />

@@ -9,7 +9,6 @@ public class AnswerMapper {
 
     public AnswerDto toDto(Answer answer) {
         return AnswerDto.builder()
-                .userId(answer.getUserId())
                 .questionId(answer.getQuestion().getId())
                 .answerValue(answer.getValue())
                 .build();

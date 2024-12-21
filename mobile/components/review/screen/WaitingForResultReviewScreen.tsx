@@ -8,10 +8,8 @@ import {addNewReviewStatusRecord} from "@/service/ReviewService";
 
 const WaitingForResultReviewScreen = ({setStatus}) => {
 
-    const testUserId = '1';
-
     const testResultsOnPressTEMPORARY = async () => {
-        await addNewReviewStatusRecord(testUserId, SurveyStatus.ReviewResults);
+        await addNewReviewStatusRecord(SurveyStatus.ReviewResults);
         setStatus(SurveyStatus.ReviewResults);
     }
 

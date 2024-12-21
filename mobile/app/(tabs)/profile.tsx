@@ -20,12 +20,12 @@ const Profile = () => {
                         {/* Фото и имя пользователя */}
                         <View name="photo-and-name-area" className="flex-col justify-center items-center">
                             <Image
-                                source={{ uri: user?.avatar }}
+                                source={{ uri: `https://api.dicebear.com/6.x/avataaars/png?seed=${user?.displayName || 'default'}` }}
                                 className="w-16 h-16 border border-secondary rounded-lg"
                                 resizeMode="contain"
                             />
                             <Text className="text-2xl text-gray-300 font-cbebas mt-5">
-                                {user?.username || "Unknown User"}
+                                {user?.displayName || "Unknown User"}
                             </Text>
                             <Text className="text-lg text-gray-300 font-mregular mt-2">
                                 Basic member

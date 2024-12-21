@@ -7,8 +7,6 @@ import SubmitSurveyButton from "@/components/review/survey/button/SubmitSurveyBu
 
 const MultiAnswerQuestionComponent = ({step, setCurrentStep, question, answer, lastQuestion, setStatus}) => {
 
-    const testUserId='1';
-
     const scrollViewRef = useRef(null);
     const [pressed, setPressed] = useState([]);
 

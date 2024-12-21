@@ -49,7 +49,7 @@ const Home = () => {
                         <View className='flex flex-row justify-between items-center'>
                             <TouchableOpacity onPress={() => router.push('/profile')}>
                                 <Image
-                                    source={{uri: user?.avatar}}
+                                    source={{ uri: `https://api.dicebear.com/6.x/avataaars/png?seed=${user?.displayName || 'default'}` }}
                                     className='w-14 h-14 border border-secondary rounded-xl'
                                     resizeMode='contain'
                                 />
@@ -63,7 +63,7 @@ const Home = () => {
                                 Hello, Good Morning
                             </Text>
                             <Text className='text-3xl font-cbebas text-gray-300 pt-2'>
-                                {user?.username} !
+                                {user?.displayName} !
                             </Text>
                         </View>
                     </View>

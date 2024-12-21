@@ -35,7 +35,6 @@ const Tabs = ({tabs}: TabsProps) => {
                 const {key, ...otherProps} = props;
                 return (
                     <TabBar
-                        key={key}
                         {...otherProps}
                         style={{backgroundColor: 'transparent'}}
                         renderLabel={({route, focused, color}) => (

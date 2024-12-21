@@ -1,10 +1,9 @@
 package co.fitreview.backend.web;
 
-import co.fitreview.backend.entity.Exercise;
-import co.fitreview.backend.entity.Region;
-import co.fitreview.backend.entity.Subcategory;
-import co.fitreview.backend.entity.Training;
+import co.fitreview.backend.entity.*;
+import co.fitreview.backend.repo.FRUserRepo;
 import co.fitreview.backend.service.TrainingService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,28 +20,33 @@ import java.util.List;
 public class TrainingApi {
 
     private final TrainingService trainingService;
+    private final FRUserRepo frUserRepo;
 
-    @GetMapping("/exercises/{trainingId}")
+    @GetMapping("/user")
+    public List<Training> getTrainingsByUser(HttpServletRequest request) {
+        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
+        FRUser user = frUserRepo.findByFirebaseId(uid)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        return trainingService.findByUserId(user.getId());
+    }
+
+    @GetMapping("/public/exercises/{trainingId}")
     public List<Exercise> getExercisesByTrainingId (@PathVariable Long trainingId){
         return trainingService.getExerciseByTrainingId(trainingId);
     }
 
-    @GetMapping("/user/{userId}")
-    public List<Training> getTrainingsByUserId(@PathVariable Long userId){
-        return trainingService.findByUserId(userId);
-    }
-
-    @GetMapping("/{id}")
+    @GetMapping("/public/{id}")
     public Training getTrainingById(@PathVariable Long id) {
         return trainingService.getTrainingById(id);
     }
 
-    @GetMapping("/exercise/{id}")
+    @GetMapping("/public/exercise/{id}")
     public Exercise getExerciseById(@PathVariable Long id) {
         return trainingService.getExerciseById(id);
     }
 
-    @GetMapping("/exercises/{region}/{subcategory}")
+    @GetMapping("/public/exercises/{region}/{subcategory}")
     public List<Exercise> getExercisesByRegionAndSubcategory(@PathVariable Region region, @PathVariable Subcategory subcategory) {
         return trainingService.getExercisesByRegionAndSubcategory(region, subcategory);
     }

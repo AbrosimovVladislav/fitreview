@@ -1,9 +1,12 @@
 package co.fitreview.backend.web;
 
-import co.fitreview.backend.dto.UserIdAndNewStatusDto;
+import co.fitreview.backend.dto.NewStatusDto;
+import co.fitreview.backend.entity.FRUser;
 import co.fitreview.backend.entity.review.Review;
 import co.fitreview.backend.entity.survey.ReviewStatus;
+import co.fitreview.backend.repo.FRUserRepo;
 import co.fitreview.backend.service.ReviewService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -15,20 +18,30 @@ import org.springframework.web.bind.annotation.*;
 public class ReviewApi {
 
     private final ReviewService reviewService;
+    private final FRUserRepo frUserRepo;
 
-    @GetMapping("/{userId}")
-    public Review getLastReviewByUserid(@PathVariable Long userId) {
-        return reviewService.getLastReviewByUserId(userId);
+    @GetMapping()
+    public Review getLastReviewByUserid(HttpServletRequest request) {
+        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
+        FRUser user = frUserRepo.findByFirebaseId(uid)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return reviewService.getLastReviewByUserId(user.getId());
     }
 
-    @GetMapping("/status/{userId}")
-    public ReviewStatus getLastReviewStatusByUserId(@PathVariable String userId) {
-        return reviewService.getReviewStatusByUserId(userId);
+    @GetMapping("/status")
+    public ReviewStatus getLastReviewStatusByUserId(HttpServletRequest request) {
+        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
+        FRUser user = frUserRepo.findByFirebaseId(uid)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return reviewService.getReviewStatusByUserId(user.getId());
     }
 
     @PostMapping("/status")
-    public void addNewReviewStatus(@RequestBody UserIdAndNewStatusDto request) {
-        reviewService.createReviewStatus(request.getUserId(), request.getStatus());
+    public void addNewReviewStatus(@RequestBody NewStatusDto statusDto, HttpServletRequest request) {
+        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
+        FRUser user = frUserRepo.findByFirebaseId(uid)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        reviewService.createReviewStatus(user.getId(), statusDto.getStatus());
     }
 
 }

@@ -1,6 +1,6 @@
 -- Вставляем данные в таблицу UserData
-INSERT INTO user_data (id, user_name, estimation, weight, fat_index, age)
-VALUES (1, 'Generated User', 82, 78, 22, 29);
+INSERT INTO user_data (id, user_name, estimation, weight, fat_index, age, fr_user_id)
+VALUES (1, 'Generated User', 82, 78, 22, 29, 5);
 
 -- Вставляем данные в таблицу Review
 INSERT INTO Review (id, date, user_data_id)

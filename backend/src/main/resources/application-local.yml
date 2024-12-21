@@ -5,3 +5,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/fitreview
   jpa:
     show-sql: true
+logging:
+  level:
+    org.springframework.security: DEBUG

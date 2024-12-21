@@ -34,14 +34,14 @@ const SubmitSurveyButton = ({
         }
 
         //save answer
-        await saveAnswer(testUserId, questionId, answerValue)
+        await saveAnswer(questionId, answerValue)
 
         //TODO подумать как вынести логику пресабмит действия для мульти вопроса
         //clear pressed ONLY FOR MULTIANSWER
         setPressed && setPressed([]);
 
         //change status
-        await addNewReviewStatusRecord(testUserId, SurveyStatus.WaitingForResults);
+        await addNewReviewStatusRecord(SurveyStatus.WaitingForResults);
         setStatus(SurveyStatus.WaitingForResults);
         setIsLoading(false);
     }
