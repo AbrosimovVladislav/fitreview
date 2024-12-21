@@ -1,24 +1,24 @@
-import {getRequest} from "./beclient";
+import {getRequest, secureGetRequest} from "./beclient";
 
 export const getExercisesByTrainingId = async (trainingId) => {
-    return await getRequest(`/training/exercises/${trainingId}`)
+    return await getRequest(`/training/public/exercises/${trainingId}`)
 }
 
 export const getTrainingById = async (trainingId) => {
-    return await getRequest(`/training/${trainingId}`);
+    return await getRequest(`/training/public/${trainingId}`);
 };
 
-export const getTrainingsByUserId = async (userId) => {
-    return await getRequest(`/training/user/${userId}`);
+export const getTrainingsForUser = async () => {
+    return await secureGetRequest(`/training/user`);
 };
 
 export const getExerciseById = async (exerciseId) => {
-    return await getRequest(`/training/exercise/${exerciseId}`);
+    return await getRequest(`/training/public/exercise/${exerciseId}`);
 };
 
 export const getExercisesBySubcategoryId = async (subcategoryId) => {
     const {region, subcategory} = extractRegionAndSubcategoryFromId(subcategoryId);
-    return await getRequest(`/training/exercises/${region.toUpperCase()}/${subcategory.toUpperCase()}`);
+    return await getRequest(`/training/public/exercises/${region.toUpperCase()}/${subcategory.toUpperCase()}`);
 }
 
 const extractRegionAndSubcategoryFromId = (subcategoryId) => {

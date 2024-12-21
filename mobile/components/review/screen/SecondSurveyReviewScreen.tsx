@@ -2,7 +2,6 @@ import React from 'react'
 import SurveyComponent from "@/components/review/survey/SurveyComponent";
 
 const SecondSurveyReviewScreen = ({setStatus}) => {
-    const testUserId = '1';
 
     //TODO take from db???
     const secondSurveyList = [
@@ -38,7 +37,6 @@ const SecondSurveyReviewScreen = ({setStatus}) => {
 
     return (
         <SurveyComponent
-            userId={testUserId}
             surveyList={secondSurveyList}
             setStatus={setStatus}
         />

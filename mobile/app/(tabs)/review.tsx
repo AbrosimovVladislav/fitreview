@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
 
-import {useGlobalContext} from "@/context/GlobalProvider";
 import WelcomeReviewScreen from "@/components/review/screen/WelcomeReviewScreen";
 import WaitingForResultReviewScreen from "@/components/review/screen/WaitingForResultReviewScreen";
 import ResultsReviewScreen from "@/components/review/screen/ResultsReviewScreen";
@@ -13,9 +12,6 @@ import {useFocusEffect} from "expo-router";
 
 
 const Review = () => {
-
-    const {user} = useGlobalContext();
-    const testUserId = '1';
 
     const [status, setStatus] = useState('WelcomeScreen');
 
@@ -45,7 +41,7 @@ const Review = () => {
 
     const refreshPageAccordingToTheStatus = async () => {
         try {
-            const currentStatus = await getReviewStatusByUserId(testUserId);
+            const currentStatus = await getReviewStatusByUserId();
             console.log("[Review_refreshPageAccordingToTheStatus] currentStatus " + currentStatus.value);
 
             //if status was not created yet, then not refresh state

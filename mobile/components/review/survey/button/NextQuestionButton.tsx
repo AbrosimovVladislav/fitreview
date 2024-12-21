@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Button from "@/components/common/Button";
 import {saveAnswer} from "@/service/SurveyService";
 import {generateImageName, uploadImageToAPI} from "@/service/StorageService"
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const NextQuestionButton = ({
                                 disabled,
@@ -13,7 +14,7 @@ const NextQuestionButton = ({
                                 setUploadedImage
                             }) => {
 
-    const testUserId = '1';
+    const {user} = useGlobalContext();
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -24,7 +25,7 @@ const NextQuestionButton = ({
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
             if(!answerValue.includes("http")){
-                const imageName = generateImageName(testUserId, questionId);
+                const imageName = generateImageName(user?.uid, questionId);
                 const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
             }
@@ -32,7 +33,7 @@ const NextQuestionButton = ({
         }
 
         //save answer
-        await saveAnswer(testUserId, questionId, answerValue)
+        await saveAnswer(questionId, answerValue)
 
         //TODO подумать как вынести логику пресабмит действия для мульти вопроса
         //clear pressed ONLY FOR MULTIANSWER

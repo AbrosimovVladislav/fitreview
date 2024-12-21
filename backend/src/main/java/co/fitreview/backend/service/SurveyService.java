@@ -19,7 +19,7 @@ public class SurveyService {
     private final QuestionRepo questionRepo;
     private final AnswerRepo answerRepo;
 
-    public Answer getAnswerByUserIdAndQuestionId(String userId, Long questionId) {
+    public Answer getAnswerByUserIdAndQuestionId(Long userId, Long questionId) {
         Optional<Answer> answerOpt = answerRepo.findByUserIdAndQuestionId(userId, questionId);
 
         if (answerOpt.isEmpty()) {
@@ -29,10 +29,10 @@ public class SurveyService {
         return answerOpt.get();
     }
 
-    public Answer saveAnswer(AnswerDto answerDto) {
+    public Answer saveAnswer(AnswerDto answerDto, Long userId) {
         Answer finalAnswer = null;
 
-        Optional<Answer> answerOpt = answerRepo.findByUserIdAndQuestionId(answerDto.getUserId(), answerDto.getQuestionId());
+        Optional<Answer> answerOpt = answerRepo.findByUserIdAndQuestionId(userId, answerDto.getQuestionId());
 
         if (answerOpt.isPresent()) {
             Answer existingAnswer = answerOpt.get();
@@ -40,7 +40,7 @@ public class SurveyService {
             finalAnswer = answerRepo.save(existingAnswer);
         } else {
             finalAnswer = answerRepo.save(new Answer()
-                    .setUserId(answerDto.getUserId())
+                    .setUserId(userId)
                     .setQuestion(questionRepo
                             .findById(answerDto.getQuestionId())
                             .orElseThrow(() -> new EntityNotFoundException("Question", "Question id: " + answerDto.getQuestionId(), "")))

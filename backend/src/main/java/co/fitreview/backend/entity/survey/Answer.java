@@ -21,7 +21,7 @@ public class Answer {
     @Column(length = 10000)
     private String value;
     private LocalDateTime date;
-    private String userId;
+    private Long userId;
 
     @ManyToOne
     @JsonIgnore

@@ -12,7 +12,7 @@ export const uploadImageToAPI = async (fileUri, imageName) => {
         const base64Image = await convertFileToBase64(fileUri);
 
         // Отправляем запрос на сервер
-        const response = await postRequest('/storage/uploadImage', {
+        const response = await postRequest('/storage/public/uploadImage', {
             imageName,
             imageBase64: base64Image,
         });

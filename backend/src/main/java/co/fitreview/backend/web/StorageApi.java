@@ -19,7 +19,7 @@ public class StorageApi {
 
     private final GCStorageClient gcStorageClient;
 
-    @PostMapping("/uploadImage")
+    @PostMapping("/public/uploadImage")
     public String uploadImage(@RequestBody TestUploadImageDto request) {
         byte[] imageBytes = Base64.decodeBase64(request.getImageBase64());
         return gcStorageClient.uploadImage(imageBytes, request.getImageName(), MediaType.IMAGE_PNG);
