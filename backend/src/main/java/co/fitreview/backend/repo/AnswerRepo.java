@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface AnswerRepo extends JpaRepository<Answer, Long> {
-    Optional<Answer> findByUserIdAndQuestionId(String userId, Long questionId);
+    Optional<Answer> findByUserIdAndQuestionId(Long userId, Long questionId);
 }

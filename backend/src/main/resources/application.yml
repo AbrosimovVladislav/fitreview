@@ -23,3 +23,10 @@ gcp:
     private-key: ${GOOGLE_STORAGE_PRIVATE_KEY}
     client-id: 105107947195209788558
     project-id: fit-review-444116
+
+security:
+  allowed-paths:
+    - /api/v1/auth
+    - /api/v1/storage/public
+    - /api/v1/training/public
+    - /api/v1/survey/public

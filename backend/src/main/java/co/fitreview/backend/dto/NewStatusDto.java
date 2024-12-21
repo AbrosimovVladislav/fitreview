@@ -5,8 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserIdAndNewStatusDto {
-
-    private String userId; // ID пользователя
+public class NewStatusDto {
     private String status; // Новый статус
 }

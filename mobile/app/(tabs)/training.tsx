@@ -9,13 +9,11 @@ import {View} from "react-native";
 import useAppwrite from "@/lib/useAppwrite";
 import {Training as ITraining} from "@/constants/interface";
 import {useFocusEffect} from "expo-router";
-import {getTrainingsByUserId} from "@/service/TrainingService";
+import {getTrainingsForUser} from "@/service/TrainingService";
 
 const Training = () => {
 
-    const testUserId = '1';
-    const {user} = useGlobalContext();
-    const {data: initialTrainings} = useAppwrite<ITraining>(() => getTrainingsByUserId(testUserId));
+    const {data: initialTrainings} = useAppwrite<ITraining>(() => getTrainingsForUser());
 
     const [trainings, setTrainings] = useState<ITraining[]>(initialTrainings || []);
 
@@ -27,7 +25,7 @@ const Training = () => {
 
     const refreshTrainings = async () => {
         try {
-            const updatedTrainings = await getTrainingsByUserId(testUserId);
+            const updatedTrainings = await getTrainingsForUser();
             setTrainings(updatedTrainings);
         } catch (error) {
             console.error("[Training_refreshTrainings] Training receiving error:", error);

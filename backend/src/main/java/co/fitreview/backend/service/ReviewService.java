@@ -1,10 +1,12 @@
 package co.fitreview.backend.service;
 
 import co.fitreview.backend.entity.review.Review;
+import co.fitreview.backend.entity.review.UserData;
 import co.fitreview.backend.entity.survey.ReviewStatus;
 import co.fitreview.backend.exception.EntityNotFoundException;
 import co.fitreview.backend.repo.ReviewRepo;
 import co.fitreview.backend.repo.ReviewStatusRepo;
+import co.fitreview.backend.repo.UserDataRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,15 +22,16 @@ public class ReviewService {
 
     private final ReviewRepo reviewRepo;
     private final ReviewStatusRepo reviewStatusRepo;
+    private final UserDataRepo userDataRepo;
 
-    public ReviewStatus createReviewStatus(String userId, String status) {
+    public ReviewStatus createReviewStatus(Long userId, String status) {
         return reviewStatusRepo.save(new ReviewStatus()
                 .setUserId(userId)
                 .setValue(status)
                 .setDate(LocalDateTime.now()));
     }
 
-    public ReviewStatus getReviewStatusByUserId(String userId) {
+    public ReviewStatus getReviewStatusByUserId(Long userId) {
         ReviewStatus actualStatus = null;
         Optional<ReviewStatus> reviewStatusOpt = reviewStatusRepo.findFirstByUserIdOrderByDateDesc(userId);
 
@@ -43,7 +46,10 @@ public class ReviewService {
 
     @Transactional(readOnly = true)
     public Review getLastReviewByUserId(Long userId) {
-        Optional<Review> reviewOpt = reviewRepo.findFirstByUserDataIdOrderByDateDesc(userId);
+        UserData userData = userDataRepo.findByFrUserId(userId)
+                .orElseThrow(() -> new EntityNotFoundException("UserData", "FRUserId: " + userId, ""));
+
+        Optional<Review> reviewOpt = reviewRepo.findFirstByUserDataIdOrderByDateDesc(userData.getId());
 
         if (reviewOpt.isEmpty()) {
             throw new EntityNotFoundException("Review", "Userid: " + userId, "");

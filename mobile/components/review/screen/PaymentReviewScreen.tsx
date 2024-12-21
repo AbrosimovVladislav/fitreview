@@ -1,6 +1,5 @@
 import {View, ScrollView} from 'react-native'
 import React from 'react'
-import {useGlobalContext} from "@/context/GlobalProvider";
 import {validatePayment} from "@/service/PaymentService";
 import {addNewReviewStatusRecord} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
@@ -9,15 +8,13 @@ import PageHeader from "@/components/PageHeader";
 import Button from "@/components/common/Button";
 
 const PaymentReviewScreen = ({setStatus}) => {
-    const {user} = useGlobalContext();
-    const testUserId = '1';
 
     const toSurveyStep = async () => {
         if (validatePayment()) {
             //ToDo Сейчас здесь логика на прохождение первого опроса, но
             // в будущем опрос может быть не всегда первым и будет другая
             // логика связанная с оплатой или опросом повторным
-            await addNewReviewStatusRecord(testUserId, SurveyStatus.FirstSurvey);
+            await addNewReviewStatusRecord(SurveyStatus.FirstSurvey);
             setStatus(SurveyStatus.FirstSurvey);
         }
     }

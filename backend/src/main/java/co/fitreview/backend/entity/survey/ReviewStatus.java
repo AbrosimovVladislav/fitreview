@@ -20,7 +20,7 @@ public class ReviewStatus {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userId;
+    private Long userId;
     private String value;
     private LocalDateTime date;
 

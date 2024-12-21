@@ -1,6 +1,7 @@
 package co.fitreview.backend.entity.review;
 
 
+import co.fitreview.backend.entity.FRUser;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,4 +22,8 @@ public class UserData {
     private double weight;     // Вес пользователя
     private double fatIndex;   // Индекс жира
     private int age;           // Возраст пользователя
+
+    @OneToOne
+    @JoinColumn(name = "fr_user_id", unique = true) // Связываем с FRUser
+    private FRUser frUser;
 }
