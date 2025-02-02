@@ -23,7 +23,7 @@ export default function Table({tableHeads, tableRows}: TableProps) {
                 <TableHeader>
                     <ShadcnTableRow>
                         {tableHeads.map((head, index) => (
-                            <TableHead key={index} className='font-montserrat font-medium text-gray-700 text-md'>
+                            <TableHead key={index} className='font-medium text-gray-700 text-md'>
                                 {head.label}
                             </TableHead>
                         ))}

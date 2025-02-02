@@ -51,7 +51,7 @@ export default function TableRow({cells}: TableRowProps) {
                 switch (cell.type) {
                     case "string":
                         return <TableCell key={index}
-                                          className='font-montserrat font-regular text-black-100 text-md'>{cell.value}</TableCell>;
+                                          className='font-regular text-black-100 text-md'>{cell.value}</TableCell>;
                     case "image":
                         return (
                             <TableCell key={index}>
@@ -61,7 +61,7 @@ export default function TableRow({cells}: TableRowProps) {
                     case "status":
                         return (
                             <TableCell key={index}>
-                                <span className={`px-2 py-1 rounded ${getStatusClass(cell.value)}`}>
+                                <span className={`px-2 py-1 font-bold rounded ${getStatusClass(cell.value)}`}>
                                     {cell.value}
                                 </span>
                             </TableCell>
