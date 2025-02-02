@@ -44,9 +44,8 @@ export default function TableRow({cells}: TableRowProps) {
         }
     }
 
-
     return (
-        <ShadcnTableRow>
+        <ShadcnTableRow className="hover:bg-gray-10 transition-colors">
             {cells.map((cell, index) => {
                 switch (cell.type) {
                     case "string":
