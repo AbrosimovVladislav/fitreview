@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { TableCell, TableRow as ShadcnTableRow } from "@/components/ui/table";
+import {TableCell, TableRow as ShadcnTableRow} from "@/components/ui/table";
 
 // Типы ячеек
 export type TableCellString = { type: "string"; value: string };
@@ -23,31 +23,43 @@ export interface TableRowProps {
     cells: CellType[];
 }
 
+export default function TableRow({cells}: TableRowProps) {
+
+    function getStatusClass(status: string): string {
+        switch (status) {
+            case "WelcomeScreen":
+                return "bg-gradient-to-r from-orange-400 to-orange-600 text-white";
+            case "PaymentScreen":
+                return "bg-gradient-to-r from-orange-400 via-yellow-400 to-yellow-600 text-white";
+            case "FirstSurvey":
+                return "bg-gradient-to-r from-yellow-400 via-blue-400 to-blue-600 text-white";
+            case "WaitingForResults":
+                return "bg-gradient-to-r from-blue-400 via-green-400 to-green-600 text-white";
+            case "ReviewResults":
+                return "bg-gradient-to-r from-green-400 to-green-600 text-white";
+            default:
+                return "bg-gray-300 text-gray-700";
+        }
+    }
 
 
-export default function TableRow({ cells }: TableRowProps) {
     return (
         <ShadcnTableRow>
             {cells.map((cell, index) => {
                 switch (cell.type) {
                     case "string":
-                        return <TableCell key={index}>{cell.value}</TableCell>;
+                        return <TableCell key={index}
+                                          className='font-montserrat font-regular text-black-100 text-md'>{cell.value}</TableCell>;
                     case "image":
                         return (
                             <TableCell key={index}>
-                                <img src={cell.value} alt="cell" className="w-8 h-8 rounded-full" />
+                                <img src={cell.value} alt="cell" className="w-8 h-8 rounded-full"/>
                             </TableCell>
                         );
                     case "status":
                         return (
                             <TableCell key={index}>
-                                <span
-                                    className={`px-2 py-1 rounded ${
-                                        cell.value === "In Progress"
-                                            ? "bg-blue-500 text-white"
-                                            : "bg-gray-300 text-gray-700"
-                                    }`}
-                                >
+                                <span className={`px-2 py-1 rounded ${getStatusClass(cell.value)}`}>
                                     {cell.value}
                                 </span>
                             </TableCell>
