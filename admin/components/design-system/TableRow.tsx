@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import {TableCell, TableRow as ShadcnTableRow} from "@/components/ui/table";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { IoHammerOutline } from "react-icons/io5"; // Иконка из Ionicons
 
 // Типы ячеек
 export type TableCellString = { type: "string"; value: string };
@@ -66,13 +68,17 @@ export default function TableRow({cells}: TableRowProps) {
                         );
                     case "action":
                         return (
-                            <TableCell key={index}>
-                                <Link
-                                    href={cell.value.href}
-                                    className="bg-green-500 text-white px-2 py-1 rounded inline-block"
-                                >
-                                    {cell.value.label}
-                                </Link>
+                            <TableCell key={index} >
+                                <Tooltip delayDuration={300}>
+                                    <TooltipTrigger asChild>
+                                        <Link href={cell.value.href} className="text-gray-400 hover:text-orange-500">
+                                            <IoHammerOutline size={28} />
+                                        </Link>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="bg-black text-white p-2 rounded text-sm shadow">
+                                        {cell.value.label}
+                                    </TooltipContent>
+                                </Tooltip>
                             </TableCell>
                         );
                     default:

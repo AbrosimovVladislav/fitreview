@@ -17,7 +17,7 @@ const tableRows: TableRowType[] = [
             { type: "string", value: "Admin" },
             { type: "string", value: "fitreview24@gmail.com" },
             { type: "status", value: "ReviewResults" },
-            { type: "action", value: { href: "/reviews/1", label: "View" } },
+            { type: "action", value: { href: "/reviews/1", label: "Edit" } },
         ],
     },
     {
@@ -27,7 +27,7 @@ const tableRows: TableRowType[] = [
             { type: "string", value: "Vlad" },
             { type: "string", value: "abrosimov94vladislav@gmail.com" },
             { type: "status", value: "FirstSurvey" },
-            { type: "action", value: { href: "/reviews/2", label: "View" } },
+            { type: "action", value: { href: "/reviews/2", label: "Edit" } },
         ],
     },
 ];
@@ -35,7 +35,6 @@ const tableRows: TableRowType[] = [
 export default function ReviewsPage() {
     return (
         <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Reviews</h1>
             <Table tableHeads={tableHeads} tableRows={tableRows} />
         </div>
     );
