@@ -7,7 +7,7 @@ import { TableCell, TableRow as ShadcnTableRow } from "@/components/ui/table";
 // Типы ячеек
 export type TableCellString = { type: "string"; value: string };
 export type TableCellImage = { type: "image"; value: string };
-export type TableCellLabel = { type: "label"; value: string };
+export type TableCellLabel = { type: "status"; value: string };
 export type TableCellAction = { type: "action"; value: { href: string; label: string } };
 
 export type CellType = TableCellString | TableCellImage | TableCellLabel | TableCellAction;
@@ -38,7 +38,7 @@ export default function TableRow({ cells }: TableRowProps) {
                                 <img src={cell.value} alt="cell" className="w-8 h-8 rounded-full" />
                             </TableCell>
                         );
-                    case "label":
+                    case "status":
                         return (
                             <TableCell key={index}>
                                 <span
