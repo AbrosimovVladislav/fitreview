@@ -15,14 +15,16 @@ export const menuItems: MenuItem[] = [
 
 export default function SideMenu() {
     return (
-        <div className="bg-gray-800 text-white w-20 flex flex-col items-center py-4 space-y-4">
-            {/* Логотип */}
-            <div className="mb-6">
-                <IoAppsSharp size={32} className="text-secondary"/>
+        <div className="bg-gray-800 text-white w-20 flex flex-col items-center space-y-4">
+            <div className="py-3 px-5 border-b border-orange-1001">
+                <img
+                    src="/fr_admin_logo.png"
+                    alt="Logo"
+                    className="w-10 h-10 object-contain"
+                />
             </div>
 
-            {/* Меню */}
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex pt-2 flex-col space-y-4">
                 {menuItems.map((item, index) => (
                     <Link
                         key={index}

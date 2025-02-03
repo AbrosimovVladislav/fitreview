@@ -17,7 +17,7 @@ export default function Header() {
 
     return (
         <header className="bg-white p-4 shadow-md flex justify-between items-center">
-            <h2 className="text-lg font-bold">{title}</h2>
+            <h2 className="text-xl font-bold pl-6">{title}</h2>
             <IoPersonCircleSharp size={32} className="text-gray-700" />
         </header>
     );

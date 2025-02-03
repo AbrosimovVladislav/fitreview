@@ -5,6 +5,7 @@ import Table from "@/components/design-system/Table";
 import { TableRowType } from "@/components/design-system/TableRow";
 import {reviewApi} from "@/service/reviewApi";
 import {IAdminShortReviewDto} from "@/interface/IAdminShortReviewDto";
+import Select from "@/components/design-system/Select";
 
 export default function ReviewsPage() {
     const { data, isLoading, isError } = useQuery<IAdminShortReviewDto[]>({
@@ -37,9 +38,27 @@ export default function ReviewsPage() {
         ],
     }));
 
+    const sortingOptions = [
+        { label: "Sort By: Review Id", value: "id" },
+        { label: "Sort By: Status", value: "status" },
+        { label: "Sort By: Date", value: "date" },
+    ];
+
+    const mockHandleSorting = (value: string) => {
+        console.log("Sorting value:", value);
+    };
+
     return (
-        <div className="p-6">
-            <Table tableHeads={tableHeads} tableRows={tableRows} />
+        <div className="pt-3 px-6">
+            <div id='table-controls' className='flex justify-between items-center pb-6'>
+                <div className='font-bold'>Total: {24} reviews</div>
+                <Select
+                    placeholder="Sort By"
+                    options={sortingOptions}
+                    onChange={mockHandleSorting}
+                />
+            </div>
+            <Table tableHeads={tableHeads} tableRows={tableRows}/>
         </div>
     );
 }

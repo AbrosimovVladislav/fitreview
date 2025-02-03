@@ -7,6 +7,7 @@ module.exports = {
 				orange: {
 					400: "#f99e16",
 					600: "#ea4f0c",
+					1001: "rgba(252,185,86,0.59)"
 				},
 				yellow: {
 					400: "#fad415",
