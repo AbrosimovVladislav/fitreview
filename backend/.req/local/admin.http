@@ -1,0 +1,3 @@
+### Get Reviews for Admin Web Service
+GET http://localhost:8080/reviewApi/v1/admin/public/review
+Accept: application/json

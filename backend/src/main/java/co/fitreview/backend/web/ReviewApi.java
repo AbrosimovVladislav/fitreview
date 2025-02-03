@@ -33,7 +33,7 @@ public class ReviewApi {
         String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
         FRUser user = frUserRepo.findByFirebaseId(uid)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        return reviewService.getReviewStatusByUserId(user.getId());
+        return reviewService.getLastReviewStatusByUserId(user.getId());
     }
 
     @PostMapping("/status")

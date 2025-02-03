@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -31,7 +32,11 @@ public class ReviewService {
                 .setDate(LocalDateTime.now()));
     }
 
-    public ReviewStatus getReviewStatusByUserId(Long userId) {
+    public List<Review> getAllReviews() {
+        return reviewRepo.findAll();
+    }
+
+    public ReviewStatus getLastReviewStatusByUserId(Long userId) {
         ReviewStatus actualStatus = null;
         Optional<ReviewStatus> reviewStatusOpt = reviewStatusRepo.findFirstByUserIdOrderByDateDesc(userId);
 
