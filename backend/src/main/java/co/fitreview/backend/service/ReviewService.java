@@ -63,4 +63,8 @@ public class ReviewService {
         return reviewOpt.get();
     }
 
+//    public Review createReview(Long userId) {
+//        //ищем юзердату по фрузерАйди, если есть берем, если нет, создаем
+//        //создаем запись о ревью с учетом готовой юзердаты
+//    }
 }

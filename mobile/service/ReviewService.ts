@@ -10,6 +10,10 @@ export const getReviewStatusByUserId = async () => {
     }
 }
 
+export const createNewReview = async () => {
+
+}
+
 export const addNewReviewStatusRecord = async (status) => {
     return await securePostRequest('/review/status', {status: status});
 }
