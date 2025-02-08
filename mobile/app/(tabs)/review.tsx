@@ -6,12 +6,14 @@ import WaitingForResultReviewScreen from "@/components/review/screen/WaitingForR
 import ResultsReviewScreen from "@/components/review/screen/ResultsReviewScreen";
 import FirstSurveyReviewScreen from "@/components/review/screen/FirstSurveyReviewScreen";
 import SecondSurveyReviewScreen from "@/components/review/screen/SecondSurveyReviewScreen";
-import {getReviewStatusByUserId} from "@/service/ReviewService";
+import {getReviewStatusById} from "@/service/ReviewService";
 import PaymentReviewScreen from "@/components/review/screen/PaymentReviewScreen";
 import {useFocusEffect} from "expo-router";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 
 const Review = () => {
+    const {reviewId} = useGlobalContext();
 
     const [status, setStatus] = useState('WelcomeScreen');
 
@@ -41,12 +43,13 @@ const Review = () => {
 
     const refreshPageAccordingToTheStatus = async () => {
         try {
-            const currentStatus = await getReviewStatusByUserId();
-            console.log("[Review_refreshPageAccordingToTheStatus] currentStatus " + currentStatus.value);
+            if (reviewId) {
+                const currentStatus = await getReviewStatusById(reviewId);
 
-            //if status was not created yet, then not refresh state
-            if (currentStatus) {
-                setStatus(currentStatus.value);
+                //if status was not created yet, then not refresh state
+                if (currentStatus) {
+                    setStatus(currentStatus.value);
+                }
             }
         } catch (error) {
             console.error("[Review_refreshPageAccordingToTheStatus] Status receiving error:", error);

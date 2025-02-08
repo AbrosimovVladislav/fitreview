@@ -21,9 +21,5 @@ public class BodySegmentDescription {
 
     @Type(JsonBinaryType.class)
     @Column(columnDefinition = "jsonb")
-    private List<String> descriptions; // Описание анализа (английский)
-
-    @Type(JsonBinaryType.class)
-    @Column(columnDefinition = "jsonb")
-    private List<String> descriptionsRus; // Описание анализа (русский)
+    private List<String> descriptions;
 }

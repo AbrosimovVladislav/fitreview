@@ -1,5 +1,6 @@
 package co.fitreview.backend.service;
 
+import co.fitreview.backend.entity.FRUser;
 import co.fitreview.backend.entity.review.Review;
 import co.fitreview.backend.entity.survey.ReviewStatus;
 import co.fitreview.backend.exception.EntityNotFoundException;
@@ -22,9 +23,17 @@ public class ReviewService {
     private final ReviewRepo reviewRepo;
     private final ReviewStatusRepo reviewStatusRepo;
 
-    public ReviewStatus createReviewStatus(Long userId, String status) {
+    public Review createNewReview(FRUser user) {
+        return reviewRepo.save(new Review()
+                .setDate(LocalDateTime.now())
+                .setFrUser(user));
+    }
+
+    public ReviewStatus createReviewStatus(Long reviewId, String status) {
+        Review review = reviewRepo.findById(reviewId)
+                .orElseThrow(() -> new EntityNotFoundException("Review", String.valueOf(reviewId), "Not found review with id: "));
         return reviewStatusRepo.save(new ReviewStatus()
-                .setUserId(userId)
+                .setReview(review)
                 .setValue(status)
                 .setDate(LocalDateTime.now()));
     }
@@ -33,28 +42,13 @@ public class ReviewService {
         return reviewRepo.findAll();
     }
 
-    //TODO принимать id конкретного ревью и у него получать последний статус
-    public ReviewStatus getLastReviewStatusByUserId(Long userId) {
-        ReviewStatus actualStatus = null;
-        Optional<ReviewStatus> reviewStatusOpt = reviewStatusRepo.findFirstByUserIdOrderByDateDesc(userId);
-
-        if (reviewStatusOpt.isEmpty()) {
-            actualStatus = createReviewStatus(userId, "WelcomeScreen");
-        } else {
-            actualStatus = reviewStatusOpt.get();
-        }
-
-        return actualStatus;
+    public ReviewStatus getLastReviewStatusById(Long reviewId) {
+        return reviewStatusRepo.findFirstByReviewIdOrderByDateDesc(reviewId)
+                .orElse(null);
     }
 
     @Transactional(readOnly = true)
-    public Review getLastReviewByUserId(Long userId) {
-        Optional<Review> reviewOpt = reviewRepo.findFirstByFrUserIdOrderByDateDesc(userId);
-
-        if (reviewOpt.isEmpty()) {
-            throw new EntityNotFoundException("Review", "Userid: " + userId, "");
-        }
-
-        return reviewOpt.get();
+    public Optional<Review> getLastReviewByUserId(Long userId) {
+        return reviewRepo.findFirstByFrUserIdOrderByDateDesc(userId);
     }
 }

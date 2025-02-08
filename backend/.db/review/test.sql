@@ -1,58 +1,38 @@
--- Вставляем данные в таблицу Review
-INSERT INTO Review (id, date, fr_user_id, estimation, fat_index)
-VALUES (1, '2024-11-05', 8, 80, '22');
+-- Обновляем данные в таблице Review
+UPDATE Review
+SET estimation = 85, -- Пример нового значения для estimation
+    fat_index = '24' -- Пример нового значения для fat_index
+WHERE id = 1;
 
 
 -- Вставляем данные в таблицу BodySegment для FrontView
-INSERT INTO body_segment_description (id, descriptions, descriptions_rus)
+INSERT INTO body_segment_description (id, descriptions)
 VALUES (1, '[
   "No visible issues detected in this region"
-]', '[
-  "Визуально проблем в данном регионе не обнаружено"
 ]'),
        (2, '[
          "Arrow 2. The left shoulder is lower than the right, indicating possible overuse of the right trapezius. This may be due to improper breathing, a sedentary lifestyle, or weak deltoid muscles lacking shoulder support."
-       ]',
-        '[
-          "Стрелка 2. Левое надплечье ниже правого. Перегрузка правой трапециевидной мышцы может быть связана с дисфункцией дельтовидной, статичной позой или неправильным дыханием."
-        ]'),
+       ]'),
        (3, '[
          "Arrow 1. The right nipple is lower than the left, possibly due to shortened fascia in the pectoral muscle. This causes nearby muscles to compensate, leading to overuse and muscle imbalance.",
          "Arrow 4. Asymmetry between arrows 4, 5 and a rightward shift of the navel may indicate diaphragm dysfunction, tension in the oblique abdominal muscles, or intestinal issues, affecting core muscle balance and symmetry."
-       ]',
-        '[
-          "Стрелка 1. Правый сосок расположен на своей исходной позиции. Дисфункция наблюдается с правой стороны. ",
-          "Стрелка 4. Асимметрия между стрелками 4, 5 и смещение пупка вправо могут указывать на дисфункцию диафрагмы, напряжение косых мышц живота или проблемы с кишечником, что влияет на симметрию и работу мышц корпуса."
-        ]'),
+       ]'),
        (4, '[
          "Arrow 3. The left nipple is higher than the right, possibly due to shortened fascia in the pectoral muscle. This causes nearby muscles to compensate, leading to overuse and muscle imbalance.",
          "Arrow 5. Asymmetry between arrows 4, 5 and a rightward shift of the navel may indicate diaphragm dysfunction, tension in the oblique abdominal muscles, or intestinal issues, affecting core muscle balance and symmetry.",
          "Arrow 6. The left arm hangs lower than the right, possibly due to weak middle deltoid muscles. A slight forward rotation of the shoulder may suggest tension in the small pectoral and internal shoulder rotator muscles."
-       ]',
-        '[
-          "Стрелка 3. Грудная клетка: левый сосок выше правого. Возможное укорочение фасций грудной мышцы, что снижает её активацию при нагрузке.",
-          "Стрелка 5. Асимметрия между стрелками 4, 5 и смещение пупка вправо могут указывать на дисфункцию диафрагмы, напряжение косых мышц живота или проблемы с кишечником, что влияет на симметрию и работу мышц корпуса.",
-          "Стрелка 6. Левая рука ниже правой. Средняя дельтовидная мышца, вероятно, не поддерживает плечевую кость в нейтрали."
-        ]'),
+       ]'),
        (5, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (6, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (7, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (8, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]');
 
 INSERT INTO body_segment (id, name, title, segment_group, estimation, user_image, diagram_image, review_id,
@@ -92,55 +72,32 @@ VALUES (1, 'FrontView-L1', 'Upper Body Right', 'FrontView', NULL,
 
 
 -- Вставляем данные в таблицу BodySegment для BackView
-INSERT INTO body_segment_description (id, descriptions, descriptions_rus)
+INSERT INTO body_segment_description (id, descriptions)
 VALUES (9, '[
   "No visible issues detected in this region"
-]', '[
-  "Визуально проблем в данном регионе не обнаружено"
 ]'),
        (10, '[
          "Arrow 2. The right shoulder is higher than the left, possibly due to overuse of the trapezius muscle. This is often linked to carrying a bag on the right shoulder, weak deltoids, or poor posture."
-       ]',
-        '[
-          "Стрелка 2. Правое надплечье выше чем левое.  Наблюдается перегрузка трапециевидной. Это часто может быть связанным с ношением сумок на правой плече, нестабильностью дельтовидной мышцы или нестабильность работы кора."
-        ]'),
+       ]'),
        (11, '[
          "Arrow 1. Tension in the shoulder muscle suggests scapular instability. This can cause improper function of back and shoulder muscles, affecting overall shoulder mobility.",
          "Arrows 6 & 7. The left lower back muscle is more tense, possibly due to weak glutes and oblique abs. This imbalance creates uneven strain on the lower back and hips."
-       ]',
-        '[
-          "Стрелка 1. Рука и лопатка: гипертонус большой круглой мышцы и слабость широчайшей снижают стабильность лопатки и её подвижность.",
-          "Стрелки 6 и 7. Мышцы поясничного региона: левая квадратная мышца напряжена больше, чем правая, из-за дисфункции ягодичных и косых мышц. Это приводит к мышечному дисбалансу передней и задней мышечных цепей."
-        ]'),
+       ]'),
        (12, '[
          "Arrow 3. The shoulder blade is shifted up and sideways, likely due to tight chest and shoulder muscles or weak back muscles. A forward-tilted pelvis may also contribute to this misalignment.",
          "Arrows 4 & 5. Outward arm rotation may indicate scapular instability: front muscles are overworked, while back muscles are weakened, lacking the support needed for proper shoulder alignment."
-       ]',
-        '[
-          "Стрелка 3. Лопатка смещена вверх и в сторону,  что связано с гипертонусом грудных, плечевых и нестабильной работа мышц кора. Наклон таза вперед также может влиять на это смещение.",
-          "Стрелки 4 и 5. ПРука повернута вперёд может указывать на нестабильность лопатки, мышц ротаторов плеча малой грудной, передней зубчатой, ромбовидных мышц."
-        ]'),
+       ]'),
        (13, '[
          "Arrow 8. Sacral misalignment may be due to uneven hip muscle activity or weak glutes and lower back muscles, disrupting pelvis and lower back symmetry."
-       ]',
-        '[
-          "Стрелка 8. Смещение крестца может быть вызвано асимметрией мышц ротаторов бедра, слабой работы ягодичных мышц и нестабильностью широчайших  мышц."
-        ]'),
+       ]'),
        (14, '[
          "Arrow 8. Sacral misalignment may be due to uneven hip muscle activity or weak glutes and lower back muscles, disrupting pelvis and lower back symmetry."
-       ]',
-        '[
-          "Стрелка 8. Смещение крестца может быть вызвано асимметрией мышц ротаторов бедра, слабой работы ягодичных мышц и нестабильностью широчайших  мышц."
-        ]'),
+       ]'),
        (15, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (16, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]');
 
 INSERT INTO body_segment (id, name, title, segment_group, estimation, user_image, diagram_image, review_id,
@@ -180,53 +137,31 @@ VALUES (9, 'BackView-L1', 'Upper Body Right', 'BackView', NULL,
 
 
 -- Вставляем данные в таблицу BodySegment для SideView
-INSERT INTO body_segment_description (id, descriptions, descriptions_rus)
+INSERT INTO body_segment_description (id, descriptions)
 VALUES (17, '[
   "Arrow 1 & 2. Arms are rotated forward due to backward torso shift. This leads to instability in the serratus anterior, pectoralis minor, shoulder rotators, and rhomboid muscles."
-]',
-        '[
-          "Стрелка 1 и 2. Руки выкручены вперед. Это связано с смещением корпуса назад, вызывая нестабильность малой грудной, передней зубчатой, ротаторов плеча и ромбовидной."
-        ]'),
+]'),
        (18, '[
          "Arrow 1. Arms are rotated forward due to backward torso shift. This leads to instability in the serratus anterior, pectoralis minor, shoulder rotators, and rhomboid muscles."
-       ]',
-        '[
-          "Стрелка 1. Руки выкручены вперед. Это связано с смещением корпуса назад, вызывая нестабильность малой грудной, передней зубчатой, ротаторов плеча и ромбовидной."
-        ]'),
+       ]'),
        (19, '[
          "Arrow 3 & 4. The lower back is overloaded due to pelvic misalignment and weak glutes and core muscles, leading to instability."
-       ]',
-        '[
-          "Стрелка 3 и 4. Перегружена поясница из-за изменения положения таза и слабости ягодичных мышц и кора, что вызывает нестабильность."
-        ]'),
+       ]'),
        (20, '[
          "Arrow 2 & 3. The lower back is overloaded due to pelvic misalignment and weak glutes and core muscles, leading to instability.",
          "Arrow 4 & 5. The abdominal wall is stretched. Forward pelvic tilt and backward thoracic shift cause lower back strain and weak abdominal and gluteal muscles."
-       ]',
-        '[
-          "Стрелка 2 и 3. Перегружена поясница из-за изменения положения таза и слабости ягодичных мышц и кора, что вызывает нестабильность.",
-          "Стрелка 4 и 5. Передняя стенка живота вытянута. Смещение таза вперед и грудного отдела назад вызывает перегруз поясницы и слабость мышц живота и ягодиц."
-        ]'),
+       ]'),
        (21, '[
          "Arrow 5. The pelvis is tilted forward, causing anterior tilt. This indicates overload on the front thighs, weak core and glutes, and underactivation of the posterior chain."
-       ]',
-        '[
-          "Стрелка 5. Таз выведен вперед с наклоном. Это может указывать на перегруз передней поверхности бедра, слабость мышц кора, ягодиц и недоработку задней мышечной цепи."
-        ]'),
+       ]'),
        (22, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (23, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]'),
        (24, '[
          "No visible issues detected in this region"
-       ]', '[
-         "Визуально проблем в данном регионе не обнаружено"
        ]');
 
 INSERT INTO body_segment (id, name, title, segment_group, estimation, user_image, diagram_image, review_id,
@@ -266,55 +201,31 @@ VALUES (17, 'SideView-L1', 'Left View Upper Body', 'SideView', NULL,
 
 
 -- Вставляем данные в таблицу BodySegment для SummaryView
-INSERT INTO body_segment_description (id, descriptions, descriptions_rus)
+INSERT INTO body_segment_description (id, descriptions)
 VALUES (25, '[
   "Shoulders. Consult a specialist to address fascial tension and activate muscles. Wear a backpack on both shoulders. Exercises: dynamic stretching, functional training with equipment to improve strength and motor function."
-]',
-        '[
-          "Плечи. Обратитесь к специалисту для работы с фасцией и активации мышц. Носите рюкзак на обоих плечах. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
-        ]'),
+]'),
        (26, '[
          "Shoulders. Consult a specialist to address fascial tension and activate muscles. Wear a backpack on both shoulders. Exercises: dynamic stretching, functional training with equipment to improve strength and motor function."
-       ]',
-        '[
-          "Плечи. Обратитесь к специалисту для работы с фасцией и активации мышц. Носите рюкзак на обоих плечах. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
-        ]'),
+       ]'),
        (27, '[
          "Thoracic Region. Improve thoracic mobility and core function (diaphragm, abs, pelvic floor). Include stretching for front thighs and exercises targeting hip joints and surrounding muscles."
-       ]',
-        '[
-          "Грудной отдел. Улучшите мобильность грудного отдела и работу кора (диафрагма, пресс, тазовое дно). Добавьте растяжку передней поверхности бедра и тренировки для тазобедренного сустава и окружающих мышц."
-        ]'),
+       ]'),
        (28, '[
          "Thoracic Region. Improve thoracic mobility and core function (diaphragm, abs, pelvic floor). Include stretching for front thighs and exercises targeting hip joints and surrounding muscles."
-       ]',
-        '[
-          "Грудной отдел. Улучшите мобильность грудного отдела и работу кора (диафрагма, пресс, тазовое дно). Добавьте растяжку передней поверхности бедра и тренировки для тазобедренного сустава и окружающих мышц."
-        ]'),
+       ]'),
        (29, '[
          "Hip Joint. Focus on hip mobility and pelvic stability. Exercises: dynamic stretching, functional training with equipment to enhance strength and motor function."
-       ]',
-        '[
-          "Тазобедренный сустав. Работайте над мобильностью тазобедренного сустава и стабильностью таза. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
-        ]'),
+       ]'),
        (30, '[
          "Hip Joint. Focus on hip mobility and pelvic stability. Exercises: dynamic stretching, functional training with equipment to enhance strength and motor function."
-       ]',
-        '[
-          "Тазобедренный сустав. Работайте над мобильностью тазобедренного сустава и стабильностью таза. Упражнения: динамическая растяжка, функциональный тренинг с оборудованием для улучшения силы и двигательной функции."
-        ]'),
+       ]'),
        (31, '[
          "Foot. Wear wide-toe shoes, walk barefoot at home, massage feet and calves. Practice exercises to improve foot stability and mobility."
-       ]',
-        '[
-          "Стопа. Носите обувь с широким носком, ходите босиком дома, делайте массаж стоп и голеней. Тренируйтесь для улучшения стабильности и мобильности стопы."
-        ]'),
+       ]'),
        (32, '[
          "Foot. Wear wide-toe shoes, walk barefoot at home, massage feet and calves. Practice exercises to improve foot stability and mobility."
-       ]',
-        '[
-          "Стопа. Носите обувь с широким носком, ходите босиком дома, делайте массаж стоп и голеней. Тренируйтесь для улучшения стабильности и мобильности стопы."
-        ]');
+       ]');
 
 INSERT INTO body_segment (id, name, title, segment_group, estimation, user_image, diagram_image, review_id,
                           body_segment_description_id)

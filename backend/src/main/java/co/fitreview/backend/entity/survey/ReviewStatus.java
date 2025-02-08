@@ -18,11 +18,10 @@ public class ReviewStatus {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
     private String value;
     private LocalDateTime date;
 
     @ManyToOne
-    @JoinColumn(name = "review_id", nullable = true) // Внешний ключ указывает на Review
+    @JoinColumn(name = "review_id", nullable = false)
     private Review review;
 }

@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import Button from "@/components/common/Button";
 import {saveAnswer} from "@/service/SurveyService";
-import {addNewReviewStatusRecord} from "@/service/ReviewService";
+import {addNewReviewStatus} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
 import {generateImageName, uploadImageToAPI} from "@/service/StorageService"
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const SubmitSurveyButton = ({
                                 disabled,
@@ -15,7 +16,7 @@ const SubmitSurveyButton = ({
                                 setUploadedImage
                             }) => {
 
-    const testUserId = '1';
+    const { user, reviewId } = useGlobalContext();
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -26,7 +27,7 @@ const SubmitSurveyButton = ({
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
             if (!answerValue.includes("http")) {
-                const imageName = generateImageName(testUserId, questionId);
+                const imageName = generateImageName(user.id, questionId);
                 const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
             }
@@ -34,14 +35,14 @@ const SubmitSurveyButton = ({
         }
 
         //save answer
-        await saveAnswer(questionId, answerValue)
+        await saveAnswer(questionId, answerValue, reviewId)
 
         //TODO подумать как вынести логику пресабмит действия для мульти вопроса
         //clear pressed ONLY FOR MULTIANSWER
         setPressed && setPressed([]);
 
         //change status
-        await addNewReviewStatusRecord(SurveyStatus.WaitingForResults);
+        await addNewReviewStatus(reviewId, SurveyStatus.WaitingForResults);
         setStatus(SurveyStatus.WaitingForResults);
         setIsLoading(false);
     }

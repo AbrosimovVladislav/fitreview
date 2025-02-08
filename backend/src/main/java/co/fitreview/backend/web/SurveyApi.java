@@ -1,10 +1,8 @@
 package co.fitreview.backend.web;
 
 import co.fitreview.backend.dto.AnswerDto;
-import co.fitreview.backend.entity.FRUser;
 import co.fitreview.backend.entity.survey.Answer;
 import co.fitreview.backend.entity.survey.Question;
-import co.fitreview.backend.repo.FRUserRepo;
 import co.fitreview.backend.service.SurveyService;
 import co.fitreview.backend.web.mapper.AnswerMapper;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,23 +19,15 @@ public class SurveyApi {
     private final SurveyService surveyService;
     private final AnswerMapper answerMapper;
 
-    private final FRUserRepo frUserRepo;
-
-    @GetMapping("/answer/{questionId}")
-    public AnswerDto getAnswerByQuestionIdForUser(@PathVariable Long questionId, HttpServletRequest request) {
-        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
-        FRUser user = frUserRepo.findByFirebaseId(uid)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        Answer answer = surveyService.getAnswerByUserIdAndQuestionId(user.getId(), questionId);
+    @GetMapping("/answer/{reviewId}/{questionId}")
+    public AnswerDto getAnswerByReviewIdAndQuestionId(@PathVariable Long reviewId, @PathVariable Long questionId, HttpServletRequest request) {
+        Answer answer = surveyService.getAnswerByReviewIdAndQuestionId(reviewId, questionId);
         return answer == null ? null : answerMapper.toDto(answer);
     }
 
     @PostMapping("/answer")
     public void saveAnswer(@RequestBody AnswerDto requestDto, HttpServletRequest request) {
-        String uid = (String) request.getAttribute("uid"); // Получаем UID из middleware
-        FRUser user = frUserRepo.findByFirebaseId(uid)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        surveyService.saveAnswer(requestDto, user.getId());
+        surveyService.saveAnswer(requestDto);
     }
 
     @GetMapping("/public/question/{questionId}")

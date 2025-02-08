@@ -1,23 +1,31 @@
 import {secureGetRequest, securePostRequest} from "@/service/beclient";
 
-export const getReviewStatusByUserId = async () => {
+export const createNewReview = async () => {
+    return await securePostRequest('/review');
+}
+
+export const addNewReviewStatus = async (reviewId, status) => {
+    return await securePostRequest('/review/status', {reviewId: reviewId, status: status});
+}
+
+export const getLastReviewByUserId = async () => {
+    return await secureGetRequest(`/review`);
+};
+
+export const getLastReviewIdByUserId = async () => {
+    return await secureGetRequest(`/review/id`);
+};
+
+export const getReviewStatusById = async (reviewId) => {
     try {
-        let status = await secureGetRequest(`/review/status`);
-        return status;
+        return await secureGetRequest(`/review/status/${reviewId}`);
     } catch (error) {
         console.log(error)
         return null;
     }
 }
 
-export const createNewReview = async () => {
 
-}
 
-export const addNewReviewStatusRecord = async (status) => {
-    return await securePostRequest('/review/status', {status: status});
-}
 
-export const getLastReviewByUserId = async () => {
-    return await secureGetRequest(`/review`);
-};
+

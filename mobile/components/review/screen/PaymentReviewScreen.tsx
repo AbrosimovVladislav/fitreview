@@ -1,13 +1,16 @@
 import {View, ScrollView} from 'react-native'
 import React from 'react'
 import {validatePayment} from "@/service/PaymentService";
-import {addNewReviewStatusRecord} from "@/service/ReviewService";
+import {addNewReviewStatus, createNewReview} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
 import {SafeAreaView} from "react-native-safe-area-context";
 import PageHeader from "@/components/PageHeader";
 import Button from "@/components/common/Button";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const PaymentReviewScreen = ({setStatus}) => {
+
+    const { setReviewId } = useGlobalContext();
 
     const toSurveyStep = async () => {
         if (validatePayment()) {
@@ -15,7 +18,10 @@ const PaymentReviewScreen = ({setStatus}) => {
             // в будущем опрос может быть не всегда первым и будет другая
             // логика связанная с оплатой или опросом повторным
             console.log('Put Review record creation here')
-            await addNewReviewStatusRecord(SurveyStatus.FirstSurvey);
+
+            const reviewId = await createNewReview();
+            setReviewId(reviewId)
+            await addNewReviewStatus(reviewId, SurveyStatus.FirstSurvey);
             setStatus(SurveyStatus.FirstSurvey);
         }
     }

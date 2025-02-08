@@ -4,12 +4,15 @@ import React from 'react'
 import {images} from '../../../constants'
 import Button from "@/components/common/Button";
 import {SurveyStatus} from "@/constants/survey";
-import {addNewReviewStatusRecord} from "@/service/ReviewService";
+import {addNewReviewStatus} from "@/service/ReviewService";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const WaitingForResultReviewScreen = ({setStatus}) => {
 
+    const { reviewId } = useGlobalContext();
+
     const testResultsOnPressTEMPORARY = async () => {
-        await addNewReviewStatusRecord(SurveyStatus.ReviewResults);
+        await addNewReviewStatus(reviewId, SurveyStatus.ReviewResults);
         setStatus(SurveyStatus.ReviewResults);
     }
 

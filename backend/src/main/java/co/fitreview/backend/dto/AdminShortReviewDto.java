@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -15,6 +15,6 @@ public class AdminShortReviewDto {
     private String name;
     private String email;
     private String status;
-    private LocalDate date;
+    private LocalDateTime date;
 
 }

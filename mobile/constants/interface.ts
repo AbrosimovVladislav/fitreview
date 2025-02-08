@@ -52,7 +52,6 @@ export interface Training {
 interface BodySegmentDescription {
     id: number;
     descriptions: string[];
-    descriptionsRus: string[];
 }
 
 // Описание для BodySegment

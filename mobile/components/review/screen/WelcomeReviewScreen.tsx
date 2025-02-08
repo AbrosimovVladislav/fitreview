@@ -6,13 +6,11 @@ import {Ionicons} from "@expo/vector-icons";
 import Button from "@/components/common/Button";
 
 import {images} from '../../../constants'
-import {addNewReviewStatusRecord} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
 
 const WelcomeReviewScreen = ({setStatus}) => {
 
     const toPaymentStep = async () => {
-        await addNewReviewStatusRecord(SurveyStatus.PaymentScreen);
         setStatus(SurveyStatus.PaymentScreen);
     }
 

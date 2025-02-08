@@ -6,5 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class NewStatusDto {
-    private String status; // Новый статус
+    private Long reviewId;
+    private String status;
 }

@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -18,7 +18,7 @@ import java.util.List;
 public class ReviewDetailsDto {
     private Long id;
 
-    private LocalDate date;
+    private LocalDateTime date;
 
     private Integer estimation;
 

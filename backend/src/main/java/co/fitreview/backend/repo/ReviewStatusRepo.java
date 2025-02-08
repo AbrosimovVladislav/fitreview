@@ -9,6 +9,6 @@ import java.util.Optional;
 @Repository
 public interface ReviewStatusRepo extends JpaRepository<ReviewStatus, Long> {
 
-    Optional<ReviewStatus> findFirstByUserIdOrderByDateDesc(Long userId);
+    Optional<ReviewStatus> findFirstByReviewIdOrderByDateDesc(Long userId);
 
 }
