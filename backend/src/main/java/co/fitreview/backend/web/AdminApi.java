@@ -32,7 +32,9 @@ public class AdminApi {
             //TODO здесь мы берем последний актуальный статус по юзеру а не по конкретному ревью
             //TODO возможно надо будет передлать в том числе и модель данных
             //TODO либо сделать метод который сможет определять какой статус к какому ревью относится
-            ReviewStatus actualStatus = reviewService.getLastReviewStatusByUserId(review.getUserData().getFrUser().getId());
+
+            //TODO Upd. Тут надо получать инфу по конкретному ревью, вернемся сюда как дойдем до админки
+            ReviewStatus actualStatus = reviewService.getLastReviewStatusByUserId(review.getFrUser().getId());
             return adminApiMapper.map(review, actualStatus.getValue());
         }).toList();
     }

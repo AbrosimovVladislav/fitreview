@@ -30,7 +30,6 @@ const SignIn = () => {
 
             // Отправляем запрос на логин
             const serverResponse = await postRequest("/auth/login", { idToken });
-            console.log("Server response:", serverResponse);
 
             router.replace("/home");
         } catch (error) {

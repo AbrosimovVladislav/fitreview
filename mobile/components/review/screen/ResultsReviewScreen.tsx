@@ -10,13 +10,10 @@ import BackViewReviewResultTab from "@/components/review/result/tab/back/BackVie
 import useAppwrite from "@/lib/useAppwrite";
 import {getLastReviewByUserId} from "@/service/ReviewService";
 import SideViewReviewResultTab from "@/components/review/result/tab/side/SideViewReviewResultTab";
-import Review from "@/app/(tabs)/review";
+import {IReview} from "@/constants/interface";
 
-const ResultsReviewScreen = ({user}) => {
-
-    const testUserId = '1';
-
-    const {data: reviewData} = useAppwrite<Review>(() => getLastReviewByUserId(testUserId))
+const ResultsReviewScreen = ({}) => {
+    const {data: reviewData} = useAppwrite<IReview>(() => getLastReviewByUserId())
 
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
@@ -64,6 +61,8 @@ const ResultsReviewScreen = ({user}) => {
             content: reviewData && reviewData.bodySegments ? (
                 <SummaryReviewResultTab
                     userData={reviewData.userData}
+                    reviewDate={reviewData.date}
+                    estimation={reviewData.estimation}
                     problems={reviewData.problems}
                     trainingObjectives={reviewData.trainingObjectives}
                     generalRecommendations={reviewData.generalRecommendations}

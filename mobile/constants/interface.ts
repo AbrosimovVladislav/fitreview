@@ -56,7 +56,7 @@ interface BodySegmentDescription {
 }
 
 // Описание для BodySegment
-interface BodySegment {
+interface IBodySegment {
     id: number;
     name: string;
     title: string;
@@ -68,7 +68,7 @@ interface BodySegment {
 }
 
 // Описание для Problems, Objectives, Recommendations
-interface Problem {
+interface IProblem {
     id: number;
     title: string;
     description: string;
@@ -76,37 +76,34 @@ interface Problem {
     iconType: string;
 }
 
-interface TrainingObjective {
+interface ITrainingObjective {
     id: number;
     title: string;
     description: string;
     iconType: string;
 }
 
-interface GeneralRecommendation {
+interface IGeneralRecommendation {
     id: number;
     title: string;
     description: string;
     iconType: string;
 }
 
-// Описание для UserData
-interface UserData {
-    id: number;
-    userName: string;
-    estimation: number;
-    weight: number;
-    fatIndex: number;
-    age: number;
+interface IUserData{
+    weight: string;
+    fatIndex: string;
+    age: string;
 }
 
 // Описание для главного объекта
-interface Review {
+export interface IReview {
     id: number;
     date: string;
-    userData: UserData;
-    bodySegments: BodySegment[];
-    problems: Problem[];
-    trainingObjectives: TrainingObjective[];
-    generalRecommendations: GeneralRecommendation[];
+    estimation: number;
+    userData: IUserData;
+    bodySegments: IBodySegment[];
+    problems: IProblem[];
+    trainingObjectives: ITrainingObjective[];
+    generalRecommendations: IGeneralRecommendation[];
 }

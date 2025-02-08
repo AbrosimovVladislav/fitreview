@@ -45,7 +45,7 @@ export default function ReviewsPage() {
     ];
 
     const mockHandleSorting = (value: string) => {
-        console.log("Sorting value:", value);
+
     };
 
     return (

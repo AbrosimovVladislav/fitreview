@@ -1,10 +1,6 @@
--- Вставляем данные в таблицу UserData
-INSERT INTO user_data (id, user_name, estimation, weight, fat_index, age, fr_user_id)
-VALUES (1, 'Generated User', 82, 78, 22, 29, 5);
-
 -- Вставляем данные в таблицу Review
-INSERT INTO Review (id, date, user_data_id)
-VALUES (1, '2024-11-05', 1);
+INSERT INTO Review (id, date, fr_user_id, estimation, fat_index)
+VALUES (1, '2024-11-05', 8, 80, '22');
 
 
 -- Вставляем данные в таблицу BodySegment для FrontView

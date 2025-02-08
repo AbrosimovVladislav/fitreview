@@ -1,5 +1,7 @@
 package co.fitreview.backend.entity.review;
 
+import co.fitreview.backend.entity.FRUser;
+import co.fitreview.backend.entity.survey.Answer;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,9 +22,16 @@ public class Review {
 
     private LocalDate date; // Дата проведения ревью
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_data_id", referencedColumnName = "id")
-    private UserData userData; // Ссылка на данные пользователя
+    private Integer estimation;
+
+    private String fatIndex;
+
+    @ManyToOne
+    @JoinColumn(name = "fr_user_id", nullable = false) // Привязываем к пользователю
+    private FRUser frUser;
+
+    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Answer> answers; // Все ответы, связанные с ревью
 
     @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<BodySegment> bodySegments; // Сегменты тела

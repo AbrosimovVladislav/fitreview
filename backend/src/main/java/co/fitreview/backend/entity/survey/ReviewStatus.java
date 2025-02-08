@@ -1,9 +1,7 @@
 package co.fitreview.backend.entity.survey;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import co.fitreview.backend.entity.review.Review;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -24,4 +22,7 @@ public class ReviewStatus {
     private String value;
     private LocalDateTime date;
 
+    @ManyToOne
+    @JoinColumn(name = "review_id", nullable = true) // Внешний ключ указывает на Review
+    private Review review;
 }

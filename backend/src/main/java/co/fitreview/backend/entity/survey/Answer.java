@@ -1,5 +1,6 @@
 package co.fitreview.backend.entity.survey;
 
+import co.fitreview.backend.entity.review.Review;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -21,7 +22,11 @@ public class Answer {
     @Column(length = 10000)
     private String value;
     private LocalDateTime date;
-    private Long userId;
+
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "review_id", nullable = false) // Привязка к конкретному ревью
+    private Review review;
 
     @ManyToOne
     @JsonIgnore

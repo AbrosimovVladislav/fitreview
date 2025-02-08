@@ -11,8 +11,8 @@ public class AdminApiMapper {
 
         return AdminShortReviewDto.builder()
                 .id(String.valueOf(review.getId()))
-                .name(review.getUserData().getFrUser().getName())
-                .email(review.getUserData().getFrUser().getEmail())
+                .name(review.getFrUser().getName())
+                .email(review.getFrUser().getEmail())
                 .status(actualStatus)
                 .date(review.getDate())
                 .build();

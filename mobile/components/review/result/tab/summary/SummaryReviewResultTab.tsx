@@ -11,6 +11,8 @@ import {IconBed, IconDatabase, IconMeat, IconMoodNervous, IconShirt} from "@tabl
 
 const SummaryReviewResultTab = ({
                                     userData,
+                                    reviewDate,
+                                    estimation,
                                     problems,
                                     trainingObjectives,
                                     generalRecommendations,
@@ -51,7 +53,9 @@ const SummaryReviewResultTab = ({
                 summary
             />
             <SummaryEstimationArea
-                summaryData={userData}
+                userData={userData}
+                estimation={estimation}
+                reviewDate={reviewDate}
             />
             <Divider/>
 
