@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import SideMenu from "@/components/design-system/SideMenu";
 import Header from "@/components/design-system/Header";
-import ClientProviders from "@/components/design-system/ClientProviders"; // Обёртка для клиентских задач
+import ClientProviders from "@/components/ClientProviders"; // Обёртка для клиентских задач
 
 export const metadata: Metadata = {
     title: "Admin Panel",

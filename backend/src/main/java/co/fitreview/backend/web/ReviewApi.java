@@ -35,13 +35,9 @@ public class ReviewApi {
         reviewService.createReviewStatus(statusDto.getReviewId(), statusDto.getStatus());
     }
 
-    @GetMapping()
-    public ReviewDetailsDto getLastReviewByUserId(HttpServletRequest request) {
-        String uid = (String) request.getAttribute("uid");
-        FRUser user = frUserRepo.findByFirebaseId(uid)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        return reviewService.getLastReviewByUserId(user.getId())
+    @GetMapping("/{reviewId}")
+    public ReviewDetailsDto getReviewById(@PathVariable Long reviewId){
+                return reviewService.getReviewById(reviewId)
                 .map(reviewMapper::map)
                 .orElse(null);
     }

@@ -1,4 +1,4 @@
-package co.fitreview.backend.dto;
+package co.fitreview.backend.dto.admin;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -51,4 +51,8 @@ public class ReviewService {
     public Optional<Review> getLastReviewByUserId(Long userId) {
         return reviewRepo.findFirstByFrUserIdOrderByDateDesc(userId);
     }
+
+    public Optional<Review> getReviewById(Long reviewId) {
+        return reviewRepo.findById(reviewId);
+    }
 }

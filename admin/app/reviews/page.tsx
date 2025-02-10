@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Table from "@/components/design-system/Table";
 import { TableRowType } from "@/components/design-system/TableRow";
 import {reviewApi} from "@/service/reviewApi";
-import {IAdminShortReviewDto} from "@/interface/IAdminShortReviewDto";
+import {IAdminShortReviewDto} from "@/interface/interfaces";
 import Select from "@/components/design-system/Select";
 
 export default function ReviewsPage() {

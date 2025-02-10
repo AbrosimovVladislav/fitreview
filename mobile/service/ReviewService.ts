@@ -8,9 +8,9 @@ export const addNewReviewStatus = async (reviewId, status) => {
     return await securePostRequest('/review/status', {reviewId: reviewId, status: status});
 }
 
-export const getLastReviewByUserId = async () => {
-    return await secureGetRequest(`/review`);
-};
+export const getReviewById = async (reviewId) => {
+    return await secureGetRequest(`/review/${reviewId}`)
+}
 
 export const getLastReviewIdByUserId = async () => {
     return await secureGetRequest(`/review/id`);

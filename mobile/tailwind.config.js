@@ -22,6 +22,9 @@ module.exports = {
           100: "#CDCDE0",
           300: "rgba(205,205,224,0.76)"
         },
+        milk: {
+          100: "#FFF8F7"
+        }
       },
       fontFamily: {
         bebas: ["BebasNeue-Regular", "sans-serif"],
