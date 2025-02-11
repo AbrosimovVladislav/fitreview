@@ -2,7 +2,7 @@ import React from 'react'
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import BodySegmentComponent from "@/components/BodySegmentComponent";
 
-export default function ReviewViewsFulfillmentArea() {
+export default function ReviewViewsFulfillmentArea({bodySegments}) {
 
     const handleUpload = (file: File) => {
         console.log("Uploaded file:", file);
@@ -13,40 +13,22 @@ export default function ReviewViewsFulfillmentArea() {
     };
 
     return (
-        <Accordion type="single" collapsible>
+        <Accordion type="multiple" collapsible>
             {/* Front View */}
             <AccordionItem value="front-view">
                 <AccordionTrigger>Front View</AccordionTrigger>
                 <AccordionContent>
                     <div className="grid grid-cols-2 gap-4">
-                        <BodySegmentComponent
-                            title="Front View Left 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
-                        <BodySegmentComponent
-                            title="Front View Right 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
-                        <BodySegmentComponent
-                            title="Front View Left 2"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
-                        <BodySegmentComponent
-                            title="Front View Right 2"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
+                        {
+                            bodySegments.filter(segment=> 'FrontView' === segment.segmentGroup)
+                                .map(segment =>
+                                <BodySegmentComponent
+                                    segment={segment}
+                                    onUpload={handleUpload}
+                                    onLinkClick={handleLinkClick}
+                                />
+                            )
+                        }
                     </div>
                 </AccordionContent>
             </AccordionItem>
@@ -56,43 +38,35 @@ export default function ReviewViewsFulfillmentArea() {
                 <AccordionTrigger>Back View</AccordionTrigger>
                 <AccordionContent>
                     <div className="grid grid-cols-2 gap-4">
-                        <BodySegmentComponent
-                            title="Back View Left 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
-                        <BodySegmentComponent
-                            title="Back View Right 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
+                        {
+                            bodySegments.filter(segment=> 'BackView' === segment.segmentGroup)
+                                .map(segment =>
+                                    <BodySegmentComponent
+                                        segment={segment}
+                                        onUpload={handleUpload}
+                                        onLinkClick={handleLinkClick}
+                                    />
+                                )
+                        }
                     </div>
                 </AccordionContent>
             </AccordionItem>
 
             {/* Side Views */}
-            <AccordionItem value="side-views">
-                <AccordionTrigger>Side Views</AccordionTrigger>
+            <AccordionItem value="side-view">
+                <AccordionTrigger>Side View</AccordionTrigger>
                 <AccordionContent>
                     <div className="grid grid-cols-2 gap-4">
-                        <BodySegmentComponent
-                            title="Side View Left 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
-                        <BodySegmentComponent
-                            title="Side View Right 1"
-                            description="... and here we can see under arrow 4 a lot of issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
+                        {
+                            bodySegments.filter(segment=> 'SideView' === segment.segmentGroup)
+                                .map(segment =>
+                                    <BodySegmentComponent
+                                        segment={segment}
+                                        onUpload={handleUpload}
+                                        onLinkClick={handleLinkClick}
+                                    />
+                                )
+                        }
                     </div>
                 </AccordionContent>
             </AccordionItem>
@@ -102,13 +76,16 @@ export default function ReviewViewsFulfillmentArea() {
                 <AccordionTrigger>Summary View</AccordionTrigger>
                 <AccordionContent>
                     <div className="grid grid-cols-2 gap-4">
-                        <BodySegmentComponent
-                            title="Summary View"
-                            description="... and here we can summarize all issues..."
-                            imageUrl="https://via.placeholder.com/150"
-                            onUpload={handleUpload}
-                            onLinkClick={handleLinkClick}
-                        />
+                        {
+                            bodySegments.filter(segment=> 'SummaryView' === segment.segmentGroup)
+                                .map(segment =>
+                                    <BodySegmentComponent
+                                        segment={segment}
+                                        onUpload={handleUpload}
+                                        onLinkClick={handleLinkClick}
+                                    />
+                                )
+                        }
                     </div>
                 </AccordionContent>
             </AccordionItem>

@@ -1,5 +1,6 @@
 package co.fitreview.backend.web.mapper;
 
+import co.fitreview.backend.dto.admin.AdminBodySegmentDto;
 import co.fitreview.backend.dto.admin.AdminReviewAnswerDto;
 import co.fitreview.backend.dto.admin.AdminReviewDetailsDto;
 import co.fitreview.backend.dto.admin.AdminShortReviewDto;
@@ -35,9 +36,21 @@ public class AdminApiMapper {
                 .filter(answer -> PHOTO.equals(answer.getQuestion().getType()))
                 .map(answer -> AdminReviewAnswerDto.builder()
                         .question(answer.getQuestion().getTitle())
-                        .answer(answer.getValue().replaceAll("\"",""))
+                        .answer(answer.getValue().replaceAll("\"", ""))
                         .build())
                 .toList();
+
+        List<AdminBodySegmentDto> bodySegments = review.getBodySegments().stream()
+                .map(segment -> AdminBodySegmentDto.builder()
+                        .id(segment.getId())
+                        .name(segment.getName())
+                        .title(segment.getTitle())
+                        .segmentGroup(segment.getSegmentGroup())
+                        .userImage(segment.getUserImage())
+                        .diagramImage(segment.getDiagramImage())
+                        .description(segment.getDescription())
+                        .estimation(segment.getEstimation())
+                        .build()).toList();
 
         return AdminReviewDetailsDto.builder()
                 .userName(review.getFrUser().getName())
@@ -45,6 +58,7 @@ public class AdminApiMapper {
                 .creationDate(review.getDate())
                 .answers(answers)
                 .photos(photos)
+                .bodySegments(bodySegments)
                 .build();
     }
 

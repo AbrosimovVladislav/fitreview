@@ -17,5 +17,6 @@ public class AdminReviewDetailsDto {
     private LocalDateTime creationDate;
     private List<AdminReviewAnswerDto> answers;
     private List<AdminReviewAnswerDto> photos;
+    private List<AdminBodySegmentDto> bodySegments;
 
 }

@@ -1,6 +1,7 @@
 package co.fitreview.backend.service;
 
 import co.fitreview.backend.entity.FRUser;
+import co.fitreview.backend.entity.review.BodySegment;
 import co.fitreview.backend.entity.review.Review;
 import co.fitreview.backend.entity.survey.ReviewStatus;
 import co.fitreview.backend.exception.EntityNotFoundException;
@@ -22,11 +23,19 @@ public class ReviewService {
 
     private final ReviewRepo reviewRepo;
     private final ReviewStatusRepo reviewStatusRepo;
+    private final BodySegmentService bodySegmentService;
 
     public Review createNewReview(FRUser user) {
-        return reviewRepo.save(new Review()
+        List<BodySegment> emptyBodySegments = bodySegmentService.getEmptyBodySegments();
+
+        // Установить связь между каждым BodySegment и создаваемым ревью
+        Review newReview = new Review()
                 .setDate(LocalDateTime.now())
-                .setFrUser(user));
+                .setFrUser(user);
+
+        emptyBodySegments.forEach(segment -> segment.setReview(newReview));
+
+        return reviewRepo.save(newReview.setBodySegments(emptyBodySegments));
     }
 
     public ReviewStatus createReviewStatus(Long reviewId, String status) {

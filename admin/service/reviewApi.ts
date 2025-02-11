@@ -37,7 +37,8 @@ export const reviewApi = {
             userEmail: data.userEmail ?? "Error Email",
             creationDate: data.creationDate ?? new Date().toISOString(),
             answers: data.answers ?? [],
-            photos: data.photos ?? []
+            photos: data.photos ?? [],
+            bodySegments: data.bodySegments ?? [],
         };
     }
 };

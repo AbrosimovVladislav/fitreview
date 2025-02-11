@@ -12,9 +12,21 @@ export interface IAdminReviewDetailsDto {
     creationDate: string;
     answers: IAdminReviewAnswerDto[];
     photos: string[];
+    bodySegments: IAdminBodySegmentDto[];
 }
 
-export interface IAdminReviewAnswerDto{
+export interface IAdminReviewAnswerDto {
     question: string;
     answer: string;
+}
+
+export interface IAdminBodySegmentDto {
+    id: number;
+    name: string;
+    title: string;
+    segmentGroup: string;
+    userImage: string;
+    diagramImage: string;
+    description: string;
+    estimation: number;
 }

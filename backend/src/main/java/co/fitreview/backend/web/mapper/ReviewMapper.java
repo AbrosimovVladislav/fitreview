@@ -2,8 +2,11 @@ package co.fitreview.backend.web.mapper;
 
 import co.fitreview.backend.dto.ReviewDetailsDto;
 import co.fitreview.backend.dto.UserDataDto;
+import co.fitreview.backend.entity.review.BodySegment;
 import co.fitreview.backend.entity.review.Review;
 import org.springframework.stereotype.Component;
+
+import java.util.Comparator;
 
 @Component
 public class ReviewMapper {
@@ -33,7 +36,9 @@ public class ReviewMapper {
                 .estimation(review.getEstimation())
                 .userData(userDataDto)
                 .frUser(review.getFrUser())
-                .bodySegments(review.getBodySegments())
+                .bodySegments(review.getBodySegments().stream()
+                        .sorted(Comparator.comparing(BodySegment::getId))
+                        .toList())
                 .problems(review.getProblems())
                 .trainingObjectives(review.getTrainingObjectives())
                 .generalRecommendations(review.getGeneralRecommendations())

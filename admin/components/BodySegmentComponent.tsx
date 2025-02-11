@@ -1,23 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
+import {IAdminBodySegmentDto} from "@/interface/interfaces";
 
 interface SegmentProps {
-    title: string;
-    description: string;
-    imageUrl?: string;
+    segment: IAdminBodySegmentDto;
     onUpload: (file: File) => void;
     onLinkClick: () => void;
 }
 
-export default function BodySegmentComponent({
-                                                 title,
-                                                 description,
-                                                 imageUrl,
-                                                 onUpload,
-                                                 onLinkClick,
-                                             }: SegmentProps) {
-    const [comment, setComment] = useState(description);
+export default function BodySegmentComponent({segment, onUpload, onLinkClick,}: SegmentProps) {
+    const [comment, setComment] = useState(segment.description ?? 'Insert your description here');
 
     const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
@@ -28,7 +21,7 @@ export default function BodySegmentComponent({
     return (
         <div className="border p-4 rounded-md flex flex-col space-y-4">
             {/* Заголовок */}
-            <h2 className="text-lg font-semibold">{title}</h2>
+            <h2 className="text-lg font-semibold">{segment.title}</h2>
 
             {/* Текстовое поле с описанием */}
             <textarea
@@ -40,9 +33,9 @@ export default function BodySegmentComponent({
 
             {/* Зона с изображением */}
             <div className="flex flex-col items-center space-y-2">
-                {imageUrl ? (
+                {segment.userImage ? (
                     <img
-                        src={imageUrl}
+                        src={segment.userImage}
                         alt="Segment"
                         className="w-32 h-32 object-cover rounded-md"
                     />

@@ -46,7 +46,7 @@ export default function ReviewDetailsPage() {
             <PhotosArea photos={data.photos || []} />
             <AdditionalInfoArea />
 
-            <ReviewViewsFulfillmentArea />
+            <ReviewViewsFulfillmentArea bodySegments={data.bodySegments}/>
 
             <GeneralEstimationArea />
             <ReviewResultsArea />

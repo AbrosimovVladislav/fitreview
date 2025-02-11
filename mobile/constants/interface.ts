@@ -48,12 +48,6 @@ export interface Training {
     "description": string
 }
 
-// Описание для BodySegmentDescription
-interface BodySegmentDescription {
-    id: number;
-    descriptions: string[];
-}
-
 // Описание для BodySegment
 interface IBodySegment {
     id: number;
@@ -63,7 +57,7 @@ interface IBodySegment {
     estimation: number | null;
     userImage: string;
     diagramImage: string;
-    bodySegmentDescription: BodySegmentDescription;
+    description: string;
 }
 
 // Описание для Problems, Objectives, Recommendations
