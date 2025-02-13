@@ -2,74 +2,31 @@ import React from 'react'
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import BodySegmentComponent from "@/components/BodySegmentComponent";
 
-export default function ReviewViewsFulfillmentArea({bodySegments}) {
+export default function ReviewViewsFulfillmentArea({bodySegments, reviewId}) {
 
-    const handleUpload = (file: File) => {
-        console.log("Uploaded file:", file);
-    };
-
-    const handleLinkClick = () => {
-        alert("Image link clicked");
-    };
+    const viewTypes = [
+        {key: "front-view", label: "Front View", segmentGroup: "FrontView"},
+        {key: "back-view", label: "Back View", segmentGroup: "BackView"},
+        {key: "side-view", label: "Side View", segmentGroup: "SideView"},
+        // { key: "summary-view", label: "Summary View", segmentGroup: "SummaryView" }
+    ];
 
     return (
-        <Accordion type="multiple" collapsible>
-            {/* Front View */}
-            <AccordionItem value="front-view">
-                <AccordionTrigger>Front View</AccordionTrigger>
-                <AccordionContent>
-                    <div className="grid grid-cols-2 gap-4">
-                        {
-                            bodySegments.filter(segment=> 'FrontView' === segment.segmentGroup)
-                                .map(segment =>
-                                <BodySegmentComponent
-                                    segment={segment}
-                                    onUpload={handleUpload}
-                                    onLinkClick={handleLinkClick}
-                                />
-                            )
-                        }
-                    </div>
-                </AccordionContent>
-            </AccordionItem>
-
-            {/* Back View */}
-            <AccordionItem value="back-view">
-                <AccordionTrigger>Back View</AccordionTrigger>
-                <AccordionContent>
-                    <div className="grid grid-cols-2 gap-4">
-                        {
-                            bodySegments.filter(segment=> 'BackView' === segment.segmentGroup)
-                                .map(segment =>
-                                    <BodySegmentComponent
-                                        segment={segment}
-                                        onUpload={handleUpload}
-                                        onLinkClick={handleLinkClick}
-                                    />
-                                )
-                        }
-                    </div>
-                </AccordionContent>
-            </AccordionItem>
-
-            {/* Side Views */}
-            <AccordionItem value="side-view">
-                <AccordionTrigger>Side View</AccordionTrigger>
-                <AccordionContent>
-                    <div className="grid grid-cols-2 gap-4">
-                        {
-                            bodySegments.filter(segment=> 'SideView' === segment.segmentGroup)
-                                .map(segment =>
-                                    <BodySegmentComponent
-                                        segment={segment}
-                                        onUpload={handleUpload}
-                                        onLinkClick={handleLinkClick}
-                                    />
-                                )
-                        }
-                    </div>
-                </AccordionContent>
-            </AccordionItem>
+        <Accordion type="multiple">
+            {viewTypes.map(({key, label, segmentGroup}) => (
+                <AccordionItem key={key} value={key}>
+                    <AccordionTrigger>{label}</AccordionTrigger>
+                    <AccordionContent>
+                        <div className="grid grid-cols-2 gap-4">
+                            {bodySegments
+                                .filter(segment => segment.segmentGroup === segmentGroup)
+                                .map(segment => (
+                                    <BodySegmentComponent key={segment.id} reviewId={reviewId} segment={segment}/>
+                                ))}
+                        </div>
+                    </AccordionContent>
+                </AccordionItem>
+            ))}
 
             {/* Summary View */}
             <AccordionItem value="summary-view">
@@ -77,13 +34,11 @@ export default function ReviewViewsFulfillmentArea({bodySegments}) {
                 <AccordionContent>
                     <div className="grid grid-cols-2 gap-4">
                         {
-                            bodySegments.filter(segment=> 'SummaryView' === segment.segmentGroup)
+                            bodySegments.filter(segment => 'SummaryView' === segment.segmentGroup)
                                 .map(segment =>
-                                    <BodySegmentComponent
-                                        segment={segment}
-                                        onUpload={handleUpload}
-                                        onLinkClick={handleLinkClick}
-                                    />
+                                    <div key={segment.id}>
+                                        <BodySegmentComponent reviewId={reviewId} segment={segment}/>
+                                    </div>
                                 )
                         }
                     </div>

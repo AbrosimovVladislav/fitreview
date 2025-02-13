@@ -28,6 +28,7 @@ module.exports = {
                     DEFAULT: '#000'
                 },
                 gray: {
+                    '1': '#f1f1f5',
                     '10': '#ebebf1',
                     '100': '#CDCDE0',
                     '300': 'rgba(205,205,224,0.76)',

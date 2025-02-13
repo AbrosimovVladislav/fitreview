@@ -14,20 +14,49 @@ export const beClient = {
         }
     },
 
-    async post(endpoint: string, body: any) {
+    async post(endpoint: string, body: any, isFormData = false) {
         try {
+            const headers = isFormData ? {} : { "Content-Type": "application/json" };
+
             const response = await fetch(`${BASE_URL}${endpoint}`, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(body),
+                headers,
+                body: isFormData ? body : JSON.stringify(body),
             });
+
             if (!response.ok) {
                 throw new Error(`POST ${endpoint} failed: ${response.status}`);
             }
-            return JSON.parse(JSON.stringify(await response.json())); // Гарантируем JSON
+
+            // Проверяем, есть ли JSON в ответе
+            const contentType = response.headers.get("Content-Type");
+            if (contentType && contentType.includes("application/json")) {
+                return response.json();
+            }
+
+            // Если контент не JSON, просто возвращаем null (или true, если нужно)
+            return null;
         } catch (error) {
             console.error(`API POST Error: ${error}`);
             throw error;
         }
-    },
+    }
+
+
+    // async post(endpoint: string, body: any) {
+    //     try {
+    //         const response = await fetch(`${BASE_URL}${endpoint}`, {
+    //             method: "POST",
+    //             headers: { "Content-Type": "application/json" },
+    //             body: JSON.stringify(body),
+    //         });
+    //         if (!response.ok) {
+    //             throw new Error(`POST ${endpoint} failed: ${response.status}`);
+    //         }
+    //         return JSON.parse(JSON.stringify(await response.json())); // Гарантируем JSON
+    //     } catch (error) {
+    //         console.error(`API POST Error: ${error}`);
+    //         throw error;
+    //     }
+    // },
 };

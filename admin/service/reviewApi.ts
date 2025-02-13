@@ -40,6 +40,26 @@ export const reviewApi = {
             photos: data.photos ?? [],
             bodySegments: data.bodySegments ?? [],
         };
+    },
+
+    async uploadBodySegmentImage(bodySegmentId: number, reviewId: number, file: File, imageType: "userImage" | "diagramImage"): Promise<void> {
+        console.log(reviewId)
+        const formData = new FormData();
+        formData.append("bodySegmentId", String(bodySegmentId));
+        formData.append("reviewId", String(reviewId));
+        formData.append("imageType", imageType);
+        formData.append("file", file);
+
+        await beClient.post("/api/v1/admin/public/body-segment/image", formData, true);
+    },
+
+    async saveBodySegmentDescription(bodySegmentId: number, reviewId: number, description: string): Promise<void> {
+        await beClient.post("/api/v1/admin/public/body-segment/description", {
+            bodySegmentId,
+            reviewId,
+            description,
+        });
     }
+
 };
 

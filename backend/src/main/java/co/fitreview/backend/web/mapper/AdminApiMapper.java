@@ -4,9 +4,11 @@ import co.fitreview.backend.dto.admin.AdminBodySegmentDto;
 import co.fitreview.backend.dto.admin.AdminReviewAnswerDto;
 import co.fitreview.backend.dto.admin.AdminReviewDetailsDto;
 import co.fitreview.backend.dto.admin.AdminShortReviewDto;
+import co.fitreview.backend.entity.review.BodySegment;
 import co.fitreview.backend.entity.review.Review;
 import org.springframework.stereotype.Component;
 
+import java.util.Comparator;
 import java.util.List;
 
 import static co.fitreview.backend.entity.QuestionType.PHOTO;
@@ -41,6 +43,7 @@ public class AdminApiMapper {
                 .toList();
 
         List<AdminBodySegmentDto> bodySegments = review.getBodySegments().stream()
+                .sorted(Comparator.comparing(BodySegment::getId))
                 .map(segment -> AdminBodySegmentDto.builder()
                         .id(segment.getId())
                         .name(segment.getName())
