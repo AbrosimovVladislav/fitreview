@@ -59,6 +59,14 @@ export const reviewApi = {
             reviewId,
             description,
         });
+    },
+
+    async saveBodySegmentEstimation(bodySegmentId: number, reviewId: number, estimation: number): Promise<void> {
+        await beClient.post("/api/v1/admin/public/body-segment/estimation", {
+            bodySegmentId,
+            reviewId,
+            estimation,
+        });
     }
 
 };

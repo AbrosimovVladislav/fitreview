@@ -66,4 +66,13 @@ public class BodySegmentService {
         bodySegment.setDescription(description);
         bodySegmentRepository.save(bodySegment);
     }
+
+    @Transactional
+    public void updateBodySegmentEstimation(Long bodySegmentId, Integer estimation) {
+        BodySegment bodySegment = bodySegmentRepository.findById(bodySegmentId)
+                .orElseThrow(() -> new EntityNotFoundException("BodySegment", String.valueOf(bodySegmentId), "BodySegment with such id not found"));
+
+        bodySegment.setEstimation(estimation);
+        bodySegmentRepository.save(bodySegment);
+    }
 }

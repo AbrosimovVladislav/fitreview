@@ -2,6 +2,7 @@ package co.fitreview.backend.web;
 
 import co.fitreview.backend.dto.admin.AdminReviewDetailsDto;
 import co.fitreview.backend.dto.admin.AdminSaveDescriptionDto;
+import co.fitreview.backend.dto.admin.AdminSaveEstimationDto;
 import co.fitreview.backend.dto.admin.AdminShortReviewDto;
 import co.fitreview.backend.entity.review.Review;
 import co.fitreview.backend.entity.survey.ReviewStatus;
@@ -84,6 +85,16 @@ public class AdminApi {
         bodySegmentService.updateBodySegmentDescription(
                 adminSaveDescriptionDto.getBodySegmentId(),
                 adminSaveDescriptionDto.getDescription()
+        );
+        return ResponseEntity.ok().build();
+    }
+
+    @CrossOrigin
+    @PostMapping("/body-segment/estimation")
+    public ResponseEntity<Void> saveEstimationForBodySegment(@RequestBody AdminSaveEstimationDto adminSaveEstimationDto) {
+        bodySegmentService.updateBodySegmentEstimation(
+                adminSaveEstimationDto.getBodySegmentId(),
+                adminSaveEstimationDto.getEstimation()
         );
         return ResponseEntity.ok().build();
     }

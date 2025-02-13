@@ -1,37 +1,58 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { IAdminBodySegmentDto } from "@/interface/interfaces";
 import { reviewApi } from "@/service/reviewApi";
 import { useQueryClient } from "@tanstack/react-query";
 
 interface SegmentProps {
-    reviewId: number,
+    reviewId: number;
     segment: IAdminBodySegmentDto;
 }
 
-export default function BodySegmentComponent({reviewId, segment }: SegmentProps) {
+export default function BodySegmentComponent({ reviewId, segment }: SegmentProps) {
     const [description, setDescription] = useState(segment.description ?? "Insert your description here");
-    const [status, setStatus] = useState<"saved" | "changed" | "saving">("saved");
+    const [descriptionStatus, setDescriptionStatus] = useState<"saved" | "changed" | "saving">("saved");
+
+    const [estimation, setEstimation] = useState(segment.estimation ?? 0);
+    const [estimationStatus, setEstimationStatus] = useState<"saved" | "changed" | "saving">("saved");
+
     const [loading, setLoading] = useState<"userImage" | "diagramImage" | null>(null);
     const queryClient = useQueryClient(); // Доступ к кэшу query
 
-    // Таймер для дебаунса
+    // Дебаунс для описания
     useEffect(() => {
-        if (status === "changed") {
+        if (descriptionStatus === "changed") {
             const timer = setTimeout(async () => {
-                setStatus("saving");
+                setDescriptionStatus("saving");
                 try {
                     await reviewApi.saveBodySegmentDescription(segment.id, reviewId, description);
-                    setStatus("saved");
+                    setDescriptionStatus("saved");
                     await queryClient.invalidateQueries(["review"]);
                 } catch (error) {
                     console.error("Failed to save description:", error);
                 }
-            }, 2000); // Ждем 2 секунды после ввода
-            return () => clearTimeout(timer); // Очистка таймера при изменении
+            }, 2000);
+            return () => clearTimeout(timer);
         }
     }, [description]);
+
+    // Дебаунс для оценки
+    useEffect(() => {
+        if (estimationStatus === "changed") {
+            const timer = setTimeout(async () => {
+                setEstimationStatus("saving");
+                try {
+                    await reviewApi.saveBodySegmentEstimation(segment.id, reviewId, estimation);
+                    setEstimationStatus("saved");
+                    await queryClient.invalidateQueries(["review"]);
+                } catch (error) {
+                    console.error("Failed to save estimation:", error);
+                }
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [estimation]);
 
     const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>, imageType: "userImage" | "diagramImage") => {
         if (e.target.files && e.target.files[0]) {
@@ -58,15 +79,34 @@ export default function BodySegmentComponent({reviewId, segment }: SegmentProps)
                     value={description}
                     onChange={(e) => {
                         setDescription(e.target.value);
-                        setStatus("changed"); // Меняем статус на "changed" при вводе
+                        setDescriptionStatus("changed"); // Меняем статус на "changed" при вводе
                     }}
                     className="border rounded-md p-2 text-gray-700 w-full"
                     rows={3}
                 />
-                <span className={`absolute bottom-2 right-2 text-sm ${status === "saved" ? "text-green-600" : "text-yellow-600"}`}>
-                    {status === "saving" ? "Saving..." : status === "changed" ? "Changed" : "Saved"}
+                <span className={`absolute bottom-2 right-2 text-sm ${descriptionStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
+                    {descriptionStatus === "saving" ? "Saving..." : descriptionStatus === "changed" ? "Changed" : "Saved"}
                 </span>
             </div>
+
+            {/* Оценка (Estimation) только для SummaryView */}
+            {segment.segmentGroup === "SummaryView" && (
+                <div className="relative">
+                    <label className="block text-lg font-semibold">Estimation:</label>
+                    <input
+                        type="number"
+                        value={estimation}
+                        onChange={(e) => {
+                            setEstimation(Number(e.target.value));
+                            setEstimationStatus("changed"); // Меняем статус на "changed" при изменении оценки
+                        }}
+                        className="border rounded-md p-2 text-gray-700 w-full"
+                    />
+                    <span className={`absolute bottom-2 right-2 text-sm ${estimationStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
+                        {estimationStatus === "saving" ? "Saving..." : estimationStatus === "changed" ? "Changed" : "Saved"}
+                    </span>
+                </div>
+            )}
 
             {/* Зона с изображениями */}
             <div className="grid grid-cols-2 gap-4">
