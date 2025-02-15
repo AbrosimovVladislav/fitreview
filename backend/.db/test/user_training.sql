@@ -1,6 +1,6 @@
 insert into user_training (user_id, training_id)
-values (8,1);
+values (1,1);
 insert into user_training (user_id, training_id)
-values (8,2);
+values (1,2);
 insert into user_training (user_id, training_id)
-values (8,3);
+values (1,3);

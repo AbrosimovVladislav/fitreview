@@ -1,8 +1,8 @@
 spring:
   datasource:
-    username: admin
-    password: fitreview010824
-    url: jdbc:postgresql://34.32.80.79:5432/fitreviewdb
+    username: neondb_owner
+    password: npg_G5fBYkDXcJQ7
+    url: jdbc:postgresql://ep-soft-math-a29ypfbb-pooler.eu-central-1.aws.neon.tech/fitreview
   jpa:
     database: postgresql
     hibernate:
