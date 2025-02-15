@@ -3,6 +3,8 @@ import { IAdminReviewResultsItemDto } from "@/interface/interfaces";
 import { useQueryClient } from "@tanstack/react-query";
 import { reviewApi } from "@/service/reviewApi";
 import ReviewResultsItem from "@/components/review-details/ReviewResultsItem";
+import {Accordion} from "@radix-ui/react-accordion";
+import {AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 
 interface ReviewResultsAreaProps {
     reviewId: number;
@@ -61,37 +63,44 @@ export default function ReviewResultsArea({ reviewId, results }: ReviewResultsAr
 
 
     return (
-        <div className="space-y-6">
-            {categories.map(({ type, title, color, textColor }) => {
-                const filteredResults = results.filter((item) => item.type === type);
+        <Accordion type="single" collapsible>
+            <AccordionItem value="review-results">
+                <AccordionTrigger>Review Results</AccordionTrigger>
+                <AccordionContent>
+                    <div className="space-y-6">
+                        {categories.map(({ type, title, color, textColor }) => {
+                            const filteredResults = results.filter((item) => item.type === type);
 
-                return (
-                    <div key={type} className="bg-gray-900 p-4 rounded-lg">
-                        <div className="flex justify-between items-center mb-4">
-                            <h2 className="text-xl font-semibold text-white">{title.toUpperCase()}</h2>
-                            <button
-                                onClick={() => handleAddNewItem(type)}
-                                className="bg-gray-700 text-white px-3 py-1 rounded-full text-lg"
-                            >
-                                +
-                            </button>
-                        </div>
+                            return (
+                                <div key={type} className="bg-gray-900 p-4 rounded-lg">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <h2 className="text-xl font-semibold text-white">{title.toUpperCase()}</h2>
+                                        <button
+                                            onClick={() => handleAddNewItem(type)}
+                                            className="bg-gray-700 text-white px-3 py-1 rounded-full text-lg"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
 
-                        <div className="space-y-4">
-                            {filteredResults.map((item) => (
-                                <ReviewResultsItem
-                                    key={item.id}
-                                    item={item}
-                                    color={color}
-                                    textColor={textColor}
-                                    onSave={handleSave}
-                                    onDelete={handleDelete}  // Передаем метод удаления
-                                />
-                            ))}
-                        </div>
+                                    <div className="space-y-4">
+                                        {filteredResults.map((item) => (
+                                            <ReviewResultsItem
+                                                key={item.id}
+                                                item={item}
+                                                color={color}
+                                                textColor={textColor}
+                                                onSave={handleSave}
+                                                onDelete={handleDelete}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                );
-            })}
-        </div>
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
     );
 }

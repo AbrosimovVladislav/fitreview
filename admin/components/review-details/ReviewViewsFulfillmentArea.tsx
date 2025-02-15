@@ -8,7 +8,7 @@ export default function ReviewViewsFulfillmentArea({bodySegments, reviewId}) {
         {key: "front-view", label: "Front View", segmentGroup: "FrontView"},
         {key: "back-view", label: "Back View", segmentGroup: "BackView"},
         {key: "side-view", label: "Side View", segmentGroup: "SideView"},
-        // { key: "summary-view", label: "Summary View", segmentGroup: "SummaryView" }
+        {key: "summary-view", label: "Summary View", segmentGroup: "SummaryView"}
     ];
 
     return (
@@ -27,23 +27,6 @@ export default function ReviewViewsFulfillmentArea({bodySegments, reviewId}) {
                     </AccordionContent>
                 </AccordionItem>
             ))}
-
-            {/* Summary View */}
-            <AccordionItem value="summary-view">
-                <AccordionTrigger>Summary View</AccordionTrigger>
-                <AccordionContent>
-                    <div className="grid grid-cols-2 gap-4">
-                        {
-                            bodySegments.filter(segment => 'SummaryView' === segment.segmentGroup)
-                                .map(segment =>
-                                    <div key={segment.id}>
-                                        <BodySegmentComponent reviewId={reviewId} segment={segment}/>
-                                    </div>
-                                )
-                        }
-                    </div>
-                </AccordionContent>
-            </AccordionItem>
         </Accordion>
     )
 }
