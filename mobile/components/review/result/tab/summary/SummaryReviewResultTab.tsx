@@ -13,9 +13,7 @@ const SummaryReviewResultTab = ({
                                     userData,
                                     reviewDate,
                                     estimation,
-                                    problems,
-                                    trainingObjectives,
-                                    generalRecommendations,
+                                    reviewResultsItems,
                                     bodyMapRegions,
                                     selectedRegion,
                                     setSelectedRegion,
@@ -61,20 +59,20 @@ const SummaryReviewResultTab = ({
 
             <MainProblemsArea
                 getIconByType={getIconByType}
-                mainProblems={problems}
+                mainProblems={reviewResultsItems.filter(e => e.type==="problem")}
             />
             <Divider/>
 
             <TrainingPlanArea
                 getIconByType={getIconByType}
-                trainingObjective={trainingObjectives}
+                trainingObjective={reviewResultsItems.filter(e => e.type==="objective")}
             />
 
             <Divider/>
 
             <RecommendationsArea
                 getIconByType={getIconByType}
-                recommendations={generalRecommendations}
+                recommendations={reviewResultsItems.filter(e => e.type==="recommendation")}
             />
         </ScrollView>
     )

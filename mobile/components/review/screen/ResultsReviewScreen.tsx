@@ -20,6 +20,7 @@ const ResultsReviewScreen = ({}) => {
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
+    //TODO можно ли как то убрать красноту?
     const tabs = [
         {
             key: "front-view",
@@ -65,9 +66,7 @@ const ResultsReviewScreen = ({}) => {
                     userData={reviewData.userData}
                     reviewDate={reviewData.date}
                     estimation={reviewData.estimation}
-                    problems={reviewData.problems}
-                    trainingObjectives={reviewData.trainingObjectives}
-                    generalRecommendations={reviewData.generalRecommendations}
+                    reviewResultsItems={reviewData.reviewResultsItems}
                     bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'SummaryView')}
                     selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'SummaryView' ? selectedRegion : emptyRegion}
                     setSelectedRegion={setSelectedRegion}

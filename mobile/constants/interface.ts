@@ -89,6 +89,15 @@ interface IUserData{
     age: string;
 }
 
+export interface IReviewResultsItem{
+    id: number;
+    title: string;
+    description: string;
+    estimation: number;
+    iconType: string;
+    type: string;
+}
+
 // Описание для главного объекта
 export interface IReview {
     id: number;
@@ -96,7 +105,5 @@ export interface IReview {
     estimation: number;
     userData: IUserData;
     bodySegments: IBodySegment[];
-    problems: IProblem[];
-    trainingObjectives: ITrainingObjective[];
-    generalRecommendations: IGeneralRecommendation[];
+    reviewResultsItems: IReviewResultsItem[];
 }
