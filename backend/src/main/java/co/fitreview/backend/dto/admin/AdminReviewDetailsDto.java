@@ -15,6 +15,8 @@ public class AdminReviewDetailsDto {
     private String userName;
     private String userEmail;
     private LocalDateTime creationDate;
+    private Integer estimation;
+    private String fatIndex;
     private List<AdminReviewAnswerDto> answers;
     private List<AdminReviewAnswerDto> photos;
     private List<AdminBodySegmentDto> bodySegments;

@@ -64,4 +64,22 @@ public class ReviewService {
     public Optional<Review> getReviewById(Long reviewId) {
         return reviewRepo.findById(reviewId);
     }
+
+    @Transactional
+    public Review updateReviewEstimation(Long reviewId, Integer estimation) {
+        Review review = reviewRepo.findById(reviewId)
+                .orElseThrow(() -> new EntityNotFoundException("Review", String.valueOf(reviewId), "Review not found"));
+
+        review.setEstimation(estimation);
+        return reviewRepo.save(review);
+    }
+
+    @Transactional
+    public Review updateReviewFatIndex(Long reviewId, String fatIndex) {
+        Review review = reviewRepo.findById(reviewId)
+                .orElseThrow(() -> new EntityNotFoundException("Review", String.valueOf(reviewId), "Review not found"));
+
+        review.setFatIndex(fatIndex);
+        return reviewRepo.save(review);
+    }
 }

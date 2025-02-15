@@ -42,6 +42,31 @@ export const beClient = {
         }
     },
 
+    async put(endpoint: string, body: any) {
+        try {
+            const response = await fetch(`${BASE_URL}${endpoint}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body),
+            });
+
+            if (!response.ok) {
+                throw new Error(`PUT ${endpoint} failed: ${response.status}`);
+            }
+
+            // Проверяем, есть ли JSON в ответе
+            const contentType = response.headers.get("Content-Type");
+            if (contentType && contentType.includes("application/json")) {
+                return response.json();
+            }
+
+            return null; // PUT-запрос может не возвращать данные
+        } catch (error) {
+            console.error(`API PUT Error: ${error}`);
+            throw error;
+        }
+    },
+
     async delete(endpoint: string) {
         try {
             const response = await fetch(`${BASE_URL}${endpoint}`, { method: "DELETE" });

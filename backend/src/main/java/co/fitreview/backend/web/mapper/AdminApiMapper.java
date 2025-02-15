@@ -69,6 +69,8 @@ public class AdminApiMapper {
                 .userName(review.getFrUser().getName())
                 .userEmail(review.getFrUser().getEmail())
                 .creationDate(review.getDate())
+                .estimation(review.getEstimation())
+                .fatIndex(review.getFatIndex())
                 .answers(answers)
                 .photos(photos)
                 .bodySegments(bodySegments)

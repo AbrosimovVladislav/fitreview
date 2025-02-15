@@ -10,6 +10,8 @@ export interface IAdminReviewDetailsDto {
     userName: string;
     userEmail: string;
     creationDate: string;
+    estimation: number;
+    fatIndex: string;
     answers: IAdminReviewAnswerDto[];
     photos: string[];
     bodySegments: IAdminBodySegmentDto[];

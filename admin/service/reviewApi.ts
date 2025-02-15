@@ -36,6 +36,8 @@ export const reviewApi = {
             userName: data.userName ?? "Error Name",
             userEmail: data.userEmail ?? "Error Email",
             creationDate: data.creationDate ?? new Date().toISOString(),
+            estimation: data.estimation ?? 0,
+            fatIndex: data.fatIndex ?? "0",
             answers: data.answers ?? [],
             photos: data.photos ?? [],
             bodySegments: data.bodySegments ?? [],
@@ -76,6 +78,14 @@ export const reviewApi = {
 
     async deleteReviewResultsItem(id: number): Promise<void> {
         await beClient.delete(`/api/v1/admin/public/review/results-item/${id}`);
+    },
+
+    async updateReviewEstimation(reviewId: number, estimation: number): Promise<void> {
+        await beClient.put(`/api/v1/admin/public/review/${reviewId}/estimation`, {estimation});
+    },
+
+    async updateReviewFatIndex(reviewId: number, fatIndex: string): Promise<void> {
+        await beClient.put(`/api/v1/admin/public/review/${reviewId}/fat-index`, {fatIndex});
     }
 
 };

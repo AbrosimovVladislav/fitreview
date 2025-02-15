@@ -126,4 +126,22 @@ public class AdminApi {
         }
     }
 
+    @CrossOrigin
+    @PutMapping("/review/{reviewId}/estimation")
+    public ResponseEntity<Void> updateReviewEstimation(
+            @PathVariable Long reviewId,
+            @RequestBody Map<String, Integer> body) {
+        reviewService.updateReviewEstimation(reviewId, body.get("estimation"));
+        return ResponseEntity.ok().build();
+    }
+
+    @CrossOrigin
+    @PutMapping("/review/{reviewId}/fat-index")
+    public ResponseEntity<Void> updateReviewFatIndex(
+            @PathVariable Long reviewId,
+            @RequestBody Map<String, String> body) {
+        reviewService.updateReviewFatIndex(reviewId, body.get("fatIndex"));
+        return ResponseEntity.ok().build();
+    }
+
 }
