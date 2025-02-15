@@ -40,23 +40,20 @@ export const beClient = {
             console.error(`API POST Error: ${error}`);
             throw error;
         }
+    },
+
+    async delete(endpoint: string) {
+        try {
+            const response = await fetch(`${BASE_URL}${endpoint}`, { method: "DELETE" });
+
+            if (!response.ok) {
+                throw new Error(`DELETE ${endpoint} failed: ${response.status}`);
+            }
+
+            return null; // DELETE-запрос обычно не возвращает данные
+        } catch (error) {
+            console.error(`API DELETE Error: ${error}`);
+            throw error;
+        }
     }
-
-
-    // async post(endpoint: string, body: any) {
-    //     try {
-    //         const response = await fetch(`${BASE_URL}${endpoint}`, {
-    //             method: "POST",
-    //             headers: { "Content-Type": "application/json" },
-    //             body: JSON.stringify(body),
-    //         });
-    //         if (!response.ok) {
-    //             throw new Error(`POST ${endpoint} failed: ${response.status}`);
-    //         }
-    //         return JSON.parse(JSON.stringify(await response.json())); // Гарантируем JSON
-    //     } catch (error) {
-    //         console.error(`API POST Error: ${error}`);
-    //         throw error;
-    //     }
-    // },
 };

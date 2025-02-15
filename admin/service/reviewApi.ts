@@ -1,4 +1,4 @@
-import {IAdminReviewDetailsDto, IAdminShortReviewDto} from "@/interface/interfaces";
+import {IAdminReviewDetailsDto, IAdminReviewResultsItemDto, IAdminShortReviewDto} from "@/interface/interfaces";
 import {beClient} from "@/service/beClient";
 
 export const reviewApi = {
@@ -39,6 +39,7 @@ export const reviewApi = {
             answers: data.answers ?? [],
             photos: data.photos ?? [],
             bodySegments: data.bodySegments ?? [],
+            reviewResultsItems: data.reviewResultsItems ?? []
         };
     },
 
@@ -67,6 +68,14 @@ export const reviewApi = {
             reviewId,
             estimation,
         });
+    },
+
+    async saveReviewResultsItem(item: IAdminReviewResultsItemDto): Promise<IAdminReviewResultsItemDto> {
+        return await beClient.post("/api/v1/admin/public/review/results-item", item);
+    },
+
+    async deleteReviewResultsItem(id: number): Promise<void> {
+        await beClient.delete(`/api/v1/admin/public/review/results-item/${id}`);
     }
 
 };

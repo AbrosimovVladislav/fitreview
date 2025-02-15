@@ -1,6 +1,4 @@
 export default function PhotosArea({ photos }) {
-    console.log(photos);
-
     return (
         <div className="p-4 border rounded-lg bg-white shadow-md">
             <h2 className="text-lg font-semibold mb-2">Uploaded Photos</h2>

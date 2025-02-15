@@ -49,7 +49,7 @@ export default function ReviewDetailsPage() {
             <ReviewViewsFulfillmentArea bodySegments={data.bodySegments} reviewId={reviewId}/>
 
             <GeneralEstimationArea />
-            <ReviewResultsArea />
+            <ReviewResultsArea reviewId={reviewId} results={data.reviewResultsItems} />
         </div>
     );
 }

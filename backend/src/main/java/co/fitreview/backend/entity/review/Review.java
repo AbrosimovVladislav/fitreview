@@ -37,12 +37,6 @@ public class Review {
     private List<BodySegment> bodySegments; // Сегменты тела
 
     @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Problem> problems; // Проблемы, выявленные в ревью
-
-    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<TrainingObjective> trainingObjectives; // Тренировочные цели
-
-    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<GeneralRecommendation> generalRecommendations; // Рекомендации
+    private List<ReviewResultsItem> reviewResultsItems; // Review Results, выявленные в ревью
 
 }

@@ -1,15 +1,16 @@
 package co.fitreview.backend.web;
 
-import co.fitreview.backend.dto.admin.AdminReviewDetailsDto;
-import co.fitreview.backend.dto.admin.AdminSaveDescriptionDto;
-import co.fitreview.backend.dto.admin.AdminSaveEstimationDto;
-import co.fitreview.backend.dto.admin.AdminShortReviewDto;
+import co.fitreview.backend.dto.admin.*;
 import co.fitreview.backend.entity.review.Review;
+import co.fitreview.backend.entity.review.ReviewResultsItem;
 import co.fitreview.backend.entity.survey.ReviewStatus;
 import co.fitreview.backend.integration.GCStorageClient;
 import co.fitreview.backend.service.BodySegmentService;
+import co.fitreview.backend.service.ReviewResultsItemService;
 import co.fitreview.backend.service.ReviewService;
 import co.fitreview.backend.web.mapper.AdminApiMapper;
+import co.fitreview.backend.web.mapper.ReviewResultsItemMapper;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -30,10 +31,12 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AdminApi {
 
-    private final ReviewService reviewService;
-    private final AdminApiMapper adminApiMapper;
     private final GCStorageClient gcStorageClient;
+    private final ReviewService reviewService;
     private final BodySegmentService bodySegmentService;
+    private final ReviewResultsItemService reviewResultsItemService;
+    private final AdminApiMapper adminApiMapper;
+    private final ReviewResultsItemMapper reviewResultsItemMapper;
 
     @CrossOrigin
     @GetMapping("/reviews")
@@ -99,5 +102,28 @@ public class AdminApi {
         return ResponseEntity.ok().build();
     }
 
+    @CrossOrigin
+    @PostMapping("/review/results-item")
+    public ResponseEntity<AdminReviewResultsItemDto> saveReviewResultsItem(@RequestBody AdminReviewResultsItemDto adminReviewResultsItemDto) {
+        if (adminReviewResultsItemDto.getId() != null) {
+            ReviewResultsItem updatedItem = reviewResultsItemService.update(adminReviewResultsItemDto);
+            return ResponseEntity.ok(reviewResultsItemMapper.map(updatedItem));
+        }
+
+        // Если ID нет, создаём новый объект
+        ReviewResultsItem reviewResultsItem = reviewResultsItemService.save(adminReviewResultsItemDto);
+        return ResponseEntity.ok(reviewResultsItemMapper.map(reviewResultsItem));
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/review/results-item/{id}")
+    public ResponseEntity<Void> deleteReviewResultsItem(@PathVariable Long id) {
+        try {
+            reviewResultsItemService.deleteReviewResultsItem(id);
+            return ResponseEntity.noContent().build(); // 204 No Content (успешное удаление)
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+    }
 
 }

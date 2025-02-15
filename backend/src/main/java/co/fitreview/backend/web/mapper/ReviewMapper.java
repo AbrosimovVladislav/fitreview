@@ -39,9 +39,7 @@ public class ReviewMapper {
                 .bodySegments(review.getBodySegments().stream()
                         .sorted(Comparator.comparing(BodySegment::getId))
                         .toList())
-                .problems(review.getProblems())
-                .trainingObjectives(review.getTrainingObjectives())
-                .generalRecommendations(review.getGeneralRecommendations())
+                .reviewResultsItems(review.getReviewResultsItems())
                 .build();
     }
 

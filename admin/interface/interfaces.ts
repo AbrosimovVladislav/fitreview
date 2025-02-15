@@ -13,6 +13,7 @@ export interface IAdminReviewDetailsDto {
     answers: IAdminReviewAnswerDto[];
     photos: string[];
     bodySegments: IAdminBodySegmentDto[];
+    reviewResultsItems: IAdminReviewResultsItemDto[];
 }
 
 export interface IAdminReviewAnswerDto {
@@ -29,4 +30,14 @@ export interface IAdminBodySegmentDto {
     diagramImage: string;
     description: string;
     estimation: number;
+}
+
+export interface IAdminReviewResultsItemDto {
+    id: number;
+    reviewId: number;       // ID ревью, к которому относится этот результат
+    title: string;          // Название секции (например, "Right Shoulder", "Core and Thoracic Mobility")
+    description: string;    // Описание проблемы или рекомендации
+    estimation: number;     // Оценка в процентах (например, 67%)
+    iconType: string;       // Тип иконки (например, "hand", "shirt", "target")
+    type: "problem" | "objective" | "recommendation" | string;  // Тип результата
 }

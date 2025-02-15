@@ -1,11 +1,9 @@
 package co.fitreview.backend.web.mapper;
 
-import co.fitreview.backend.dto.admin.AdminBodySegmentDto;
-import co.fitreview.backend.dto.admin.AdminReviewAnswerDto;
-import co.fitreview.backend.dto.admin.AdminReviewDetailsDto;
-import co.fitreview.backend.dto.admin.AdminShortReviewDto;
+import co.fitreview.backend.dto.admin.*;
 import co.fitreview.backend.entity.review.BodySegment;
 import co.fitreview.backend.entity.review.Review;
+import co.fitreview.backend.entity.review.ReviewResultsItem;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -55,6 +53,18 @@ public class AdminApiMapper {
                         .estimation(segment.getEstimation())
                         .build()).toList();
 
+        List<AdminReviewResultsItemDto> reviewResultsItemDtos = review.getReviewResultsItems().stream()
+                .sorted(Comparator.comparing(ReviewResultsItem::getId))
+                .map(reviewResultsItem -> AdminReviewResultsItemDto.builder()
+                        .id(reviewResultsItem.getId())
+                        .reviewId(reviewResultsItem.getReview().getId())
+                        .title(reviewResultsItem.getTitle())
+                        .description(reviewResultsItem.getDescription())
+                        .estimation(reviewResultsItem.getEstimation())
+                        .iconType(reviewResultsItem.getIconType())
+                        .type(reviewResultsItem.getType())
+                        .build()).toList();
+
         return AdminReviewDetailsDto.builder()
                 .userName(review.getFrUser().getName())
                 .userEmail(review.getFrUser().getEmail())
@@ -62,6 +72,7 @@ public class AdminApiMapper {
                 .answers(answers)
                 .photos(photos)
                 .bodySegments(bodySegments)
+                .reviewResultsItems(reviewResultsItemDtos)
                 .build();
     }
 

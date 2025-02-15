@@ -18,5 +18,6 @@ public class AdminReviewDetailsDto {
     private List<AdminReviewAnswerDto> answers;
     private List<AdminReviewAnswerDto> photos;
     private List<AdminBodySegmentDto> bodySegments;
+    private List<AdminReviewResultsItemDto> reviewResultsItems;
 
 }
