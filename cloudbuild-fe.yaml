@@ -8,7 +8,7 @@ substitutions:
 steps:
   # Сборка Docker-образа
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME', '-f', 'Dockerfile', '.' ]
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/$_SERVICE_NAME', '-f', 'Dockerfile.fe', '.' ]
 
   # Пуш Docker-образа в Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
