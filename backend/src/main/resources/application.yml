@@ -2,7 +2,7 @@ spring:
   datasource:
     username: admin
     password: fitreview010824
-    url: jdbc:postgresql://34.32.80.79:5432/fitreviewdb
+    url: jdbc:postgresql://34.141.1.22:5432/fitreview
   jpa:
     database: postgresql
     hibernate:
@@ -30,3 +30,4 @@ security:
     - /api/v1/storage/public
     - /api/v1/training/public
     - /api/v1/survey/public
+    - /api/v1/admin/public

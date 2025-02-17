@@ -11,9 +11,9 @@ import {IconBed, IconDatabase, IconMeat, IconMoodNervous, IconShirt} from "@tabl
 
 const SummaryReviewResultTab = ({
                                     userData,
-                                    problems,
-                                    trainingObjectives,
-                                    generalRecommendations,
+                                    reviewDate,
+                                    estimation,
+                                    reviewResultsItems,
                                     bodyMapRegions,
                                     selectedRegion,
                                     setSelectedRegion,
@@ -51,26 +51,28 @@ const SummaryReviewResultTab = ({
                 summary
             />
             <SummaryEstimationArea
-                summaryData={userData}
+                userData={userData}
+                estimation={estimation}
+                reviewDate={reviewDate}
             />
             <Divider/>
 
             <MainProblemsArea
                 getIconByType={getIconByType}
-                mainProblems={problems}
+                mainProblems={reviewResultsItems.filter(e => e.type==="problem")}
             />
             <Divider/>
 
             <TrainingPlanArea
                 getIconByType={getIconByType}
-                trainingObjective={trainingObjectives}
+                trainingObjective={reviewResultsItems.filter(e => e.type==="objective")}
             />
 
             <Divider/>
 
             <RecommendationsArea
                 getIconByType={getIconByType}
-                recommendations={generalRecommendations}
+                recommendations={reviewResultsItems.filter(e => e.type==="recommendation")}
             />
         </ScrollView>
     )

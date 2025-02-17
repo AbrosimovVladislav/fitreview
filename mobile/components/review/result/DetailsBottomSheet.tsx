@@ -36,7 +36,8 @@ const DetailsBottomSheet = ({isOpen, onClose, region}) => {
                         resizeMode="contain"
                     />
 
-                    <View className={`absolute top-24 ${region.name.includes("R") ? "right-9" : "left-9"} flex-row items-center`}>
+                    <View
+                        className={`absolute top-24 ${region.name.includes("R") ? "right-9" : "left-9"} flex-row items-center`}>
                         <Text className="text-white mr-2">{showDiagram ? 'Photo' : 'X-Ray'}</Text>
                         <Switch
                             value={showDiagram}
@@ -46,12 +47,10 @@ const DetailsBottomSheet = ({isOpen, onClose, region}) => {
                         />
                     </View>
 
-                    {
-                        region && region.bodySegmentDescription && region.bodySegmentDescription.descriptions && region.bodySegmentDescription.descriptions.map((point, index) =>
-                            <Text key={index} className="text-md text-center text-gray-100 pt-3 pb-2 font-mregular">
-                                {point}
-                            </Text>)
-                    }
+
+                    <Text className="text-md text-center text-gray-100 pt-3 pb-2 font-mregular">
+                        {region && region.description}
+                    </Text>
 
 
                 </View>

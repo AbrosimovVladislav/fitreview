@@ -1,0 +1,162 @@
+[
+  {
+    "name": "FrontView-L1",
+    "segmentGroup": "FrontView",
+    "title": "Upper Body Right"
+  },
+  {
+    "name": "FrontView-R1",
+    "segmentGroup": "FrontView",
+    "title": "Upper Body Left"
+  },
+  {
+    "name": "FrontView-L2",
+    "segmentGroup": "FrontView",
+    "title": "Core Right"
+  },
+  {
+    "name": "FrontView-R2",
+    "segmentGroup": "FrontView",
+    "title": "Core Left"
+  },
+  {
+    "name": "FrontView-L3",
+    "segmentGroup": "FrontView",
+    "title": "Hips Right"
+  },
+  {
+    "name": "FrontView-R3",
+    "segmentGroup": "FrontView",
+    "title": "Hips Left"
+  },
+  {
+    "name": "FrontView-L4",
+    "segmentGroup": "FrontView",
+    "title": "Feet Right"
+  },
+  {
+    "name": "FrontView-R4",
+    "segmentGroup": "FrontView",
+    "title": "Feet Left"
+  },
+  {
+    "name": "BackView-L1",
+    "segmentGroup": "BackView",
+    "title": "Upper Body Right"
+  },
+  {
+    "name": "BackView-R1",
+    "segmentGroup": "BackView",
+    "title": "Upper Body Left"
+  },
+  {
+    "name": "BackView-L2",
+    "segmentGroup": "BackView",
+    "title": "Core Right"
+  },
+  {
+    "name": "BackView-R2",
+    "segmentGroup": "BackView",
+    "title": "Core Left"
+  },
+  {
+    "name": "BackView-L3",
+    "segmentGroup": "BackView",
+    "title": "Hips Right"
+  },
+  {
+    "name": "BackView-R3",
+    "segmentGroup": "BackView",
+    "title": "Hips Left"
+  },
+  {
+    "name": "BackView-L4",
+    "segmentGroup": "BackView",
+    "title": "Feet Right"
+  },
+  {
+    "name": "BackView-R4",
+    "segmentGroup": "BackView",
+    "title": "Feet Left"
+  },
+  {
+    "name": "SideView-L1",
+    "segmentGroup": "SideView",
+    "title": "Left View Upper Body"
+  },
+  {
+    "name": "SideView-R1",
+    "segmentGroup": "SideView",
+    "title": "Right View Upper Body"
+  },
+  {
+    "name": "SideView-L2",
+    "segmentGroup": "SideView",
+    "title": "Left View Core"
+  },
+  {
+    "name": "SideView-R2",
+    "segmentGroup": "SideView",
+    "title": "Right View Core"
+  },
+  {
+    "name": "SideView-L3",
+    "segmentGroup": "SideView",
+    "title": "Left View Hips"
+  },
+  {
+    "name": "SideView-R3",
+    "segmentGroup": "SideView",
+    "title": "Right View Hips"
+  },
+  {
+    "name": "SideView-L4",
+    "segmentGroup": "SideView",
+    "title": "Left View Feet"
+  },
+  {
+    "name": "SideView-R4",
+    "segmentGroup": "SideView",
+    "title": "Right View Feet"
+  },
+  {
+    "name": "SummaryView-L1",
+    "segmentGroup": "SummaryView",
+    "title": "Upper Body Right"
+  },
+  {
+    "name": "SummaryView-R1",
+    "segmentGroup": "SummaryView",
+    "title": "Upper Body Left"
+  },
+  {
+    "name": "SummaryView-L2",
+    "segmentGroup": "SummaryView",
+    "title": "Core Right"
+  },
+  {
+    "name": "SummaryView-R2",
+    "segmentGroup": "SummaryView",
+    "title": "Core Left"
+  },
+  {
+    "name": "SummaryView-L3",
+    "segmentGroup": "SummaryView",
+    "title": "Hips Right"
+  },
+  {
+    "name": "SummaryView-R3",
+    "segmentGroup": "SummaryView",
+    "title": "Hips Left"
+  },
+  {
+    "name": "SummaryView-L4",
+    "segmentGroup": "SummaryView",
+    "title": "Feet Right"
+  },
+  {
+    "name": "SummaryView-R4",
+    "segmentGroup": "SummaryView",
+    "title": "Feet Left"
+  }
+]

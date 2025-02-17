@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface ReviewRepo extends JpaRepository<Review, Long> {
-
-    Optional<Review> findFirstByUserDataIdOrderByDateDesc(Long userId);
+    //TODO принимать id конкретного ревью и у него получать последний статус
+    Optional<Review> findFirstByFrUserIdOrderByDateDesc(Long userId);
 
 }

@@ -6,6 +6,7 @@ import co.fitreview.backend.entity.survey.Question;
 import co.fitreview.backend.exception.EntityNotFoundException;
 import co.fitreview.backend.repo.AnswerRepo;
 import co.fitreview.backend.repo.QuestionRepo;
+import co.fitreview.backend.repo.ReviewRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +19,10 @@ public class SurveyService {
 
     private final QuestionRepo questionRepo;
     private final AnswerRepo answerRepo;
+    private final ReviewRepo reviewRepo;
 
-    public Answer getAnswerByUserIdAndQuestionId(Long userId, Long questionId) {
-        Optional<Answer> answerOpt = answerRepo.findByUserIdAndQuestionId(userId, questionId);
+    public Answer getAnswerByReviewIdAndQuestionId(Long reviewId, Long questionId) {
+        Optional<Answer> answerOpt = answerRepo.findByReviewIdAndQuestionId(reviewId, questionId);
 
         if (answerOpt.isEmpty()) {
             return null;
@@ -29,10 +31,10 @@ public class SurveyService {
         return answerOpt.get();
     }
 
-    public Answer saveAnswer(AnswerDto answerDto, Long userId) {
+    public Answer saveAnswer(AnswerDto answerDto) {
         Answer finalAnswer = null;
 
-        Optional<Answer> answerOpt = answerRepo.findByUserIdAndQuestionId(userId, answerDto.getQuestionId());
+        Optional<Answer> answerOpt = answerRepo.findByReviewIdAndQuestionId(answerDto.getReviewId(), answerDto.getQuestionId());
 
         if (answerOpt.isPresent()) {
             Answer existingAnswer = answerOpt.get();
@@ -40,7 +42,7 @@ public class SurveyService {
             finalAnswer = answerRepo.save(existingAnswer);
         } else {
             finalAnswer = answerRepo.save(new Answer()
-                    .setUserId(userId)
+                    .setReview(reviewRepo.findById(answerDto.getReviewId()).orElseThrow(() -> new EntityNotFoundException("Review", String.valueOf(answerDto.getReviewId()), "No review with id: ")))
                     .setQuestion(questionRepo
                             .findById(answerDto.getQuestionId())
                             .orElseThrow(() -> new EntityNotFoundException("Question", "Question id: " + answerDto.getQuestionId(), "")))

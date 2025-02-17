@@ -1,13 +1,15 @@
 import {View} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Question} from "@/constants/interface";
-import {getAnswerByQuestionIdForUser, getQuestionById} from "@/service/SurveyService";
+import {getAnswerByReviewIdAndQuestionId, getQuestionById} from "@/service/SurveyService";
 import MultiAnswerQuestionComponent from "@/components/review/survey/MultiAnswerQuestionComponent";
 import NumberInputQuestionComponent from "@/components/review/survey/NumberInputQuestionComponent";
 import PhotoQuestionComponent from "@/components/review/survey/PhotoQuestionComponent";
 import ErrorReviewScreen from "@/components/review/screen/ErrorReviewScreen";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
 const SurveyComponent = ({surveyList, setStatus}) => {
+    const { reviewId } = useGlobalContext();
 
     const [currentStep, setCurrentStep] = useState(1);
     const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
@@ -24,7 +26,7 @@ const SurveyComponent = ({surveyList, setStatus}) => {
             if (questionId) {
                 const fetchedQuestion = await getQuestionById(questionId);
                 setCurrentQuestion(fetchedQuestion);
-                let answer = await getAnswerByQuestionIdForUser(questionId);
+                let answer = await getAnswerByReviewIdAndQuestionId(reviewId, questionId);
                 setExistingAnswer(answer);
             }
         };

@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.util.List;
-
 @Entity
 @Getter
 @Setter
@@ -24,13 +22,11 @@ public class BodySegment {
     private Integer estimation;
     private String userImage; // URL изображения пользователя
     private String diagramImage; // URL изображения диаграммы
+    @Column(length = 10000)
+    private String description;
 
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "review_id", nullable = false)
     private Review review; // Ссылка на ревью
-
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "body_segment_description_id", referencedColumnName = "id")
-    private BodySegmentDescription bodySegmentDescription;
 }

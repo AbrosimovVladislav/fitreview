@@ -14,7 +14,7 @@ const NextQuestionButton = ({
                                 setUploadedImage
                             }) => {
 
-    const {user} = useGlobalContext();
+    const {user, reviewId} = useGlobalContext();
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -24,7 +24,7 @@ const NextQuestionButton = ({
         //TODO подумать как вынести логику пресабмит действия для фото вопроса
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
-            if(!answerValue.includes("http")){
+            if (!answerValue.includes("http")) {
                 const imageName = generateImageName(user?.uid, questionId);
                 const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
@@ -32,8 +32,7 @@ const NextQuestionButton = ({
             setUploadedImage(null);
         }
 
-        //save answer
-        await saveAnswer(questionId, answerValue)
+        await saveAnswer(questionId, answerValue, reviewId)
 
         //TODO подумать как вынести логику пресабмит действия для мульти вопроса
         //clear pressed ONLY FOR MULTIANSWER

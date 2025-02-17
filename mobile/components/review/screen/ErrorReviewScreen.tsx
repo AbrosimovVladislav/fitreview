@@ -12,7 +12,7 @@ const ErrorReviewScreen = () => {
                     title="ERROR CASE"
                     containerStyles="mt-2 mx-6"
                     icon={'ribbon'}
-                    onPress={() => console.log("[ErrorReviewScreen] results_error")}/>
+                    onPress={() => console.error("[ErrorReviewScreen] results_error")}/>
             </View>
         </ScrollView>
     )

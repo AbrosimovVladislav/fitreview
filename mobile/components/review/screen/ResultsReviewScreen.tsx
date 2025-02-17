@@ -8,19 +8,19 @@ import SummaryReviewResultTab from "@/components/review/result/tab/summary/Summa
 import FrontViewReviewResultTab from "@/components/review/result/tab/front/FrontViewReviewResultTab";
 import BackViewReviewResultTab from "@/components/review/result/tab/back/BackViewReviewResultTab";
 import useAppwrite from "@/lib/useAppwrite";
-import {getLastReviewByUserId} from "@/service/ReviewService";
+import {getReviewById} from "@/service/ReviewService";
 import SideViewReviewResultTab from "@/components/review/result/tab/side/SideViewReviewResultTab";
-import Review from "@/app/(tabs)/review";
+import {IReview} from "@/constants/interface";
+import {useGlobalContext} from "@/context/GlobalProvider";
 
-const ResultsReviewScreen = ({user}) => {
-
-    const testUserId = '1';
-
-    const {data: reviewData} = useAppwrite<Review>(() => getLastReviewByUserId(testUserId))
+const ResultsReviewScreen = ({}) => {
+    const {reviewId} = useGlobalContext();
+    const {data: reviewData} = useAppwrite<IReview>(() => getReviewById(reviewId))
 
     const [selectedRegion, setSelectedRegion] = useState(emptyRegion);
     const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
 
+    //TODO можно ли как то убрать красноту?
     const tabs = [
         {
             key: "front-view",
@@ -64,9 +64,9 @@ const ResultsReviewScreen = ({user}) => {
             content: reviewData && reviewData.bodySegments ? (
                 <SummaryReviewResultTab
                     userData={reviewData.userData}
-                    problems={reviewData.problems}
-                    trainingObjectives={reviewData.trainingObjectives}
-                    generalRecommendations={reviewData.generalRecommendations}
+                    reviewDate={reviewData.date}
+                    estimation={reviewData.estimation}
+                    reviewResultsItems={reviewData.reviewResultsItems}
                     bodyMapRegions={reviewData.bodySegments.filter(bs => bs.segmentGroup === 'SummaryView')}
                     selectedRegion={selectedRegion && selectedRegion.segmentGroup === 'SummaryView' ? selectedRegion : emptyRegion}
                     setSelectedRegion={setSelectedRegion}

@@ -48,15 +48,8 @@ export interface Training {
     "description": string
 }
 
-// Описание для BodySegmentDescription
-interface BodySegmentDescription {
-    id: number;
-    descriptions: string[];
-    descriptionsRus: string[];
-}
-
 // Описание для BodySegment
-interface BodySegment {
+interface IBodySegment {
     id: number;
     name: string;
     title: string;
@@ -64,11 +57,11 @@ interface BodySegment {
     estimation: number | null;
     userImage: string;
     diagramImage: string;
-    bodySegmentDescription: BodySegmentDescription;
+    description: string;
 }
 
 // Описание для Problems, Objectives, Recommendations
-interface Problem {
+interface IProblem {
     id: number;
     title: string;
     description: string;
@@ -76,37 +69,41 @@ interface Problem {
     iconType: string;
 }
 
-interface TrainingObjective {
+interface ITrainingObjective {
     id: number;
     title: string;
     description: string;
     iconType: string;
 }
 
-interface GeneralRecommendation {
+interface IGeneralRecommendation {
     id: number;
     title: string;
     description: string;
     iconType: string;
 }
 
-// Описание для UserData
-interface UserData {
+interface IUserData{
+    weight: string;
+    fatIndex: string;
+    age: string;
+}
+
+export interface IReviewResultsItem{
     id: number;
-    userName: string;
+    title: string;
+    description: string;
     estimation: number;
-    weight: number;
-    fatIndex: number;
-    age: number;
+    iconType: string;
+    type: string;
 }
 
 // Описание для главного объекта
-interface Review {
+export interface IReview {
     id: number;
     date: string;
-    userData: UserData;
-    bodySegments: BodySegment[];
-    problems: Problem[];
-    trainingObjectives: TrainingObjective[];
-    generalRecommendations: GeneralRecommendation[];
+    estimation: number;
+    userData: IUserData;
+    bodySegments: IBodySegment[];
+    reviewResultsItems: IReviewResultsItem[];
 }
