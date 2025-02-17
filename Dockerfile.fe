@@ -1,4 +1,3 @@
-# Используем multi-stage build
 # === Стадия 1: Сборка проекта ===
 FROM node:20 AS builder
 
@@ -29,9 +28,9 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 
-# Переменная окружения для Cloud Run
+# Указываем переменные окружения
 ENV PORT=8080
 EXPOSE 8080
 
-# Запуск приложения
-CMD ["npm", "start"]
+# Используем Next.js серверный запуск
+CMD ["npm", "run", "start"]
