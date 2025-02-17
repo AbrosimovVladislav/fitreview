@@ -340,31 +340,5 @@ VALUES (1000, 'Right Shoulder',
        (9000, 'Relaxation and Recovery', 'Spa treatments for muscle relaxation and overall well-being', 0,'sleep',
         'recommendation',1);
 
---
--- -- Вставляем данные в таблицу Problem
--- INSERT INTO problem (id, title, description, estimation, icon_type, review_id)
--- VALUES (1, 'Right Shoulder',
---         'Right shoulder is higher; left arm hangs, suggesting weak deltoid, with trapezius compensating', 67, 'hand',
---         1),
---        (2, 'Chest Muscles', 'Left pec minor and major seem overloaded, pulling the shoulder forward and up', 47,
---         'upper-body', 1),
---        (3, 'Lower Back and Pelvis',
---         'Left side overloaded; indicates weak glutes and abdominal imbalance affecting pelvic alignment', 54, 'core',
---         1);
---
--- -- Вставляем данные в таблицу TrainingObjective
--- INSERT INTO training_objective (id, title, description, icon_type, review_id)
--- VALUES (1, 'Foot Stability and Big Toe Function',
---         'Improve foot stability, enhance big toe mobility, wear flexible, wide-toe shoes', 'hand', 1),
---        (2, 'Pelvic Stability and Hip Flexors',
---         'Focus on hip flexor release, glute activation, and core-pelvic stabilization', 'feet', 1),
---        (3, 'Core and Thoracic Mobility',
---         'Strengthen diaphragm and core, enhance thoracic mobility, and release upper shoulder tension', 'feet', 1);
---
--- -- Вставляем данные в таблицу GeneralRecommendation
--- INSERT INTO general_recommendation (id, title, description, icon_type, review_id)
--- VALUES (1, 'Training and Active Recovery',
---         'Swimming, dynamic stretching, bodyweight and equipment-based functional and strength training', 'stress', 1),
---        (2, 'Professional Therapeutic Support',
---         'Regular sessions with a massage therapist, kinesiologist, and osteopath', 'food', 1),
---        (3, 'Relaxation and Recovery', 'Spa treatments for muscle relaxation and overall well-being', 'sleep', 1);
+INSERT INTO review_status (date, value, review_id)
+VALUES (NOW(),'ReviewResults', 1)
