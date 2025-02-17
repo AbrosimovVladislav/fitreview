@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { IAdminBodySegmentDto } from "@/interface/interfaces";
-import { reviewApi } from "@/service/reviewApi";
-import { useQueryClient } from "@tanstack/react-query";
+import React, {useEffect, useState} from "react";
+import {IAdminBodySegmentDto} from "@/interface/interfaces";
+import {reviewApi} from "@/service/reviewApi";
+import {useQueryClient} from "@tanstack/react-query";
 
 interface SegmentProps {
     reviewId: number;
     segment: IAdminBodySegmentDto;
 }
 
-export default function BodySegmentComponent({ reviewId, segment }: SegmentProps) {
+export default function BodySegmentComponent({reviewId, segment}: SegmentProps) {
     const [description, setDescription] = useState(segment.description ?? "Insert your description here");
     const [descriptionStatus, setDescriptionStatus] = useState<"saved" | "changed" | "saving">("saved");
 
@@ -28,7 +28,7 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
                 try {
                     await reviewApi.saveBodySegmentDescription(segment.id, reviewId, description);
                     setDescriptionStatus("saved");
-                    await queryClient.invalidateQueries(["review"]);
+                    await queryClient.invalidateQueries({queryKey: ["review"]});
                 } catch (error) {
                     console.error("Failed to save description:", error);
                 }
@@ -45,7 +45,7 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
                 try {
                     await reviewApi.saveBodySegmentEstimation(segment.id, reviewId, estimation);
                     setEstimationStatus("saved");
-                    await queryClient.invalidateQueries(["review"]);
+                    await queryClient.invalidateQueries({queryKey: ["review"]});
                 } catch (error) {
                     console.error("Failed to save estimation:", error);
                 }
@@ -59,7 +59,7 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
             setLoading(imageType);
             try {
                 await reviewApi.uploadBodySegmentImage(segment.id, reviewId, e.target.files[0], imageType);
-                await queryClient.invalidateQueries(["review"]); // Перезапрос всего ревью
+                await queryClient.invalidateQueries({queryKey: ["review"]}); // Перезапрос всего ревью
             } catch (error) {
                 console.error(`Image upload failed for ${imageType}:`, error);
             } finally {
@@ -84,7 +84,8 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
                     className="border rounded-md p-2 text-gray-700 w-full"
                     rows={3}
                 />
-                <span className={`absolute bottom-2 right-2 text-sm ${descriptionStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
+                <span
+                    className={`absolute bottom-2 right-2 text-sm ${descriptionStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
                     {descriptionStatus === "saving" ? "Saving..." : descriptionStatus === "changed" ? "Changed" : "Saved"}
                 </span>
             </div>
@@ -102,7 +103,8 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
                         }}
                         className="border rounded-md p-2 text-gray-700 w-full"
                     />
-                    <span className={`absolute bottom-2 right-2 text-sm ${estimationStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
+                    <span
+                        className={`absolute bottom-2 right-2 text-sm ${estimationStatus === "saved" ? "text-green-600" : "text-yellow-600"}`}>
                         {estimationStatus === "saving" ? "Saving..." : estimationStatus === "changed" ? "Changed" : "Saved"}
                     </span>
                 </div>
@@ -113,11 +115,12 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
                 {/* User Image */}
                 <div className="flex flex-col items-center space-y-2">
                     {loading === "userImage" ? (
-                        <div className="w-32 h-32 bg-gray-300 flex items-center justify-center rounded-md animate-pulse">
+                        <div
+                            className="w-32 h-32 bg-gray-300 flex items-center justify-center rounded-md animate-pulse">
                             <span>Uploading...</span>
                         </div>
                     ) : segment.userImage ? (
-                        <img src={segment.userImage} alt="User" className="w-32 h-32 object-cover rounded-md" />
+                        <img src={segment.userImage} alt="User" className="w-32 h-32 object-cover rounded-md"/>
                     ) : (
                         <div className="w-32 h-32 bg-gray-200 flex items-center justify-center rounded-md">
                             <span>No User Image</span>
@@ -126,18 +129,20 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
 
                     <label className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">
                         Upload User Image
-                        <input type="file" accept="image/*" onChange={(e) => handleUpload(e, "userImage")} className="hidden" />
+                        <input type="file" accept="image/*" onChange={(e) => handleUpload(e, "userImage")}
+                               className="hidden"/>
                     </label>
                 </div>
 
                 {/* Diagram Image */}
                 <div className="flex flex-col items-center space-y-2">
                     {loading === "diagramImage" ? (
-                        <div className="w-32 h-32 bg-gray-300 flex items-center justify-center rounded-md animate-pulse">
+                        <div
+                            className="w-32 h-32 bg-gray-300 flex items-center justify-center rounded-md animate-pulse">
                             <span>Uploading...</span>
                         </div>
                     ) : segment.diagramImage ? (
-                        <img src={segment.diagramImage} alt="Diagram" className="w-32 h-32 object-cover rounded-md" />
+                        <img src={segment.diagramImage} alt="Diagram" className="w-32 h-32 object-cover rounded-md"/>
                     ) : (
                         <div className="w-32 h-32 bg-gray-200 flex items-center justify-center rounded-md">
                             <span>No Diagram Image</span>
@@ -146,7 +151,8 @@ export default function BodySegmentComponent({ reviewId, segment }: SegmentProps
 
                     <label className="bg-yellow-600 text-white px-4 py-2 rounded cursor-pointer">
                         Upload Diagram Image
-                        <input type="file" accept="image/*" onChange={(e) => handleUpload(e, "diagramImage")} className="hidden" />
+                        <input type="file" accept="image/*" onChange={(e) => handleUpload(e, "diagramImage")}
+                               className="hidden"/>
                     </label>
                 </div>
             </div>

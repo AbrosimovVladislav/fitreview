@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { useQueryClient } from "@tanstack/react-query";
-import { reviewApi } from "@/service/reviewApi";
-import { Accordion } from "@radix-ui/react-accordion";
-import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import React, {useState} from "react";
+import {useQueryClient} from "@tanstack/react-query";
+import {reviewApi} from "@/service/reviewApi";
+import {Accordion} from "@radix-ui/react-accordion";
+import {AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 
 interface GeneralEstimationAreaProps {
     reviewId: number;
     data: { estimation: number | null; fatIndex: string | null };
 }
 
-export default function GeneralEstimationArea({ reviewId, data }: GeneralEstimationAreaProps) {
+export default function GeneralEstimationArea({reviewId, data}: GeneralEstimationAreaProps) {
     const queryClient = useQueryClient();
     const [isSaved, setIsSaved] = useState(true);
 
     const handleUpdateEstimation = async (value: number) => {
         setIsSaved(false);
         await reviewApi.updateReviewEstimation(reviewId, value);
-        await queryClient.invalidateQueries(["review", reviewId]); // Обновляем кэш
+        await queryClient.invalidateQueries({queryKey: ["review", reviewId]});
         setIsSaved(true);
     };
 
     const handleUpdateFatIndex = async (value: string) => {
         setIsSaved(false);
         await reviewApi.updateReviewFatIndex(reviewId, value);
-        await queryClient.invalidateQueries(["review", reviewId]); // Обновляем кэш
+        await queryClient.invalidateQueries({queryKey: ["review", reviewId]});
         setIsSaved(true);
     };
 

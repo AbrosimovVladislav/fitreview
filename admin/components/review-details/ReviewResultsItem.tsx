@@ -1,5 +1,5 @@
-import { IAdminReviewResultsItemDto } from "@/interface/interfaces";
-import { useEffect, useState } from "react";
+import {IAdminReviewResultsItemDto} from "@/interface/interfaces";
+import {useEffect, useState} from "react";
 
 interface ReviewResultsItemProps {
     item: IAdminReviewResultsItemDto;
@@ -9,7 +9,7 @@ interface ReviewResultsItemProps {
     onDelete: (id: number) => Promise<void>;  // Новый пропс для удаления
 }
 
-export default function ReviewResultsItem({ item, color, textColor, onSave, onDelete }: ReviewResultsItemProps) {
+export default function ReviewResultsItem({item, color, textColor, onSave, onDelete}: ReviewResultsItemProps) {
     const [title, setTitle] = useState(item.title);
     const [description, setDescription] = useState(item.description);
     const [estimation, setEstimation] = useState(item.estimation);
@@ -23,7 +23,7 @@ export default function ReviewResultsItem({ item, color, textColor, onSave, onDe
                 estimation !== item.estimation
             ) {
                 setSaving(true);
-                onSave({ ...item, title, description, estimation }).finally(() => setSaving(false));
+                onSave({...item, title, description, estimation}).finally(() => setSaving(false));
             }
         }, 1500);
 
@@ -64,7 +64,7 @@ export default function ReviewResultsItem({ item, color, textColor, onSave, onDe
 
             {/* Кнопка удаления */}
             <button
-                onClick={() => onDelete(item.id)}
+                onClick={() => item.id !== undefined && onDelete(item.id)}
                 className="absolute top-2 right-2 bg-red-600 text-white w-6 h-6 flex items-center justify-center rounded-full"
             >
                 ×

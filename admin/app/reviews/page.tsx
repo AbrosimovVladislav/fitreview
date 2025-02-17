@@ -1,14 +1,14 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import {useQuery} from "@tanstack/react-query";
 import Table from "@/components/design-system/Table";
-import { TableRowType } from "@/components/design-system/TableRow";
+import {TableRowType} from "@/components/design-system/TableRow";
 import {reviewApi} from "@/service/reviewApi";
 import {IAdminShortReviewDto} from "@/interface/interfaces";
 import Select from "@/components/design-system/Select";
 
 export default function ReviewsPage() {
-    const { data, isLoading, isError } = useQuery<IAdminShortReviewDto[]>({
+    const {data, isLoading, isError} = useQuery<IAdminShortReviewDto[]>({
         queryKey: ["reviews"],
         queryFn: reviewApi.getReviews,
     });
@@ -18,30 +18,30 @@ export default function ReviewsPage() {
     if (isError) return <p>Error loading reviews</p>;
 
     const tableHeads = [
-        { label: "Review ID" },
-        { label: "Client Name" },
-        { label: "Client Email" },
-        { label: "Status" },
-        { label: "Date" },
-        { label: "Actions" },
+        {label: "Review ID"},
+        {label: "Client Name"},
+        {label: "Client Email"},
+        {label: "Status"},
+        {label: "Date"},
+        {label: "Actions"},
     ];
 
-    const tableRows: TableRowType[] = data.map((review) => ({
+    const tableRows: TableRowType[] = (data ?? []).map((review) => ({
         id: String(review.id),
         cells: [
-            { type: "string", value: review.id },
-            { type: "string", value: review.name },
-            { type: "string", value: review.email },
-            { type: "status", value: review.status },
-            { type: "string", value: review.date },
-            { type: "action", value: { href: `/reviews/${review.id}`, label: "View" } },
+            {type: "string", value: review.id},
+            {type: "string", value: review.name},
+            {type: "string", value: review.email},
+            {type: "status", value: review.status},
+            {type: "string", value: review.date},
+            {type: "action", value: {href: `/reviews/${review.id}`, label: "View"}},
         ],
     }));
 
     const sortingOptions = [
-        { label: "Sort By: Review Id", value: "id" },
-        { label: "Sort By: Status", value: "status" },
-        { label: "Sort By: Date", value: "date" },
+        {label: "Sort By: Review Id", value: "id"},
+        {label: "Sort By: Status", value: "status"},
+        {label: "Sort By: Date", value: "date"},
     ];
 
     const mockHandleSorting = (value: string) => {

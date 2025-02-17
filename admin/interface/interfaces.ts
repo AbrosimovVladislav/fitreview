@@ -13,7 +13,7 @@ export interface IAdminReviewDetailsDto {
     estimation: number;
     fatIndex: string;
     answers: IAdminReviewAnswerDto[];
-    photos: string[];
+    photos: IAdminReviewAnswerDto[];
     bodySegments: IAdminBodySegmentDto[];
     reviewResultsItems: IAdminReviewResultsItemDto[];
 }
@@ -35,7 +35,7 @@ export interface IAdminBodySegmentDto {
 }
 
 export interface IAdminReviewResultsItemDto {
-    id: number;
+    id?: number;
     reviewId: number;       // ID ревью, к которому относится этот результат
     title: string;          // Название секции (например, "Right Shoulder", "Core and Thoracic Mobility")
     description: string;    // Описание проблемы или рекомендации

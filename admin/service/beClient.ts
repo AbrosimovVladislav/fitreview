@@ -16,7 +16,7 @@ export const beClient = {
 
     async post(endpoint: string, body: any, isFormData = false) {
         try {
-            const headers = isFormData ? {} : { "Content-Type": "application/json" };
+            const headers: HeadersInit = isFormData ? {} : {"Content-Type": "application/json"};
 
             const response = await fetch(`${BASE_URL}${endpoint}`, {
                 method: "POST",
@@ -46,7 +46,7 @@ export const beClient = {
         try {
             const response = await fetch(`${BASE_URL}${endpoint}`, {
                 method: "PUT",
-                headers: { "Content-Type": "application/json" },
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body),
             });
 
@@ -69,7 +69,7 @@ export const beClient = {
 
     async delete(endpoint: string) {
         try {
-            const response = await fetch(`${BASE_URL}${endpoint}`, { method: "DELETE" });
+            const response = await fetch(`${BASE_URL}${endpoint}`, {method: "DELETE"});
 
             if (!response.ok) {
                 throw new Error(`DELETE ${endpoint} failed: ${response.status}`);

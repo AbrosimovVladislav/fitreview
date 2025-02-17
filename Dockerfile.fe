@@ -1,0 +1,37 @@
+# Используем multi-stage build
+# === Стадия 1: Сборка проекта ===
+FROM node:20 AS builder
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем package.json и package-lock.json
+COPY admin/package*.json ./
+
+# Устанавливаем зависимости
+RUN npm install --force
+
+# Копируем остальные файлы проекта
+COPY admin/ ./
+
+# Собираем Next.js
+RUN npm run build
+
+# === Стадия 2: Запуск приложения ===
+FROM node:20-alpine
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем файлы из первой стадии
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/node_modules ./node_modules
+
+# Переменная окружения для Cloud Run
+ENV PORT=8080
+EXPOSE 8080
+
+# Запуск приложения
+CMD ["npm", "start"]

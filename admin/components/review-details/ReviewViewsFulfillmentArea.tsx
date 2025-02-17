@@ -1,8 +1,14 @@
 import React from 'react'
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import BodySegmentComponent from "@/components/BodySegmentComponent";
+import {IAdminBodySegmentDto} from "@/interface/interfaces";
 
-export default function ReviewViewsFulfillmentArea({bodySegments, reviewId}) {
+interface ReviewViewsFulfillmentAreaProps {
+    bodySegments: IAdminBodySegmentDto[];
+    reviewId: number;
+}
+
+export default function ReviewViewsFulfillmentArea({bodySegments, reviewId}: ReviewViewsFulfillmentAreaProps) {
 
     const viewTypes = [
         {key: "front-view", label: "Front View", segmentGroup: "FrontView"},

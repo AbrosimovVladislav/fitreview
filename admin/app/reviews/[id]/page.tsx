@@ -46,14 +46,14 @@ export default function ReviewDetailsPage() {
             <PhotosArea photos={data.photos || []}/>
             <AdditionalInfoArea/>
 
-            <ReviewViewsFulfillmentArea bodySegments={data.bodySegments} reviewId={reviewId}/>
+            <ReviewViewsFulfillmentArea bodySegments={data.bodySegments} reviewId={Number(reviewId)}/>
 
             <GeneralEstimationArea
                 data={{estimation: data.estimation, fatIndex: data.fatIndex}}
-                reviewId={reviewId}
+                reviewId={Number(reviewId)}
             />
 
-            <ReviewResultsArea reviewId={reviewId} results={data.reviewResultsItems}/>
+            <ReviewResultsArea reviewId={Number(reviewId)} results={data.reviewResultsItems}/>
         </div>
     );
 }

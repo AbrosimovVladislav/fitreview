@@ -1,4 +1,10 @@
-export default function PhotosArea({ photos }) {
+import {IAdminReviewAnswerDto} from "@/interface/interfaces";
+
+interface PhotosAreaProps {
+    photos: IAdminReviewAnswerDto[]; // Если это массив URL-ов фотографий
+}
+
+export default function PhotosArea({photos}: PhotosAreaProps) {
     return (
         <div className="p-4 border rounded-lg bg-white shadow-md">
             <h2 className="text-lg font-semibold mb-2">Uploaded Photos</h2>
@@ -8,7 +14,8 @@ export default function PhotosArea({ photos }) {
                         <h3 className="text-sm font-medium mb-2 text-center">
                             {photo.question || "No question"}
                         </h3>
-                        <div className="w-full h-auto aspect-square bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden">
+                        <div
+                            className="w-full h-auto aspect-square bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden">
                             {photo.answer ? (
                                 <img
                                     src={photo.answer}

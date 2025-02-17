@@ -1,6 +1,12 @@
 import InfoCard from "@/components/design-system/InfoCard";
+import {IAdminReviewAnswerDto} from "@/interface/interfaces";
 
-export default function AnswersArea({ answers }) {
+
+interface AnswersAreaProps {
+    answers: IAdminReviewAnswerDto[];
+}
+
+export default function AnswersArea({answers}: AnswersAreaProps) {
     return (
         <div className="p-4 border rounded-lg bg-white shadow-md">
             <h2 className="text-lg font-semibold mb-2">User Information</h2>
