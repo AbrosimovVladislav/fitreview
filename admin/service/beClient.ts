@@ -16,7 +16,6 @@ export const beClient = {
 
     async post(endpoint: string, body: any, isFormData = false) {
         try {
-            //
             const headers: HeadersInit = isFormData ? {} : {"Content-Type": "application/json"};
 
             const response = await fetch(`${BASE_URL}${endpoint}`, {
