@@ -13,8 +13,8 @@ RUN npm install --force
 # Копируем остальные файлы проекта
 COPY admin/ ./
 
-# Собираем Next.js
-RUN npm run build
+# Соберите приложение
+RUN npm run prod
 
 # === Стадия 2: Запуск приложения ===
 FROM node:20-alpine
