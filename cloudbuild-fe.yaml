@@ -8,7 +8,7 @@ substitutions:
 steps:
   # 📌 Сборка фронтенда
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/next-app', '-f', 'Dockerfile.front', '.' ]
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/next-app', '-f', 'Dockerfile.fe', '.' ]
 
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'gcr.io/$PROJECT_ID/next-app' ]

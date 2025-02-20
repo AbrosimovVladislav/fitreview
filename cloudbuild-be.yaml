@@ -6,7 +6,6 @@ steps:
     entrypoint: mvn
     args: [ 'compile','jib:build', '-Djib.to.image=gcr.io/$PROJECT_ID/fit-review-444116:$COMMIT_SHA', '-f', 'backend/pom.xml' ]
 
-  # 📌 Деплой бэка (остается на 8080)
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [ 'run', 'deploy', 'fit-review-444116',
             '--project', '$PROJECT_ID',
@@ -14,5 +13,6 @@ steps:
             '--platform', 'managed',
             '--region', 'europe-north1',
             '--allow-unauthenticated',
-            '--port=8080' ]  # 👈 Бэкенд остается на 8080
+            '--set-env-vars', 'PORT=8080' ]
+
 
