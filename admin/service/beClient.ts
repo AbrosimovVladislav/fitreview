@@ -1,6 +1,4 @@
-// const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
-//
-const BASE_URL = "https://fit-review-444116-633533964999.europe-north1.run.app";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://fit-review-444116-633533964999.europe-north1.run.app";
 
 export const beClient = {
     async get(endpoint: string) {
