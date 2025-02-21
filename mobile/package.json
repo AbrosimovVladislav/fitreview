@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "../node_modules/.bin/expo start",
+    "start:local": "EXPO_ENV=local ../node_modules/.bin/expo start",
+    "start:test": "EXPO_ENV=test ../node_modules/.bin/expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "../node_modules/.bin/expo run:android",
     "ios": "../node_modules/.bin/expo run:ios",
