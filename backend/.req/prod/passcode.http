@@ -1,0 +1,7 @@
+### Генерация 10 новых пасскодов
+POST https://fit-review-444116-633533964999.europe-north1.run.app/api/v1/passcode/public/generate
+Content-Type: application/json
+
+### Получение доступного активного пасскода
+GET https://fit-review-444116-633533964999.europe-north1.run.app/api/v1/passcode/public/get-active
+Content-Type: application/json

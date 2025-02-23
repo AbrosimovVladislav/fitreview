@@ -3,6 +3,12 @@ spring:
     username: admin
     password: fitreview010824
     url: jdbc:postgresql://34.141.1.22:5432/fitreview
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 60000
+      max-lifetime: 1800000
+      connection-timeout: 30000
   jpa:
     database: postgresql
     hibernate:

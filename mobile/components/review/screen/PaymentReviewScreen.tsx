@@ -1,15 +1,15 @@
-import { View, ScrollView, TextInput, Text } from 'react-native';
-import React, { useState } from 'react';
-import { validatePasscode } from "@/service/PasscodeService";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {View, ScrollView, Text} from 'react-native';
+import React, {useState} from 'react';
+import {validatePasscode} from "@/service/PasscodeService";
 import PageHeader from "@/components/PageHeader";
 import Button from "@/components/common/Button";
-import { useGlobalContext } from "@/context/GlobalProvider";
+import {useGlobalContext} from "@/context/GlobalProvider";
 import {addNewReviewStatus, createNewReview} from "@/service/ReviewService";
 import {SurveyStatus} from "@/constants/survey";
+import FormField from "@/components/common/FormField";
 
-const PaymentReviewScreen = ({ setStatus }) => {
-    const { setReviewId } = useGlobalContext();
+const PaymentReviewScreen = ({setStatus}) => {
+    const {setReviewId} = useGlobalContext();
     const [passcode, setPasscode] = useState("");
     const [error, setError] = useState("");
 
@@ -28,25 +28,28 @@ const PaymentReviewScreen = ({ setStatus }) => {
     };
 
     return (
-        <SafeAreaView className='bg-primary h-full'>
-            <ScrollView>
-                <View className='pt-4'>
-                    <PageHeader title='Enter Passcode'/>
-                    <TextInput
-                        value={passcode}
-                        onChangeText={setPasscode}
-                        placeholder="Enter passcode"
-                        className="mx-6 mt-2 border border-gray-300 p-2 rounded"
-                    />
-                    <Button
-                        title="Submit"
-                        onPress={handlePasscodeSubmit}
-                        containerStyles="mt-2 mx-6"
-                    />
-                    {error && <Text className='text-red-500 mx-6'>{error}</Text>}
-                </View>
-            </ScrollView>
-        </SafeAreaView>
+        <ScrollView>
+            <View className='pt-4'>
+                <PageHeader title='Enter Passcode'/>
+            </View>
+
+            <View className="w-full justify-center px-4 my-24">
+                <FormField
+                    title="Passcode"
+                    value={passcode}
+                    handleChangeText={setPasscode}
+                    keyboardType="numeric"
+                />
+
+                {error && <Text className='text-red-500 mt-2'>{error}</Text>}
+
+                <Button
+                    title="Submit"
+                    onPress={handlePasscodeSubmit}
+                    containerStyles="mt-10"
+                />
+            </View>
+        </ScrollView>
     );
 };
 export default PaymentReviewScreen;
