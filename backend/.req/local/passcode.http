@@ -1,0 +1,7 @@
+### Генерация 10 новых пасскодов
+POST http://localhost:8080/api/v1/passcode/public/generate
+Content-Type: application/json
+
+### Получение доступного активного пасскода
+GET http://localhost:8080/api/v1/passcode/public/get-active
+Content-Type: application/json

@@ -31,3 +31,4 @@ security:
     - /api/v1/training/public
     - /api/v1/survey/public
     - /api/v1/admin/public
+    - /api/v1/passcode/public
