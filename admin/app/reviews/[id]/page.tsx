@@ -35,6 +35,7 @@ export default function ReviewDetailsPage() {
         <div className="p-6 space-y-6">
             <h1 className="text-2xl font-bold mb-4">Review Details: {reviewId}</h1>
 
+            <div className='flex gap-6'>
             <UserGeneralInfoArea
                 userData={{
                     userName: data.userName,
@@ -43,6 +44,8 @@ export default function ReviewDetailsPage() {
                 }}
             />
             <AnswersArea answers={data.answers || []}/>
+            </div>
+
             <PhotosArea photos={data.photos || []}/>
             <AdditionalInfoArea/>
 

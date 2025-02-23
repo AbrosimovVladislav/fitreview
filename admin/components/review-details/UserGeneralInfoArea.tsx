@@ -11,12 +11,12 @@ interface UserGeneralInfoProps {
 
 export default function UserGeneralInfoArea({userData}: UserGeneralInfoProps) {
     return (
-        <div className="p-4 border rounded-lg bg-white shadow-md">
+        <div className="p-4 border rounded-lg bg-gradient-to-r from-blue-400 via-green-400 to-green-600 text-white shadow-md">
             <h2 className="text-lg font-semibold mb-2">User Information</h2>
-            <div className='flex justify-between'>
+            <div className='flex flex-col  justify-between'>
                 <InfoCard title='Username' value={userData.userName}/>
                 <InfoCard title='Email' value={userData.userEmail}/>
-                <InfoCard title='Creation Date' value={userData.creationDate}/>
+                <InfoCard title='Review Creation Date' value={userData.creationDate}/>
             </div>
         </div>
     );
