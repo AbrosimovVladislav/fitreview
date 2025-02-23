@@ -9,6 +9,7 @@ export interface IAdminShortReviewDto {
 export interface IAdminReviewDetailsDto {
     userName: string;
     userEmail: string;
+    status: string;
     creationDate: string;
     estimation: number;
     fatIndex: string;

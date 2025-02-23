@@ -14,6 +14,7 @@ public class AdminReviewDetailsDto {
 
     private String userName;
     private String userEmail;
+    private String status;
     private LocalDateTime creationDate;
     private Integer estimation;
     private String fatIndex;

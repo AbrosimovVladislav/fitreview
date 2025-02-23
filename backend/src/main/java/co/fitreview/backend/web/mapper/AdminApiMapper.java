@@ -4,6 +4,7 @@ import co.fitreview.backend.dto.admin.*;
 import co.fitreview.backend.entity.review.BodySegment;
 import co.fitreview.backend.entity.review.Review;
 import co.fitreview.backend.entity.review.ReviewResultsItem;
+import co.fitreview.backend.entity.survey.ReviewStatus;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -24,7 +25,7 @@ public class AdminApiMapper {
                 .build();
     }
 
-    public AdminReviewDetailsDto map(Review review) {
+    public AdminReviewDetailsDto mapDetails(Review review, ReviewStatus actualStatus) {
         List<AdminReviewAnswerDto> answers = review.getAnswers().stream()
                 .filter(answer -> !PHOTO.equals(answer.getQuestion().getType()))
                 .map(answer -> AdminReviewAnswerDto.builder()
@@ -68,6 +69,7 @@ public class AdminApiMapper {
         return AdminReviewDetailsDto.builder()
                 .userName(review.getFrUser().getName())
                 .userEmail(review.getFrUser().getEmail())
+                .status(actualStatus.getValue())
                 .creationDate(review.getDate())
                 .estimation(review.getEstimation())
                 .fatIndex(review.getFatIndex())

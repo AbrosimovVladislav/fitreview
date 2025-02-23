@@ -35,6 +35,7 @@ export const reviewApi = {
         return {
             userName: data.userName ?? "Error Name",
             userEmail: data.userEmail ?? "Error Email",
+            status: data.status ?? 'Undefined',
             creationDate: data.creationDate ?? new Date().toISOString(),
             estimation: data.estimation ?? 0,
             fatIndex: data.fatIndex ?? "0",
@@ -86,7 +87,14 @@ export const reviewApi = {
 
     async updateReviewFatIndex(reviewId: number, fatIndex: string): Promise<void> {
         await beClient.put(`/api/v1/admin/public/review/${reviewId}/fat-index`, {fatIndex});
-    }
+    },
 
+    async submitReview(reviewId: number): Promise<void> {
+        if (!reviewId) {
+            throw new Error("Review ID is required");
+        }
+
+        await beClient.post(`/api/v1/admin/public/submitReview?reviewId=${reviewId}`, null);
+    }
 };
 

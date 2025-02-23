@@ -39,6 +39,12 @@ public class AdminApi {
     private final ReviewResultsItemMapper reviewResultsItemMapper;
 
     @CrossOrigin
+    @PostMapping("/submitReview")
+    public void submitReview(@RequestParam("reviewId") Long reviewId) {
+        reviewService.createReviewStatus(reviewId, "ReviewResults");
+    }
+
+    @CrossOrigin
     @GetMapping("/reviews")
     public List<AdminShortReviewDto> getAdminShortReviewDtos() {
         List<Review> reviews = reviewService.getAllReviews();
@@ -51,10 +57,15 @@ public class AdminApi {
 
     @CrossOrigin
     @GetMapping("/review/{reviewId}")
-    public AdminReviewDetailsDto getReviewDetailsById(@PathVariable Long reviewId) {
+    public ResponseEntity<AdminReviewDetailsDto> getReviewDetailsById(@PathVariable Long reviewId) {
         return reviewService.getReviewById(reviewId)
-                .map(adminApiMapper::map)
-                .orElse(null);
+                .map(review -> {
+                    AdminReviewDetailsDto dto = adminApiMapper.mapDetails(
+                            review, reviewService.getLastReviewStatusById(review.getId())
+                    );
+                    return ResponseEntity.ok(dto);
+                })
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @CrossOrigin
