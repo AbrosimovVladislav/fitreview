@@ -8,13 +8,11 @@
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-
     "runtimeVersion": "1.0.0",
     "ios": {
       "supportsTablet": true,
@@ -32,7 +30,6 @@
       "package": "com.vlad911.fitreview",
       "runtimeVersion": "1.0.0"
     },
-
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -51,7 +48,8 @@
       },
       "eas": {
         "projectId": "937c1fb2-aaf3-4432-9fac-2cbd7d67d9ae"
-      }
+      },
+      "API_URL": "https://fit-review-444116-633533964999.europe-north1.run.app/api/v1"
     },
     "updates": {
       "url": "https://u.expo.dev/937c1fb2-aaf3-4432-9fac-2cbd7d67d9ae"
