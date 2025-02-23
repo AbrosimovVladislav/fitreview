@@ -12,8 +12,12 @@ const PaymentReviewScreen = ({setStatus}) => {
     const {setReviewId} = useGlobalContext();
     const [passcode, setPasscode] = useState("");
     const [error, setError] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handlePasscodeSubmit = async () => {
+        setIsSubmitting(true);
+        setError("");
+
         try {
             await validatePasscode(passcode);
 
@@ -24,6 +28,8 @@ const PaymentReviewScreen = ({setStatus}) => {
             setStatus(SurveyStatus.FirstSurvey);
         } catch (e) {
             setError("Invalid passcode. Please try again.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -46,6 +52,7 @@ const PaymentReviewScreen = ({setStatus}) => {
                 <Button
                     title="Submit"
                     onPress={handlePasscodeSubmit}
+                    isLoading={isSubmitting}
                     containerStyles="mt-10"
                 />
             </View>

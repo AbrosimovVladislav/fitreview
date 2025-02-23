@@ -2,7 +2,6 @@ import {View, Text, Image, ScrollView} from 'react-native'
 import React from 'react'
 
 import {images} from '../../../constants'
-import Button from "@/components/common/Button";
 import {SurveyStatus} from "@/constants/survey";
 import {addNewReviewStatus} from "@/service/ReviewService";
 import {useGlobalContext} from "@/context/GlobalProvider";
@@ -42,11 +41,11 @@ const WaitingForResultReviewScreen = ({setStatus}) => {
                 </View>
             </View>
 
-            <Button
-                className='p-2 bg-red'
-                title='Test Results'
-                onPress={testResultsOnPressTEMPORARY}
-            />
+            {/*<Button*/}
+            {/*    className='p-2 bg-red'*/}
+            {/*    title='Test Results'*/}
+            {/*    onPress={testResultsOnPressTEMPORARY}*/}
+            {/*/>*/}
         </ScrollView>
     )
 }
