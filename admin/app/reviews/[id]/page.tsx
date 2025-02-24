@@ -35,7 +35,7 @@ export default function ReviewDetailsPage() {
     });
 
     const submitReviewMutation = useMutation({
-        mutationFn: () => reviewApi.submitReview(reviewId!),
+        mutationFn: () => reviewApi.submitReview(Number(reviewId!)),
         onSuccess: () => {
             queryClient.invalidateQueries({queryKey: ["review", reviewId]}); // Обновляем кэш данных
             setDialogOpen(false);
