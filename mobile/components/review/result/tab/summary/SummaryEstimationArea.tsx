@@ -62,7 +62,7 @@ const SummaryEstimationArea = ({userData, reviewDate, estimation}) => {
                 <View className='flex-1 flex flex-col justify-center items-center'>
                     <IconCalendarMonth size={25} color='#007AFF'/>
                     <Text className='text-md text-gray-100 pt-2 font-msemibold'>
-                        {reviewDate && reviewDate}
+                        {reviewDate && new Date(reviewDate).toLocaleDateString('ru-RU', { year: 'numeric', month: '2-digit', day: '2-digit' })}
                     </Text>
                 </View>
             </View>
