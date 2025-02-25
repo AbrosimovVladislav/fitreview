@@ -6,7 +6,6 @@ import {API_URL} from "@/config";
 const BASE_URL = API_URL;
 
 export const getRequest = async (endpoint, params = {}) => {
-    console.log(BASE_URL)
     try {
         const response = await axios.get(`${BASE_URL}${endpoint}`, { params });
         return response.data;
@@ -17,7 +16,6 @@ export const getRequest = async (endpoint, params = {}) => {
 };
 
 export const postRequest = async (endpoint, data = {}, config = {}) => {
-    console.log(BASE_URL)
     try {
         const response = await axios.post(`${BASE_URL}${endpoint}`, data, config);
         return response.data;
@@ -29,7 +27,6 @@ export const postRequest = async (endpoint, data = {}, config = {}) => {
 
 // Защищённые GET-запросы
 export const secureGetRequest = async (endpoint, params = {}) => {
-    console.log(BASE_URL)
     try {
         const user = auth.currentUser;
         if (!user) {
@@ -52,7 +49,6 @@ export const secureGetRequest = async (endpoint, params = {}) => {
 
 // Защищённые POST-запросы
 export const securePostRequest = async (endpoint, data = {}, config = {}) => {
-    console.log(BASE_URL)
     try {
         // Получаем текущий idToken
         const user = auth.currentUser;

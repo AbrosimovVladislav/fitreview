@@ -45,7 +45,7 @@ const Review = () => {
         try {
             if (reviewId) {
                 const currentStatus = await getReviewStatusById(reviewId);
-
+                console.log("reviewId - " + reviewId + " / currentStatus - " + currentStatus.value)
                 //if status was not created yet, then not refresh state
                 if (currentStatus) {
                     setStatus(currentStatus.value);

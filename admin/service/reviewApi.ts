@@ -47,7 +47,6 @@ export const reviewApi = {
     },
 
     async uploadBodySegmentImage(bodySegmentId: number, reviewId: number, file: File, imageType: "userImage" | "diagramImage"): Promise<void> {
-        console.log(reviewId)
         const formData = new FormData();
         formData.append("bodySegmentId", String(bodySegmentId));
         formData.append("reviewId", String(reviewId));
