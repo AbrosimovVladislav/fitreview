@@ -1,6 +1,6 @@
 import React from "react";
 import {IAdminReviewResultsItemDto} from "@/interface/interfaces";
-import {useQueryClient} from "@tanstack/react-query";
+import {InvalidateQueryFilters, useQueryClient} from "@tanstack/react-query";
 import {reviewApi} from "@/service/reviewApi";
 import ReviewResultsItem from "@/components/review-details/ReviewResultsItem";
 import {Accordion} from "@radix-ui/react-accordion";
@@ -23,19 +23,18 @@ export default function ReviewResultsArea({reviewId, results}: ReviewResultsArea
     const handleSave = async (updatedItem: IAdminReviewResultsItemDto) => {
         if (!updatedItem.id) return; // <-- Пропускаем, если нет ID
         await reviewApi.saveReviewResultsItem(updatedItem);
-        await queryClient.invalidateQueries({queryKey: ["review", reviewId]});
+        await queryClient.invalidateQueries(["review", reviewId] as unknown as InvalidateQueryFilters);
     };
 
     const handleDelete = async (id: number) => {
         try {
             await reviewApi.deleteReviewResultsItem(id);
-            await queryClient.invalidateQueries({queryKey: ["review", reviewId]});
+            await queryClient.invalidateQueries(["review", reviewId] as unknown as InvalidateQueryFilters);
         } catch (error) {
             console.error("Failed to delete review item:", error);
         }
     };
 
-    //TODO разобраться че тут с типами (скорее всего id)
     const handleAddNewItem = async (type: string) => {
         try {
             const newItem: IAdminReviewResultsItemDto = {
@@ -54,7 +53,7 @@ export default function ReviewResultsArea({reviewId, results}: ReviewResultsArea
                 throw new Error("Server did not return ID for the new item.");
             }
 
-            await queryClient.invalidateQueries({queryKey: ["review", reviewId]});
+            await queryClient.invalidateQueries(["review", reviewId] as unknown as InvalidateQueryFilters);
         } catch (error) {
             console.error("Failed to add new review item:", error);
         }
