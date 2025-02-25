@@ -52,8 +52,10 @@ public class ReviewService {
     }
 
     public ReviewStatus getLastReviewStatusById(Long reviewId) {
-        return reviewStatusRepo.findFirstByReviewIdOrderByDateDesc(reviewId)
+        ReviewStatus reviewStatus = reviewStatusRepo.findFirstByReviewIdOrderByDateDesc(reviewId)
                 .orElse(null);
+        log.info("ReviewId - " + reviewId + " / Status - " + reviewStatus.getValue());
+        return reviewStatus;
     }
 
     @Transactional(readOnly = true)
