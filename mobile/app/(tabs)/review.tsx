@@ -16,12 +16,20 @@ const Review = () => {
     const {reviewId} = useGlobalContext();
 
     const [status, setStatus] = useState('WelcomeScreen');
+    const [refreshing, setRefreshing] = useState(false);
+
+    //on refresh mechanism for manual status refresh
+    const onRefresh = async () => {
+        setRefreshing(true);
+        await refreshPageAccordingToTheStatus();
+        setRefreshing(false);
+    };
 
     const statusComponentMap = {
         WelcomeScreen: <WelcomeReviewScreen setStatus={setStatus}/>,
         PaymentScreen: <PaymentReviewScreen setStatus={setStatus}/>,
         FirstSurvey: <FirstSurveyReviewScreen setStatus={setStatus}/>,
-        WaitingForResults: <WaitingForResultReviewScreen setStatus={setStatus}/>,
+        WaitingForResults: <WaitingForResultReviewScreen setStatus={setStatus} onRefresh={onRefresh} refreshing={refreshing}/>,
         ReviewResults: <ResultsReviewScreen/>,
         SecondSurvey: <SecondSurveyReviewScreen setStatus={setStatus}/>,
     };
@@ -45,7 +53,6 @@ const Review = () => {
         try {
             if (reviewId) {
                 const currentStatus = await getReviewStatusById(reviewId);
-                console.log("reviewId - " + reviewId + " / currentStatus - " + currentStatus.value)
                 //if status was not created yet, then not refresh state
                 if (currentStatus) {
                     setStatus(currentStatus.value);
