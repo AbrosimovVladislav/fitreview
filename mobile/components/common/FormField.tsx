@@ -1,33 +1,37 @@
-import {View, Text, TextInput, TouchableOpacity} from 'react-native'
-import React, {useState} from 'react'
+import {View, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback} from 'react-native'
+import React, {useRef, useState} from 'react'
 
 import {Ionicons} from "@expo/vector-icons";
 
 const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ...props}) => {
 
     const [showPassword, setShowPassword] = useState(false);
+    const inputRef = useRef(null); // Создаём реф для TextInput
 
     return (
         <View className={`space-y-2 ${otherStyles}`}>
-            <Text className="text-base text-gray-100 font-mmedium">{title}</Text>
+            <Text className="text-base text-gray-100 font-mmedium pb-2">{title}</Text>
 
-            <View className="w-full h-16 px-4 bg-black-100 rounded-2xl border-2
+            <TouchableWithoutFeedback onPress={() => inputRef.current?.focus()}>
+                <View className="w-full h-16 px-4 bg-black-100 rounded-2xl border-2
             border-black-200 focus:border-secondary flex flex-row items-center">
-                <TextInput
-                    className="flex-1 text-gray-300 font-msemibold text-base"
-                    value={value}
-                    placeholder={placeholder}
-                    placeholderTextColor="#7b7b8b"
-                    onChangeText={handleChangeText}
-                    secureTextEntry={title === 'Password' && !showPassword}
-                />
+                    <TextInput
+                        ref={inputRef}
+                        className="flex-1 text-gray-300 font-msemibold text-base"
+                        value={value}
+                        placeholder={placeholder}
+                        placeholderTextColor="#7b7b8b"
+                        onChangeText={handleChangeText}
+                        secureTextEntry={title === 'Password' && !showPassword}
+                    />
 
-                {title === 'Password' && (
-                    <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                        <Ionicons name={!showPassword ? 'eye-outline' : 'eye-off-outline'} size={28} color='gray'/>
-                    </TouchableOpacity>
-                )}
-            </View>
+                    {title === 'Password' && (
+                        <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                            <Ionicons name={!showPassword ? 'eye-outline' : 'eye-off-outline'} size={28} color='gray'/>
+                        </TouchableOpacity>
+                    )}
+                </View>
+            </TouchableWithoutFeedback>
         </View>
     )
 }

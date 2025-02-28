@@ -70,11 +70,14 @@ const SignUp = () => {
                 style={{flex: 1}}
             >
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                    <View style={{flex: 1, justifyContent: "center", paddingHorizontal: 16}}>
-                        <Text className="text-3xl text-gray-300 text-semibold mt-4 font-cbebas"
-                              style={{opacity: isKeyboardVisible ? 0 : 1}}>
+                    <View style={{
+                        flex: 1,
+                        justifyContent: isKeyboardVisible ? 'flex-start' : 'center',
+                        paddingHorizontal: 16
+                    }}>
+                        {!isKeyboardVisible && <Text className="text-3xl text-gray-300 text-semibold mt-4 font-cbebas">
                             Register to Fit Review
-                        </Text>
+                        </Text>}
 
                         <FormField
                             title="Username"

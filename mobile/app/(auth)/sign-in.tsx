@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from 'react';
 import { View, Text, Alert, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FormField from '@/components/common/FormField';
 import { Link, router } from 'expo-router';
@@ -11,6 +11,21 @@ import { postRequest } from "@/service/beclient";
 const SignIn = () => {
     const [form, setForm] = useState({ email: '', password: '' });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+    useEffect(() => {
+        const keyboardDidShowListener = Keyboard.addListener('keyboardWillShow', () => {
+            setKeyboardVisible(true);
+        });
+        const keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', () => {
+            setKeyboardVisible(false);
+        });
+
+        return () => {
+            keyboardDidShowListener.remove();
+            keyboardDidHideListener.remove();
+        };
+    }, []);
 
     const submit = async () => {
         if (!form.email || !form.password) {
@@ -26,7 +41,7 @@ const SignIn = () => {
             const idToken = await getIdToken(user);
 
             // Отправляем запрос на логин
-            const serverResponse = await postRequest("/auth/login", { idToken });
+            await postRequest("/auth/login", { idToken });
 
             router.replace("/home");
         } catch (error) {
@@ -40,11 +55,18 @@ const SignIn = () => {
         <SafeAreaView edges={['top', 'bottom', 'left', 'right']} className="bg-primary flex-1">
             <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
-                keyboardVerticalOffset={0} // Убираем возможный лишний отступ
+                keyboardVerticalOffset={0}
                 style={{ flex: 1 }}
             >
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                    <View style={{ flex: 1, justifyContent: "center", paddingHorizontal: 16 }}>
+                    <View
+                        style={{
+                            flex: 1,
+                            justifyContent: isKeyboardVisible ? 'flex-start' : 'center',
+                            paddingHorizontal: 16,
+                            paddingTop: isKeyboardVisible ? 40 : 0  // можно настроить отступ при открытой клавиатуре
+                        }}
+                    >
                         <Text className="text-3xl text-gray-300 text-semibold mt-4 font-cbebas">
                             Log in to Fit Review
                         </Text>
