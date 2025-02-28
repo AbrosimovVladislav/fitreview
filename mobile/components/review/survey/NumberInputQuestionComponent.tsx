@@ -11,7 +11,7 @@ const NumberInputQuestionComponent = ({step, setCurrentStep, question, answer, l
 
     useEffect(() => {
         answer ? setValue(answer.replaceAll('"',"")) : setValue(null);
-    }, [answer])
+    }, [step,answer])
 
     return (
         <ScrollView>
@@ -19,7 +19,7 @@ const NumberInputQuestionComponent = ({step, setCurrentStep, question, answer, l
                 currentStep={step}
                 setCurrentStep={setCurrentStep}/>
 
-            <View className='flex-1 gap-48 pt-8'>
+            <View className='flex-1 gap-40 pt-8'>
                 <View name='question-header' className='pt-2 px-4'>
                     <Text className='text-md text-gray-300 font-mmedium'>
                         Step {step}
