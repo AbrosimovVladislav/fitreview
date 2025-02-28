@@ -54,7 +54,7 @@ const UploadArea = ({uploadedImage, setUploadedImage}) => {
                     // Если изображение не загружено, отображаем кнопку для загрузки
                     <TouchableOpacity
                         onPress={handleImagePick}
-                        className="border-2 border-dashed border-gray-500 rounded-xl p-6 items-center justify-center w-full h-40 bg-black-100"
+                        className="border-2 border-dashed border-gray-500 rounded-xl p-6 mb-2 items-center justify-center w-full h-40 bg-black-100"
                     >
                         <Ionicons name="cloud-upload-outline" size={48} color="gray" />
                         <Text className="text-gray-300 mt-4">Tap to upload an image</Text>

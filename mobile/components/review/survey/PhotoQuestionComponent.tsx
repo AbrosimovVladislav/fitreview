@@ -22,8 +22,8 @@ const PhotoQuestionComponent = ({step, setCurrentStep, question, answer, lastQue
                 currentStep={step}
                 setCurrentStep={setCurrentStep}/>
 
-            <View className='flex-1 gap-3 pt-4'>
-                <View name='question-header' className='pt-2 px-4'>
+            <View className='flex-1 gap-1 pt-4'>
+                <View name='question-header' className='pt-1 px-4'>
                     <Text className='text-md text-gray-300 font-mmedium'>
                         Step {step}
                     </Text>

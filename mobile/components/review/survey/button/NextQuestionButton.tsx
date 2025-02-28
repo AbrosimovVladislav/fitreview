@@ -25,7 +25,7 @@ const NextQuestionButton = ({
         if (photoQuestion) {
             //Если это не сохраненное фото, а подгруженное локально, то загружаем в стор
             if (!answerValue.includes("http")) {
-                const imageName = generateImageName(user?.uid, questionId);
+                const imageName = generateImageName(user?.uid, questionId, reviewId);
                 const photoUrl = await uploadImageToAPI(answerValue, imageName);
                 answerValue = photoUrl;
             }

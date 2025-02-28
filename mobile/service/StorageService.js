@@ -1,9 +1,8 @@
 import * as FileSystem from "expo-file-system";
 import {postRequest} from "@/service/beclient";
-import {getRandomNumber} from "@/service/utils";
 
-export const generateImageName = (userId, questionId) => {
-    return "photo-" + questionId + "-" + userId + "-"  +getRandomNumber();
+export const generateImageName = (userId, questionId, reviewId) => {
+    return "review/" + reviewId + "/userPhoto/" + questionId
 }
 
 export const uploadImageToAPI = async (fileUri, imageName) => {
