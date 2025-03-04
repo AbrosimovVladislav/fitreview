@@ -1,32 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { createTelegramApp, TelegramAppProvider } from "@telegram-apps/sdk-react";
+import React from "react";
 
-export default function TelegramProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<any>(null);
-    const [debugData, setDebugData] = useState<string>("Loading...");
+// 1. Создаём экземпляр приложения
+const telegramApp = createTelegramApp({
+    enableLogging: true,
+    // Здесь можно добавить другие настройки,
+    // например, lang: "ru" и т.д.
+});
 
-    useEffect(() => {
-        if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-            window.Telegram.WebApp.ready();
-            window.Telegram.WebApp.expand();
-
-            const initData = window.Telegram.WebApp.initDataUnsafe;
-            setDebugData("Debug Zone" + JSON.stringify(initData, null, 2));
-
-            if (initData?.user) {
-                setUser(initData.user);
-            }
-        }
-    }, []);
-
+// 2. Экспортируем компонент обёртку
+export function TelegramProvider({ children }: { children: React.ReactNode }) {
     return (
-        <div>
-            {user ? <p>Привет, {user.first_name}!</p> : <p>Загрузка...</p>}
-            <pre style={{ fontSize: "12px", whiteSpace: "pre-wrap", background: "#000", color: "#fff", padding: "10px" }}>
-                {debugData}
-            </pre>
+        <TelegramAppProvider app={telegramApp}>
             {children}
-        </div>
+        </TelegramAppProvider>
     );
 }
