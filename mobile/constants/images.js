@@ -3,7 +3,6 @@
 import cards from "../assets/images/cards.png";
 import bannerGetFitReview from "../assets/images/banner-get-fit-review2.png";
 import exerciseSmallTest from "../assets/images/exercise-small-test.png";
-import questionOptionTest from "../assets/images/question-option-test.png";
 
 //regions
 import core from "../assets/images/regions/core/core.png";
@@ -36,7 +35,6 @@ export default {
     cards,
     bannerGetFitReview,
     exerciseSmallTest,
-    questionOptionTest,
 
     core,
     coreDrill,
