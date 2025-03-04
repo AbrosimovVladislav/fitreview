@@ -1,38 +1,35 @@
-"use client";
+'use client';
 
-import React, { useEffect } from "react";
-import { useTelegram } from "@telegram-apps/sdk-react";
+import {Section, Cell, List} from '@telegram-apps/telegram-ui';
 
-export default function HomePage() {
-    // Хук даст нам доступ к WebApp
-    const { WebApp } = useTelegram();
+import {Link} from '@/components/Link/Link';
+import {Page} from '@/components/Page';
 
-    useEffect(() => {
-        if (!WebApp) return;
-
-        // Показываем основную кнопку WebApp
-        WebApp.MainButton.show();
-        WebApp.MainButton.setText("Нажми меня!");
-
-        // Пример — логируем юзера в консоль
-        console.log("Current user:", WebApp.initDataUnsafe?.user);
-    }, [WebApp]);
-
-    // Если WebApp ещё не инициализировался, пока покажем "Loading..."
-    if (!WebApp) {
-        return <div>Loading...</div>;
-    }
-
-    // Достаём данные пользователя из initDataUnsafe
-    const { user } = WebApp.initDataUnsafe;
-
+export default function Home() {
     return (
-        <div>
-            <h1>Home Page</h1>
-            <p>Username: {user?.username}</p>
-            <p>First Name: {user?.first_name}</p>
-            <p>Last Name: {user?.last_name}</p>
-            <p>ID: {user?.id}</p>
-        </div>
+        <Page back={false}>
+            <List>
+                <Section
+                    header="Application Launch Data"
+                    footer="These pages help developer to learn more about current launch information"
+                >
+                    <Link href="/init-data">
+                        <Cell subtitle="User data, chat information, technical data">
+                            Init Data
+                        </Cell>
+                    </Link>
+                    <Link href="/launch-params">
+                        <Cell subtitle="Platform identifier, Mini Apps version, etc.">
+                            Launch Parameters
+                        </Cell>
+                    </Link>
+                    <Link href="/theme-params">
+                        <Cell subtitle="Telegram application palette information">
+                            Theme Parameters
+                        </Cell>
+                    </Link>
+                </Section>
+            </List>
+        </Page>
     );
 }

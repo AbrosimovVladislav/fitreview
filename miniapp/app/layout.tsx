@@ -1,26 +1,24 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
-import {TelegramProvider} from "@/providers/telegram-provider";
+import type {PropsWithChildren} from 'react';
+import type {Metadata} from 'next';
 
-const inter = Inter({ subsets: ["latin"] });
+import {Root} from '@/components/Root/Root';
 
-export const metadata = {
-    title: "Next Telegram MiniApp",
-    description: "Testing Telegram MiniApp integration",
+import '@telegram-apps/telegram-ui/dist/styles.css';
+import 'normalize.css/normalize.css';
+import './_assets/globals.css';
+
+export const metadata: Metadata = {
+    title: 'Your Application Title Goes Here',
+    description: 'Your application description goes here',
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default async function RootLayout({children}: PropsWithChildren) {
     return (
         <html lang="en">
-        <body className={inter.className}>
-        {/* Оборачиваем всё приложение в TelegramProvider */}
-        <TelegramProvider>
+        <body>
+        <Root>
             {children}
-        </TelegramProvider>
+        </Root>
         </body>
         </html>
     );
