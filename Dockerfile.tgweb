@@ -1,0 +1,36 @@
+# === Стадия 1: Сборка проекта ===
+FROM node:20 AS builder
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем package.json и package-lock.json
+COPY miniapp/package*.json ./
+
+# Устанавливаем зависимости
+RUN npm install --force
+
+# Копируем остальные файлы проекта
+COPY miniapp/ ./
+
+# Соберите приложение
+RUN npm run prod
+
+# === Стадия 2: Запуск приложения ===
+FROM node:20-alpine
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем файлы из первой стадии
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/node_modules ./node_modules
+
+# Указываем правильный порт
+ENV PORT=3001
+EXPOSE 3001
+
+# Запускаем Next.js серверный рендеринг на 3001 порту
+CMD ["npm", "run", "start", "--", "--port", "3001"]

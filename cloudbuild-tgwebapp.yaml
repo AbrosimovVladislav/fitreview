@@ -1,0 +1,26 @@
+options:
+  logging: CLOUD_LOGGING_ONLY  # Запись логов только в Cloud Logging
+
+substitutions:
+  _DEPLOY_REGION: "europe-north1"
+  _SERVICE_NAME: "tgweb-app"
+
+steps:
+  # 📌 Сборка фронтенда
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/next-app', '-f', 'Dockerfile.tgweb', '.' ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/$PROJECT_ID/tgweb-app' ]
+
+  # 📌 Деплой фронта (работает на 3000)
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'run', 'deploy', 'next-app',
+            '--image', 'gcr.io/$PROJECT_ID/tgweb-app',
+            '--region', 'europe-north1',
+            '--platform', 'managed',
+            '--allow-unauthenticated',
+            '--port=3001' ]  # 👈 Указываем порт 3000
+
+images:
+  - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME'
