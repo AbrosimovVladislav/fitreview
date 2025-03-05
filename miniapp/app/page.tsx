@@ -1,35 +1,24 @@
 'use client';
 
-import {Section, Cell, List} from '@telegram-apps/telegram-ui';
-
-import {Link} from '@/components/Link/Link';
 import {Page} from '@/components/Page';
+import {useEffect} from "react";
+import {useTelegramStore} from "@/store/telegramStore";
 
 export default function Home() {
+
+    const { user, isValid } = useTelegramStore();
+
+    // const initDataRaw = useSignal(initData.raw);
+    // const initDataState = useSignal(initData.state);
+
+    useEffect(() => {
+        // const user = initDataState && initDataState.user && getUserRows(initDataState.user);
+        console.log(user)
+    }, [user])
+
     return (
         <Page back={false}>
-            <List>
-                <Section
-                    header="Application Launch Data"
-                    footer="These pages help developer to learn more about current launch information"
-                >
-                    <Link href="/init-data">
-                        <Cell subtitle="User data, chat information, technical data">
-                            Init Data
-                        </Cell>
-                    </Link>
-                    <Link href="/launch-params">
-                        <Cell subtitle="Platform identifier, Mini Apps version, etc.">
-                            Launch Parameters
-                        </Cell>
-                    </Link>
-                    <Link href="/theme-params">
-                        <Cell subtitle="Telegram application palette information">
-                            Theme Parameters
-                        </Cell>
-                    </Link>
-                </Section>
-            </List>
+
         </Page>
     );
 }

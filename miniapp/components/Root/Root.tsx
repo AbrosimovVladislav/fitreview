@@ -44,8 +44,10 @@ function RootInner({ children }: PropsWithChildren) {
 
   return (
       <AppRoot
-        appearance={isDark ? 'dark' : 'light'}
-        platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
+        // appearance={isDark ? 'dark' : 'light'}
+        appearance={'dark'}
+        // platform={['macos', 'ios'].includes(lp.platform) ? 'ios' : 'base'}
+        platform={'ios'}
       >
         {children}
       </AppRoot>
