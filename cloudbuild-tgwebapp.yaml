@@ -4,6 +4,7 @@ options:
 substitutions:
   _DEPLOY_REGION: "europe-north1"
   _SERVICE_NAME: "tgweb-app"
+  _NEXT_PUBLIC_TELEGRAM_BOT_TOKEN: "7695087380:AAHVJPcqPTaVogUoRjkuHDORFppuRSJPVFQ"
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
@@ -18,7 +19,8 @@ steps:
             '--region', 'europe-north1',
             '--platform', 'managed',
             '--allow-unauthenticated',
-            '--port=3001' ]
+            '--port=3001',
+            '--set-env-vars', 'NEXT_PUBLIC_TELEGRAM_BOT_TOKEN=$_NEXT_PUBLIC_TELEGRAM_BOT_TOKEN' ]
 
 images:
   - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME'

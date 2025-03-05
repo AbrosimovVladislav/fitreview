@@ -1,19 +1,26 @@
 "use client";
 
-import {useEffect} from "react";
-import {initData, useSignal} from "@telegram-apps/sdk-react";
-import {useTelegramStore} from "@/store/telegramStore";
-import {validateTelegramAuth} from "@/utils/validateTelegramAuth";
+import { useEffect } from "react";
+import { initData, useSignal } from "@telegram-apps/sdk-react";
+import { useTelegramStore } from "@/store/telegramStore";
+import { validateTelegramAuth } from "@/utils/validateTelegramAuth";
 
-export function TelegramProvider({children}: { children: React.ReactNode }) {
-    const {setUser} = useTelegramStore();
+export function TelegramProvider({ children }: { children: React.ReactNode }) {
+    const { setUser } = useTelegramStore();
 
     const initDataRaw = useSignal(initData.raw);
     const initDataState = useSignal(initData.state);
 
     useEffect(() => {
+        const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
+
+        if (!botToken) {
+            console.error("Ошибка: NEXT_PUBLIC_TELEGRAM_BOT_TOKEN не задан в .env.local");
+            return;
+        }
+
         if (initDataState) {
-            const isValid = validateTelegramAuth(initDataRaw, process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN || "");
+            const isValid = validateTelegramAuth(initDataRaw || "", botToken);
 
             setUser(
                 initDataState.user
@@ -31,7 +38,5 @@ export function TelegramProvider({children}: { children: React.ReactNode }) {
         }
     }, [initDataState, initDataRaw, setUser]);
 
-    return (
-        <>{children}</>
-    );
+    return <>{children}</>;
 }
