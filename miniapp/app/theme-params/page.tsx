@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = "force-dynamic"
+
 import { useSignal, themeParams } from '@telegram-apps/sdk-react';
 import { List } from '@telegram-apps/telegram-ui';
 

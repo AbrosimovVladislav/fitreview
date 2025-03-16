@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = "force-dynamic"
+
 import { useMemo } from 'react';
 import { useSignal, initData, type User } from '@telegram-apps/sdk-react';
 import { List, Placeholder } from '@telegram-apps/telegram-ui';
