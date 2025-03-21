@@ -17,10 +17,10 @@ const UploadArea = ({uploadedImage, setUploadedImage}) => {
         // Открываем галерею для выбора изображений
         const result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
-            allowsEditing: true,
-            aspect: [4, 3],
+            allowsEditing: false, // отключаем встроенный crop UI
             quality: 1,
         });
+
 
         if (!result.canceled) {
             const selectedImage = result.assets[0].uri; // Получаем URI выбранного изображения

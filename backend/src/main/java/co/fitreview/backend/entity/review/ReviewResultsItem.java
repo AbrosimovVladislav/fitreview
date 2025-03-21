@@ -15,7 +15,9 @@ public class ReviewResultsItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 5000)
     private String title; // Название проблемы
+    @Column(length = 15000)
     private String description; // Описание проблемы
     private int estimation; // Оценка проблемы
     private String iconType; // Тип иконки для отображения
