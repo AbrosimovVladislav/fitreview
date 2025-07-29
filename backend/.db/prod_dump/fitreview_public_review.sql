@@ -1,0 +1,11 @@
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (1, '2025-02-17 11:05:16.624357', 85, '24', 22222222);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (3, '2025-02-23 16:11:47.383799', null, null, 11111111);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (4, '2025-02-25 19:18:45.820612', 50, '25', 44444444);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (5, '2025-02-28 09:52:49.463579', null, null, 2);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (6, '2025-02-28 19:57:44.947634', null, null, 3);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (7, '2025-03-07 19:42:30.065606', 60, '27', 4);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (8, '2025-03-20 18:57:58.126682', null, null, 6);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (10, '2025-03-22 13:04:16.450347', 65, '26', 5);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (9, '2025-03-21 18:17:30.809621', 60, '23', 7);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (11, '2025-03-26 18:21:14.344974', 68, '20', 8);
+INSERT INTO public.review (id, date, estimation, fat_index, fr_user_id) VALUES (12, '2025-04-15 14:34:53.515547', 60, '20', 9);

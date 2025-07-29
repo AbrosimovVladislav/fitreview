@@ -1,0 +1,11 @@
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (11111111, 'abrosimov94vladislav@gmail.com', '8DGc744lhagyAKmWxKQVyAEDdoD3', 'Abrosimov94Vladislav');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (22222222, 'd.moiseev-cccp@yandex.ru', 'E2eoVAN7xnapeJb6BoWxaJjE6Um2', 'Dimi Moiseev');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (44444444, 'fitreview24@gmail.com', 'jBGIB5CF0ZN7XwA12mTS6Hil1fV2', 'Fit Review');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (2, 'fitreview24-2@gmail.com', 'UEKBpjw6KhaAMQZgzDqkhmFA9NQ2', 'Admin-2');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (3, 'fitreview24-3@gmail.com', 'isHrbolnQRb6cU73E8r3V5ERx8L2', 'Admin-3');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (4, 'n.m.trenogin@gmail.com', 'wSCTksTmo3aqPr9FsDgPXPrpiuS2', 'Nikolai Trenogin');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (5, 'efimchik.egor@gmail.com', 'BSCRdly3vJfVQoQxRt6f1ZTDvZk2', 'egor.efimchik');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (6, 'ezkhrv@gmail.com', 'El8kdPGRwDZV9H16eOHfTD9eNt33', 'evgeny_zakharov');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (7, 'zhivozhenko@gmail.com', '6u5zc1eufzZJ3oZFyxrndAVcf3W2', 'dzhivozhenko');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (8, 'az.hairx.work@gmail.com', 'JBqSg4Xjf8hCnDDz1VZO32G2Yas2', 'jackizzle_new');
+INSERT INTO public.fruser (id, email, firebase_id, name) VALUES (9, 'alessandra.berd@gmail.com', 'qfQC3GzS06MOZSFFkUTBzKZ5dlD3', 'alexandra_podlesna');
