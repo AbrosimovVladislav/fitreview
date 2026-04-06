@@ -4,9 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import FormField from '@/components/common/FormField';
 import { Link, router } from 'expo-router';
 import Button from '@/components/common/Button';
-import { signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
-import { auth } from '@/firebase';
-import { postRequest } from "@/service/beclient";
+import { supabase } from '@/supabase';
+import { securePostRequest } from "@/service/beclient";
 
 const SignIn = () => {
     const [form, setForm] = useState({ email: '', password: '' });
@@ -36,15 +35,17 @@ const SignIn = () => {
         setIsSubmitting(true);
 
         try {
-            const userCredential = await signInWithEmailAndPassword(auth, form.email, form.password);
-            const user = userCredential.user;
-            const idToken = await getIdToken(user);
+            const { error } = await supabase.auth.signInWithPassword({
+                email: form.email,
+                password: form.password,
+            });
+            if (error) throw error;
 
-            // Отправляем запрос на логин
-            await postRequest("/auth/login", { idToken });
+            // Backend login (creates fr_user if needed)
+            await securePostRequest("/auth/login", {});
 
             router.replace("/home");
-        } catch (error) {
+        } catch (error: any) {
             Alert.alert("Error", error.message);
         } finally {
             setIsSubmitting(false);

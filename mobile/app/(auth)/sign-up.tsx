@@ -4,9 +4,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import FormField from '@/components/common/FormField';
 import Button from '@/components/common/Button';
 import {Link, router} from 'expo-router';
-import {createUserWithEmailAndPassword, getIdToken, updateProfile} from 'firebase/auth';
-import {auth} from '@/firebase';
-import {postRequest} from "@/service/beclient";
+import {supabase} from '@/supabase';
+import {securePostRequest} from "@/service/beclient";
 
 const SignUp = () => {
     const [form, setForm] = useState({
@@ -40,22 +39,19 @@ const SignUp = () => {
         setIsSubmitting(true);
 
         try {
-            // Регистрируем пользователя через Firebase
-            const userCredential = await createUserWithEmailAndPassword(auth, form.email, form.password);
-            const user = userCredential.user;
+            const { error } = await supabase.auth.signUp({
+                email: form.email,
+                password: form.password,
+                options: { data: { name: form.userName } },
+            });
+            if (error) throw error;
 
-            // Обновляем профиль пользователя (например, добавляем displayName)
-            await updateProfile(user, {displayName: form.userName});
-
-            // Получаем новый токен после обновления профиля
-            const idToken = await getIdToken(user, true); // true означает форсировать обновление токена
-
-            // Отправляем запрос на регистрацию на сервер
-            await postRequest("/auth/register", {idToken});
+            // Register on backend
+            await securePostRequest("/auth/register", {});
 
             Alert.alert("Success", "User registered successfully!");
             router.replace("/home");
-        } catch (error) {
+        } catch (error: any) {
             Alert.alert("Error", error.message);
         } finally {
             setIsSubmitting(false);

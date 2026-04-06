@@ -1,6 +1,5 @@
 import axios from 'axios';
-import {auth} from "@/firebase";
-import {getIdToken} from "firebase/auth";
+import {supabase} from "@/supabase";
 import {API_URL} from "@/config";
 
 const BASE_URL = API_URL;
@@ -25,19 +24,20 @@ export const postRequest = async (endpoint, data = {}, config = {}) => {
     }
 };
 
-// Защищённые GET-запросы
+const getAccessToken = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) throw new Error("User is not authenticated");
+    return session.access_token;
+};
+
+// Secure GET requests
 export const secureGetRequest = async (endpoint, params = {}) => {
     try {
-        const user = auth.currentUser;
-        if (!user) {
-            throw new Error("User is not authenticated");
-        }
-        const idToken = await getIdToken(user);
-
+        const token = await getAccessToken();
         const response = await axios.get(`${BASE_URL}${endpoint}`, {
             params,
             headers: {
-                Authorization: `Bearer ${idToken}`, // Добавляем токен в заголовок
+                Authorization: `Bearer ${token}`,
             },
         });
         return response.data;
@@ -47,20 +47,14 @@ export const secureGetRequest = async (endpoint, params = {}) => {
     }
 };
 
-// Защищённые POST-запросы
+// Secure POST requests
 export const securePostRequest = async (endpoint, data = {}, config = {}) => {
     try {
-        // Получаем текущий idToken
-        const user = auth.currentUser;
-        if (!user) {
-            throw new Error("User is not authenticated");
-        }
-        const idToken = await getIdToken(user);
-
+        const token = await getAccessToken();
         const response = await axios.post(`${BASE_URL}${endpoint}`, data, {
             ...config,
             headers: {
-                Authorization: `Bearer ${idToken}`, // Добавляем токен в заголовок
+                Authorization: `Bearer ${token}`,
                 ...config?.headers,
             },
         });

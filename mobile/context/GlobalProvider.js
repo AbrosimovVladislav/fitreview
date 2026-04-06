@@ -1,8 +1,7 @@
 import {createContext, useContext, useState, useEffect} from "react";
-import {onAuthStateChanged, signOut} from "firebase/auth";
-import {auth} from "@/firebase";
+import {supabase} from "@/supabase";
 import {router} from "expo-router";
-import {getLastReviewIdByUserId} from "@/service/ReviewService"; // Импортируем router
+import {getLastReviewIdByUserId} from "@/service/ReviewService";
 
 const GlobalContext = createContext();
 
@@ -17,52 +16,61 @@ const GlobalProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        console.log("Checking auth state..."); // Лог начала проверки состояния
-        console.log("Firebase Current User:", auth.currentUser); // Лог текущего пользователя
+        console.log("Checking auth state...");
 
-
-        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-            if (currentUser) {
-                console.log("User is logged in:", { // Лог, если пользователь найден
-                    uid: currentUser.uid,
-                    email: currentUser.email,
-                    displayName: currentUser.displayName,
-                });
+        // Check initial session
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            if (session?.user) {
+                const u = session.user;
+                console.log("User is logged in:", { uid: u.id, email: u.email });
                 setIsLoggedIn(true);
                 setUser({
-                    uid: currentUser.uid,
-                    email: currentUser.email,
-                    displayName: currentUser.displayName || null,
+                    uid: u.id,
+                    email: u.email,
+                    displayName: u.user_metadata?.name || null,
                 });
-
-                // Получаем последнее активное ревью с бэка
-                const latestReviewId = await getLastReviewIdByUserId(currentUser.uid);
-                if (latestReviewId) {
-                    setReviewId(latestReviewId);
-                }
-            } else {
-                console.log("No user is logged in"); // Лог, если пользователь не найден
-                setIsLoggedIn(false);
-                setUser(null);
-                setReviewId(null);
+                getLastReviewIdByUserId(u.id).then((latestReviewId) => {
+                    if (latestReviewId) setReviewId(latestReviewId);
+                });
             }
-            setIsLoading(false); // Завершаем загрузку
+            setIsLoading(false);
         });
 
-        return () => unsubscribe(); // Отписываемся при размонтировании
+        const { data: { subscription } } = supabase.auth.onAuthStateChange(
+            async (event, session) => {
+                if (session?.user) {
+                    const u = session.user;
+                    console.log("Auth state changed:", event, { uid: u.id, email: u.email });
+                    setIsLoggedIn(true);
+                    setUser({
+                        uid: u.id,
+                        email: u.email,
+                        displayName: u.user_metadata?.name || null,
+                    });
+                    const latestReviewId = await getLastReviewIdByUserId(u.id);
+                    if (latestReviewId) setReviewId(latestReviewId);
+                } else {
+                    console.log("No user is logged in");
+                    setIsLoggedIn(false);
+                    setUser(null);
+                    setReviewId(null);
+                }
+            }
+        );
+
+        return () => subscription.unsubscribe();
     }, []);
 
     const logout = async () => {
         try {
-            await signOut(auth); // Выход из Firebase
-            setIsLoggedIn(false); // Обновляем состояние
-            setUser(null); // Очищаем данные пользователя
-            router.replace("/sign-in"); // Перенаправляем на экран входа
+            await supabase.auth.signOut();
+            setIsLoggedIn(false);
+            setUser(null);
+            router.replace("/sign-in");
         } catch (error) {
             console.error("Logout Error:", error);
         }
     };
-
 
     return (
         <GlobalContext.Provider
